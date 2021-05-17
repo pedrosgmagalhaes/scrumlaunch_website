@@ -1,0 +1,105 @@
+.btn {
+  width: 166px;
+  height: 166px;
+  background: #12E2B0;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #1E1F21;
+  transition: all .4s ease;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background: #1E1F21;
+    color: #FFFFFF;
+  }
+
+  &:active {
+    background: #1E1F21;
+    color: #12E2B0;
+  }
+}
+
+.header-big {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 70px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.header-1 {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 56px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #1E1F21;
+}
+
+.header-1-stroke {
+  -webkit-text-stroke: 1px #1E1F21;
+  -webkit-text-fill-color: white;
+}
+
+.header-1-stroke-2 {
+  -webkit-text-stroke: 1px #FFFFFF;
+  -webkit-text-fill-color: transparent;
+}
+
+.header-2 {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 140%;
+  color: #1E1F21;
+}
+
+.header-4 {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  color: #1E1F21;
+}
+
+.body-1 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 150%;
+}
+
+.body-3 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  color: #1E1F21;
+}
+
+@media screen and (min-width: 768px) {
+  .header-big {
+    font-size: 56px;
+  }
+
+  .header-1 {
+    font-size: 48px;
+  }
+}

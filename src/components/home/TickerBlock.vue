@@ -1,0 +1,73 @@
+<template>
+  <div class="marquee-block">
+    <div class="marquee-block--wrapper" style="animation-duration: 60s;">
+      <div class="marquee-block--wrapper--text" v-for="i in 10" :key="i">
+        <p class="header-1 header-1-stroke-2">1 Client Acquired by a Unicorn</p>
+        <inline-svg
+          :src="require('@/assets/icons/circle-icon.svg')"
+          class="marquee-block--wrapper--text--icon"
+        />
+        <p class="header-1 header-1-stroke-2">1 Client Acquired by a Publicly Traded Company</p>
+        <inline-svg
+          :src="require('@/assets/icons/circle-icon.svg')"
+          class="marquee-block--wrapper--text--icon"
+        />
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+
+}
+</script>
+
+<style lang="scss" scoped>
+.marquee-block {
+  background: #1E1F21;
+  padding: 203px 0 216px;
+  overflow: hidden;
+
+  &--wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    position: relative;
+    transform: translate3d(0%, 0, 0);
+    animation-name: marquee;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    &:hover {
+      animation-play-state: paused !important;
+    }
+
+    &--text {
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+
+      p {
+        white-space: nowrap;
+      }
+
+      &--icon {
+        margin: 0 50px;
+        flex: none;
+      }
+    }
+  }
+}
+
+@keyframes marquee {
+  0% {
+      transform: translate3d(0%, 0, 0);
+  }
+
+  100% {
+      transform: translate3d(-100%, 0, 0);
+  }
+}
+</style>
