@@ -18,7 +18,7 @@
     <div class="footer--address">
       <p>Netechens'ka embankment 8,<br />Kharkiv, Ukraine</p>
     </div>
-    <SocialBlock />
+    <SocialBlock class="footer--social"/>
     <span>© ScrumLaunch 2021</span>
   </div>
 </template>
@@ -37,22 +37,29 @@ export default {
 <style lang="scss" scoped>
 .footer {
   width: 100vw;
-  height: 278px;
-  padding: 60px 8.34%;
+  padding: 0px 20px 40px;
   box-sizing: border-box;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   color: #1E1F21;
   position: relative;
 
   a, p {
-    font-size: 18px;
     line-height: 150%;
     color: #1E1F21;
     text-decoration: none;
     font-family: 'Proxima Nova';
     font-weight: bold;
     text-align: left;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  a {
+    font-size: 18px;
   }
 
   span {
@@ -63,17 +70,12 @@ export default {
     line-height: 150%;
     text-align: right;
     position: absolute;
-    bottom: 60px;
-    right: 8.34%;
+    bottom: 40px;
+    right: 20px;
   }
 
   &--menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
-    margin-right: 14.17%;
+    display: none;
   }
 
   &--contact {
@@ -82,23 +84,179 @@ export default {
     align-items: flex-start;
     justify-content: space-between;
     height: 100%;
-    margin-right: 7.83%;
+    margin-right: 0;
+    margin-bottom: 24px;
 
     &--item {
       text-align: left;
+      margin-bottom: 16px;
+
+      &:last-child {
+        margin-bottom: 0px;
+      }
 
       p {
         margin-bottom: 4px;
       }
 
       a {
-        font-size: 24px;
+        font-size: 18px;
       }
     }
   }
 
   &--address {
-    margin-right: 18.92%;
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+
+  &--social {
+    position: relative;
+    right: inherit;
+    bottom: inherit;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    width: 100vw;
+    height: 278px;
+    padding: 0px 30px 120px;
+    flex-direction: row;
+    justify-content: space-between;
+
+    a, p {
+      font-size: 18px;
+      line-height: 150%;
+      color: #1E1F21;
+      text-decoration: none;
+      font-family: 'Proxima Nova';
+      font-weight: bold;
+      text-align: left;
+    }
+
+    span {
+      text-align: center;
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &--menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      margin-right: 10.17%;
+    }
+
+    &--contact {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      height: 100%;
+      margin-right: 7.83%;
+      margin-bottom: 0;
+
+      &--item {
+        text-align: left;
+        margin-bottom: 24px;
+
+        p {
+          margin-bottom: 4px;
+        }
+
+        a {
+          font-size: 24px;
+        }
+      }
+    }
+
+    &--address {
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+
+    &--social {
+      position: absolute;
+      right: 30px;
+      bottom: 122px;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .footer {
+    width: 100vw;
+    height: 278px;
+    padding: 60px 8.34%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    color: #1E1F21;
+    position: relative;
+
+    a, p {
+      font-size: 18px;
+      line-height: 150%;
+      color: #1E1F21;
+      text-decoration: none;
+      font-family: 'Proxima Nova';
+      font-weight: bold;
+      text-align: left;
+    }
+
+    span {
+      text-align: right;
+      position: absolute;
+      bottom: 60px;
+      right: 8.34%;
+      left: inherit;
+      transform: none;
+    }
+
+    &--menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      margin-right: 14.17%;
+    }
+
+    &--contact {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      height: 100%;
+      margin-right: 7.83%;
+
+      &--item {
+        text-align: left;
+
+        p {
+          margin-bottom: 4px;
+        }
+
+        a {
+          font-size: 24px;
+        }
+      }
+    }
+
+    &--address {
+      margin-right: 11.92%;
+    }
+
+    &--social {
+      position: relative;
+      right: inherit;
+      bottom: inherit;
+    }
   }
 }
 </style>

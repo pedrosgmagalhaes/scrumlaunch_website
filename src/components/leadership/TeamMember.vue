@@ -47,42 +47,44 @@ export default {
 .member {
   border: 1px solid #1E1F21;
   box-sizing: border-box;
-  width: 386px;
-  height: 587px;
+  width: 335px;
+  height: 470px;
+  margin-bottom: 30px;
 
   &--image {
-    width: 384px;
-    height: 394px;
+    width: 100%;
+    height: 341px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
   }
 
   &--info {
-    padding: 29px 19px 20px 20px;
+    padding: 24px 12px 14px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    text-align: left;
 
     &--position {
       display: flex;
       align-items: center;
-      margin-top: 10px;
-      margin-bottom: 40px;
+      margin-top: 5px;
+      margin-bottom: 22px;
 
       &--text {
         position: relative;
-        padding-left: 18px;
-        margin-left: 10px;
+        padding-left: 11px;
+        margin-left: 6px;
 
         &::before {
           content: '';
           position: absolute;
-          width: 8px;
-          height: 8px;
+          width: 5px;
+          height: 5px;
           background: #1E1F21;
           border-radius: 50%;
-          top: 8px;
+          top: 6px;
           left: 0px;
         }
       }
@@ -96,6 +98,58 @@ export default {
 
       &--icon {
         cursor: pointer;
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .member {
+    width: 339px;
+
+    &--info {
+      padding: 24px 16px 14px;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .member {
+    width: 386px;
+    height: 587px;
+    margin-bottom: 0px;
+
+    &--image {
+      height: 394px;
+    }
+
+    &--info {
+      padding: 29px 20px 20px;
+
+      &--position {
+        margin-top: 10px;
+        margin-bottom: 40px;
+
+        &--text {
+          padding-left: 18px;
+          margin-left: 10px;
+
+          &::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            top: 8px;
+          }
+        }
+      }
+
+      &--links {
+        &--icon {
+          width: 27px;
+          height: 27px;
+        }
       }
     }
   }

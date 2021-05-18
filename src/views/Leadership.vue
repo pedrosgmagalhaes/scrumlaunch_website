@@ -49,7 +49,7 @@ export default {
 
 <style lang="scss" scoped>
 .leadership {
-  padding: 270px 8.34% 0;
+  padding: 125px 20px 0;
   display: flex;
   flex-direction: column;
 
@@ -64,16 +64,56 @@ export default {
 
     p {
       text-align: left;
-      width: 52.25%;
-      margin-bottom: 80px;
+      width: 67.25%;
+      margin-bottom: 40px;
     }
   }
 
   &--team {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 240px;
+    margin-bottom: 347px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .leadership {
+    padding: 197px 30px 0;
+
+    h1 {
+      margin-left: 30px;
+    }
+
+    &--team {
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 140px;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .leadership {
+    padding: 270px 8.34% 0;
+
+    h1 {
+      margin-left: 0px;
+    }
+
+    &--desc {
+      display: flex;
+      justify-content: flex-end;
+
+      p {
+        width: 52.25%;
+        margin-bottom: 80px;
+      }
+    }
+
+    &--team {
+      margin-bottom: 240px;
+    }
   }
 }
 </style>
