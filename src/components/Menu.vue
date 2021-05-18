@@ -8,7 +8,7 @@
       <router-link :to="{ name: 'About' }">Work</router-link>
       <router-link :to="{ name: 'About' }">Services</router-link>
       <router-link :to="{ name: 'About' }">Process</router-link>
-      <router-link :to="{ name: 'About' }">Leadership</router-link>
+      <router-link :to="{ name: 'Leadership' }">Leadership</router-link>
       <router-link :to="{ name: 'About' }">Contact</router-link>
     </div>
   </div>
