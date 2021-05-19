@@ -17,12 +17,10 @@
 </template>
 
 <script>
-import InlineSvg from 'vue-inline-svg';
-import SocialBlock from '@/components/SocialBlock.vue';
+import SocialBlock from '@/components/SocialBlock.vue'
 
 export default {
   components: {
-    InlineSvg,
     SocialBlock
   },
 }

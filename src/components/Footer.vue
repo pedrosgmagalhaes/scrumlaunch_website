@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import SocialBlock from '@/components/SocialBlock.vue';
+import SocialBlock from '@/components/SocialBlock.vue'
 
 export default {
   components: {
@@ -192,7 +192,7 @@ export default {
   .footer {
     width: 100vw;
     height: 278px;
-    padding: 60px 8.34%;
+    padding: 0px 8.34% 60px;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;

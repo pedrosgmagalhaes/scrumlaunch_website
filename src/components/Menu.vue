@@ -9,20 +9,10 @@
       <router-link :to="{ name: 'About' }">Services</router-link>
       <router-link :to="{ name: 'About' }">Process</router-link>
       <router-link :to="{ name: 'Leadership' }">Leadership</router-link>
-      <router-link :to="{ name: 'About' }">Contact</router-link>
+      <router-link :to="{ name: 'ContactUs' }">Contact</router-link>
     </div>
   </div>
 </template>
-
-<script>
-import InlineSvg from 'vue-inline-svg';
-
-export default {
-  components: {
-    InlineSvg,
-  },
-}
-</script>
 
 <style lang="scss" scoped>
 .menu {
