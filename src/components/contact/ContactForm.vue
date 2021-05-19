@@ -10,7 +10,7 @@
       <InputComponent
           class="contact-form--wrapper--input"
           :modelValue="name"
-          @update:modelValue="handleInputChange"
+          @update:modelValue="handleFieldChange('name', $event)"
           placeholder="Enter your name here"
           id="name"
           name="name"
@@ -23,7 +23,7 @@
       <InputComponent
           class="contact-form--wrapper--input input-email"
           :modelValue="email"
-          @update:modelValue="handleInputChange"
+          @update:modelValue="handleFieldChange('email', $event)"
           placeholder="Enter your email or phone number here"
           id="email"
           name="email"
@@ -36,7 +36,7 @@
       <InputComponent
           class="contact-form--wrapper--input input-project"
           :modelValue="project"
-          @update:modelValue="handleInputChange"
+          @update:modelValue="handleFieldChange('project', $event)"
           placeholder="Enter your project details here"
           id="project"
           name="project"
@@ -66,6 +66,12 @@ export default {
     project: '',
     projectError: null,
   }),
+
+  methods: {
+    handleFieldChange(name, value) {
+      this[name] = value;
+    },
+  }
 }
 </script>
 
