@@ -2,8 +2,8 @@
   <div class="footer">
     <div class="footer--menu">
       <router-link :to="{ name: 'About' }">Portfolio</router-link>
-      <router-link :to="{ name: 'About' }">About us</router-link>
-      <router-link :to="{ name: 'About' }">Contact</router-link>
+      <router-link :to="{ name: 'Process' }">About us</router-link>
+      <router-link :to="{ name: 'ContactUs' }">Contact</router-link>
     </div>
     <div class="footer--contact">
       <div class="footer--contact--item">

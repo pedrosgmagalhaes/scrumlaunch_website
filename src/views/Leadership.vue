@@ -7,8 +7,8 @@
     <div class="leadership--team">
       <TeamMember v-for="(member, i) in team" :key="i" :member="member" />
     </div>
-    <ContactUsBlock />
   </div>
+  <ContactUsBlock />
 </template>
 
 <script>

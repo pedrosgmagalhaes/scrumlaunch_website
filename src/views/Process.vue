@@ -2,9 +2,7 @@
   <div class="process">
     <OurProcess />
     <OurApproach :approachItems="approachItems" />
-    <div class="process--contact">
-      <ContactUsBlock />
-    </div>
+    <ContactUsBlock />
   </div>
 </template>
 
@@ -47,19 +45,3 @@ export default {
 
 }
 </script>
-
-<style lang="scss" scoped>
-.process {
-  &--contact {
-    padding: 0 20px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .process {
-    &--contact {
-      padding: 0 30px;
-    }
-  }
-}
-</style>

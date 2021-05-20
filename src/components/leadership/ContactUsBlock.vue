@@ -26,10 +26,11 @@ export default {
   margin-right: 0px;
   margin-bottom: 80px;
   position: relative;
+  padding: 0 20px;
 
   &--icon {
     position: absolute;
-    left: -20px;
+    left: 0;
     top: -300px;
 
     &.icon-mobile {
@@ -53,10 +54,10 @@ export default {
     justify-content: flex-end;
     margin-right: 0px;
     margin-bottom: 140px;
+    padding: 0 30px;
 
     &--icon {
       position: absolute;
-      left: -30px;
       top: -100px;
     }
 
@@ -75,10 +76,10 @@ export default {
     margin-right: 34px;
     margin-bottom: 240px;
     position: relative;
+    padding: 0 8.34%;
 
     &--icon {
       position: absolute;
-      left: -30px;
       top: -150px;
 
       &.icon-mobile {
