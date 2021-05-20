@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <div class="footer--menu">
-      <router-link :to="{ name: 'About' }">Portfolio</router-link>
+      <router-link :to="{ name: 'Home' }">Portfolio</router-link>
       <router-link :to="{ name: 'Process' }">About us</router-link>
       <router-link :to="{ name: 'ContactUs' }">Contact</router-link>
     </div>
