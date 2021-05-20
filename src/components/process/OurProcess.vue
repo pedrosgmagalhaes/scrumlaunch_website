@@ -1,0 +1,302 @@
+<template>
+  <div class="process">
+    <div class="process--hero">
+      <h1 class="header-big">OUR process</h1>
+      <p class="body-1">We deliver desired business outcomes because we lay </p>
+
+      <inline-svg
+        :src="require('@/assets/icons/right-foundation.svg')"
+        class="process--hero--icon icon-mobile"
+      />
+
+      <inline-svg
+        :src="require('@/assets/icons/right-foundation-tablet.svg')"
+        class="process--hero--icon icon-tablet"
+      />
+
+      <inline-svg
+        :src="require('@/assets/icons/right-foundation-desktop.svg')"
+        class="process--hero--icon icon-desktop"
+      />
+    </div>
+
+    <div class="process--wrapper">
+      <div class="process--wrapper--item item-1">
+        Defining clear business goals and success criteria
+      </div>
+      <div class="process--wrapper--item item-2">
+        Providing dedicated design and engineering teams
+      </div>
+      <div class="process--wrapper--item item-3">
+        Implementing rapid feedback loops and iterations
+      </div>
+      <div class="process--wrapper--item item-4">
+        Prioritizing communication and collaboration to mitigate the likelihood of surprises
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+}
+</script>
+
+<style lang="scss" scoped>
+.process {
+  &--hero {
+    padding: 125px 20px 0px;
+    color: #1E1F21;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    position: relative;
+    margin-bottom: 30px;
+
+    h1 {
+      margin-bottom: 40px;
+    }
+
+    p {
+      width: 55%;
+    }
+
+    &--icon {
+      position: absolute;
+      top: 102px;
+      right: 0px;
+
+      &.icon-mobile {
+        display: block;
+      }
+
+      &.icon-tablet {
+        display: none;
+      }
+
+      &.icon-desktop{
+        display: none;
+      }
+    }
+  }
+
+  &--wrapper {
+    position: relative;
+    width: calc(100% - 40px);
+    height: 222px;
+    margin: 0 20px 80px;
+    box-sizing: border-box;
+
+    &--item {
+      position: absolute;
+      box-sizing: border-box;
+      border-radius: 50%;
+      border: 1px solid #1E1F21;
+      background: #fff;
+      color: #1E1F21;
+      transition: all .4s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 9px;
+      line-height: 140%;
+      text-align: center;
+
+      &:hover {
+        background: #12E2B0;
+        border: 1px solid #12E2B0;
+      }
+
+      &.item-1 {
+        top: 0;
+        left: 0;
+        width: 125.52px;
+        height: 125.66px;
+        padding: 0 13px;
+      }
+
+      &.item-2 {
+        top: 125px;
+        left: 28px;
+        width: 97.63px;
+        height: 97.74px;
+        padding: 0 8px;
+      }
+
+      &.item-3 {
+        top: 78.5px;
+        left: 108px;
+        width: 83.68px;
+        height: 83.77px;
+        padding: 0 7px;
+      }
+
+      &.item-4 {
+        top: 63px;
+        left: 191px;
+        width: 144px;
+        height: 144px;
+        padding: 0 12px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .process {
+    &--hero {
+      padding: 197px 30px 0px;
+      color: #1E1F21;
+      margin-bottom: 60px;
+
+      h1 {
+        margin-bottom: 24px;
+      }
+
+      p {
+        width: 68%;
+      }
+
+      &--icon {
+        position: absolute;
+        top: 199px;
+        right: 0px;
+
+        &.icon-mobile {
+          display: none;
+        }
+
+        &.icon-tablet {
+          display: block;
+        }
+
+        &.icon-desktop {
+          display: none;
+        }
+      }
+    }
+
+    &--wrapper {
+      position: relative;
+      width: 708px;
+      height: 468px;
+      margin: 0 auto 140px;
+      box-sizing: border-box;
+
+      &--item {
+        font-size: 12px;
+
+        &.item-1 {
+          top: 0;
+          left: 0;
+          width: 265.21px;
+          height: 265.09px;
+          padding: 0 62px;
+        }
+
+        &.item-2 {
+          top: 262px;
+          left: 60px;
+          width: 206.27px;
+          height: 206.18px;
+          padding: 0 33px;
+        }
+
+        &.item-3 {
+          top: 164px;
+          left: 229px;
+          width: 176.81px;
+          height: 176.73px;
+          padding: 0 18px;
+        }
+
+        &.item-4 {
+          top: 133px;
+          left: 403px;
+          width: 304.11px;
+          height: 303.97px;
+          padding: 0 12px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .process {
+    &--hero {
+      padding: 270px 8.34% 0px;
+      margin-bottom: 204px;
+
+      h1 {
+        margin-bottom: 40px;
+      }
+
+      &--icon {
+        position: absolute;
+        top: 199px;
+        right: 0px;
+
+        &.icon-mobile {
+          display: none;
+        }
+
+        &.icon-tablet {
+          display: none;
+        }
+
+        &.icon-desktop{
+          display: block;
+        }
+      }
+    }
+
+    &--wrapper {
+      position: relative;
+      width: 1200px;
+      height: 800px;
+      margin: 0 auto 240px;
+      box-sizing: border-box;
+
+      &--item {
+        font-size: 18px;
+
+        &.item-1 {
+          top: 0;
+          left: 0;
+          width: 450px;
+          height: 450px;
+          padding: 0 107px;
+        }
+
+        &.item-2 {
+          top: 445px;
+          left: 102px;
+          width: 350px;
+          height: 350px;
+          padding: 0 57px;
+        }
+
+        &.item-3 {
+          top: 279px;
+          left: 389px;
+          width: 300px;
+          height: 300px;
+          padding: 0 32px;
+        }
+
+        &.item-4 {
+          top: 228px;
+          left: 685px;
+          width: 516px;
+          height: 516px;
+          padding: 0 80px;
+        }
+      }
+    }
+  }
+}
+</style>
