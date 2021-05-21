@@ -93,10 +93,17 @@
   line-height: 150%;
 }
 
+.body-2 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 140%;
+}
+
 .body-3 {
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 150%;
   color: #1E1F21;
 }
@@ -107,6 +114,13 @@
   font-size: 12px;
   line-height: 150%;
   color: #1E1F21;
+}
+
+.body-5 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 150%;
 }
 
 @media screen and (min-width: 768px) {
@@ -130,6 +144,14 @@
 
   .body-1 {
     font-size: 20px;
+  }
+
+  .body-2 {
+    font-size: 12px;
+  }
+
+  .body-3 {
+    font-size: 18px;
   }
 }
 
@@ -160,7 +182,20 @@
     font-size: 26px;
   }
 
+  .body-2 {
+    font-size: 20px;
+  }
+
+  .body-3 {
+    font-size: 18px;
+  }
+
   .body-4 {
     font-size: 16px;
   }
+
+  .body-5 {
+    font-size: 18px;
+  }
+
 }

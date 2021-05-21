@@ -34,7 +34,6 @@ export default {
   props: ['approachItems'],
 
   data: () => ({
-    hover: false,
     activeItem: {
       index: null,
       id: null
