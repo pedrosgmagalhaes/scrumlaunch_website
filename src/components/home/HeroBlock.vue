@@ -28,22 +28,22 @@ export default {
 
 <style lang="scss" scoped>
 .hero {
-  padding: 270px 8.34% 0;
+  padding: 125px 20px 0;
   position: relative;
   display: flex;
   flex-direction: column;
 
   &--text-wrapper {
-    margin-bottom: 208px;
+    margin-bottom: 80px;
 
     h1 {
       text-align: left;
+      margin-bottom: 30px;
     }
 
     &--illustration {
-      position: absolute;
-      top: 207px;
-      right: 55px;
+      width: 335px;
+      height: 329px;
     }
   }
 

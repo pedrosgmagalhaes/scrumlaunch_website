@@ -18,21 +18,22 @@ export default {
 
 <style lang="scss" scoped>
 .services {
-  padding: 0 8.34% 0;
+  padding: 0px 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin: 240px 0;
+  margin: 80px 0;
   text-align: right;
 
   h2 {
-    margin-bottom: 59px;
+    margin-bottom: 40px;
   }
 
   p {
-    margin-bottom: 52px;
+    margin-bottom: 30px;
     transition: all .4s ease;
     width: fit-content;
+    font-size: 20px;
 
     &:hover {
       color: #12E2B0;
@@ -40,6 +41,38 @@ export default {
 
     &:last-child {
       margin-bottom: 0px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .services {
+    padding: 0px 30px;
+    margin: 140px 0;
+
+    h2 {
+      margin-bottom: 60px;
+    }
+
+    p {
+      margin-bottom: 36px;
+      font-size: 40px;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .services {
+    padding: 0 8.34% 0;
+    margin: 240px 0;
+
+    h2 {
+      margin-bottom: 59px;
+    }
+
+    p {
+      margin-bottom: 52px;
+      font-size: 56px;
     }
   }
 }

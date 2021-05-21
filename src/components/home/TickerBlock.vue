@@ -26,7 +26,7 @@ export default {
 <style lang="scss" scoped>
 .marquee-block {
   background: #1E1F21;
-  padding: 203px 0 216px;
+  padding: 80px 0;
   overflow: hidden;
 
   &--wrapper {
@@ -49,13 +49,19 @@ export default {
       align-items: center;
       flex-wrap: nowrap;
 
+      .header-1 {
+        font-size: 20px;
+      }
+
       p {
         white-space: nowrap;
       }
 
       &--icon {
-        margin: 0 50px;
+        margin: 0 10px;
         flex: none;
+        width: 8px;
+        height: 8px;
       }
     }
   }
@@ -69,5 +75,44 @@ export default {
   100% {
       transform: translate3d(-100%, 0, 0);
   }
+}
+
+@media screen and (min-width: 768px) {
+  .marquee-block {
+    padding: 139px 0;
+
+    &--wrapper {
+      &--text {
+        .header-1 {
+          font-size: 56px;
+        }
+
+        &--icon {
+          margin: 0 30px;
+          width: 22px;
+          height: 22px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .marquee-block {
+    padding: 203px 0 216px;
+
+    &--wrapper {
+      &--text {
+        .header-1 {
+          font-size: 70px;
+        }
+
+        &--icon {
+          margin: 0 50px;
+        }
+      }
+    }
+  }
+
 }
 </style>

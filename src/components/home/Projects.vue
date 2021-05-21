@@ -2,7 +2,7 @@
   <div class="projects">
     <h2 class="header-1">Latest projects</h2>
     <div class="projects--wrapper">
-      <ProjectItem v-for="i in 6" :key="i" class="projects--wrapper--item"/>
+      <ProjectItem v-for="(item, i) in projects" :key="i" class="projects--wrapper--item" :item="item" />
     </div>
     <div class="projects--btn-wrapper">
       <button class="btn">View all</button>
@@ -15,38 +15,128 @@ import ProjectItem from '@/components/home/ProjectItem.vue'
 export default {
   components: {
     ProjectItem
-  }
+  },
+
+  data: () => ({
+    projects: [
+      {
+        image: 'work-8',
+        name: 'Project name',
+        year: '2021'
+      },
+      {
+        image: 'work-2',
+        name: 'Project name',
+        year: '2021'
+      },
+      {
+        image: 'work-4',
+        name: 'Project name',
+        year: '2021'
+      },
+      {
+        image: 'work-5',
+        name: 'Project name',
+        year: '2021'
+      },
+      {
+        image: 'work-7',
+        name: 'Project name',
+        year: '2021'
+      },
+      {
+        image: 'work-8',
+        name: 'Project name',
+        year: '2021'
+      }
+    ]
+  }),
 }
 </script>
 
 <style lang="scss" scoped>
 .projects {
-  padding: 0 8.34% 0;
-  margin: 0 0 240px;
+  padding: 0 20px;
+  margin: 0 0 80px;
 
   h2 {
     text-align: left;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   &--wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 40px;
 
     &--item {
-      margin-bottom: 80px;
-
-      &:nth-child(2n+1) {
-        margin-top: 80px;
-        margin-bottom: 0px;
-      }
+      margin-bottom: 30px;
     }
   }
 
   &--btn-wrapper {
     display: flex;
     justify-content: flex-end;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .projects {
+    padding: 0 30px;
+    margin: 0 0 140px;
+
+    h2 {
+      margin-bottom: 30px;
+    }
+
+    &--wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 30px;
+
+      &--item {
+        margin-bottom: 30px;
+
+        &:nth-child(2n+1) {
+          margin-top: 30px;
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .projects {
+    padding: 0 8.34% 0;
+    margin: 0 0 240px;
+
+    h2 {
+      text-align: left;
+      margin-bottom: 40px;
+    }
+
+    &--wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      &--item {
+        margin-bottom: 80px;
+
+        &:nth-child(2n+1) {
+          margin-top: 80px;
+          margin-bottom: 0px;
+        }
+      }
+    }
+
+    &--btn-wrapper {
+      display: flex;
+      justify-content: flex-end;
+    }
   }
 }
 </style>

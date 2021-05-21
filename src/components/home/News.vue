@@ -29,56 +29,65 @@ export default {
 
 <style lang="scss" scoped>
 .news {
-  padding: 420px 8.34% 0;
+  padding: 172px 20px 0;
   display: flex;
   flex-direction: column;
-  margin-bottom: 240px;
+  margin-bottom: 80px;
   position: relative;
   overflow: hidden;
 
   &--icon {
     position: absolute;
-    top: -5px;
-    right: -143px;
+    top: -15px;
+    right: -15px;
+    width: 279px;
+    height: 181px;
   }
 
   h2 {
-    margin-bottom: 152px;
+    margin-bottom: 80px;
     text-align: left;
   }
 
   &--wrapper {
     &--item {
-      padding: 50px 0;
+      padding: 30px 0;
       border-top: 1px solid #1E1F21;
       display: flex;
       justify-content: space-between;
+      position: relative;
 
       &:last-child {
         border-bottom: 1px solid #1E1F21;
       }
 
       &--content {
-        max-width: 68%;
         text-align: left;
 
         &--header {
-          margin-bottom: 20px;
+          margin-bottom: 16px;
         }
 
         &--text {
-          margin-bottom: 40px;
+          margin-bottom: 32px;
+        }
+
+        .header-4 {
+          font-size: 12px;
         }
       }
 
       &--arrow {
-        width: 75px;
-        height: 37px;
+        width: 30px;
+        height: 15px;
         background-image: url('../../assets/icons/union-empty.svg');
         background-size: contain;
         background-repeat: no-repeat;
         transition: all .4s ease;
         cursor: pointer;
+        position: absolute;
+        right: 0;
+        bottom: 31px;
 
         &:hover {
           background-image: url('../../assets/icons/union.svg');
@@ -88,8 +97,101 @@ export default {
   }
 
   &--btn {
-    margin: 80px auto 0;
+    margin: 40px auto 0;
   }
+}
 
+@media screen and (min-width: 768px) {
+  .news {
+    padding: 291px 30px 0;
+    margin-bottom: 140px;
+
+    &--icon {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      width: 448px;
+      height: 291px;
+    }
+
+    h2 {
+      margin-bottom: 140px;
+    }
+
+    &--wrapper {
+      &--item {
+        padding: 32px 0;
+
+        &:last-child {
+          border-bottom: 1px solid #1E1F21;
+        }
+
+        &--content {
+          max-width: 73%;
+
+          &--header {
+            margin-bottom: 20px;
+          }
+
+          &--text {
+            margin-bottom: 40px;
+          }
+
+          .header-4 {
+            font-size: 14px;
+          }
+        }
+
+        &--arrow {
+          width: 59px;
+          height: 29px;
+          position: relative;
+          top: 0;
+        }
+      }
+    }
+
+    &--btn {
+      margin: 60px auto 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .news {
+    padding: 420px 8.34% 0;
+    margin-bottom: 240px;
+
+    &--icon {
+      position: absolute;
+      top: -5px;
+      right: -143px;
+      width: 1010px;
+      height: 656px;
+    }
+
+    h2 {
+      margin-bottom: 152px;
+    }
+
+    &--wrapper {
+      &--item {
+        padding: 50px 0;
+
+        &--content {
+          max-width: 68%;
+        }
+
+        &--arrow {
+          width: 75px;
+          height: 37px;
+        }
+      }
+    }
+
+    &--btn {
+      margin: 80px auto 0;
+    }
+  }
 }
 </style>
