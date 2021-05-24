@@ -9,7 +9,7 @@
       class="contact-block--icon icon-desktop"
     />
     <p class="header-2">Looking to build something amazing? We’d love to help.</p>
-    <router-link class="btn" :to="{ name: 'Home'}">contact us</router-link>
+    <router-link class="btn" :to="{ name: 'ContactUs'}">contact us</router-link>
   </div>
 </template>
 

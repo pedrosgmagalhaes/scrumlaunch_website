@@ -5,7 +5,7 @@
       <ProjectItem v-for="(item, i) in projects" :key="i" class="projects--wrapper--item" :item="item" />
     </div>
     <div class="projects--btn-wrapper">
-      <button class="btn">View all</button>
+      <router-link class="btn" :to="{ name: 'Work' }">View all</router-link>
     </div>
   </div>
 </template>

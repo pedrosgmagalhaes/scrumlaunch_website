@@ -1,5 +1,5 @@
 <template>
-  <div class="project-item">
+  <div class="project-item" @click="handleNavigate">
     <div
       class="project-item--image"
       :style="{'background-image': `url('${setBackgroundImage}')`}"
@@ -31,6 +31,12 @@ export default {
       return require(`@/assets/images/work/${this.item.image}.png`);
     }
   },
+
+  methods: {
+    handleNavigate() {
+      this.$router.push({ name: 'CaseStudy'});
+    }
+  }
 }
 </script>
 

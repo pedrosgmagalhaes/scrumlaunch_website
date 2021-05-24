@@ -4,6 +4,7 @@ import Leadership from '../views/Leadership.vue'
 import ContactUs from '../views/ContactUs.vue'
 import Work from '../views/Work.vue'
 import Process from '../views/Process.vue'
+import CaseStudy from '../views/CaseStudy.vue'
 
 const routes = [
   {
@@ -19,8 +20,7 @@ const routes = [
   {
     path: '/contact-us',
     name: 'ContactUs',
-    component: ContactUs,
-    props: { whiteModeMenu: true }
+    component: ContactUs
   },
   {
     path: '/process',
@@ -31,11 +31,23 @@ const routes = [
     path: '/work',
     name: 'Work',
     component: Work
+  },
+  {
+    path: '/case-study',
+    name: 'CaseStudy',
+    component: CaseStudy
   }
 ]
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { top: 0 }
+    }
+  },
   routes
 })
 
