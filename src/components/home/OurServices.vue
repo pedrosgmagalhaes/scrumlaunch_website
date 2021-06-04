@@ -27,6 +27,7 @@ export default {
 
   h2 {
     margin-bottom: 40px;
+    -webkit-text-stroke: 0.5px #1E1F21;
   }
 
   p {
@@ -52,6 +53,7 @@ export default {
 
     h2 {
       margin-bottom: 60px;
+      -webkit-text-stroke: 1px #1E1F21;
     }
 
     p {

@@ -4,7 +4,7 @@
       <h1 class="header-big">Let’s <br/>
         <span style="color: #12E2B0;">talk</span>
       </h1>
-      <p class="header-2">Interested in working with us? <span style="color: #12E2B0;">Send us an email</span> or start a conversation by filling out the form below.</p>
+      <p class="header-2">Interested in working with us? <span style="color: #1E1F21; background: #12E2B0;">Send us an email</span> or start a conversation by filling out the form below.</p>
     </div>
     <ContactForm />
   </div>

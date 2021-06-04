@@ -183,6 +183,7 @@ export default {
         display: flex;
         align-items: center;
         box-sizing: border-box;
+        padding-left: 24px;
 
         &.active {
           padding: 30px 24px;
@@ -211,14 +212,6 @@ export default {
 
         &:nth-child(2n+1) {
           border-right: 1px solid #FFFFFF;
-
-          .approach--wrapper--item--number {
-            left: 0;
-          }
-        }
-
-        &:nth-child(2n) {
-          padding-left: 24px;
         }
 
         &:nth-child(3) {
@@ -267,6 +260,7 @@ export default {
         width: 50%;
         height: 334px;
         margin: 0px;
+        padding-left: 30px;
 
         & > div {
           width: 100%;
@@ -279,6 +273,7 @@ export default {
 
           .active-title {
             margin-bottom: 20px;
+            width: 100%;
           }
         }
 
@@ -299,10 +294,6 @@ export default {
 
         &:nth-child(2n+1) {
           border-right: 1px solid #FFFFFF;
-        }
-
-        &:nth-child(2n) {
-          padding-left: 30px;
         }
 
         &:nth-child(3) {

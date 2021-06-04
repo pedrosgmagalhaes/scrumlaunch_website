@@ -37,7 +37,7 @@ export default {
     margin-bottom: 80px;
 
     h1 {
-      text-align: left;
+      text-align: center;
       margin-bottom: 30px;
     }
 
@@ -65,7 +65,7 @@ export default {
 
       &--illustration {
         position: relative;
-        width: calc(100% - 60px);
+        width: -webkit-fill-available;
         height: 695px;
         top: 0;
         right: 0;
@@ -77,6 +77,34 @@ export default {
 
 @media screen and (min-width: 1280px) {
   .hero {
+    padding: 206px 3.9% 0;
+
+    &--text-wrapper {
+      margin-bottom: 110px;
+
+      h1 {
+        font-size: 56px;
+      }
+
+      &--illustration {
+        position: relative;
+        width: -webkit-fill-available;
+        height: 519px;
+        top: 0;
+        right: 0;
+        margin: 30px 0 0;
+      }
+    }
+
+    &--bottom {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .hero {
     padding: 270px 8.34% 0;
     position: relative;
     display: flex;
@@ -87,6 +115,7 @@ export default {
 
       h1 {
         text-align: left;
+        font-size: 70px;
       }
 
       &--illustration {

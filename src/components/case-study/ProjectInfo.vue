@@ -93,7 +93,7 @@ export default {
     padding: 140px 30px;
 
     &--header {
-      font-size: 30px;
+      font-size: 24px;
       margin-bottom: 31px;
     }
 

@@ -42,12 +42,14 @@ export default {
 
 <style lang="scss" scoped>
 .history {
-  padding: 15px 20px 34px;
+  padding: 24px 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   background: #1E1F21;
   align-items: center;
+  height: 283px;
+  box-sizing: border-box;
 
   .header-1 {
     font-size: 16px;
@@ -115,6 +117,7 @@ export default {
 @media screen and (min-width: 768px) {
   .history {
     padding: 30px;
+    height: 557px;
 
     .header-1 {
       font-size: 34px;
@@ -168,6 +171,7 @@ export default {
 @media screen and (min-width: 1280px) {
   .history {
     padding: 90px 8.34%;
+    height: 950px;
 
     .header-1 {
       font-size: 56px;

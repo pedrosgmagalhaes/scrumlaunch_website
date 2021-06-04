@@ -26,7 +26,7 @@ export default {
 <style lang="scss" scoped>
 .marquee-block {
   background: #1E1F21;
-  padding: 80px 0;
+  padding: 76px 0;
   overflow: hidden;
 
   &--wrapper {
@@ -50,7 +50,9 @@ export default {
       flex-wrap: nowrap;
 
       .header-1 {
-        font-size: 20px;
+        font-size: 24.1111px;
+        line-height: 34px;
+        letter-spacing: 0.02em;
       }
 
       p {
@@ -79,12 +81,13 @@ export default {
 
 @media screen and (min-width: 768px) {
   .marquee-block {
-    padding: 139px 0;
+    padding: 140px 0;
 
     &--wrapper {
       &--text {
         .header-1 {
-          font-size: 56px;
+          font-size: 54.2857px;
+          line-height: 76px;
         }
 
         &--icon {
@@ -99,12 +102,13 @@ export default {
 
 @media screen and (min-width: 1280px) {
   .marquee-block {
-    padding: 203px 0 216px;
+    padding: 210px 0 209px;
 
     &--wrapper {
       &--text {
         .header-1 {
           font-size: 70px;
+          line-height: 140%;
         }
 
         &--icon {

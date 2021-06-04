@@ -40,7 +40,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     color: #FFFFFF;
     transition: all .4s ease;
 
@@ -50,6 +50,8 @@ export default {
       font-size: 14px;
       line-height: 150%;
       margin-bottom: 4px;
+      position: relative;
+      top: 92px;
     }
 
     p {
@@ -58,6 +60,8 @@ export default {
       font-size: 20px;
       line-height: 150%;
       text-transform: uppercase;
+      position: relative;
+      top: 92px;
     }
   }
 }
@@ -66,6 +70,16 @@ export default {
   .project {
     height: 256px;
     width: 50%;
+
+    &--hover {
+      span {
+        top: 88px;
+      }
+
+      p {
+        top: 88px;
+      }
+    }
   }
 }
 
@@ -79,11 +93,13 @@ export default {
       visibility: hidden;
 
       span {
+        top: 190px;
         font-size: 16px;
         margin-bottom: 6px;
       }
 
       p {
+        top: 190px;
         font-size: 26px;
       }
     }

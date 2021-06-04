@@ -59,6 +59,7 @@ export default {
     &--icon {
       position: absolute;
       top: -100px;
+      left: -49px;
     }
 
     p {
@@ -81,6 +82,7 @@ export default {
     &--icon {
       position: absolute;
       top: -150px;
+      left: -20px;
 
       &.icon-mobile {
         display: none;
