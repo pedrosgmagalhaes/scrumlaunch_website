@@ -3,21 +3,16 @@
     <div class="process--hero">
       <h1 class="header-big">OUR process</h1>
       <p class="body-1">We deliver desired business outcomes because we lay </p>
-
-      <inline-svg
-        :src="require('@/assets/icons/right-foundation.svg')"
-        class="process--hero--icon icon-mobile"
-      />
-
-      <inline-svg
-        :src="require('@/assets/icons/right-foundation-tablet.svg')"
-        class="process--hero--icon icon-tablet"
-      />
-
-      <inline-svg
-        :src="require('@/assets/icons/right-foundation-desktop.svg')"
-        class="process--hero--icon icon-desktop"
-      />
+      
+      <div class="process--hero--icon">
+        <vLottiePlayer
+          name="workoutMonkeyAnim"
+          loop
+          width="100%"
+          height="100%"
+          :animationData="require('../../assets/animation/right-foundation.json')"
+        />
+      </div>
     </div>
 
     <div class="process--wrapper">
@@ -38,12 +33,18 @@
 </template>
 
 <script>
+import VueLottiePlayer from "vue-lottie-player";
 export default {
+  components: {
+    vLottiePlayer: VueLottiePlayer
+  },
 }
 </script>
 
 <style lang="scss" scoped>
 .process {
+  overflow: hidden;
+
   &--hero {
     padding: 125px 20px 0px;
     color: #1E1F21;
@@ -65,19 +66,9 @@ export default {
     &--icon {
       position: absolute;
       top: 102px;
-      right: 0px;
-
-      &.icon-mobile {
-        display: block;
-      }
-
-      &.icon-tablet {
-        display: none;
-      }
-
-      &.icon-desktop{
-        display: none;
-      }
+      right: -48px;
+      width: 194px;
+      height: 195px;
     }
   }
 
@@ -162,20 +153,10 @@ export default {
 
       &--icon {
         position: absolute;
-        top: 199px;
-        right: 0px;
-
-        &.icon-mobile {
-          display: none;
-        }
-
-        &.icon-tablet {
-          display: block;
-        }
-
-        &.icon-desktop {
-          display: none;
-        }
+        top: 139px;
+        right: -104px;
+        width: 399px;
+        height: 400px;
       }
     }
 
@@ -239,18 +220,8 @@ export default {
         position: absolute;
         top: 199px;
         right: 0px;
-
-        &.icon-mobile {
-          display: none;
-        }
-
-        &.icon-tablet {
-          display: none;
-        }
-
-        &.icon-desktop{
-          display: block;
-        }
+        width: 627px;
+        height: 628px;
       }
     }
 

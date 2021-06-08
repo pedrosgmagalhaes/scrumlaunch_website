@@ -1,9 +1,14 @@
 <template>
   <div class="flexible">
-    <inline-svg
-      :src="require('@/assets/icons/scrumlaunch-text.svg')"
-      class="flexible--icon"
-    />
+    <div class="flexible--icon">
+      <vLottiePlayer
+        name="workoutMonkeyAnim"
+        loop
+        width="100%"
+        height="100%"
+        :animationData="require('../../assets/animation/scrumlaunch.json')"
+      />
+    </div>
 
     <div class="flexible--text">
       <h2 class="header-1">We build flexible teams with client business goals <br />in mind</h2>
@@ -12,6 +17,16 @@
   </div>
 </template>
 
+<script>
+import VueLottiePlayer from "vue-lottie-player";
+
+export default {
+  components: {
+    vLottiePlayer: VueLottiePlayer
+  },
+}
+</script>
+
 <style lang="scss" scoped>
 .flexible {
   padding: 158px 20px 0;
@@ -19,13 +34,14 @@
   justify-content: flex-end;
   position: relative;
   margin-bottom: 80px;
+  overflow: hidden;
 
   &--icon {
     position: absolute;
-    top: -15px;
-    left: -30px;
-    width: 295.2px;
-    height: 287.72px;
+    top: -48px;
+    left: -48px;
+    width: 395.2px;
+    height: 387.72px;
   }
 
   &--text {
@@ -47,9 +63,9 @@
     &--icon {
       position: absolute;
       top: -36px;
-      left: -28px;
-      width: 400px;
-      height: 400px;
+      left: -44px;
+      width: 526px;
+      height: 526px;
     }
 
     &--text {
