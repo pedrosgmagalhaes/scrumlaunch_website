@@ -3,7 +3,7 @@
     <div class="hero--text-wrapper">
       <h1 class="header-big">Product Design<br />& Software<br />Development<br />for Startups</h1>
       <inline-svg
-        :src="require('@/assets/illustrations/illustration-map.svg')"
+        :src="require('@/assets/illustrations/illustration-map-1.svg')"
         class="hero--text-wrapper--illustration"
       />
     </div>
@@ -43,7 +43,7 @@ export default {
 
     &--illustration {
       width: 335px;
-      height: 329px;
+      height: 284px;
     }
   }
 
@@ -58,18 +58,20 @@ export default {
     padding: 197px 3.9% 0;
 
     &--text-wrapper {
-      margin-bottom: 140px;
       display: flex;
       justify-content: center;
       flex-direction: column;
 
+      h1 {
+        margin-bottom: 60px;
+      }
+
       &--illustration {
         position: relative;
         width: -webkit-fill-available;
-        height: 695px;
+        height: 601px;
         top: 0;
         right: 0;
-        margin: 60px 0 0;
       }
     }
   }
@@ -80,7 +82,7 @@ export default {
     padding: 206px 3.9% 0;
 
     &--text-wrapper {
-      margin-bottom: 110px;
+      margin-bottom: 100px;
 
       h1 {
         font-size: 56px;
@@ -89,10 +91,9 @@ export default {
       &--illustration {
         position: relative;
         width: -webkit-fill-available;
-        height: 519px;
+        height: 503px;
         top: 0;
         right: 0;
-        margin: 30px 0 0;
       }
     }
 
@@ -105,7 +106,7 @@ export default {
 
 @media screen and (min-width: 1440px) {
   .hero {
-    padding: 270px 8.34% 0;
+    padding: 269px 8.34% 0;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -120,8 +121,8 @@ export default {
 
       &--illustration {
         position: absolute;
-        top: 207px;
-        right: 55px;
+        top: 243px;
+        right: 60px;
         width: auto;
         height: auto;
         margin: 0;
