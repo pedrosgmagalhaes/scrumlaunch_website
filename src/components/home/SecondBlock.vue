@@ -1,13 +1,33 @@
 <template>
   <div class="flexible">
     <div class="flexible--icon">
-      <vLottiePlayer
-        name="workoutMonkeyAnim"
-        loop
-        width="100%"
-        height="100%"
-        :animationData="require('../../assets/animation/scrumlaunch.json')"
-      />
+      <div class="flexible--icon--desktop">
+        <vLottiePlayer
+          name="scrumlaunchDesktopAnim"
+          loop
+          width="100%"
+          height="100%"
+          :animationData="require('../../assets/animation/scrumlaunch-desktop.json')"
+        />
+      </div>
+      <div class="flexible--icon--tablet">
+        <vLottiePlayer
+          name="scrumlaunchTabletAnim"
+          loop
+          width="100%"
+          height="100%"
+          :animationData="require('../../assets/animation/scrumlaunch-tablet.json')"
+        />
+      </div>
+      <div class="flexible--icon--mobile">
+        <vLottiePlayer
+          name="scrumlaunchMobileAnim"
+          loop
+          width="100%"
+          height="100%"
+          :animationData="require('../../assets/animation/scrumlaunch-mobile.json')"
+        />
+      </div>
     </div>
 
     <div class="flexible--text">
@@ -38,10 +58,23 @@ export default {
 
   &--icon {
     position: absolute;
-    top: -48px;
-    left: -48px;
-    width: 395.2px;
-    height: 387.72px;
+    top: -10px;
+    left: -20px;
+    width: 277px;
+    height: 277px;
+    z-index: -1;
+
+    &--desktop {
+      display: none;
+    }
+
+    &--tablet {
+      display: none;
+    }
+
+    &--mobile {
+      display: block;
+    }
   }
 
   &--text {
@@ -62,10 +95,22 @@ export default {
 
     &--icon {
       position: absolute;
-      top: -36px;
-      left: -44px;
-      width: 526px;
-      height: 526px;
+      top: -20px;
+      left: 20px;
+      width: 426px;
+      height: 426px;
+
+      &--desktop {
+        display: none;
+      }
+
+      &--tablet {
+        display: block;
+      }
+
+      &--mobile {
+        display: none;
+      }
     }
 
     &--text {
@@ -91,9 +136,21 @@ export default {
     &--icon {
       position: absolute;
       top: -128px;
-      left: -28px;
+      left: -60px;
       width: auto;
       height: auto;
+
+      &--desktop {
+        display: block;
+      }
+
+      &--tablet {
+        display: none;
+      }
+
+      &--mobile {
+        display: none;
+      }
     }
 
     &--text {

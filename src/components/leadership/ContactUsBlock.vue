@@ -1,20 +1,54 @@
 <template>
   <div class="contact-block">
-    <inline-svg
+    <div class="contact-block--icon">
+      <div class="contact-block--icon--desktop">
+        <vLottiePlayer
+          name="scrumlaunchLowerDesktopAnim"
+          loop
+          width="100%"
+          height="100%"
+          :animationData="require('../../assets/animation/scrumlaunch-lower-desktop.json')"
+        />
+      </div>
+      <div class="contact-block--icon--tablet">
+        <vLottiePlayer
+          name="scrumlaunchLowerTabletAnim"
+          loop
+          width="100%"
+          height="100%"
+          :animationData="require('../../assets/animation/scrumlaunch-lower-tablet.json')"
+        />
+      </div>
+      <div class="contact-block--icon--mobile">
+        <vLottiePlayer
+          name="scrumlaunchLowerMobileAnim"
+          loop
+          width="100%"
+          height="100%"
+          :animationData="require('../../assets/animation/scrumlaunch-lower-mobile.json')"
+        />
+      </div>
+    </div>
+    <!-- <inline-svg
       :src="require('@/assets/icons/launch-mobile.svg')"
       class="contact-block--icon icon-mobile"
     />
     <inline-svg
       :src="require('@/assets/icons/launch-desktop.svg')"
       class="contact-block--icon icon-desktop"
-    />
+    /> -->
     <p class="header-2">Looking to build something amazing? We’d love to help.</p>
     <router-link class="btn" :to="{ name: 'ContactUs'}">contact us</router-link>
   </div>
 </template>
 
 <script>
+import VueLottiePlayer from "vue-lottie-player";
+
 export default {
+  components: {
+    vLottiePlayer: VueLottiePlayer
+  },
 }
 </script>
 
@@ -30,15 +64,20 @@ export default {
 
   &--icon {
     position: absolute;
+    z-index: -1;
     left: 0;
     top: -300px;
 
-    &.icon-mobile {
-      display: block;
+    &--desktop {
+      display: none;
     }
 
-    &.icon-desktop {
+    &--tablet {
       display: none;
+    }
+
+    &--mobile {
+      display: block;
     }
   }
 
@@ -57,9 +96,20 @@ export default {
     padding: 0 30px;
 
     &--icon {
-      position: absolute;
       top: -100px;
       left: -49px;
+
+      &--desktop {
+        display: none;
+      }
+
+      &--tablet {
+        display: block;
+      }
+
+      &--mobile {
+        display: none;
+      }
     }
 
     p {
@@ -80,16 +130,19 @@ export default {
     padding: 0 8.34%;
 
     &--icon {
-      position: absolute;
       top: -150px;
       left: -20px;
 
-      &.icon-mobile {
+      &--desktop {
+        display: block;
+      }
+
+      &--tablet {
         display: none;
       }
 
-      &.icon-desktop {
-        display: block;
+      &--mobile {
+        display: none;
       }
     }
 

@@ -1,9 +1,35 @@
 <template>
   <div class="news">
-    <inline-svg
-      :src="require('@/assets/illustrations/reliability.svg')"
-      class="news--icon"
-    />
+
+    <div class="news--icon">
+      <div class="news--icon--desktop">
+        <vLottiePlayer
+          name="reliabilityDesktopAnim"
+          loop
+          width="100%"
+          height="100%"
+          :animationData="require('../../assets/animation/reliability-desktop.json')"
+        />
+      </div>
+      <div class="news--icon--tablet">
+        <vLottiePlayer
+          name="reliabilityTabletAnim"
+          loop
+          width="100%"
+          height="100%"
+          :animationData="require('../../assets/animation/reliability-tablet.json')"
+        />
+      </div>
+      <div class="news--icon--mobile">
+        <vLottiePlayer
+          name="reliabilityMobileAnim"
+          loop
+          width="100%"
+          height="100%"
+          :animationData="require('../../assets/animation/reliability-mobile.json')"
+        />
+      </div>
+    </div>
 
     <h2 class="header-1">NEWS & INSIGHTS</h2>
 
@@ -23,7 +49,12 @@
 </template>
 
 <script>
+import VueLottiePlayer from "vue-lottie-player";
+
 export default {
+  components: {
+    vLottiePlayer: VueLottiePlayer
+  },
 }
 </script>
 
@@ -38,10 +69,23 @@ export default {
 
   &--icon {
     position: absolute;
-    top: -15px;
-    right: -15px;
-    width: 279px;
-    height: 181px;
+    top: 0px;
+    right: 0px;
+    width: 375px;
+    height: 300px;
+    z-index: -1;
+
+    &--desktop {
+      display: none;
+    }
+
+    &--tablet {
+      display: none;
+    }
+
+    &--mobile {
+      display: block;
+    }
   }
 
   h2 {
@@ -107,11 +151,22 @@ export default {
     margin-bottom: 140px;
 
     &--icon {
-      position: absolute;
       top: 0px;
       right: 0px;
-      width: 448px;
-      height: 291px;
+      width: 768px;
+      height: 300px;
+
+      &--desktop {
+        display: none;
+      }
+
+      &--tablet {
+        display: block;
+      }
+
+      &--mobile {
+        display: none;
+      }
     }
 
     h2 {
@@ -163,11 +218,22 @@ export default {
     margin-bottom: 240px;
 
     &--icon {
-      position: absolute;
-      top: -5px;
-      right: -143px;
-      width: 1010px;
-      height: 656px;
+      top: 110px;
+      right: -140px;
+      width: 950px;
+      height: 250px;
+
+      &--desktop {
+        display: block;
+      }
+
+      &--tablet {
+        display: none;
+      }
+
+      &--mobile {
+        display: none;
+      }
     }
 
     h2 {
