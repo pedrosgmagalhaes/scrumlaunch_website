@@ -29,15 +29,15 @@ export default {
     'member'
   ],
 
-  computed: {
-    setBackgroundImage() {
-      return require(`@/assets/images/leadership/${this.member.photo}.png`);
-    }
-  },
-
   methods: {
     handleOpenInLink(link) {
       window.open(link, '_blank');
+    },
+
+    setBackgroundImage() {
+      if (this.member.photo) {
+        return require(`@/assets/images/leadership/${this.member.photo}.png`);
+      }
     }
   }
 }
@@ -51,12 +51,25 @@ export default {
   height: 470px;
   margin-bottom: 30px;
 
+  &:nth-child(2) {
+    .member--image {
+      background-color: #F4E0DF;
+    }
+  }
+
+  &:nth-child(3) {
+    .member--image {
+      background-color: #D4E0DC;
+    }
+  }
+
   &--image {
     width: 100%;
     height: 341px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    background-color: #E7EDF9;
   }
 
   &--info {

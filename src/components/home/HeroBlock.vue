@@ -3,7 +3,7 @@
     <div class="hero--text-wrapper">
       <h1 class="header-big">Product Design<br />& Software<br />Development<br />for Startups</h1>
       <inline-svg
-        :src="require('@/assets/illustrations/illustration-map-1.svg')"
+        :src="require('@/assets/illustrations/illustration-map.svg')"
         class="hero--text-wrapper--illustration"
       />
     </div>
