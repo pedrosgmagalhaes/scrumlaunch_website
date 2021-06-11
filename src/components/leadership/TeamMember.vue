@@ -1,9 +1,6 @@
 <template>
   <div class="member">
-    <div
-      class="member--image"
-      :style="{'background-image': `url('${setBackgroundImage}')`}"
-    >
+    <div class="member--image">
     </div>
     <div class="member--info">
       <p class="header-2">{{member.name}}</p>
@@ -32,12 +29,6 @@ export default {
   methods: {
     handleOpenInLink(link) {
       window.open(link, '_blank');
-    },
-
-    setBackgroundImage() {
-      if (this.member.photo) {
-        return require(`@/assets/images/leadership/${this.member.photo}.png`);
-      }
     }
   }
 }

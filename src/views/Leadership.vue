@@ -28,19 +28,16 @@ export default {
         position: 'Chief Executive Officer',
         position_2: 'Co-founder',
         inLink: 'https://www.linkedin.com/in/charlielambropoulos/',
-        photo: ''
       },
       {
         name: 'Andy Daidone',
         position: 'Co-founder',
         inLink: 'https://www.linkedin.com/in/andy-daidone/',
-        photo: ''
       },
       {
         name: 'Dmytro Riazanov',
         position: 'Co-founder',
         inLink: 'https://www.linkedin.com/in/dmytro-riazanov-2180a427/',
-        photo: ''
       }
     ]
   }),
