@@ -37,16 +37,6 @@
   </div>
 </template>
 
-<script>
-import VueLottiePlayer from "vue-lottie-player";
-
-export default {
-  components: {
-    vLottiePlayer: VueLottiePlayer
-  },
-}
-</script>
-
 <style lang="scss" scoped>
 .flexible {
   padding: 158px 20px 0;

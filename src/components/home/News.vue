@@ -48,16 +48,6 @@
   </div>
 </template>
 
-<script>
-import VueLottiePlayer from "vue-lottie-player";
-
-export default {
-  components: {
-    vLottiePlayer: VueLottiePlayer
-  },
-}
-</script>
-
 <style lang="scss" scoped>
 .news {
   padding: 172px 20px 0;

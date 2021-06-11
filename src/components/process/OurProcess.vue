@@ -3,7 +3,7 @@
     <div class="process--hero">
       <h1 class="header-big">OUR process</h1>
       <p class="body-1">We deliver desired business outcomes because we lay </p>
-      
+
       <div class="process--hero--icon">
         <vLottiePlayer
           name="workoutMonkeyAnim"
@@ -31,15 +31,6 @@
     </div>
   </div>
 </template>
-
-<script>
-import VueLottiePlayer from "vue-lottie-player";
-export default {
-  components: {
-    vLottiePlayer: VueLottiePlayer
-  },
-}
-</script>
 
 <style lang="scss" scoped>
 .process {
