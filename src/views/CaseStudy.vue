@@ -62,7 +62,7 @@ export default {
     background: #3F5DFF;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-image: url('../assets/images/case/divider-photo.png');
   }
 
@@ -93,7 +93,6 @@ export default {
 
     &--divider {
       height: 576px;
-      background-size: cover;
     }
 
     &--divider-small {

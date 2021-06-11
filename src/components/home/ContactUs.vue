@@ -1,7 +1,7 @@
 <template>
   <div class="contact-us">
     <inline-svg
-      :src="require('@/assets/illustrations/illustration-team.svg')"
+      :src="require('@/assets/illustrations/illustration-faces.svg')"
       class="contact-us--icon"
     />
     <div class="contact-us--text">
