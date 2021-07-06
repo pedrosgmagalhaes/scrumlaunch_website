@@ -42,52 +42,52 @@ export default {
 
 <style lang="scss" scoped>
 .history {
-  padding: 24px 20px;
+  padding: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   background: #1E1F21;
   align-items: center;
-  height: 283px;
+  height: 231px;
   box-sizing: border-box;
 
   .header-1 {
-    font-size: 16px;
+    font-size: 13px;
   }
 
   &--icon-1 {
-    width: 31px;
-    height: 13px;
+    width: 35px;
+    height: 12px;
   }
 
   &--img-1 {
     width: 32px;
-    height: 26px;
+    height: 20px;
   }
 
   &--img-2 {
-    width: 33px;
-    height: 26px;
+    width: 28px;
+    height: 20px;
   }
 
   &--img-3 {
-    width: 36px;
-    height: 26px;
+    width: 30px;
+    height: 20px;
   }
 
   &--img-4 {
-    width: 27px;
-    height: 26px;
+    width: 23px;
+    height: 20px;
   }
 
   &--img-5 {
-    width: 74px;
-    height: 26px;
+    width: 67px;
+    height: 20px;
   }
 
   &--img-6 {
-    width: 41px;
-    height: 26px;
+    width: 34px;
+    height: 20px;
   }
 
   &--text-white {
@@ -97,7 +97,7 @@ export default {
   &--text-icon-1 {
     font-style: normal;
     font-weight: 900;
-    font-size: 23.8095px;
+    font-size: 14px;
     line-height: 140%;
     display: flex;
     align-items: center;
@@ -108,9 +108,117 @@ export default {
   &--text-icon-2 {
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 12px;
     line-height: 150%;
     color: #12E2B0;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .history {
+    padding: 24px 20px;
+    height: 283px;
+
+    .header-1 {
+      font-size: 16px;
+    }
+
+    &--icon-1 {
+      width: 31px;
+      height: 13px;
+    }
+
+    &--img-1 {
+      width: 32px;
+      height: 26px;
+    }
+
+    &--img-2 {
+      width: 33px;
+      height: 26px;
+    }
+
+    &--img-3 {
+      width: 36px;
+      height: 26px;
+    }
+
+    &--img-4 {
+      width: 27px;
+      height: 26px;
+    }
+
+    &--img-5 {
+      width: 74px;
+      height: 26px;
+    }
+
+    &--img-6 {
+      width: 41px;
+      height: 26px;
+    }
+
+    &--text-icon-1 {
+      font-size: 23.8095px;
+    }
+
+    &--text-icon-2 {
+      font-size: 18px;
+    }
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .history {
+    padding: 20px;
+    height: 317px;
+
+    .header-1 {
+      font-size: 21px;
+    }
+
+    &--icon-1 {
+      width: 34px;
+      height: 12px;
+    }
+
+    &--img-1 {
+      width: 46px;
+      height: 24px;
+    }
+
+    &--img-2 {
+      width: 44px;
+      height: 24px;
+    }
+
+    &--img-3 {
+      width: 57px;
+      height: 24px;
+    }
+
+    &--img-4 {
+      width: 26px;
+      height: 24px;
+    }
+
+    &--img-5 {
+      width: 106px;
+      height: 24px;
+    }
+
+    &--img-6 {
+      width: 53px;
+      height: 24px;
+    }
+
+    &--text-icon-1 {
+      font-size: 21px;
+    }
+
+    &--text-icon-2 {
+      font-size: 21px;
+    }
   }
 }
 
@@ -168,7 +276,168 @@ export default {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .history {
+    height: 670px;
+
+    .header-1 {
+      font-size: 46px;
+    }
+
+    &--icon-1 {
+      width: 95px;
+      height: 47px;
+    }
+
+    &--img-1 {
+      width: 90px;
+      height: 66px;
+    }
+
+    &--img-2 {
+      width: 108px;
+      height: 66px;
+    }
+
+    &--img-3 {
+      width: 74px;
+      height: 66px;
+    }
+
+    &--img-4 {
+      width: 84px;
+      height: 66px;
+    }
+
+    &--img-5 {
+      width: 230px;
+      height: 66px;
+    }
+
+    &--img-6 {
+      width: 89px;
+      height: 66px;
+    }
+
+    &--text-icon-1 {
+      font-size: 64px;
+    }
+
+    &--text-icon-2 {
+      font-size: 48px;
+    }
+  }
+}
+
 @media screen and (min-width: 1280px) {
+  .history {
+    padding: 90px 8.34%;
+    height: 950px;
+
+    .header-1 {
+      font-size: 50px;
+    }
+
+    &--icon-1 {
+      width: 139px;
+      height: 57px;
+    }
+
+    &--img-1 {
+      width: 114px;
+      height: 84px;
+    }
+
+    &--img-2 {
+      width: 136px;
+      height: 84px;
+    }
+
+    &--img-3 {
+      width: 117px;
+      height: 84px;
+    }
+
+    &--img-4 {
+      width: 119px;
+      height: 84px;
+    }
+
+    &--img-5 {
+      width: 311px;
+      height: 84px;
+    }
+
+    &--img-6 {
+      width: 132px;
+      height: 84px;
+    }
+
+    &--text-icon-1 {
+      font-size: 80px;
+    }
+
+    &--text-icon-2 {
+      font-size: 56px;
+    }
+  }
+}
+
+@media screen and (min-width: 1380px) {
+  .history {
+    padding: 90px 8.34%;
+    height: 917px;
+
+    .header-1 {
+      font-size: 54px;
+    }
+
+    &--icon-1 {
+      width: 139px;
+      height: 57px;
+    }
+
+    &--img-1 {
+      width: 114px;
+      height: 84px;
+    }
+
+    &--img-2 {
+      width: 136px;
+      height: 84px;
+    }
+
+    &--img-3 {
+      width: 117px;
+      height: 84px;
+    }
+
+    &--img-4 {
+      width: 119px;
+      height: 84px;
+    }
+
+    &--img-5 {
+      width: 311px;
+      height: 84px;
+    }
+
+    &--img-6 {
+      width: 132px;
+      height: 84px;
+    }
+
+    &--text-icon-1 {
+      font-size: 84px;
+    }
+
+    &--text-icon-2 {
+      font-size: 60px;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
   .history {
     padding: 90px 8.34%;
     height: 950px;

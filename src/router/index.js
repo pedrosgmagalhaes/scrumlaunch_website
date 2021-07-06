@@ -5,6 +5,7 @@ import ContactUs from '../views/ContactUs.vue'
 import Work from '../views/Work.vue'
 import Process from '../views/Process.vue'
 import CaseStudy from '../views/CaseStudy.vue'
+import Services from '../views/Services.vue'
 
 const routes = [
   {
@@ -36,6 +37,11 @@ const routes = [
     path: '/case-study',
     name: 'CaseStudy',
     component: CaseStudy
+  },
+  {
+    path: '/services',
+    name: 'Services',
+    component: Services
   }
 ]
 

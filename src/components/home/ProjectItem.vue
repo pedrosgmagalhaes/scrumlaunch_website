@@ -62,6 +62,7 @@ export default {
     padding: 12px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     &--wrapper {
       display: flex;
@@ -111,8 +112,8 @@ export default {
     }
 
     &--year {
-      width: 50px;
-      height: 50px;
+      width: 35px;
+      height: 35px;
       border: 1px solid #1E1F21;
       box-sizing: border-box;
       font-style: normal;
@@ -126,6 +127,13 @@ export default {
       border-radius: 50%;
       flex: none;
     }
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .project-item--info--year {
+    width: 50px;
+    height: 50px;
   }
 }
 

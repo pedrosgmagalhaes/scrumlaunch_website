@@ -13,7 +13,7 @@
         :class="contactPage && 'white-wrapper'"
       >
         <router-link :to="{ name: 'Work' }">Work</router-link>
-        <router-link :to="{ name: 'Home' }">Services</router-link>
+        <router-link :to="{ name: 'Services' }">Services</router-link>
         <router-link :to="{ name: 'Process' }">Process</router-link>
         <router-link :to="{ name: 'Leadership' }">Leadership</router-link>
         <router-link :to="{ name: 'ContactUs' }">Contact</router-link>
@@ -45,7 +45,7 @@
       <div class="menu--burger--links">
         <span @click="handleNavigation('Home')" class="menu--burger--links--item">Home</span>
         <span @click="handleNavigation('Work')" class="menu--burger--links--item">Work</span>
-        <span @click="handleNavigation('Home')" class="menu--burger--links--item">Services</span>
+        <span @click="handleNavigation('Services')" class="menu--burger--links--item">Services</span>
         <span @click="handleNavigation('Process')" class="menu--burger--links--item">Process</span>
         <span @click="handleNavigation('Leadership')" class="menu--burger--links--item">Leadership</span>
         <span @click="handleNavigation('ContactUs')" class="menu--burger--links--item">Contact</span>

@@ -61,6 +61,8 @@ export default {
     background-repeat: no-repeat;
     background-position: center;
     background-color: #E7EDF9;
+    border-bottom: 1px solid #1E1F21;
+    box-sizing: border-box;
   }
 
   &--info {
@@ -112,9 +114,32 @@ export default {
 @media screen and (min-width: 768px) {
   .member {
     width: 339px;
+    margin: 0 0px 30px;
+
+    &:nth-child(2n+1) {
+      margin-right: 30px;
+    }
 
     &--info {
       padding: 24px 16px 14px;
+
+      .header-2 {
+        font-size: 18px;
+      }
+
+      &--position {
+        margin-bottom: 17px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .member {
+    margin: 0 10px 22px;
+
+    &:nth-child(2n+1) {
+      margin-right: 10px;
     }
   }
 }
@@ -123,7 +148,11 @@ export default {
   .member {
     width: 386px;
     height: 587px;
-    margin-bottom: 0px;
+    margin: 0 10px 22px;
+
+    &:nth-child(2n+1) {
+      margin-right: 10px;
+    }
 
     &--image {
       height: 394px;
@@ -156,6 +185,12 @@ export default {
         }
       }
     }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .member {
+    margin: 0 8px 22px;
   }
 }
 </style>

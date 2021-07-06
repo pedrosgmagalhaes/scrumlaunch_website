@@ -27,8 +27,8 @@ export default {
   margin-bottom: 80px;
 
   &--icon {
-    width: 334px;
-    height: 221px;
+    width: 280px;
+    height: auto;
   }
 
   &--text {
@@ -45,6 +45,13 @@ export default {
       text-align: left;
       width: 101%;
     }
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .contact-us--icon {
+    width: 334px;
+    height: 221px;
   }
 }
 

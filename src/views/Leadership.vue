@@ -38,6 +38,16 @@ export default {
         name: 'Dmytro Riazanov',
         position: 'Co-founder',
         inLink: 'https://www.linkedin.com/in/dmytro-riazanov-2180a427/',
+      },
+      {
+        name: 'Mikhaylo Shatskiy',
+        position: 'CTO',
+        inLink: 'https://www.linkedin.com/in/michael-shatskiy-387990bb/',
+      },
+      {
+        name: 'Yuliia Hlushkina',
+        position: 'Vice President of design',
+        inLink: 'https://www.linkedin.com/in/yuliia-hlushkina-682627155/',
       }
     ]
   }),
@@ -83,9 +93,10 @@ export default {
     }
 
     &--team {
-      justify-content: space-between;
+      justify-content: flex-start;
       flex-wrap: wrap;
       margin-bottom: 140px;
+      margin: 0 -10px;
     }
   }
 }
@@ -109,8 +120,14 @@ export default {
     }
 
     &--team {
-      margin-bottom: 240px;
+      margin: 0 -10px 240px;
     }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .leadership--team {
+    margin: 0 -8px;
   }
 }
 </style>

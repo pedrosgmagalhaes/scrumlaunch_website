@@ -42,14 +42,25 @@ export default {
     }
 
     &--illustration {
-      width: 335px;
-      height: 284px;
+      width: 280px;
+      height: auto;
     }
   }
 
   &--bottom {
     display: flex;
     justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .hero {
+    &--text-wrapper {
+      &--illustration {
+        width: 335px;
+        height: 284px;
+      }
+    }
   }
 }
 
