@@ -1,0 +1,196 @@
+<template>
+  <div class="case-study">
+    <div class="case-study--hero">
+      <inline-svg
+        :src="require('@/assets/images/case-study/harvest/hero.svg')"
+        class="case-study--hero--icon"
+      />
+    </div>
+
+    <ProjectInfo :projectInfo="projectInfo" />
+
+    <div class="case-study--divider"></div>
+
+    <div class="case-study--illustration">
+      <h2 class="case-study--illustration--title header-1">Illustrations</h2>
+      <div class="case-study--illustration--wrapper">
+        <inline-svg
+          :src="require('@/assets/images/case-study/harvest/illustration-1.svg')"
+        />
+        <inline-svg
+          :src="require('@/assets/images/case-study/harvest/illustration-2.svg')"
+        />
+        <inline-svg
+          :src="require('@/assets/images/case-study/harvest/illustration-3.svg')"
+        />
+        <inline-svg
+          :src="require('@/assets/images/case-study/harvest/illustration-4.svg')"
+        />
+        <inline-svg
+          :src="require('@/assets/images/case-study/harvest/illustration-5.svg')"
+        />
+      </div>
+    </div>
+
+    <MoreProjects :moreProjects="moreProjects"/>
+  </div>
+</template>
+
+<script>
+import ProjectInfo from '@/components/case-study/ProjectInfo.vue'
+import MoreProjects from '@/components/case-study/MoreProjects.vue'
+
+export default {
+  components: {
+    ProjectInfo,
+    MoreProjects
+  },
+
+  data: () => ({
+    moreProjects: [
+      {
+        order: 'Previous',
+        name: 'project name',
+        image: 'work-2'
+      },
+      {
+        order: 'Next',
+        name: 'project name',
+        image: 'work-10'
+      }
+    ],
+    projectInfo: {
+      name: 'Harvest',
+      description: 'Harvest is a negotiation fee platform where you can manage debts and expenses. US banks charge clients enormous amount of fee for each transaction or ATM cash transactions. People struggle with negotiating fees through banks and return their money so Harvest helps with this problem and provides and automatic and fast solution to eliminate this problem.',
+      details: '2021',
+      work: ['UI/UX design', 'Development'],
+      team: ['Dasha Shyf', 'Yulia Hlushkina', 'Yevheniia Tkachenko']
+    }
+  }),
+}
+</script>
+
+<style lang="scss" scoped>
+.case-study {
+  &--hero {
+    height: 392px;
+    box-sizing: border-box;
+    background: #74C947;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+  }
+
+  &--divider {
+    height: 359px;
+    box-sizing: border-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../assets/images/case-study/harvest/divider-photo.png');
+  }
+
+  &--illustration {
+    padding: 80px 20px 0;
+
+    &--title {
+      margin-bottom: 20px;
+      align-items: center;
+    }
+
+    &--wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      svg {
+        width: 100%;
+        height: auto;
+        margin-bottom: 80px;
+
+        &:last-child {
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .case-study {
+    &--hero {
+      height: 612px;
+    }
+
+    &--divider {
+      height: 736px;
+    }
+
+    &--illustration {
+      padding: 140px 30px 0;
+
+      &--title {
+        margin-bottom: 50px;
+      }
+
+      &--wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        svg {
+          width: 38%;
+          height: auto;
+          margin-bottom: 0px;
+
+          &:nth-child(3) {
+            width: 19%;
+          }
+
+          &:last-child {
+            margin-bottom: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .case-study {
+    &--hero {
+      height: 800px;
+    }
+
+    &--divider {
+      height: 1380px;
+    }
+
+    &--illustration {
+      padding: 240px 8.34% 0;
+
+      &--title {
+        margin-bottom: 40px;
+      }
+
+      &--wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        svg {
+          width: auto;
+          height: auto;
+          margin-bottom: 0px;
+
+          &:nth-child(3) {
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+}
+</style>

@@ -1,13 +1,15 @@
 <template>
   <div class="main-goal">
-    <h2 class="main-goal--header">main goal</h2>
-    <p class="main-goal--disc">The mark is built using the golden ratio design system by applying a 42º slant. All corners and curves are rounded using the same radius.</p>
-    <p class="main-goal--disc">The smile is constructed based on a circle with the same amount of width as the house.</p>
+    <h2 class="main-goal--header">{{mainInfo.title}}</h2>
+    <p class="main-goal--disc" v-for="(desc, i) in mainInfo.description" :key="i">{{desc}}</p>
   </div>
 </template>
 
 <script>
 export default {
+  props: [
+    'mainInfo'
+  ]
 }
 </script>
 

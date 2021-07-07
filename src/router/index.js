@@ -4,7 +4,10 @@ import Leadership from '../views/Leadership.vue'
 import ContactUs from '../views/ContactUs.vue'
 import Work from '../views/Work.vue'
 import Process from '../views/Process.vue'
-import CaseStudy from '../views/CaseStudy.vue'
+import FamilyGameNightCaseStudy from '../views/FamilyGameNightCaseStudy.vue'
+import HarvestCaseStudy from '../views/HarvestCaseStudy.vue'
+import FullCourtAiCaseStudy from '../views/FullCourtAiCaseStudy.vue'
+import ScopeCaseStudy from '../views/ScopeCaseStudy.vue'
 import Services from '../views/Services.vue'
 
 const routes = [
@@ -34,9 +37,24 @@ const routes = [
     component: Work
   },
   {
-    path: '/case-study',
-    name: 'CaseStudy',
-    component: CaseStudy
+    path: '/fgn-case-study',
+    name: 'FamilyGameNightCaseStudy',
+    component: FamilyGameNightCaseStudy
+  },
+  {
+    path: '/harvest-case-study',
+    name: 'HarvestCaseStudy',
+    component: HarvestCaseStudy
+  },
+  {
+    path: '/full-court-ai-case-study',
+    name: 'FullCourtAiCaseStudy',
+    component: FullCourtAiCaseStudy
+  },
+  {
+    path: '/scope-case-study',
+    name: 'ScopeCaseStudy',
+    component: ScopeCaseStudy
   },
   {
     path: '/services',

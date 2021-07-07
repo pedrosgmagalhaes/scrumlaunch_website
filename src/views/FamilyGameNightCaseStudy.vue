@@ -2,14 +2,14 @@
   <div class="case-study">
     <div class="case-study--hero"></div>
 
-    <ProjectInfo />
+    <ProjectInfo :projectInfo="projectInfo" />
 
     <div class="case-study--divider"></div>
 
-    <MainGoal />
+    <MainGoal :mainInfo="mainInfo" />
 
     <div class="case-study--divider-small"></div>
-    <div class="case-study--divider-small"></div>
+    <div class="case-study--divider-small second"></div>
 
     <MoreProjects :moreProjects="moreProjects"/>
   </div>
@@ -39,7 +39,21 @@ export default {
         name: 'project name',
         image: 'work-10'
       }
-    ]
+    ],
+    projectInfo: {
+      name: 'family game night',
+      description: 'Discovery, design and development of a social gaming platform specifically designed for seniors to play intellectually stimulating games and stay connected with family members while collecting data and monitoring for cognitive decline.',
+      details: '2021',
+      work: ['UI/UX design'],
+      team: ['Yulia Hlushkina', 'Denis Didenko', 'Anton Kharytonov']
+    },
+    mainInfo: {
+      title: 'main goal',
+      description: [
+        'The mark is built using the golden ratio design system by applying a 42º slant. All corners and curves are rounded using the same radius.',
+        'The smile is constructed based on a circle with the same amount of width as the house.'
+      ]
+    }
   }),
 }
 </script>
@@ -53,7 +67,7 @@ export default {
     background-position: center 95px;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url('../assets/images/case/hero.png');
+    background-image: url('../assets/images/case-study/fgn/hero.png');
   }
 
   &--divider {
@@ -63,7 +77,7 @@ export default {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('../assets/images/case/divider-photo.png');
+    background-image: url('../assets/images/case-study/fgn/divider-photo.png');
   }
 
   &--divider-small {
@@ -73,12 +87,12 @@ export default {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('../assets/images/case/divider-2.png');
+    background-image: url('../assets/images/case-study/fgn/divider-2.png');
     margin-bottom: 10px;
 
-    &:last-child {
+    &.second {
       margin-bottom: 0px;
-      background-image: url('../assets/images/case/divider-3.png');
+      background-image: url('../assets/images/case-study/fgn/divider-3.png');
     }
   }
 }

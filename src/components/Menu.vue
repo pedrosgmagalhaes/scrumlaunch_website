@@ -63,7 +63,11 @@ export default {
 
   watch: {
     $route() {
-      if (this.$route.name === "ContactUs" || this.$route.name === "CaseStudy") {
+      if (this.$route.name === "ContactUs" ||
+          this.$route.name === "FamilyGameNightCaseStudy" ||
+          this.$route.name === "HarvestCaseStudy" ||
+          this.$route.name === "FullCourtAiCaseStudy" ||
+          this.$route.name === "ScopeCaseStudy") {
         this.contactPage = true;
       } else {
         this.contactPage = false;

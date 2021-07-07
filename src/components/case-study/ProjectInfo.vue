@@ -1,22 +1,20 @@
 <template>
   <div class="info">
-    <h2 class="info--header">family game night</h2>
+    <h2 class="info--header">{{projectInfo.name}}</h2>
     <div class="info--wrapper">
-      <p class="info--wrapper--desc">Discovery, design and development of a social gaming platform specifically designed for seniors to play intellectually stimulating games and stay connected with family members while collecting data and monitoring for cognitive decline.</p>
+      <p class="info--wrapper--desc">{{projectInfo.description}}</p>
       <div class="info--wrapper--details">
         <div class="info--wrapper--details--item">
           <span class="info--wrapper--details--item--title">Details</span>
-          <span class="info--wrapper--details--item--text">2021</span>
+          <span class="info--wrapper--details--item--text">{{projectInfo.details}}</span>
         </div>
         <div class="info--wrapper--details--item">
           <span class="info--wrapper--details--item--title">Work</span>
-          <span class="info--wrapper--details--item--text">UI/UX design</span>
+          <span class="info--wrapper--details--item--text" v-for="(work, i) in projectInfo.work" :key="i">{{work}}</span>
         </div>
         <div class="info--wrapper--details--item">
           <span class="info--wrapper--details--item--title">Team</span>
-          <span class="info--wrapper--details--item--text">Yulia Hlushkina</span>
-          <span class="info--wrapper--details--item--text">Denis Didenko</span>
-          <span class="info--wrapper--details--item--text">Anton Kharytonov</span>
+          <span class="info--wrapper--details--item--text" v-for="(item, i) in projectInfo.team" :key="i">{{item}}</span>
         </div>
       </div>
     </div>
@@ -25,6 +23,9 @@
 
 <script>
 export default {
+  props: [
+    'projectInfo'
+  ]
 }
 </script>
 
