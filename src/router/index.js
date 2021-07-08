@@ -60,6 +60,10 @@ const routes = [
     path: '/services',
     name: 'Services',
     component: Services
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    redirect: { name: 'Home' }
   }
 ]
 
