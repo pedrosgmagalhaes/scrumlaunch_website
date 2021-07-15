@@ -56,6 +56,13 @@ export default {
       flex-direction: row;
     }
   }
+}
 
+@media screen and (min-width: 1280px) {
+  .more-project {
+    &--title {
+      padding: 0 8.34%;
+    }
+  }
 }
 </style>

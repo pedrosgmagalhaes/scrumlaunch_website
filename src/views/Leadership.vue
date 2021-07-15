@@ -101,7 +101,7 @@ export default {
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
   .leadership {
     padding: 270px 8.34% 0;
 

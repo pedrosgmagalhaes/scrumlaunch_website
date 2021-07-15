@@ -139,4 +139,12 @@ export default {
     }
   }
 }
+
+@media screen and (min-width: 1920px) {
+  .projects {
+    &--wrapper {
+      justify-content: space-around;
+    }
+  }
+}
 </style>

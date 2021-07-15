@@ -31,13 +31,15 @@ export default {
     moreProjects: [
       {
         order: 'Previous',
-        name: 'project name',
-        image: 'work-2'
+        name: 'Scope',
+        image: 'scope-preview',
+        url: 'ScopeCaseStudy'
       },
       {
         order: 'Next',
         name: 'project name',
-        image: 'work-10'
+        image: 'harvest-preview',
+        url: 'HarvestCaseStudy'
       }
     ],
     projectInfo: {

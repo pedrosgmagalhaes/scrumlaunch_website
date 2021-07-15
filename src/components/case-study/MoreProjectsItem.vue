@@ -1,5 +1,5 @@
 <template>
-  <div class="project" :style="{'background-image': `url('${setBackgroundImage}')`}">
+  <div @click="handleNavigate(project.url)" class="project" :style="{'background-image': `url('${setBackgroundImage}')`}">
     <div class="project--hover">
       <span>{{project.order}} project</span>
       <p>{{project.name}}</p>
@@ -18,6 +18,12 @@ export default {
       return require(`@/assets/images/work/${this.project.image}.png`);
     }
   },
+
+  methods: {
+    handleNavigate(pageName) {
+      this.$router.push({ name: pageName});
+    }
+  }
 }
 </script>
 

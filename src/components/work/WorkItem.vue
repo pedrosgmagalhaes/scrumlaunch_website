@@ -3,6 +3,7 @@
     class="item"
     @mouseover="hover=true"
     @mouseleave="hover=false"
+    @click="handleNavigation(item.url)"
   >
     <div v-if="!hover" class="item--preview" :style="{'background-image': `url('${setBackgroundImage}')`}"></div>
 
@@ -12,7 +13,7 @@
         <p class="item--info--header--year body-2">{{item.year}}</p>
       </div>
       <div class="item--info--desc">
-        <p class="header-2 item--info--desc--header">Project name</p>
+        <p class="header-2 item--info--desc--header">{{item.name}}</p>
         <div class="item--info--desc--info">
           <p class="item--info--desc--info--text body-4">Design<span></span>Frontend<span></span>Backend<span></span>QA<span></span>Support</p>
           <inline-svg
@@ -35,9 +36,15 @@ export default {
 
   computed: {
     setBackgroundImage() {
-      return require(`@/assets/images/work/${this.item.url}.png`);
+      return require(`@/assets/images/work/${this.item.image}.png`);
     }
   },
+
+  methods: {
+    handleNavigation(pageName) {
+      this.$router.push({ name: pageName });
+    }
+  }
 }
 </script>
 

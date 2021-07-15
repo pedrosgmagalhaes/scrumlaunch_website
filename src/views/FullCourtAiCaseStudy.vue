@@ -37,12 +37,14 @@ export default {
       {
         order: 'Previous',
         name: 'project name',
-        image: 'work-2'
+        image: 'harvest-preview',
+        url: 'HarvestCaseStudy'
       },
       {
         order: 'Next',
-        name: 'project name',
-        image: 'work-10'
+        name: 'Scope',
+        image: 'scope-preview',
+        url: 'ScopeCaseStudy'
       }
     ],
     projectInfo: {
