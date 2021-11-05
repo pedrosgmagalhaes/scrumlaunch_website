@@ -1,7 +1,13 @@
 <template>
   <div class="hero">
     <div class="hero--text-wrapper">
-      <h1 class="header-big">Product Design<br />& Software<br />Development<br />for Startups</h1>
+
+      <AppearFromMask><p class="header-big">Product Design</p></AppearFromMask>
+      <AppearFromMask><p class="header-big">& Software</p></AppearFromMask>
+      <AppearFromMask><p class="header-big">Development</p></AppearFromMask>
+      <AppearFromMask><p class="header-big">for Startups</p></AppearFromMask>
+
+      <!-- <h1 class="header-big">Product Design<br />& Software<br />Development<br />for Startups</h1> -->
       <inline-svg
         :src="require('@/assets/illustrations/illustration-map.svg')"
         class="hero--text-wrapper--illustration"
@@ -18,10 +24,12 @@
 
 <script>
 import SocialBlock from '@/components/SocialBlock.vue'
+import AppearFromMask from '@/components/animations/AppearFromMask.vue'
 
 export default {
   components: {
-    SocialBlock
+    SocialBlock,
+    AppearFromMask
   },
 }
 </script>

@@ -1,6 +1,8 @@
 <template>
   <div class="projects">
-    <h2 class="header-1">Latest projects</h2>
+    <TypingEffect>
+      <h2 class="header-1">Latest projects</h2>
+    </TypingEffect>
     <div class="projects--wrapper">
       <ProjectItem v-for="(item, i) in projects" :key="i" class="projects--wrapper--item" :item="item" />
     </div>
@@ -12,9 +14,12 @@
 
 <script>
 import ProjectItem from '@/components/home/ProjectItem.vue'
+import TypingEffect from '@/components/animations/TypingEffect.vue'
+
 export default {
   components: {
-    ProjectItem
+    ProjectItem,
+    TypingEffect,
   },
 
   data: () => ({
