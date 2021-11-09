@@ -8,6 +8,8 @@ import FamilyGameNightCaseStudy from '../views/FamilyGameNightCaseStudy.vue'
 import HarvestCaseStudy from '../views/HarvestCaseStudy.vue'
 import FullCourtAiCaseStudy from '../views/FullCourtAiCaseStudy.vue'
 import ScopeCaseStudy from '../views/ScopeCaseStudy.vue'
+import HelmmCaseStudy from '../views/HelmmCaseStudy.vue'
+import VestaCaseStudy from '../views/VestaCaseStudy.vue'
 import Services from '../views/Services.vue'
 
 const routes = [
@@ -55,6 +57,16 @@ const routes = [
     path: '/scope-case-study',
     name: 'ScopeCaseStudy',
     component: ScopeCaseStudy
+  },
+  {
+    path: '/helmm-case-study',
+    name: 'HelmmCaseStudy',
+    component: HelmmCaseStudy
+  },
+  {
+    path: '/vesta-case-study',
+    name: 'VestaCaseStudy',
+    component: VestaCaseStudy
   },
   {
     path: '/services',

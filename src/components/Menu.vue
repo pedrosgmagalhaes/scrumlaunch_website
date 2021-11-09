@@ -67,6 +67,7 @@ export default {
           this.$route.name === "FamilyGameNightCaseStudy" ||
           this.$route.name === "HarvestCaseStudy" ||
           this.$route.name === "FullCourtAiCaseStudy" ||
+          this.$route.name === "HelmmCaseStudy" ||
           this.$route.name === "ScopeCaseStudy") {
         this.contactPage = true;
       } else {

@@ -46,7 +46,21 @@ export default {
         type: 'Mobile app',
         year: '2021',
         name: 'Family game night',
-      }
+      },
+      {
+        url: 'HelmmCaseStudy',
+        image: 'helmm-preview',
+        type: 'Mobile app',
+        year: '2021',
+        name: 'Helmm',
+      },
+      {
+        url: 'VestaCaseStudy',
+        image: 'vesta-preview',
+        type: 'Mobile app',
+        year: '2021',
+        name: 'Vesta',
+      },
     ]
   }),
 }
