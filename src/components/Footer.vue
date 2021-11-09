@@ -20,15 +20,18 @@
     </div>
     <SocialBlock class="footer--social"/>
     <span>© ScrumLaunch 2021</span>
+    <ScrollToTop />
   </div>
 </template>
 
 <script>
 import SocialBlock from '@/components/SocialBlock.vue'
+import ScrollToTop from '@/components/ScrollToTop.vue'
 
 export default {
   components: {
-    SocialBlock
+    SocialBlock,
+    ScrollToTop,
   },
 }
 </script>
