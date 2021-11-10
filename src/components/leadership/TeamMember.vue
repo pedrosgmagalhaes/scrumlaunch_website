@@ -1,6 +1,6 @@
 <template>
   <div class="member">
-    <div class="member--image">
+    <div class="member--image" :style="{ background: `url('${setBackgroundImage}')` }">
     </div>
     <div class="member--info">
       <p class="header-2">{{member.name}}</p>
@@ -14,7 +14,7 @@
           class="member--info--links--icon"
           @click="handleOpenInLink(member.inLink)"
         />
-        <router-link :to="{ name: 'Home' }" class="button-link">View bio</router-link>
+        <!-- <router-link :to="{ name: 'Home' }" class="button-link">View bio</router-link> -->
       </div>
     </div>
   </div>
@@ -25,6 +25,12 @@ export default {
   props: [
     'member'
   ],
+
+  computed: {
+    setBackgroundImage() {
+      return require(`@/assets/images/team/${this.member.photo}`);
+    }
+  },
 
   methods: {
     handleOpenInLink(link) {
