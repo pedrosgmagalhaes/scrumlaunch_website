@@ -39,7 +39,7 @@ export default {
 
 <style lang="scss" scoped>
 .footer {
-  width: 100vw;
+  width: 100%;
   padding: 0px 20px 40px;
   box-sizing: border-box;
   display: flex;
@@ -122,7 +122,7 @@ export default {
 
 @media screen and (min-width: 768px) {
   .footer {
-    width: 100vw;
+    width: 100%;
     height: 278px;
     padding: 0px 30px 120px;
     flex-direction: row;
@@ -193,7 +193,7 @@ export default {
 
 @media screen and (min-width: 1280px) {
   .footer {
-    width: 100vw;
+    width: 100%;
     height: 278px;
     padding: 0px 8.34% 60px;
     box-sizing: border-box;

@@ -79,6 +79,12 @@ export default {
   methods: {
     toggleMenu() {
       this.showMenu = !this.showMenu;
+      if ( this.showMenu ) {
+        document.querySelector('body').classList.add('overflow-hidden')
+      }
+      else {
+        document.querySelector('body').classList.remove('overflow-hidden')
+      }
     },
 
     handleNavigation(pageName) {
@@ -93,7 +99,7 @@ export default {
 
 <style lang="scss" scoped>
 .menu {
-  width: 100vw;
+  width: 100%;
   padding: 18px 20px;
   box-sizing: border-box;
 
@@ -117,14 +123,14 @@ export default {
   }
 
   &--burger {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background: #000000;
     padding: 20px;
     box-sizing: border-box;
     top: 0;
     left: 0;
-    overflow: hidden;
+    overflow: auto;
     position: fixed;
 
     &--header {

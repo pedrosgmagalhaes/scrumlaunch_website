@@ -75,6 +75,16 @@ export default {
         cursor: pointer;
         z-index: 999;
 
+        @media screen and (max-width: 768px) {
+            bottom: 10px;
+            right: 10px;
+        }
+
+        @media screen and (max-width: 420px) {
+            width: 60px;
+            height: 60px;
+        }
+
         &.active {
             opacity: 1;
             pointer-events: all;

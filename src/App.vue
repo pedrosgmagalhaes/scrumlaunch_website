@@ -29,6 +29,7 @@ export default {
 
 #nav {
   position: absolute;
+  width: 100%;
   z-index: 100;
 }
 
