@@ -33,13 +33,7 @@
     <div class="flexible--text">
       <div class="h2_wrap"></div>
       <AppearFromMask>
-        <h2 class="header-1">We build flexible teams with</h2>
-      </AppearFromMask>
-      <AppearFromMask>
-        <h2 class="header-1">client business goals</h2>
-      </AppearFromMask>
-      <AppearFromMask>
-        <h2 class="header-1">in mind</h2>
+        <h2 class="header-1">We build flexible teams with client business goals in mind</h2>
       </AppearFromMask>
       
       <AppearFromMask>
@@ -49,15 +43,7 @@
   </div>
 </template>
 
-<script>
-import AppearFromMask from '@/components/animations/AppearFromMask.vue'
 
-export default {
-  components: {
-    AppearFromMask
-  },
-}
-</script>
 
 <style lang="scss" scoped>
 .flexible {

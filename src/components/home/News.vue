@@ -31,14 +31,18 @@
       </div>
     </div>
 
+    <AppearFromMask>
     <h2 class="header-1">NEWS & INSIGHTS</h2>
+    </AppearFromMask>
 
     <div class="news--wrapper">
       <div class="news--wrapper--item" v-for="i in 3" :key="i">
         <div class="news--wrapper--item--content">
-          <p class="news--wrapper--item--content--header header-2">How does FGN app help seniors and why is it so important?</p>
-          <p class="news--wrapper--item--content--text body-3">Humans tend to subconsciously distort information and sculpt it to fit their existing beliefs. Confronting one’s own cognitive biases is critical when starting a company.</p>
-          <span class="header-4">02 Dec 21</span>
+          <div v-in-viewport="{ class_from: 'news__from', class_active: 'news__active', class_to: 'news__to' }">
+            <p class="news--wrapper--item--content--header header-2">How does FGN app help seniors and why is it so important?</p>
+            <p class="news--wrapper--item--content--text body-3">Humans tend to subconsciously distort information and sculpt it to fit their existing beliefs. Confronting one’s own cognitive biases is critical when starting a company.</p>
+          </div>
+          <span class="header-4" v-in-viewport="{ class_from: 'date__from', class_active: 'date__active', class_to: 'date__to' }">02 Dec 21</span>
         </div>
         <div class="news--wrapper--item--arrow"></div>
       </div>
@@ -132,6 +136,38 @@
 
   &--btn {
     margin: 40px auto 0;
+  }
+
+  &__from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  &__active {
+    transition: all 1s;
+  }
+
+  &__to {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+}
+
+.date {
+  &__from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  &__active {
+    display: inline-block;
+    transition: all 1s;
+  }
+
+  &__to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 

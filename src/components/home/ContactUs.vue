@@ -5,7 +5,7 @@
       class="contact-us--icon"
     />
     <div class="contact-us--text">
-      <p class="header-2">Want to talk new projects, collaborations, or just say hello? Get in touch with me.</p>
+      <TypingEffect type="2"><p class="header-2">Want to talk new projects, collaborations, or just say hello? Get in touch with me.</p></TypingEffect>
       <router-link class="btn" :to="{ name: 'ContactUs' }">Contact Us</router-link>
     </div>
   </div>

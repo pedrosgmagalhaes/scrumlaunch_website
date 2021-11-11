@@ -20,6 +20,7 @@ export default {
     },
 
     mounted() {
+        this.$slots.default()[0].el.style.opacity = '0'
         this.init()
         window.addEventListener('scroll', this.play)
     },
@@ -89,10 +90,6 @@ export default {
 .wrap {
     position: relative;
     text-align: left;
-
-    ::v-slotted(*) {
-        opacity: 0;
-    }
 }
 
 .mask {

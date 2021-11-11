@@ -3,8 +3,8 @@ export const InViewport = {
     beforeMount(el, binding) {
 
         if ( typeof binding.value === 'object' ) {
-            el.classList.add(binding.value.class_from)
-            el.classList.add(binding.value.class_active)
+            el.classList.add(binding.value.class_from ? binding.value.class_from : '')
+            el.classList.add(binding.value.class_active ? binding.value.class_active : '')
         }
 
     },
@@ -14,7 +14,7 @@ export const InViewport = {
         let in_viewport = false
 
         const scrollHandler = () => {
-            let offsetTop = el.offsetTop < el.offsetParent.offsetTop ? el.offsetParent.offsetTop : el.offsetTop
+            let offsetTop = el.getBoundingClientRect().top + document.querySelectorAll('html')[0].scrollTop
             let scrollTop = document.querySelectorAll('html')[0].scrollTop
             let viewportHeight = window.innerHeight
 
@@ -25,7 +25,7 @@ export const InViewport = {
             if ( typeof binding.value === 'object' ) {
                 if ( el.classList.contains(binding.value.class_from) ) {
                     el.classList.remove(binding.value.class_from)
-                    el.classList.add(binding.value.class_to)
+                    el.classList.add(binding.value.class_to ? binding.value.class_to : '')
                 }
             }
         }

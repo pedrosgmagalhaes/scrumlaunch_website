@@ -44,12 +44,10 @@
 
 <script>
 import SocialBlock from '@/components/SocialBlock.vue'
-import AppearFromMask from '@/components/animations/AppearFromMask.vue'
 
 export default {
   components: {
     SocialBlock,
-    AppearFromMask
   },
 }
 </script>

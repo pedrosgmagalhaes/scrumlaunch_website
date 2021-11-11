@@ -14,12 +14,10 @@
 
 <script>
 import ProjectItem from '@/components/home/ProjectItem.vue'
-import TypingEffect from '@/components/animations/TypingEffect.vue'
 
 export default {
   components: {
     ProjectItem,
-    TypingEffect,
   },
 
   data: () => ({
