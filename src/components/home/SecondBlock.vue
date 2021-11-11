@@ -31,11 +31,33 @@
     </div>
 
     <div class="flexible--text">
-      <h2 class="header-1">We build flexible teams with client business goals <br />in mind</h2>
+      <div class="h2_wrap"></div>
+      <AppearFromMask>
+        <h2 class="header-1">We build flexible teams with</h2>
+      </AppearFromMask>
+      <AppearFromMask>
+        <h2 class="header-1">client business goals</h2>
+      </AppearFromMask>
+      <AppearFromMask>
+        <h2 class="header-1">in mind</h2>
+      </AppearFromMask>
+      
+      <AppearFromMask>
       <p class="body-1">Stop worrying about recruiting, hiring, payroll, office space, HR, perks for your design and development teams and focus on growing your business.</p>
+      </AppearFromMask>
     </div>
   </div>
 </template>
+
+<script>
+import AppearFromMask from '@/components/animations/AppearFromMask.vue'
+
+export default {
+  components: {
+    AppearFromMask
+  },
+}
+</script>
 
 <style lang="scss" scoped>
 .flexible {
@@ -72,7 +94,7 @@
     width: 67.3%;
     color: #1E1F21;
 
-    h2 {
+    .h2_wrap {
       margin-bottom: 16px;
     }
   }
@@ -108,7 +130,7 @@
       width: 73.45%;
       color: #1E1F21;
 
-      h2 {
+      .h2_wrap {
         margin-bottom: 24px;
       }
     }
@@ -148,7 +170,7 @@
       width: 59.3%;
       color: #1E1F21;
 
-      h2 {
+      .h2_wrap {
         margin-bottom: 40px;
       }
 

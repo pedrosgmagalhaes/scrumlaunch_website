@@ -2,6 +2,7 @@
   <div class="hero">
     <div class="hero--text-wrapper">
 
+      <!--
       <div class="appear_from_mask__wrap">
         <p v-in-viewport="{ class_from: 'animation__from', class_active: 'animation__active', class_to: 'animation__to' }" class="header-big">Product Design</p>
       </div>
@@ -17,13 +18,14 @@
       <div class="appear_from_mask__wrap">
         <p v-in-viewport="{ class_from: 'animation__from', class_active: 'animation__active', class_to: 'animation__to' }" class="header-big">for Startups</p>
       </div>
+      -->
 
-      <!--
+      
       <AppearFromMask><p class="header-big">Product Design</p></AppearFromMask>
       <AppearFromMask><p class="header-big">& Software</p></AppearFromMask>
       <AppearFromMask><p class="header-big">Development</p></AppearFromMask>
       <AppearFromMask><p class="header-big">for Startups</p></AppearFromMask>
-      -->
+      
 
       <!-- <h1 class="header-big">Product Design<br />& Software<br />Development<br />for Startups</h1> -->
       <inline-svg
@@ -42,12 +44,12 @@
 
 <script>
 import SocialBlock from '@/components/SocialBlock.vue'
-// import AppearFromMask from '@/components/animations/AppearFromMask.vue'
+import AppearFromMask from '@/components/animations/AppearFromMask.vue'
 
 export default {
   components: {
     SocialBlock,
-    // AppearFromMask
+    AppearFromMask
   },
 }
 </script>

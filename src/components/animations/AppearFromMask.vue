@@ -10,7 +10,16 @@
 <script>
 export default {
 
-    mounted () {
+    name: 'AppearFromMask',
+
+    props: {
+        duration: {
+            type: String,
+            default: '1'
+        },
+    },
+
+    mounted() {
         this.init()
         window.addEventListener('scroll', this.play)
     },
@@ -21,8 +30,8 @@ export default {
 
     data() {
         return {
-            fontSize: null,
-            lineHeight: null,
+            blockMarginBottom: null,
+            blockHeight: null,
             is_played: false,
         }
     },
@@ -31,32 +40,43 @@ export default {
 
         init() {
 
-            this.fontSize = window.getComputedStyle(this.$slots.default()[0].el, null).getPropertyValue('font-size')
-            this.lineHeight = window.getComputedStyle(this.$slots.default()[0].el, null).getPropertyValue('line-height')
-            this.$slots.default()[0].el.style.position = 'relative'
-            this.$slots.default()[0].el.style.lineHeight = this.fontSize
-            this.$slots.default()[0].el.style.top = this.fontSize
-            // this.$slots.default()[0].el.style.transition = 'top 1s'
-            this.$refs.mask.style.height = this.lineHeight
-            this.$refs.wrap.style.marginBottom = (parseInt(this.lineHeight) - parseInt(this.fontSize)) + 'px'
+            document.fonts.ready.then(() => {
+                this.blockMarginBottom = window.getComputedStyle(this.$slots.default()[0].el, null).getPropertyValue('margin-bottom')
+                this.blockHeight = window.getComputedStyle(this.$slots.default()[0].el, null).getPropertyValue('height')
+                this.$slots.default()[0].el.style.position = 'relative'
+                this.$slots.default()[0].el.style.top = this.blockHeight
+                this.$slots.default()[0].el.style.marginBottom = 0
+                this.$slots.default()[0].el.style.transition = 'none'
+                this.$slots.default()[0].el.style.opacity = '1'
+                this.$refs.mask.style.height = this.blockHeight
+                this.$refs.wrap.style.marginBottom = this.blockMarginBottom
+                this.is_played = false
+            })
 
             setTimeout(() => {
-                this.play()
-            }, 1000);
+                this.play(true)
+            }, 1000)
 
         },
 
-        play() {
+        play(init = false) {
 
-            let offsetTop = this.$refs.wrap.offsetTop
+            let offsetTop = this.getTopPosition(this.$slots.default()[0].el)
             let scrollTop = document.querySelectorAll('html')[0].scrollTop
             let viewportHeight = window.innerHeight
             if ( (scrollTop + viewportHeight) < offsetTop || this.is_played === true ) return
             
-            this.is_played = true
+            if ( !init ) {
+                this.is_played = true
+            }
 
+            this.$slots.default()[0].el.style.transition = 'top ' + this.duration + 's'
             this.$slots.default()[0].el.style.top = '0'
-        }
+        },
+
+        getTopPosition(element) {
+            return element.getBoundingClientRect().top + document.querySelectorAll('html')[0].scrollTop
+        },
     },
     
 }
@@ -70,10 +90,8 @@ export default {
     position: relative;
     text-align: left;
 
-    ::v-slotted(p) {
-        position: relative;
-        text-align: left;
-        transition: all 1s;
+    ::v-slotted(*) {
+        opacity: 0;
     }
 }
 
