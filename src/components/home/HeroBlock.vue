@@ -1,33 +1,12 @@
 <template>
   <div class="hero">
     <div class="hero--text-wrapper">
-
-      <!--
-      <div class="appear_from_mask__wrap">
-        <p v-in-viewport="{ class_from: 'animation__from', class_active: 'animation__active', class_to: 'animation__to' }" class="header-big">Product Design</p>
-      </div>
-
-      <div class="appear_from_mask__wrap">
-        <p v-in-viewport="{ class_from: 'animation__from', class_active: 'animation__active', class_to: 'animation__to' }" class="header-big">& Software</p>
-      </div>
-
-      <div class="appear_from_mask__wrap">
-        <p v-in-viewport="{ class_from: 'animation__from', class_active: 'animation__active', class_to: 'animation__to' }" class="header-big">Development</p>
-      </div>
-
-      <div class="appear_from_mask__wrap">
-        <p v-in-viewport="{ class_from: 'animation__from', class_active: 'animation__active', class_to: 'animation__to' }" class="header-big">for Startups</p>
-      </div>
-      -->
-
       
       <AppearFromMask><p class="header-big">Product Design</p></AppearFromMask>
       <AppearFromMask><p class="header-big">& Software</p></AppearFromMask>
       <AppearFromMask><p class="header-big">Development</p></AppearFromMask>
       <AppearFromMask><p class="header-big">for Startups</p></AppearFromMask>
       
-
-      <!-- <h1 class="header-big">Product Design<br />& Software<br />Development<br />for Startups</h1> -->
       <inline-svg
         :src="require('@/assets/illustrations/illustration-map.svg')"
         class="hero--text-wrapper--illustration"
@@ -69,6 +48,7 @@ export default {
     }
 
     &--illustration {
+      position: relative;
       width: 280px;
       height: auto;
     }
@@ -110,6 +90,10 @@ export default {
       &--illustration {
         width: 335px;
         height: 284px;
+        top: 40px;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
       }
     }
   }
@@ -132,8 +116,10 @@ export default {
         position: relative;
         width: -webkit-fill-available;
         height: 601px;
-        top: 0;
+        top: 40px;
         right: 0;
+        left: auto;
+        transform: none;
       }
     }
   }
@@ -154,7 +140,7 @@ export default {
         position: relative;
         width: -webkit-fill-available;
         height: 503px;
-        top: 0;
+        top: 40px;
         right: 0;
       }
     }
