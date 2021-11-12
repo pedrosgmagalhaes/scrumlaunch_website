@@ -17,11 +17,12 @@ export default {
     },
 
     mounted () {
-        window.addEventListener('scroll', this.wrap)
+        this.init()
+        window.addEventListener('scroll', this.play)
     },
 
     beforeUnmount() {
-        window.removeEventListener('scroll', this.wrap)
+        window.removeEventListener('scroll', this.play)
     },
 
     data() {
@@ -32,7 +33,23 @@ export default {
 
     methods: {
 
-        wrap() {
+        init() {
+
+            if ( this.type === '2' ) {
+                let blockMaxWidth = window.getComputedStyle(this.$slots.default()[0].el, null).getPropertyValue('width')
+                this.$refs.wrap.style.maxWidth = blockMaxWidth
+            }
+            this.$slots.default()[0].el.style.display = 'flex'
+            this.$slots.default()[0].el.style.flexWrap = 'wrap'
+            this.$slots.default()[0].el.style.width = '100%'
+
+            setTimeout(() => {
+                this.play()
+            }, 1000);
+
+        },
+
+        play() {
 
             let offsetTop = this.getTopPosition(this.$slots.default()[0].el)
             let scrollTop = document.querySelectorAll('html')[0].scrollTop
@@ -41,13 +58,10 @@ export default {
             
             this.is_played = true
 
-            this.$slots.default()[0].el.style.display = 'flex'
-            this.$slots.default()[0].el.style.flexWrap = 'wrap'
-
             let delay = 0
             let text_arr =  this.$slots.default()[0].el.innerText.split('')
             text_arr = text_arr.map(item => {
-                item = item === ' ' ? '&nbsp;' : item
+
                 if ( this.type === '1' ) {
                     delay += 0.1
                 }
@@ -57,8 +71,16 @@ export default {
                 else {
                     delay += 0.1
                 }
-                return '<span style="animation-delay: '+delay.toFixed(2)+'s">'+item+'</span>'
+
+                if ( !/\s+/.test(item) ) {
+                    return '<span style="animation-delay: '+delay.toFixed(2)+'s">'+item+'</span>'
+                }
+                else {
+                    return '</span><span style="animation-delay: '+delay.toFixed(2)+'s">&nbsp;</span><span>'
+                }
             })
+            text_arr.unshift('<span>')
+            text_arr.push('</span>')
             this.$slots.default()[0].el.innerHTML = text_arr.join('')
         },
 
@@ -74,6 +96,10 @@ export default {
 
 
 <style lang="scss" scoped>
+
+.wrap {
+    flex: 1;
+}
 
 .typing_1 {
 

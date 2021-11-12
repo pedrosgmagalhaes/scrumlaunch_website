@@ -1,8 +1,8 @@
 <template>
   <div class="process">
     <div class="process--hero">
-      <h1 class="header-big">OUR process</h1>
-      <p class="body-1">We deliver desired business outcomes because we lay </p>
+      <AppearFromMask><h1 class="header-big">OUR process</h1></AppearFromMask>
+      <AppearFromMask><p class="body-1">We deliver desired business outcomes because we lay </p></AppearFromMask>
 
       <div class="process--hero--icon">
         <vLottiePlayer
@@ -139,7 +139,9 @@
       }
 
       p {
-        width: 68%;
+        // width: 68%;
+        width: 100%;
+        max-width: 1078px;
       }
 
       &--icon {

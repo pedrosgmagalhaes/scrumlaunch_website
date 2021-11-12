@@ -11,7 +11,7 @@
         <img src="../../assets/animation/lower-block-mobile.gif" />
       </div>
     </div>
-    <p class="header-2">Looking to build something amazing? We’d love to help.</p>
+    <TypingEffect type="2"><p class="header-2">Looking to build something amazing? We’d love to help.</p></TypingEffect>
     <router-link class="btn" :to="{ name: 'ContactUs'}">contact us</router-link>
   </div>
 </template>
@@ -47,7 +47,8 @@
 
   p {
     margin-right: 8px;
-    width: 58.9%;
+    width: 100%;
+    max-width: 540px;
     text-align: left;
   }
 }
@@ -78,7 +79,7 @@
 
     p {
       margin-right: 29px;
-      width: 46.7%;
+      width: 330px;
     }
   }
 }
@@ -112,7 +113,7 @@
 
     p {
       margin-right: 8px;
-      width: 35.3%;
+      width: 550px;
       text-align: left;
     }
   }

@@ -90,6 +90,7 @@ export default {
     handleNavigation(pageName) {
       if (this.showMenu) {
         this.showMenu = false;
+        document.querySelector('body').classList.remove('overflow-hidden')
       }
       this.$router.push({ name: pageName });
     }

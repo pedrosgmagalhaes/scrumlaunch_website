@@ -1,7 +1,7 @@
 <template>
   <div class="hero">
-    <h1 class="header-big">We design a lot of things</h1>
-    <p class="body-3">We master digital production and development. What we also master is the fine art of listening. Truly listening.</p>
+    <h1 class="header-big"><AppearFromMask><span>We design a lot of</span></AppearFromMask> <AppearFromMask><span>things</span></AppearFromMask></h1>
+    <AppearFromMask><p class="body-3">We master digital production and development. What we also master is the fine art of listening. Truly listening.</p></AppearFromMask>
     <div class="hero--wrapper">
       <inline-svg
         :src="require('@/assets/icons/planet.svg')"
@@ -17,6 +17,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.header-big {
+  span {
+    display: inline-block;
+  }
+}
+
+.body-3 {
+  position: relative;
+}
+
 .hero {
   padding: 125px 20px 80px;
   display: flex;

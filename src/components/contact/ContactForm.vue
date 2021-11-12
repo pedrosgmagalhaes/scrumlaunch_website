@@ -77,6 +77,8 @@ export default {
 
 <style lang="scss" scoped>
 .contact-form {
+  position: relative;
+  background: #fff;
   padding: 80px 20px;
   display: flex;
   flex-direction: column;

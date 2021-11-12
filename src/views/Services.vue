@@ -1,8 +1,8 @@
 <template>
   <div class="services">
-    <h1 class="header-big">Our services</h1>
+    <AppearFromMask><h1 class="header-big">Our services</h1></AppearFromMask>
     <div class="services--desc">
-      <p class="body-1">Our service offerings remain core to our mission - designed to make your content sing through well-informed content strategy, research-backed design, and forward-thinking development that excludes no one.</p>
+      <AppearFromMask><p class="body-1">Our service offerings remain core to our mission - designed to make your content sing through well-informed content strategy, research-backed design, and forward-thinking development that excludes no one.</p></AppearFromMask>
     </div>
     <div class="services--wrapper">
       <ServiceItem v-for="(service, i) in services" :key="i" :service="service" />
@@ -81,6 +81,7 @@ export default {
   }
 
   &--wrapper {
+    position: relative;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;

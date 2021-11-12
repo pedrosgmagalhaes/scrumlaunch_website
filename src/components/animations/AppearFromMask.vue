@@ -17,6 +17,11 @@ export default {
             type: String,
             default: '1'
         },
+
+        maskBg: {
+            type: String,
+            default: '#ffffff'
+        },
     },
 
     mounted() {
@@ -42,15 +47,19 @@ export default {
         init() {
 
             document.fonts.ready.then(() => {
-                this.blockMarginBottom = window.getComputedStyle(this.$slots.default()[0].el, null).getPropertyValue('margin-bottom')
+                this.blockMargin = window.getComputedStyle(this.$slots.default()[0].el, null).getPropertyValue('margin')
+                this.blockMaxWidth = window.getComputedStyle(this.$slots.default()[0].el, null).getPropertyValue('width')
                 this.blockHeight = window.getComputedStyle(this.$slots.default()[0].el, null).getPropertyValue('height')
                 this.$slots.default()[0].el.style.position = 'relative'
                 this.$slots.default()[0].el.style.top = this.blockHeight
-                this.$slots.default()[0].el.style.marginBottom = 0
+                this.$slots.default()[0].el.style.margin = 0
+                this.$slots.default()[0].el.style.width = '100%'
                 this.$slots.default()[0].el.style.transition = 'none'
                 this.$slots.default()[0].el.style.opacity = '1'
                 this.$refs.mask.style.height = this.blockHeight
-                this.$refs.wrap.style.marginBottom = this.blockMarginBottom
+                this.$refs.mask.style.backgroundColor = this.maskBg
+                this.$refs.wrap.style.margin = this.blockMargin
+                this.$refs.wrap.style.maxWidth = this.blockMaxWidth
                 this.is_played = false
             })
 
@@ -95,7 +104,6 @@ export default {
 .mask {
     position: absolute;
     width: 100%;
-    background: #fff;
 }
 
 </style>

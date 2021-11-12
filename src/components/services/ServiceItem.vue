@@ -1,14 +1,16 @@
 <template>
   <div class="service-item">
-    <div class="service-item--header">
-      <inline-svg
-        :src="require(`@/assets/icons/services/${service.icon}-icon.svg`)"
-        class="service-item--header--icon"
-      />
-      <p class="header-2">{{service.title}}</p>
-    </div>
-    <div class="service-item--desc">
-      <p>{{service.description}}</p>
+    <div class="service-item--inner" v-in-viewport="{ class_from: 'service-item__from', class_active: 'service-item__active', class_to: 'service-item__to' }">
+      <div class="service-item--header">
+        <inline-svg
+          :src="require(`@/assets/icons/services/${service.icon}-icon.svg`)"
+          class="service-item--header--icon"
+        />
+        <p class="header-2">{{service.title}}</p>
+      </div>
+      <div class="service-item--desc">
+        <p>{{service.description}}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -53,6 +55,20 @@ export default {
       text-align: left;
     }
   }
+
+  &__from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  &__active {
+    transition: all 1s;
+  }
+
+  &__to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -91,6 +107,13 @@ export default {
       .header-2 {
         max-width: 60%;
       }
+    }
+
+    &--inner {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
     }
 
     &--header {

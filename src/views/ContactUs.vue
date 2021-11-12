@@ -1,10 +1,11 @@
 <template>
   <div class="contact-us">
     <div class="contact-us--hero">
-      <h1 class="header-big">Let’s <br/>
-        <span style="color: #12E2B0;">talk</span>
+      <h1 class="header-big">
+        <AppearFromMask maskBg="#1E1F21"><span>Let’s </span></AppearFromMask>
+        <AppearFromMask maskBg="#1E1F21"><span style="color: #12E2B0;">talk</span></AppearFromMask>
       </h1>
-      <p class="header-2">Interested in working with us? <span style="color: #1E1F21; background: #12E2B0;">Send us an email</span> or start a conversation by filling out the form below.</p>
+      <AppearFromMask maskBg="#1E1F21"><p class="header-2">Interested in working with us? <span style="color: #1E1F21; background: #12E2B0;">Send us an email</span> or start a conversation by filling out the form below.</p></AppearFromMask>
     </div>
     <ContactForm />
   </div>
@@ -20,6 +21,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.header-big {
+  span {
+    display: inline-block;
+  }
+}
+
 .contact-us {
   &--hero {
     padding: 125px 20px 80px;
@@ -31,7 +39,7 @@ export default {
     p {
       margin-top: 74px;
       text-align: left;
-      width: 67%;
+      width: 90%;
     }
   }
 }
@@ -43,7 +51,8 @@ export default {
 
       p {
         margin-top: 134px;
-        width: 73.5%;
+        width: 90%;
+        max-width: 100%;
       }
     }
   }
@@ -59,6 +68,7 @@ export default {
         margin-top: 97px;
         margin-left: 146px;
         width: 62%;
+        max-width: 100%;
       }
     }
   }
