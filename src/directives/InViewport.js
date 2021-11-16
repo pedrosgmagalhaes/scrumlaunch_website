@@ -9,7 +9,7 @@ export const InViewport = {
 
     },
 
-    mounted(el, binding) {
+    mounted(el, binding, vnode) {
 
         let in_viewport = false
 
@@ -27,6 +27,9 @@ export const InViewport = {
                     el.classList.remove(binding.value.class_from)
                     el.classList.add(binding.value.class_to ? binding.value.class_to : '')
                 }
+            }
+            else if ( typeof binding.value === 'function' ) {
+                binding.value(in_viewport, vnode.key)
             }
         }
 
