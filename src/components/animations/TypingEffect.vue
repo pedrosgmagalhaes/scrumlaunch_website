@@ -10,9 +10,15 @@
 export default {
 
     props: {
+
         type: {
             type: String,
             default: '1'
+        },
+
+        delay: {
+            type: String,
+            default: null
         },
     },
 
@@ -43,6 +49,9 @@ export default {
             this.$slots.default()[0].el.style.flexWrap = 'wrap'
             this.$slots.default()[0].el.style.width = '100%'
 
+            this.$refs.wrap.style.margin = window.getComputedStyle(this.$slots.default()[0].el, null).getPropertyValue('margin')
+            this.$slots.default()[0].el.style.margin = 0
+
             setTimeout(() => {
                 this.play()
             }, 1000);
@@ -63,13 +72,13 @@ export default {
             text_arr = text_arr.map(item => {
 
                 if ( this.type === '1' ) {
-                    delay += 0.1
+                    delay += this.delay === null ? 0.1 : parseFloat(this.delay)
                 }
                 else if ( this.type === '2' ) {
-                    delay += 0.015
+                    delay += this.delay === null ? 0.015 : parseFloat(this.delay)
                 }
                 else {
-                    delay += 0.1
+                    delay += this.delay === null ? 0.1 : parseFloat(this.delay)
                 }
 
                 if ( !/\s+/.test(item) ) {

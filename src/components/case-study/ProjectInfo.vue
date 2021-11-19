@@ -53,7 +53,7 @@ export default {
 
     &--desc {
       font-style: normal;
-      font-weight: 500;
+      font-weight: 600;
       font-size: 14px;
       line-height: 150%;
       margin-bottom: 24px;
@@ -71,7 +71,7 @@ export default {
 
         &--title, &--text {
           font-style: normal;
-          font-weight: 500;
+          font-weight: 600;
           font-size: 12px;
           line-height: 150%;
           margin-bottom: 6px;

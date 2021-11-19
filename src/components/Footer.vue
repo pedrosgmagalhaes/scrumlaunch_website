@@ -6,14 +6,19 @@
       <router-link :to="{ name: 'ContactUs' }">Contact</router-link>
     </div>
     <div class="footer--contact">
+
+      <!--
       <div class="footer--contact--item">
         <p>Phone</p>
         <a href="tel:+380989999999">+38 (098) 99 99 999</a>
       </div>
+      -->
+
       <div class="footer--contact--item">
         <p>Email</p>
-        <a href="mailto:hello@scrumlaunch.com" style="color: #FF0000;">hello@scrumlaunch.com</a>
+        <a href="mailto:charlie@scrumlaunch.com" style="color: #FF0000;">charlie@scrumlaunch.com</a>
       </div>
+
     </div>
     <div class="footer--address">
       <p>Netechens'ka embankment 8,<br />Kharkiv, Ukraine</p>

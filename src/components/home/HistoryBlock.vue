@@ -107,7 +107,7 @@ export default {
 
   &--text-icon-2 {
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 12px;
     line-height: 150%;
     color: #12E2B0;

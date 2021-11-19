@@ -1,195 +1,316 @@
 <template>
-  <div class="contact-form">
-    <inline-svg
-      :src="require('@/assets/icons/pencil.svg')"
-      class="contact-form--icon"
-    />
-    <p class="header-big">HeLLO,</p>
-    <div class="contact-form--wrapper">
-      <label class="header-1" for="name">MY name is</label>
-      <InputComponent
-          class="contact-form--wrapper--input"
-          :modelValue="name"
-          @update:modelValue="handleFieldChange('name', $event)"
-          placeholder="Enter your name here"
-          id="name"
-          name="name"
-          :errorMessage="nameError"
-        />
-    </div>
+	<div class="contact-form">
 
-    <div class="contact-form--wrapper">
-      <label class="header-1" for="email">HERE are my contacts</label>
-      <InputComponent
-          class="contact-form--wrapper--input input-email"
-          :modelValue="email"
-          @update:modelValue="handleFieldChange('email', $event)"
-          placeholder="Enter your email or phone number here"
-          id="email"
-          name="email"
-          :errorMessage="emailError"
-        />
-    </div>
+		<AppearFromMask><p class="header-big">HeLLO,</p></AppearFromMask>
 
-    <div class="contact-form--wrapper">
-      <label class="header-1" for="email">I’m Intrested in</label>
-      <InputComponent
-          class="contact-form--wrapper--input input-project"
-          :modelValue="project"
-          @update:modelValue="handleFieldChange('project', $event)"
-          placeholder="Enter your project details here"
-          id="project"
-          name="project"
-          :errorMessage="projectError"
-        />
-    </div>
+		<div class="contact-form--wrapper">
+			<TypingEffect delay="0.05"><label class="header-1" for="name">MY name is</label></TypingEffect>
+			<div class="contact-form__input_wrap">
+				<InputComponent
+					class="contact-form--wrapper--input"
+					:modelValue="name"
+					@update:modelValue="handleFieldChange('name', $event)"
+					placeholder="Enter your name here"
+					id="name"
+					name="name"
+					:errorMessage="nameError"
+				/>
+				<inline-svg
+					:src="require('@/assets/icons/pencil_separate.svg')"
+					class="contact-form__pencil_separate"
+				/>
+				<inline-svg
+					:src="require('@/assets/icons/pencil_line.svg')"
+					class="contact-form__pencil_line"
+				/>
+			</div>
+		</div>
 
-    <div class="contact-form--wrapper-btn">
-      <button class="btn">Send</button>
-    </div>
-  </div>
+		<div class="contact-form--wrapper">
+			<TypingEffect delay="0.05"><label class="header-1" for="email">HERE are my contacts</label></TypingEffect>
+			<InputComponent
+				class="contact-form--wrapper--input input-email"
+				:modelValue="email"
+				@update:modelValue="handleFieldChange('email', $event)"
+				placeholder="Enter your email or phone number here"
+				id="email"
+				name="email"
+				:errorMessage="emailError"
+			/>
+		</div>
+
+		<div class="contact-form--wrapper">
+			<TypingEffect delay="0.05"><label class="header-1" for="email">I’m Intrested in</label></TypingEffect>
+			<InputComponent
+				class="contact-form--wrapper--input input-project"
+				:modelValue="project"
+				@update:modelValue="handleFieldChange('project', $event)"
+				placeholder="Enter your project details here"
+				id="project"
+				name="project"
+				:errorMessage="projectError"
+			/>
+		</div>
+
+		<div class="contact-form--wrapper-btn">
+			<button class="btn">Send</button>
+		</div>
+
+	</div>
 </template>
+
+
 
 <script>
 import InputComponent from '@/components/contact/InputComponent.vue'
 
 export default {
-  components: {
-    InputComponent
-  },
 
-  data: () => ({
-    name: '',
-    nameError: null,
-    email: '',
-    emailError: null,
-    project: '',
-    projectError: null,
-  }),
+	components: {
+		InputComponent
+	},
 
-  methods: {
-    handleFieldChange(name, value) {
-      this[name] = value;
-    },
-  }
+	data: () => ({
+		name: '',
+		nameError: null,
+		email: '',
+		emailError: null,
+		project: '',
+		projectError: null,
+	}),
+
+	methods: {
+		handleFieldChange(name, value) {
+			this[name] = value;
+		},
+	}
 }
 </script>
 
+
+
 <style lang="scss" scoped>
+
 .contact-form {
-  position: relative;
-  background: #fff;
-  padding: 80px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  color: #1E1F21;
-  position: relative;
+	position: relative;
+	background: #fff;
+	padding: 80px 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	color: #1e1f21;
+	position: relative;
 
-  &--icon {
-    position: absolute;
-    width: 114px;
-    height: 130px;
-    top: 43px;
-    right: 30px;
-    z-index: 2;
-  }
+	&--icon {
+		position: absolute;
+		width: 114px;
+		height: 130px;
+		top: 43px;
+		right: 30px;
+		z-index: 2;
+	}
 
-  & > p {
-    margin-bottom: 60px;
-  }
+	& .header-big {
+		margin-bottom: 60px;
+	}
 
-  &--wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    margin-bottom: 40px;
+	&--wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		width: 100%;
+		margin-bottom: 40px;
 
-    label {
-      margin-bottom: 16px;
-    }
+		&:deep(.wrap.typing_1) {
+			flex: initial;
+		}
 
-    &--input {
-      width: 100%;
-    }
-  }
+		label {
+			margin-bottom: 16px;
+		}
 
-  &--wrapper-btn {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
+		&--input {
+			width: 100%;
+		}
+	}
+
+	&--wrapper-btn {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
 }
 
 @media screen and (min-width: 768px) {
-  .contact-form {
-    padding: 140px 30px;
+	.contact-form {
+		padding: 140px 30px;
 
-    &--icon {
-      position: absolute;
-      width: 225px;
-      height: 257px;
-      top: 51px;
-      right: 90px;
-    }
+		&--icon {
+			position: absolute;
+			width: 225px;
+			height: 257px;
+			top: 51px;
+			right: 90px;
+		}
 
-    &--wrapper {
-      margin-bottom: 50px;
+		&--wrapper {
+			margin-bottom: 50px;
 
-      label {
-        margin-bottom: 20px;
-      }
+			label {
+				margin-bottom: 20px;
+			}
 
-      &--input {
-        width: 50.4%;
+			&--input {
+				width: 50.4%;
 
-        &.input-project {
-          width: 83.76%;
-        }
-      }
-    }
-  }
+				&.input-project {
+					width: 83.76%;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1140px) {
+	.contact-form {
+		&--wrapper {
+			position: relative;
+			align-items: flex-start;
+			margin-bottom: 0px;
+			flex-direction: row;
+			align-items: center;
+
+			& :deep(.header-1) {
+				flex-wrap: nowrap !important;
+				margin-right: 15px;
+				margin-top: 27px;
+			}
+
+			& :deep(.contact-form--wrapper--input) {
+				width: 100%;
+			}
+
+			& :deep(.input-item--input-wrapper--input) {
+				padding-left: 80px;
+			}
+		}
+
+		&--wrapper-btn {
+			margin-top: 40px;
+		}
+
+		&__input_wrap {
+			position: relative;
+			width: 39%;
+
+			.input-item {
+				width: 100%;
+			}
+		}
+
+		&__pencil_separate {
+			position: absolute;
+			right: -216px;
+			bottom: 55px;
+			z-index: 1;
+			transform: translate(0px, 0px);
+			animation: pencil 1s linear infinite;
+		}
+
+		&__pencil_line {
+			position: absolute;
+			top: -79px;
+			right: -10px;
+			z-index: 1;
+		}
+	}
 }
 
 @media screen and (min-width: 1280px) {
-  .contact-form {
-    padding: 240px 8.34%;
+	.contact-form {
+		padding: 240px 8.34%;
 
-    &--icon {
-      position: absolute;
-      width: 312.38px;
-      height: 353px;
-      top: 156px;
-      right: 177px;
-    }
+		&--icon {
+			position: absolute;
+			width: 312.38px;
+			height: 353px;
+			top: 156px;
+			right: 177px;
+		}
 
-    &--wrapper {
-      margin-bottom: 40px;
-      flex-direction: row;
-      align-items: center;
+		&--wrapper {
+			position: relative;
+			align-items: flex-start;
+			margin-bottom: 40px;
+			flex-direction: row;
+			align-items: center;
 
-      label {
-        margin-bottom: 0px;
-        margin-right: 20px;
-      }
+			label {
+				margin-bottom: 0px;
+				margin-right: 20px;
+			}
 
-      &--input {
-        width: 47%;
+			&--input {
+				// width: 47%;
 
-        &.input-project {
-          width: 48%;
-        }
+				&.input-project {
+					width: 48%;
+				}
 
-        &.input-email {
-          width: 39%;
-        }
-      }
-    }
+				&.input-email {
+					width: 39%;
+				}
+			}
+		}
 
-    &--wrapper-btn {
-      margin-top: 40px;
-    }
-  }
+		&--wrapper-btn {
+			margin-top: 40px;
+		}
+
+		&__input_wrap {
+			position: relative;
+			width: 39%;
+
+			.input-item {
+				width: 100%;
+			}
+		}
+
+		&__pencil_separate {
+			position: absolute;
+			right: -216px;
+			bottom: 58px;
+			z-index: 1;
+			transform: translate(0px, 0px);
+			animation: pencil 1s linear infinite;
+		}
+
+		&__pencil_line {
+			position: absolute;
+			top: -76px;
+			right: -10px;
+			z-index: 1;
+		}
+	}
 }
+
+@keyframes pencil {
+	0% {
+		transform: translate(0px, 0px);
+	}
+
+	25% {
+		transform: translate(3px, 0px);
+	}
+
+	50% {
+		transform: translate(3px, -3px);
+	}
+
+	75% {
+		transform: translate(0px, -3px);
+	}
+
+}
+
 </style>

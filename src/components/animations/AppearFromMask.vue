@@ -99,6 +99,7 @@ export default {
 .wrap {
     position: relative;
     text-align: left;
+    overflow: hidden;
 }
 
 .mask {

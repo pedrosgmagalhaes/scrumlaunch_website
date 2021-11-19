@@ -76,7 +76,7 @@ export default {
       color: #1E1F21;
       border: none;
       font-style: normal;
-      font-weight: 500;
+      font-weight: 600;
       font-size: 14px;
       line-height: 150%;
       width: 100%;
@@ -107,7 +107,7 @@ export default {
       font-size: 12px;
       color: #E83C56;
       text-align: right;
-      font-weight: 500;
+      font-weight: 600;
       line-height: 150%;
       position: absolute;
       bottom: -22px;

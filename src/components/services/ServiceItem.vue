@@ -48,7 +48,7 @@ export default {
     p {
       font-family: 'Proxima Nova';
       font-style: normal;
-      font-weight: 500;
+      font-weight: 600;
       font-size: 12px;
       line-height: 150%;
       color: #1E1F21;
