@@ -235,4 +235,12 @@ export default {
 		}
 	}
 }
+
+@media screen and (min-width: 1900px) {
+	.header-big {
+		font-weight: 900;
+		font-size: 90px;
+		line-height: 140%;
+	}
+}
 </style>

@@ -201,4 +201,12 @@
 	}
 }
 
+@media screen and (min-width: 1900px) {
+	.header-1 {
+		font-weight: 900;
+		font-size: 75px;
+		line-height: 140%;
+	}
+}
+
 </style>

@@ -119,4 +119,12 @@ export default {
   }
 
 }
+
+@media screen and (min-width: 1900px) {
+	.marquee-block--wrapper--text .header-1 {
+		font-weight: 900;
+    font-size: 80px;
+    line-height: 140%;
+	}
+}
 </style>

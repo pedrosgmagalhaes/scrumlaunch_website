@@ -133,10 +133,32 @@ export default {
 	}
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1281px) {
 	.projects {
 		&--wrapper {
 			justify-content: space-around;
+		}
+	}
+}
+
+@media screen and (min-width: 1900px) {
+	.header-1 {
+		font-weight: 900;
+		font-size: 75px;
+		line-height: 140%;
+	}
+
+	.projects {
+		&--wrapper {
+			justify-content: space-between;
+		}
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	.projects {
+		&--wrapper {
+			justify-content: space-between;
 		}
 	}
 }

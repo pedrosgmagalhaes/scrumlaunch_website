@@ -99,4 +99,24 @@ export default {
     }
   }
 }
+
+@media screen and (min-width: 1900px) {
+  .contact-us--icon {
+    width: 773px;
+    height: 507px;
+  }
+
+  .header-2 {
+    font-size: 40px;
+    line-height: 140%;
+  }
+
+  .btn {
+		width: 220px;
+		height: 220px;
+		border-radius: 50%;
+		font-size: 21.6867px;
+		line-height: 150%;
+	}
+}
 </style>

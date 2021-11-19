@@ -367,4 +367,34 @@ export default {
 		}
 	}
 }
+
+@media screen and (min-width: 1900px) {
+	.header-1 {
+		font-weight: 900;
+		font-size: 75px;
+		line-height: 140%;
+	}
+
+	.header-2 {
+		font-size: 40px;
+		line-height: 140%;
+	}
+
+	.body-3 {
+		font-size: 20px;
+		line-height: 150%;
+	}
+
+	.news--wrapper--item--content .header-4 {
+		font-size: 16px;
+	}
+
+	.btn {
+		width: 220px;
+		height: 220px;
+		border-radius: 50%;
+		font-size: 21.6867px;
+		line-height: 150%;
+	}
+}
 </style>

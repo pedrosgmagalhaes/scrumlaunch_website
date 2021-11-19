@@ -252,6 +252,15 @@ export default {
   }
 }
 
+@media screen and (min-width: 1900px) {
+	.header-1,
+  .services p {
+		font-weight: 900;
+		font-size: 75px;
+		line-height: 140%;
+	}
+}
+
 @media screen and (min-width: 1920px) {
   .services {
     .product-text {

@@ -204,4 +204,26 @@ export default {
 	}
 }
 
+@media screen and (min-width: 1900px) {
+	.project-item {
+		max-width: 768px;
+		width: 100%;
+		height: 1064px;
+
+		&--image {
+			height: calc(100% - 170px);
+		}
+
+		&--info {
+			display: flex;
+			align-items: center;
+			height: 128px;
+		}
+	}
+
+	.header-2 {
+		font-size: 40px;
+	}
+}
+
 </style>
