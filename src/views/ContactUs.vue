@@ -4,6 +4,11 @@
 
 		<div class="contact-us--hero">
 
+			<!-- <h1 class="header-big">
+				<span>Let’s </span>
+				<span style="color: #12e2b0">talk</span>
+			</h1> -->
+
 			<h1 class="header-big">
 				<AppearFromMask maskBg="#1E1F21"><span>Let’s </span></AppearFromMask>
 				<AppearFromMask maskBg="#1E1F21"><span style="color: #12e2b0">talk</span></AppearFromMask>
@@ -80,8 +85,23 @@ export default {
 }
 
 @media screen and (min-width: 1140px) {
-	::deep(.header-2) {
-		margin-top: 0 !important;
+	.contact-us {
+
+		:deep(.header-big) {
+			font-size: 70px;
+			line-height: 140%;
+		}
+
+		&--hero {
+			padding-left: 44px;
+			padding-right: 44px;
+
+			:deep(p) {
+				margin-top: 92px;
+				max-width: 800px;
+				font-size: 30px;
+			}
+		}
 	}
 }
 

@@ -139,6 +139,33 @@ export default {
 		justify-content: center;
 		width: 100%;
 	}
+
+	&__input_wrap {
+		position: relative;
+		width: 100%;
+
+		.input-item {
+			width: 100%;
+		}
+	}
+
+	&__pencil_separate {
+		position: absolute;
+		right: 0;
+		bottom: 40px;
+		width: 88px;
+		z-index: 1;
+		transform: translate(0px, 0px);
+		animation: pencil 1s linear infinite;
+	}
+
+	&__pencil_line {
+		position: absolute;
+		top: -154px;
+		right: 76px;
+		width: 50px;
+		z-index: 1;
+	}
 }
 
 @media screen and (min-width: 768px) {
@@ -168,15 +195,48 @@ export default {
 				}
 			}
 		}
+
+		&__input_wrap {
+			position: relative;
+			width: 39%;
+
+			.input-item {
+				width: 100%;
+			}
+		}
+
+		&__pencil_separate {
+			position: absolute;
+			right: -418px;
+			bottom: 96px;
+			width: 239px;
+			z-index: 1;
+			transform: translate(0px, 0px);
+			animation: pencil 1s linear infinite;
+		}
+
+		&__pencil_line {
+			position: absolute;
+			top: -190px;
+			right: -204px;
+			width: 107px;
+			z-index: 1;
+		}
 	}
 }
 
 @media screen and (min-width: 1140px) {
+
 	.contact-form {
+
+		& :deep(.header-big) {
+			margin-bottom: 30px;
+		}
+
 		&--wrapper {
 			position: relative;
 			align-items: flex-start;
-			margin-bottom: 0px;
+			margin-bottom: 10px;
 			flex-direction: row;
 			align-items: center;
 
