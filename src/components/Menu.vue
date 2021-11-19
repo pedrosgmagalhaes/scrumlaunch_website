@@ -187,7 +187,7 @@ export default {
 
 @media screen and (min-width: 1024px) {
   .menu {
-    padding: 35px 8.34%;
+    // padding: 35px 8.34%;
 
     &--desktop {
 
@@ -222,6 +222,19 @@ export default {
         display: none;
       }
     }
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .menu {
+    padding-left: 44px;
+    padding-right: 44px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .menu {
+    padding: 35px 8.34%;
   }
 }
 </style>

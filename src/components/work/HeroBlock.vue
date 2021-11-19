@@ -2,8 +2,8 @@
 	<div class="hero">
 
 		<h1 class="header-big">
-			<AppearFromMask><span>We design a lot of</span></AppearFromMask>
-			<AppearFromMask><span>things</span></AppearFromMask>
+			<AppearFromMask><span>We design a lot</span></AppearFromMask>
+			<AppearFromMask><span>of things</span></AppearFromMask>
 		</h1>
 
 		<AppearFromMask>
