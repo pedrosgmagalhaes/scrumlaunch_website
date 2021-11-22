@@ -30,4 +30,13 @@
     }
   }
 }
+
+@media screen and (min-width: 1900px) {
+  .social {
+    &--icon {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
 </style>

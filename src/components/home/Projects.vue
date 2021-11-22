@@ -153,6 +153,16 @@ export default {
 			justify-content: space-between;
 		}
 	}
+
+	.projects--btn-wrapper {
+		.btn {
+			width: 220px;
+			height: 220px;
+			border-radius: 50%;
+			font-size: 21.6867px;
+			line-height: 150%;
+		}
+	}
 }
 
 @media screen and (min-width: 1920px) {

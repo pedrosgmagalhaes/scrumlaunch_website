@@ -242,5 +242,13 @@ export default {
 		font-size: 90px;
 		line-height: 140%;
 	}
+
+	.hero {
+		padding-top: 230px;
+	}
+
+	.hero--text-wrapper {
+		margin-bottom: 150px;
+	}
 }
 </style>

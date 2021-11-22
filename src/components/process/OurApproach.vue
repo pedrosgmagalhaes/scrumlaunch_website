@@ -85,6 +85,20 @@ export default {
 
     &--icon {
       margin: auto;
+      transform-origin: bottom center;
+      animation: cup 1s linear infinite;
+    }
+
+    @keyframes cup {
+      0% {
+        transform: rotate(-1.5deg);
+      }
+      50% {
+        transform: rotate(1.5deg);
+      }
+      100% {
+        transform: rotate(-1.5deg);
+      }
     }
   }
 

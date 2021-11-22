@@ -1,5 +1,5 @@
 <template>
-  <div class="footer">
+  <div class="footer" :class="{ home: $route.name === 'Home' }">
     <div class="footer--menu">
       <router-link :to="{ name: 'Home' }">Portfolio</router-link>
       <router-link :to="{ name: 'Process' }">About us</router-link>
@@ -264,6 +264,32 @@ export default {
       position: relative;
       right: inherit;
       bottom: inherit;
+    }
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  .footer {
+    .footer--menu {
+      a {
+        font-size: 24px;
+        line-height: 150%;
+      }
+    }
+
+    p {
+      font-size: 24px;
+      line-height: 150%;
+    }
+
+    span {
+      font-size: 18px;
+      line-height: 150%;
+    }
+
+    &--contact--item a {
+      font-size: 32px;
+      line-height: 150%;
     }
   }
 }

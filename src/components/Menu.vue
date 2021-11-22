@@ -1,5 +1,5 @@
 <template>
-  <div class="menu">
+  <div class="menu" :class="{ home: $route.name === 'Home' }">
     <div v-if="!showMenu" class="menu--desktop">
       <router-link :to="{ name: 'Home' }">
         <inline-svg
@@ -235,6 +235,25 @@ export default {
 @media screen and (min-width: 1280px) {
   .menu {
     padding: 35px 8.34%;
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  .menu {
+    &.home {
+      .menu--desktop {
+        &--wrapper {
+          a {
+            font-size: 24px;
+          }
+        }
+
+        &--icon {
+          width: 100px;
+          height: 41px;
+        }
+      }
+    }
   }
 }
 </style>
