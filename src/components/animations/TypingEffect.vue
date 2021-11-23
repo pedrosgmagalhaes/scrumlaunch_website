@@ -107,7 +107,7 @@ export default {
 <style lang="scss" scoped>
 
 .wrap {
-    flex: 1;
+    // flex: 1;
 }
 
 .typing_1 {

@@ -19,7 +19,7 @@
 				class="hero--text-wrapper--illustration"
 				name="reliabilityDesktopAnim"
 				loop
-				renderer="canvas"
+				renderer="svg"
 				:animationData="
 					require('../../assets/animation/pangea2.json')
 				"
@@ -245,10 +245,18 @@ export default {
 
 	.hero {
 		padding-top: 230px;
-	}
 
-	.hero--text-wrapper {
-		margin-bottom: 150px;
+		&--text-wrapper {
+			margin-bottom: 150px;
+
+			&--illustration {
+
+				::v-deep {
+					transform: scale(1.5) translateX(-48px);
+					top: 282px;
+				}
+			}
+		}
 	}
 }
 </style>

@@ -21,7 +21,7 @@
 
     </div>
     <div class="footer--address">
-      <p>Netechens'ka embankment 8,<br />Kharkiv, Ukraine</p>
+      <p>Netechens'ka embankment 8,<br />Portland, Oregon</p>
     </div>
     <SocialBlock class="footer--social"/>
     <span>© ScrumLaunch 2021</span>
@@ -270,26 +270,28 @@ export default {
 
 @media screen and (min-width: 1900px) {
   .footer {
-    .footer--menu {
-      a {
+    &.home {
+      .footer--menu {
+        a {
+          font-size: 24px;
+          line-height: 150%;
+        }
+      }
+
+      p {
         font-size: 24px;
         line-height: 150%;
       }
-    }
 
-    p {
-      font-size: 24px;
-      line-height: 150%;
-    }
+      span {
+        font-size: 18px;
+        line-height: 150%;
+      }
 
-    span {
-      font-size: 18px;
-      line-height: 150%;
-    }
-
-    &--contact--item a {
-      font-size: 32px;
-      line-height: 150%;
+      &--contact--item a {
+        font-size: 32px;
+        line-height: 150%;
+      }
     }
   }
 }

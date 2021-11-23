@@ -218,6 +218,13 @@ export default {
 			display: flex;
 			align-items: center;
 			height: 128px;
+
+			&--year {
+				width: 116px;
+				height: 116px;
+				font-size: 25px;
+				line-height: 140%;
+			}
 		}
 	}
 

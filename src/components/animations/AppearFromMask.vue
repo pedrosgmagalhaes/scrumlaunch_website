@@ -1,5 +1,5 @@
 <template>
-    <div class="wrap" ref="wrap">
+    <div class="wrap" :class="{ oh: oh }" ref="wrap">
         <slot></slot>
         <div class="mask" ref="mask"></div>
     </div>
@@ -21,6 +21,11 @@ export default {
         maskBg: {
             type: String,
             default: '#ffffff'
+        },
+
+        oh: {
+            type: Boolean,
+            default: true
         },
     },
 
@@ -99,6 +104,9 @@ export default {
 .wrap {
     position: relative;
     text-align: left;
+}
+
+.oh {
     overflow: hidden;
 }
 

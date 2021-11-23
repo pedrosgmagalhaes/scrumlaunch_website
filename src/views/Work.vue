@@ -27,52 +27,6 @@ export default {
 		...mapGetters(['getAllProjects']),
 	},
 
-	// data: () => ({
-	// 	workItems: [
-	// 		{
-	// 			url: 'HarvestCaseStudy',
-	// 			image: 'harvest-preview',
-	// 			type: 'Mobile app',
-	// 			year: '2021',
-	// 			name: 'Harvest',
-	// 		},
-	// 		{
-	// 			url: 'ScopeCaseStudy',
-	// 			image: 'scope-preview',
-	// 			type: 'Mobile app',
-	// 			year: '2021',
-	// 			name: 'Scope',
-	// 		},
-	// 		{
-	// 			url: 'FullCourtAiCaseStudy',
-	// 			image: 'full-court-preview',
-	// 			type: 'Mobile app',
-	// 			year: '2021',
-	// 			name: 'Full court ai',
-	// 		},
-	// 		{
-	// 			url: 'FamilyGameNightCaseStudy',
-	// 			image: 'fgn-preview',
-	// 			type: 'Mobile app',
-	// 			year: '2021',
-	// 			name: 'Family game night',
-	// 		},
-	// 		{
-	// 			url: 'HelmmCaseStudy',
-	// 			image: 'helmm-preview',
-	// 			type: 'Mobile app',
-	// 			year: '2021',
-	// 			name: 'Helmm',
-	// 		},
-	// 		{
-	// 			url: 'VestaCaseStudy',
-	// 			image: 'vesta-preview',
-	// 			type: 'Mobile app',
-	// 			year: '2021',
-	// 			name: 'Vesta',
-	// 		},
-	// 	]
-	// }),
 }
 </script>
 

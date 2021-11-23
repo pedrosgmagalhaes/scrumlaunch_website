@@ -3,13 +3,13 @@
     <TypingEffect>
       <h2 class="header-1 header-1-stroke">Our Services</h2>
     </TypingEffect>
-    <AppearFromMask><p class="header-1 software-text">Software Development</p></AppearFromMask>
-    <AppearFromMask><p class="header-1 devops-text">DevOps</p></AppearFromMask>
-    <AppearFromMask><p class="header-1 design-text">UI/UX Design</p></AppearFromMask>
-    <AppearFromMask><p class="header-1 product-text">User Research & <br class="brake"/>Product Analytics</p></AppearFromMask>
-    <AppearFromMask><p class="header-1 brand-text">Brand Design</p></AppearFromMask>
-    <AppearFromMask><p class="header-1 pitch-text">Pitch Deck Creation</p></AppearFromMask>
-    <AppearFromMask><p class="header-1 strategy-text">Strategy</p></AppearFromMask>
+    <AppearFromMask :oh="false"><p class="header-1 software-text">Software Development</p></AppearFromMask>
+    <AppearFromMask :oh="false"><p class="header-1 devops-text">DevOps</p></AppearFromMask>
+    <AppearFromMask :oh="false"><p class="header-1 design-text">UI/UX Design</p></AppearFromMask>
+    <AppearFromMask :oh="false"><p class="header-1 product-text">User Research & <br class="brake"/>Product Analytics</p></AppearFromMask>
+    <AppearFromMask :oh="false"><p class="header-1 brand-text">Brand Design</p></AppearFromMask>
+    <AppearFromMask :oh="false"><p class="header-1 pitch-text">Pitch Deck Creation</p></AppearFromMask>
+    <AppearFromMask :oh="false"><p class="header-1 strategy-text">Strategy</p></AppearFromMask>
   </div>
 </template>
 

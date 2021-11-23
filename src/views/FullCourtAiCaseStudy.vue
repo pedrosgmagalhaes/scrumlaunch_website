@@ -48,7 +48,7 @@ export default {
       }
     ],
     projectInfo: {
-      name: 'Full court ai',
+      name: 'FullCourtAI',
       description: 'This application allows users to record games in real time. You can record using two phones with the FullCourtAI mount which allows to create panoramic videos.',
       details: '2021',
       work: ['UI/UX design', 'Development'],

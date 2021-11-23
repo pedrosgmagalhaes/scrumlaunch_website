@@ -43,7 +43,7 @@ export default {
       }
     ],
     projectInfo: {
-      name: 'family game night',
+      name: 'Seven',
       description: 'Discovery, design and development of a social gaming platform specifically designed for seniors to play intellectually stimulating games and stay connected with family members while collecting data and monitoring for cognitive decline.',
       details: '2021',
       work: ['UI/UX design'],

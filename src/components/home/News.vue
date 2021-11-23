@@ -225,7 +225,7 @@ export default {
 	}
 
 	&-enter-active {
-		transition: all 1s linear 0.3s;
+		transition: all 1s ease-out 0.3s;
 	}
 
 	&-enter-to {

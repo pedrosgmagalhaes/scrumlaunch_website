@@ -2,14 +2,13 @@
 	<div class="hero">
 
 		<h1 class="header-big">
-			<AppearFromMask><span>We design a lot</span></AppearFromMask>
-			<AppearFromMask><span>of things</span></AppearFromMask>
+			<AppearFromMask><span>We design &amp; build</span></AppearFromMask>
+			<AppearFromMask><span>a lot of things</span></AppearFromMask>
 		</h1>
 
 		<AppearFromMask>
 			<p class="body-3">
-				We master digital production and development. What we also
-				master is the fine art of listening. Truly listening.
+				Our work &amp; client business outcomes speak for themselves.
 			</p>
 		</AppearFromMask>
 
@@ -111,7 +110,9 @@ export default {
 
 		p {
 			margin-bottom: 180px;
-			width: 51%;
+			// width: 51%;
+			width: 100%;
+			max-width: 750px;
 		}
 
 		&--wrapper {

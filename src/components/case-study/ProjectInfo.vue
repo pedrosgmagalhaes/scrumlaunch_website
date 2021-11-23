@@ -12,7 +12,7 @@
           <span class="info--wrapper--details--item--title">Work</span>
           <span class="info--wrapper--details--item--text" v-for="(work, i) in projectInfo.work" :key="i">{{work}}</span>
         </div>
-        <div class="info--wrapper--details--item">
+        <div v-if="false" class="info--wrapper--details--item">
           <span class="info--wrapper--details--item--title">Team</span>
           <span class="info--wrapper--details--item--text" v-for="(item, i) in projectInfo.team" :key="i">{{item}}</span>
         </div>

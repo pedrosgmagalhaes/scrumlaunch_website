@@ -13,7 +13,7 @@
     <p class="header-1 history--text-white">STARTUP FOUNDERS</p>
     <p class="header-1 history--text-5 history--text-white">TO HELP OTHER STARTUPS</p>
     <img src="@/assets/images/home-history-2.png" class="history--img-2">
-    <p class="header-1 header-1-stroke-2">SUCCED</p>
+    <p class="header-1 header-1-stroke-2">SUCCEED</p>
     <p class="header-1 header-1-stroke-2">startups</p>
     <p class="history--text-icon-2">★★★</p>
     <p class="header-1 history--text-white">ARE IN A RACE AGAINST</p>

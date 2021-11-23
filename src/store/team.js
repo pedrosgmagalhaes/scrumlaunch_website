@@ -28,7 +28,7 @@ export default {
             },
             {
                 name: 'Yuliia Hlushkina',
-                position: 'Vice President of design',
+                position: 'Vice President of Design',
                 inLink: 'https://www.linkedin.com/in/yuliia-hlushkina-682627155/',
                 photo: 'yuliia_hlushkina.jpg'
             },

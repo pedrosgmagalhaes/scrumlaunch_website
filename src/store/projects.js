@@ -22,7 +22,7 @@ export default {
 				image: {full: 'full-court-preview-full.png', small: 'full-court-preview.png'},
 				type: 'Mobile app',
 				year: '2021',
-				name: 'Full court ai',
+				name: 'FullCourtAI',
 				tags: ['Design', 'Frontend', 'Backend', 'QA', 'Support'],
 			},
 			{
@@ -30,7 +30,7 @@ export default {
 				image: {full: 'fgn-preview-full.png', small: 'fgn-preview.png'},
 				type: 'Mobile app',
 				year: '2021',
-				name: 'Family game night',
+				name: 'Seven',
 				tags: ['Design', 'Frontend', 'Backend', 'QA', 'Support'],
 			},
 			{
@@ -46,7 +46,7 @@ export default {
 				image: {full: 'vesta-preview-full.png', small: 'vesta-preview.png'},
 				type: 'Mobile app',
 				year: '2021',
-				name: 'Vesta',
+				name: 'Vesta Home',
 				tags: ['Design', 'Frontend', 'Backend', 'QA', 'Support'],
 			},
 		],

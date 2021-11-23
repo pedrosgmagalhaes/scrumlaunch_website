@@ -50,13 +50,13 @@ export default {
     moreProjects: [
       {
         order: 'Previous',
-        name: 'Family game night',
+        name: 'Seven',
         image: 'fgn-preview',
         url: 'FamilyGameNightCaseStudy',
       },
       {
         order: 'Next',
-        name: 'Full court ai',
+        name: 'FullCourtAI',
         image: 'full-court-preview',
         url: 'FullCourtAiCaseStudy'
       }

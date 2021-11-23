@@ -2,7 +2,7 @@
   <div class="services">
     <AppearFromMask><h1 class="header-big">Our services</h1></AppearFromMask>
     <div class="services--desc">
-      <AppearFromMask><p class="body-1">Our service offerings remain core to our mission - designed to make your content sing through well-informed content strategy, research-backed design, and forward-thinking development that excludes no one.</p></AppearFromMask>
+      <AppearFromMask><p class="body-1">Our goal is simple &mdash; to help your business succeed.  We have a proven track record of building technical and design teams that help our clients to scale, raise money and get acquired.</p></AppearFromMask>
     </div>
     <div class="services--wrapper">
       <ServiceItem v-for="(service, i) in services" :key="i" :service="service" />
@@ -31,7 +31,7 @@ export default {
       {
         title: 'UI/UX Design',
         icon: 'design',
-        description: 'We pride ourselves on designing beautiful products that are intuitive and easy to use.  Our full service design team works closely with clients across the spectrum of UI/UX design, illustration, animation and brand development.'
+        description: 'Our design team works closely with clients across the spectrum of user journey mapping, UI/UX design, illustration, animation and brand development.'
       },
       {
         title: 'User Research & Product Analitycs',

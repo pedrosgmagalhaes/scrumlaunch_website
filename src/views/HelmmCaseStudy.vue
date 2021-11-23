@@ -42,13 +42,13 @@ export default {
 		moreProjects: [
 			{
 				order: 'Previous',
-				name: 'Family game night',
+				name: 'Seven',
 				image: 'fgn-preview',
 				url: 'FamilyGameNightCaseStudy'
 			},
 			{
 				order: 'Next',
-				name: 'Vesta',
+				name: 'Vesta Home',
 				image: 'vesta-preview',
 				url: 'VestaCaseStudy'
 			}

@@ -36,7 +36,7 @@ export default {
 	data: () => ({
 
 		projectInfo: {
-			name: 'Vesta',
+			name: 'Vesta Home',
 			description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id est mi dignissim iaculis sed mi interdum egestas. Eget cursus at aliquet in bibendum eget. Varius ac pellentesque elementum ullamcorper posuere.',
 			details: '2021',
 			work: ['UI/UX design'],
