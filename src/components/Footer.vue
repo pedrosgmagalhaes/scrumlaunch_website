@@ -21,7 +21,7 @@
 
     </div>
     <div class="footer--address">
-      <p>Netechens'ka embankment 8,<br />Portland, Oregon</p>
+      <p>Portland, Oregon</p>
     </div>
     <SocialBlock class="footer--social"/>
     <span>© ScrumLaunch 2021</span>

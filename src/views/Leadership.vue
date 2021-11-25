@@ -85,7 +85,7 @@ export default {
 		display: flex;
 		justify-content: center;
 		flex-wrap: wrap;
-		margin-bottom: 347px;
+		margin-bottom: 296px;
 	}
 }
 
@@ -101,7 +101,7 @@ export default {
 			justify-content: flex-start;
 			flex-wrap: wrap;
 			margin-bottom: 140px;
-			margin: 0 -10px;
+			// margin: 0 -10px;
 		}
 	}
 }
@@ -132,7 +132,7 @@ export default {
 
 @media screen and (min-width: 1920px) {
 	.leadership--team {
-		margin: 0 -8px;
+		// margin: 0 -8px;
 	}
 }
 

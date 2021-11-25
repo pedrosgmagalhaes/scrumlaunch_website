@@ -90,6 +90,10 @@ export default {
 		display: flex;
 		justify-content: space-between;
 	}
+
+	.header-big {
+		text-align: center;
+	}
 }
 
 .appear_from_mask {
@@ -170,7 +174,7 @@ export default {
 				transform: none;
 
 				::v-deep {
-					transform: scale(1.3) translateX(-15px);
+					transform: scale(1.5) translateX(-5px);
 				}
 			}
 		}
@@ -232,6 +236,10 @@ export default {
 		&--bottom {
 			display: flex;
 			justify-content: space-between;
+		}
+
+		.header-big {
+			text-align: left;
 		}
 	}
 }

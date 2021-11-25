@@ -24,19 +24,19 @@ export default {
                 name: 'Mikhaylo Shatskiy',
                 position: 'CTO',
                 inLink: 'https://www.linkedin.com/in/michael-shatskiy-387990bb/',
-                photo: 'mikhaylo_shatskiy.jpg'
+                photo: 'no_user_image.png'
             },
             {
                 name: 'Yuliia Hlushkina',
-                position: 'Vice President of Design',
+                position: 'CDO',
                 inLink: 'https://www.linkedin.com/in/yuliia-hlushkina-682627155/',
                 photo: 'yuliia_hlushkina.jpg'
             },
             {
-                name: 'Kaylee-Anna Jayaweera',
-                position: 'VP of Product',
-                inLink: 'https://www.linkedin.com/in/kaylee-anna-jayaweera/',
-                photo: 'kaylee_anna_jayaweera.jpg'
+                name: 'Mikhaylo Khizov',
+                position: 'COO',
+                inLink: 'https://www.linkedin.com/in/mykhailo-khizov-002934173/',
+                photo: 'no_user_image.png'
             },
         ],
     }),

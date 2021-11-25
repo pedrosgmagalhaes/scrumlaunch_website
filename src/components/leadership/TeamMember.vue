@@ -2,7 +2,7 @@
 
 	<div class="member">
 
-		<div class="member--image" :style="{ background: `url('${setBackgroundImage}')` }"></div>
+		<div class="member--image" :style="{ 'background-image': `url('${setBackgroundImage}')` }"></div>
 
 		<div class="member--info">
 
@@ -86,7 +86,7 @@ export default {
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;
-		background-color: #e7edf9;
+		// background-color: #e7edf9;
 		border-bottom: 1px solid #1e1f21;
 		box-sizing: border-box;
 	}
