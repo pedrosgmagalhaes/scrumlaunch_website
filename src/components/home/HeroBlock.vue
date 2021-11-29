@@ -87,6 +87,7 @@ export default {
 	}
 
 	&--bottom {
+		position: relative;
 		display: flex;
 		justify-content: space-between;
 	}
@@ -260,7 +261,7 @@ export default {
 			&--illustration {
 
 				::v-deep {
-					transform: scale(1.5) translateX(-48px);
+					transform: scale(1.8) translateX(-84px);
 					top: 282px;
 				}
 			}

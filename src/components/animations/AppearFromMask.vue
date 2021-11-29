@@ -66,11 +66,12 @@ export default {
                 this.$refs.wrap.style.margin = this.blockMargin
                 this.$refs.wrap.style.maxWidth = this.blockMaxWidth
                 this.is_played = false
+                this.play(true)
             })
 
-            setTimeout(() => {
-                this.play(true)
-            }, 1000)
+            // setTimeout(() => {
+            //     this.play(true)
+            // }, 1000)
 
         },
 

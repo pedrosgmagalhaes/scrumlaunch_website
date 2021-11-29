@@ -52,9 +52,10 @@ export default {
             this.$refs.wrap.style.margin = window.getComputedStyle(this.$refs.wrap.children[0], null).getPropertyValue('margin')
             this.$refs.wrap.children[0].style.margin = 0
 
-            setTimeout(() => {
-                this.play()
-            }, 1000);
+            this.play()
+            // setTimeout(() => {
+            //     this.play()
+            // }, 1000);
 
         },
 
