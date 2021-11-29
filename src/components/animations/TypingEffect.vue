@@ -42,15 +42,15 @@ export default {
         init() {
 
             if ( this.type === '2' ) {
-                let blockMaxWidth = window.getComputedStyle(this.$slots.default()[0].el, null).getPropertyValue('width')
+                let blockMaxWidth = window.getComputedStyle(this.$refs.wrap.children[0], null).getPropertyValue('width')
                 this.$refs.wrap.style.maxWidth = blockMaxWidth
             }
-            this.$slots.default()[0].el.style.display = 'flex'
-            this.$slots.default()[0].el.style.flexWrap = 'wrap'
-            this.$slots.default()[0].el.style.width = '100%'
+            this.$refs.wrap.children[0].style.display = 'flex'
+            this.$refs.wrap.children[0].style.flexWrap = 'wrap'
+            this.$refs.wrap.children[0].style.width = '100%'
 
-            this.$refs.wrap.style.margin = window.getComputedStyle(this.$slots.default()[0].el, null).getPropertyValue('margin')
-            this.$slots.default()[0].el.style.margin = 0
+            this.$refs.wrap.style.margin = window.getComputedStyle(this.$refs.wrap.children[0], null).getPropertyValue('margin')
+            this.$refs.wrap.children[0].style.margin = 0
 
             setTimeout(() => {
                 this.play()
@@ -60,7 +60,7 @@ export default {
 
         play() {
 
-            let offsetTop = this.getTopPosition(this.$slots.default()[0].el)
+            let offsetTop = this.getTopPosition(this.$refs.wrap.children[0])
             let scrollTop = document.querySelectorAll('html')[0].scrollTop
             let viewportHeight = window.innerHeight
             if ( (scrollTop + viewportHeight) < offsetTop || this.is_played === true ) return
@@ -68,7 +68,7 @@ export default {
             this.is_played = true
 
             let delay = 0
-            let text_arr =  this.$slots.default()[0].el.innerText.split('')
+            let text_arr =  this.$refs.wrap.children[0].innerText.split('')
             text_arr = text_arr.map(item => {
 
                 if ( this.type === '1' ) {
@@ -90,7 +90,7 @@ export default {
             })
             text_arr.unshift('<span>')
             text_arr.push('</span>')
-            this.$slots.default()[0].el.innerHTML = text_arr.join('')
+            this.$refs.wrap.children[0].innerHTML = text_arr.join('')
         },
 
         getTopPosition(element) {

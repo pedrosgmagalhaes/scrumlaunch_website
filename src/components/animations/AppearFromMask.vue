@@ -30,7 +30,7 @@ export default {
     },
 
     mounted() {
-        this.$slots.default()[0].el.style.opacity = '0'
+        this.$refs.wrap.querySelector('*:not(.mask)').style.opacity = '0'
         this.init()
         window.addEventListener('scroll', this.play)
     },
@@ -52,15 +52,15 @@ export default {
         init() {
 
             document.fonts.ready.then(() => {
-                this.blockMargin = window.getComputedStyle(this.$slots.default()[0].el, null).getPropertyValue('margin')
-                this.blockMaxWidth = window.getComputedStyle(this.$slots.default()[0].el, null).getPropertyValue('width')
-                this.blockHeight = window.getComputedStyle(this.$slots.default()[0].el, null).getPropertyValue('height')
-                this.$slots.default()[0].el.style.position = 'relative'
-                this.$slots.default()[0].el.style.top = this.blockHeight
-                this.$slots.default()[0].el.style.margin = 0
-                this.$slots.default()[0].el.style.width = '100%'
-                this.$slots.default()[0].el.style.transition = 'none'
-                this.$slots.default()[0].el.style.opacity = '1'
+                this.blockMargin = window.getComputedStyle(this.$refs.wrap.querySelector('*:not(.mask)'), null).getPropertyValue('margin')
+                this.blockMaxWidth = window.getComputedStyle(this.$refs.wrap.querySelector('*:not(.mask)'), null).getPropertyValue('width')
+                this.blockHeight = window.getComputedStyle(this.$refs.wrap.querySelector('*:not(.mask)'), null).getPropertyValue('height')
+                this.$refs.wrap.querySelector('*:not(.mask)').style.position = 'relative'
+                this.$refs.wrap.querySelector('*:not(.mask)').style.top = this.blockHeight
+                this.$refs.wrap.querySelector('*:not(.mask)').style.margin = 0
+                this.$refs.wrap.querySelector('*:not(.mask)').style.width = '100%'
+                this.$refs.wrap.querySelector('*:not(.mask)').style.transition = 'none'
+                this.$refs.wrap.querySelector('*:not(.mask)').style.opacity = '1'
                 this.$refs.mask.style.height = this.blockHeight
                 this.$refs.mask.style.backgroundColor = this.maskBg
                 this.$refs.wrap.style.margin = this.blockMargin
@@ -76,7 +76,7 @@ export default {
 
         play(init = false) {
 
-            let offsetTop = this.getTopPosition(this.$slots.default()[0].el)
+            let offsetTop = this.getTopPosition(this.$refs.wrap.querySelector('*:not(.mask)'))
             let scrollTop = document.querySelectorAll('html')[0].scrollTop
             let viewportHeight = window.innerHeight
             if ( (scrollTop + viewportHeight) < offsetTop || this.is_played === true ) return
@@ -85,8 +85,8 @@ export default {
                 this.is_played = true
             }
 
-            this.$slots.default()[0].el.style.transition = 'top ' + this.duration + 's'
-            this.$slots.default()[0].el.style.top = '0'
+            this.$refs.wrap.querySelector('*:not(.mask)').style.transition = 'top ' + this.duration + 's'
+            this.$refs.wrap.querySelector('*:not(.mask)').style.top = '0'
         },
 
         getTopPosition(element) {
