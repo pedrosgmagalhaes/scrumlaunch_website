@@ -154,7 +154,7 @@ export default {
     &--menu {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-between;
       height: 100%;
       margin-right: 10.17%;
@@ -229,7 +229,7 @@ export default {
     &--menu {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-between;
       height: 100%;
       margin-right: 14.17%;

@@ -11,84 +11,101 @@ import ScopeCaseStudy from '../views/ScopeCaseStudy.vue'
 import HelmmCaseStudy from '../views/HelmmCaseStudy.vue'
 import VestaCaseStudy from '../views/VestaCaseStudy.vue'
 import Services from '../views/Services.vue'
+import Articles from '../views/Articles.vue'
+import Article from '../views/Article.vue'
 
 const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/leadership',
-    name: 'Leadership',
-    component: Leadership
-  },
-  {
-    path: '/contact-us',
-    name: 'ContactUs',
-    component: ContactUs
-  },
-  {
-    path: '/process',
-    name: 'Process',
-    component: Process
-  },
-  {
-    path: '/work',
-    name: 'Work',
-    component: Work
-  },
-  {
-    path: '/fgn-case-study',
-    name: 'FamilyGameNightCaseStudy',
-    component: FamilyGameNightCaseStudy
-  },
-  {
-    path: '/harvest-case-study',
-    name: 'HarvestCaseStudy',
-    component: HarvestCaseStudy
-  },
-  {
-    path: '/full-court-ai-case-study',
-    name: 'FullCourtAiCaseStudy',
-    component: FullCourtAiCaseStudy
-  },
-  {
-    path: '/scope-case-study',
-    name: 'ScopeCaseStudy',
-    component: ScopeCaseStudy
-  },
-  {
-    path: '/helmm-case-study',
-    name: 'HelmmCaseStudy',
-    component: HelmmCaseStudy
-  },
-  {
-    path: '/vesta-case-study',
-    name: 'VestaCaseStudy',
-    component: VestaCaseStudy
-  },
-  {
-    path: '/services',
-    name: 'Services',
-    component: Services
-  },
-  {
-    path: "/:pathMatch(.*)*",
-    redirect: { name: 'Home' }
-  }
+	{
+		path: '/',
+		name: 'Home',
+		component: Home
+	},
+	{
+		path: '/leadership',
+		name: 'Leadership',
+		component: Leadership
+	},
+	{
+		path: '/contact-us',
+		name: 'ContactUs',
+		component: ContactUs
+	},
+	{
+		path: '/process',
+		name: 'Process',
+		component: Process
+	},
+	{
+		path: '/work',
+		name: 'Work',
+		component: Work
+	},
+	{
+		path: '/fgn-case-study',
+		name: 'FamilyGameNightCaseStudy',
+		component: FamilyGameNightCaseStudy
+	},
+	{
+		path: '/harvest-case-study',
+		name: 'HarvestCaseStudy',
+		component: HarvestCaseStudy
+	},
+	{
+		path: '/full-court-ai-case-study',
+		name: 'FullCourtAiCaseStudy',
+		component: FullCourtAiCaseStudy
+	},
+	{
+		path: '/scope-case-study',
+		name: 'ScopeCaseStudy',
+		component: ScopeCaseStudy
+	},
+	{
+		path: '/helmm-case-study',
+		name: 'HelmmCaseStudy',
+		component: HelmmCaseStudy
+	},
+	{
+		path: '/vesta-case-study',
+		name: 'VestaCaseStudy',
+		component: VestaCaseStudy
+	},
+	{
+		path: '/services',
+		name: 'Services',
+		component: Services
+	},
+	{
+		path: '/blog',
+		name: 'ArticlesAll',
+		component: Articles
+	},
+	{
+		path: '/blog/category/:id',
+		name: 'Articles',
+		component: Articles
+	},
+	{
+		path: '/blog/post/:id',
+		name: 'Article',
+		component: Article
+	},
+	{
+		path: "/:pathMatch(.*)*",
+		redirect: { name: 'Home' }
+	}
 ]
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
-  scrollBehavior(to, from, savedPosition) {
-    if (savedPosition) {
-      return savedPosition
-    } else {
-      return { top: 0 }
-    }
-  },
-  routes
+	history: createWebHistory(process.env.BASE_URL),
+	scrollBehavior(to, from, savedPosition) {
+		if (savedPosition) {
+			return savedPosition
+		} else {
+			return { top: 0 }
+		}
+	},
+	routes
 })
 
 export default router

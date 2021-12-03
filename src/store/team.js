@@ -28,7 +28,7 @@ export default {
             },
             {
                 name: 'Yuliia Hlushkina',
-                position: 'CDO',
+                position: 'Head of Design Department',
                 inLink: 'https://www.linkedin.com/in/yuliia-hlushkina-682627155/',
                 photo: 'yuliia_hlushkina.jpg'
             },
