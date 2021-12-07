@@ -53,7 +53,7 @@
 		</div>
 
 		<div class="contact-form--wrapper-btn">
-			<button class="btn">Send</button>
+			<button class="btn" @click="sendForm()">Send</button>
 		</div>
 
 	</div>
@@ -63,6 +63,9 @@
 
 <script>
 import InputComponent from '@/components/contact/InputComponent.vue'
+
+import Airtable from 'airtable'
+var base = new Airtable({apiKey: 'keyDtp2haFcTkKWFh'}).base('appPamHyC1Fm0g2mx')
 
 export default {
 
@@ -80,8 +83,28 @@ export default {
 	}),
 
 	methods: {
+
 		handleFieldChange(name, value) {
 			this[name] = value;
+		},
+
+		sendForm() {
+			base('Contact form').create([
+				{
+					"fields": {
+						Name: this.name,
+						Email: this.email,
+						Details: this.project,
+					}
+				}
+			],
+			(err) => {
+				if (err) {
+					console.error(err);
+					return;
+				}
+			}
+			);
 		},
 	}
 }
