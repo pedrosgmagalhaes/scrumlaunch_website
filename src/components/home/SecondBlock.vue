@@ -46,10 +46,18 @@
 
 			<div class="h2_wrap">
 				<h2 class="header-1">
-					<AppearFromMask><span>We build flexible</span></AppearFromMask>
-					<AppearFromMask><span>teams with client</span></AppearFromMask>
-					<AppearFromMask><span>business goals</span></AppearFromMask>
-					<AppearFromMask><span>in mind</span></AppearFromMask>
+					<div class="v1">
+						<AppearFromMask><span>We build flexible</span></AppearFromMask>
+						<AppearFromMask><span>teams with client</span></AppearFromMask>
+						<AppearFromMask><span>business goals</span></AppearFromMask>
+						<AppearFromMask><span>in mind</span></AppearFromMask>
+					</div>
+
+					<div class="v2">
+						<AppearFromMask><span>We build flexible teams</span></AppearFromMask>
+						<AppearFromMask><span>with client business</span></AppearFromMask>
+						<AppearFromMask><span>goals in mind</span></AppearFromMask>
+					</div>
 				</h2>
 			</div>
 
@@ -74,6 +82,10 @@
 .header-1 {
 	& :deep(span) {
 		display: inline-block;
+	}
+
+	.v2 {
+		display: none;
 	}
 }
 
@@ -154,7 +166,27 @@
 	}
 }
 
+@media screen and (min-width: 1140px) {
+	.header-1 {
+		.v1 {
+			display: none;
+		}
+		.v2 {
+			display: block;
+		}
+	}
+}
+
 @media screen and (min-width: 1280px) {
+	.header-1 {
+		.v1 {
+			display: block;
+		}
+		.v2 {
+			display: none;
+		}
+	}
+
 	.flexible {
 		padding: 304px 8.34% 0;
 		display: flex;

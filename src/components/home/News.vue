@@ -82,7 +82,7 @@
 			</div>
 		</div>
 
-		<button class="btn news--btn">explore more</button>
+		<router-link class="btn news--btn" to="/blog">explore more</router-link>
 	</div>
 </template>
 
@@ -365,6 +365,21 @@ export default {
 		&--btn {
 			margin: 80px auto 0;
 		}
+	}
+}
+
+@media screen and (min-width: 1140px) {
+	.header-2 {
+		font-size: 30px;
+	}
+
+	.news--wrapper--item--content {
+		max-width: 90%;
+	}
+
+	.news--wrapper--item--arrow {
+		width: 75px;
+		height: 37px;
 	}
 }
 

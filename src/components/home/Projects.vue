@@ -101,10 +101,31 @@ export default {
 	}
 }
 
+@media screen and (min-width: 1140px) {
+	.projects {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 1054px;
+	}
+
+	.projects--btn-wrapper {
+		margin-top: 40px;
+
+		.btn {
+			width: 166px;
+			height: 166px;
+			border-radius: 50%;
+			font-size: 18px;
+			line-height: 150%;
+		}
+	}
+}
+
 @media screen and (min-width: 1280px) {
 	.projects {
 		padding: 0 8.34% 0;
 		margin: 0 0 240px;
+		max-width: initial;
 
 		h2 {
 			text-align: left;
@@ -149,6 +170,8 @@ export default {
 	}
 
 	.projects {
+		max-width: 1602px;
+		
 		&--wrapper {
 			justify-content: space-between;
 		}

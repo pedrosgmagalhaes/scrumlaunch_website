@@ -329,10 +329,24 @@ export default {
   }
 }
 
+@media screen and (min-width: 1140px) {
+  .history {
+    & > * {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}
+
 @media screen and (min-width: 1280px) {
   .history {
     padding: 90px 8.34%;
     height: 950px;
+
+    & > * {
+      padding-left: 0;
+      padding-right: 0;
+    }
 
     .header-1 {
       font-size: 50px;
@@ -496,11 +510,18 @@ export default {
     height: auto;
     padding-top: 120px;
     padding-bottom: 120px;
+    text-align: justify;
 
     .header-1 {
       font-weight: 900;
       font-size: 75px;
       line-height: 140%;
+    }
+
+    & > * {
+      display: inline-block;
+      margin-left: 11px;
+      margin-right: 11px;
     }
   }
 }

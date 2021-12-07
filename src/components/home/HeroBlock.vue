@@ -1,5 +1,5 @@
 <template>
-	<div class="hero">
+	<div class="hero" ref="hero">
 
 		<div class="hero--text-wrapper">
 
@@ -29,7 +29,7 @@
 
 		<div class="hero--bottom">
 			<SocialBlock />
-			<inline-svg :src="require('@/assets/icons/scroll-down.svg')" />
+			<inline-svg :src="require('@/assets/icons/scroll-down.svg')" @click="scrollDown()" class="hero--bottom__scroll_down" />
 		</div>
 
 	</div>
@@ -41,9 +41,23 @@
 import SocialBlock from '@/components/SocialBlock.vue'
 
 export default {
+
 	components: {
 		SocialBlock,
 	},
+
+	methods: {
+		scrollDown() {
+
+			let top = this.$refs.hero.offsetTop + this.$refs.hero.clientHeight
+
+			window.scrollTo({
+                top: top,
+                behavior: "smooth"
+            })
+		}
+	},
+
 }
 </script>
 
@@ -90,6 +104,10 @@ export default {
 		position: relative;
 		display: flex;
 		justify-content: space-between;
+
+		&__scroll_down {
+			cursor: pointer;
+		}
 	}
 
 	.header-big {
@@ -175,7 +193,7 @@ export default {
 				transform: none;
 
 				::v-deep {
-					transform: scale(1.5) translateX(-5px);
+					transform: scale(1.5) translateX(-50px);
 				}
 			}
 		}

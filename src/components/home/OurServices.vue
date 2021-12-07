@@ -184,12 +184,36 @@ export default {
     .devops-text,
     .design-text,
     .brand-text,
-    .product-text,
+    // .product-text,
     .pitch-text,
     .strategy-text {
       &::before {
         left: -233px;
       }
+    }
+
+    .product-text {
+      &::before {
+        left: -140px;
+      }
+    }
+
+    .brake {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .services {
+    .product-text {
+      &::before {
+        left: -233px;
+      }
+    }
+
+    p {
+      margin-bottom: 50px;
     }
   }
 }
@@ -265,7 +289,7 @@ export default {
   .services {
     .product-text {
       &::before {
-        left: -417px;
+        // left: -417px;
       }
     }
   }

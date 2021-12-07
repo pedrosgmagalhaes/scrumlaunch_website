@@ -1,5 +1,5 @@
 <template>
-  <div class="footer" :class="{ home: $route.name === 'Home' }">
+  <div class="footer home">
     <div class="footer--menu">
       <router-link :to="{ name: 'Home' }">Portfolio</router-link>
       <router-link :to="{ name: 'Process' }">About us</router-link>
@@ -7,12 +7,12 @@
     </div>
     <div class="footer--contact">
 
-      <!--
+      
       <div class="footer--contact--item">
         <p>Phone</p>
         <a href="tel:+380989999999">+38 (098) 99 99 999</a>
       </div>
-      -->
+     
 
       <div class="footer--contact--item">
         <p>Email</p>

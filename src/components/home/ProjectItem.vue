@@ -153,6 +153,42 @@ export default {
 	}
 }
 
+@media screen and (min-width: 1140px) {
+	.project-item {
+		max-width: 514px;
+		height: auto;
+
+		&--image {
+			height: 598px;
+		}
+
+		&--info {
+			height: 88px;
+
+			&--wrapper {
+				&--services {
+					&--text {
+						font-size: 14px;
+						padding-right: 16px;
+						margin-right: 8px;
+
+						&::after {
+							width: 8px;
+							height: 8px;
+						}
+					}
+				}
+			}
+
+			&--year {
+				width: 76px;
+				height: 76px;
+				font-size: 18px;
+			}
+		}
+	}
+}
+
 @media screen and (min-width: 1280px) {
 	.project-item {
 		max-width: 580px;

@@ -1,5 +1,5 @@
 <template>
-  <div class="menu" :class="{ home: $route.name === 'Home' }">
+  <div class="menu home">
     <div v-if="!showMenu" class="menu--desktop">
       <router-link :to="{ name: 'Home' }">
         <inline-svg
@@ -15,7 +15,7 @@
         <router-link :to="{ name: 'Work' }">Work</router-link>
         <router-link :to="{ name: 'Services' }">Services</router-link>
         <router-link :to="{ name: 'Process' }">Process</router-link>
-        <!-- <router-link to="/blog">Blog</router-link> -->
+        <router-link to="/blog">Blog</router-link>
         <router-link :to="{ name: 'Leadership' }">Leadership</router-link>
         <router-link :to="{ name: 'ContactUs' }">Contact</router-link>
       </div>
