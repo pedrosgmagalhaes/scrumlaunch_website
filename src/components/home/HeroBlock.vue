@@ -72,7 +72,8 @@ export default {
 	text-align: left;
 
 	&--text-wrapper {
-		margin-bottom: 80px;
+		// margin-bottom: 80px;
+		margin-bottom: 0px;
 		overflow: hidden;
 
 		h1 {
@@ -161,6 +162,8 @@ export default {
 @media screen and (min-width: 425px) {
 	.hero {
 		&--text-wrapper {
+			margin-bottom: 80px;
+			
 			&--illustration {
 				::v-deep {
 					transform: scale(1.18) translateX(0px);
@@ -193,7 +196,28 @@ export default {
 				transform: none;
 
 				::v-deep {
-					transform: scale(1.5) translateX(-50px);
+					transform: scale(1.5) translateX(0);
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1140px) {
+	.hero {
+		&--text-wrapper {
+			flex-direction: row;
+			justify-content: space-between;
+
+			.header-big {
+				text-align: left;
+			}
+
+			&--illustration {
+				margin-top: -90px;
+
+				::v-deep {
+					transform: scale(1.2) translateX(30px);
 				}
 			}
 		}
@@ -215,7 +239,7 @@ export default {
 				position: relative;
 				width: -webkit-fill-available;
 				height: 503px;
-				top: 40px;
+				top: 83px;
 				right: 0;
 			}
 		}
