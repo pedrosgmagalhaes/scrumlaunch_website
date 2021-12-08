@@ -33,7 +33,7 @@ app.post('/contact-us', (req, res) => {
 			console.error(err);
 			return;
 		}
-		res.json({'success': true})
+		res.json({"success": "true"})
 	});
 
 })

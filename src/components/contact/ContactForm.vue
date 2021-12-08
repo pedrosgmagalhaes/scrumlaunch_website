@@ -97,12 +97,10 @@ export default {
 				}
 			})
 				.then((res) => {
-					let response = JSON.parse(res)
-					if (response.success === true) {
-						this.name = ''
-						this.email = ''
-						this.project = ''
-					}
+					console.log(res);
+					this.name = ''
+					this.email = ''
+					this.project = ''
 				})
 		},
 	}

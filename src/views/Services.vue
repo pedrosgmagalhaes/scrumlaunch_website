@@ -128,4 +128,24 @@ export default {
     }
   }
 }
+
+@media screen and (min-width: 1440px) {
+  .services {
+    &--desc {
+      p {
+        width: 59.25%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .services {
+    &--desc {
+      p {
+        width: 59.25%;
+      }
+    }
+  }
+}
 </style>

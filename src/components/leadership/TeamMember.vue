@@ -217,6 +217,10 @@ export default {
 @media screen and (min-width: 1920px) {
 	.member {
 		margin: 0 8px 22px;
+
+		&:nth-child(2n + 1) {
+			margin-right: 6px;
+		}
 	}
 }
 
