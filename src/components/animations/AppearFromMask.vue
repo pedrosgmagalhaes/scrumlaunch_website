@@ -37,6 +37,9 @@ export default {
 
     beforeUnmount() {
         window.removeEventListener('scroll', this.play)
+        this.$refs.wrap.querySelector('*:not(.mask)').removeAttribute("style")
+        this.$refs.wrap.removeAttribute("style")
+        this.$refs.mask.removeAttribute("style")
     },
 
     data() {

@@ -29,6 +29,8 @@ export default {
 
     beforeUnmount() {
         window.removeEventListener('scroll', this.play)
+        this.$refs.wrap.removeAttribute("style")
+        this.$refs.wrap.children[0].removeAttribute("style")
     },
 
     data() {
