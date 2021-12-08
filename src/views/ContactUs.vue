@@ -68,6 +68,11 @@ export default {
 			width: 90%;
 		}
 	}
+
+	.header-2 {
+		width: 100%;
+		max-width: 290px;
+	}
 }
 
 @media screen and (min-width: 768px) {
@@ -80,6 +85,20 @@ export default {
 				width: 90%;
 				max-width: 100%;
 			}
+		}
+
+		.header-2 {
+			width: 100%;
+			max-width: 540px;
+		}
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.contact-us {
+		.header-2 {
+			margin-right: 92px;
+			max-width: 565px;
 		}
 	}
 }
@@ -102,6 +121,12 @@ export default {
 				font-size: 30px;
 			}
 		}
+
+		.header-2 {
+			margin-right: 92px;
+			width: 100%;
+			max-width: 690px;
+		}
 	}
 }
 
@@ -117,6 +142,10 @@ export default {
 				width: 62%;
 				max-width: 100%;
 			}
+		}
+
+		.header-2 {
+			margin-right: initial;
 		}
 	}
 }

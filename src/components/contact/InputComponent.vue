@@ -76,7 +76,7 @@ export default {
       color: #1E1F21;
       border: none;
       font-style: normal;
-      font-weight: 600;
+      font-weight: 500;
       font-size: 14px;
       line-height: 150%;
       width: 100%;

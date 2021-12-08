@@ -39,6 +39,12 @@ export default {
                 photo: 'mikhaylo_khizov.jpg'
             },
             {
+                name: 'Kaylee-Anna Jayaweera',
+                position: 'VP of Product',
+                inLink: 'https://www.linkedin.com/in/kaylee-anna-jayaweera/',
+                photo: 'kaylee_anna_jayaweera.jpg'
+            },
+            {
                 name: 'Dmitriy Yefremov',
                 position: 'Head of Mobile Department',
                 inLink: 'https://www.linkedin.com/in/dmitriy-yefremov-208023141/',
@@ -73,12 +79,6 @@ export default {
                 position: 'Head of People Management Department',
                 inLink: '#',
                 photo: 'anna_mateichenko.jpg'
-            },
-            {
-                name: 'Kaylee-Anna Jayaweera',
-                position: 'VP of Product',
-                inLink: 'https://www.linkedin.com/in/kaylee-anna-jayaweera/',
-                photo: 'kaylee_anna_jayaweera.jpg'
             },
         ],
     }),
