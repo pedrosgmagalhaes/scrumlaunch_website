@@ -63,9 +63,7 @@
 
 <script>
 import InputComponent from '@/components/contact/InputComponent.vue'
-
-import Airtable from 'airtable'
-var base = new Airtable({apiKey: 'keyDtp2haFcTkKWFh'}).base('appPamHyC1Fm0g2mx')
+import axios from 'axios'
 
 export default {
 
@@ -89,22 +87,23 @@ export default {
 		},
 
 		sendForm() {
-			base('Contact form').create([
-				{
-					"fields": {
-						Name: this.name,
-						Email: this.email,
-						Details: this.project,
+			axios({
+				method: 'POST',
+				url: '/contact-us',
+				data: {
+					name: this.name,
+					email: this.email,
+					details: this.project,
+				}
+			})
+				.then((res) => {
+					let response = JSON.parse(res)
+					if (response.success === true) {
+						this.name = ''
+						this.email = ''
+						this.project = ''
 					}
-				}
-			],
-			(err) => {
-				if (err) {
-					console.error(err);
-					return;
-				}
-			}
-			);
+				})
 		},
 	}
 }
