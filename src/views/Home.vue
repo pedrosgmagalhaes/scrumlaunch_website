@@ -4,7 +4,7 @@
     <SecondBlock />
     <Projects />
     <HistoryBlock />
-    <News />
+    <!-- <News /> -->
     <TickerBlock />
     <OurServices />
     <ContactUs />
@@ -17,7 +17,7 @@ import HeroBlock from '@/components/home/HeroBlock.vue'
 import SecondBlock from '@/components/home/SecondBlock.vue'
 import Projects from '@/components/home/Projects.vue'
 import HistoryBlock from '@/components/home/HistoryBlock.vue'
-import News from '@/components/home/News.vue'
+// import News from '@/components/home/News.vue'
 import TickerBlock from '@/components/home/TickerBlock.vue'
 import OurServices from '@/components/home/OurServices.vue'
 import ContactUs from '@/components/home/ContactUs.vue'
@@ -29,7 +29,7 @@ export default {
     SecondBlock,
     Projects,
     HistoryBlock,
-    News,
+    // News,
     TickerBlock,
     OurServices,
     ContactUs

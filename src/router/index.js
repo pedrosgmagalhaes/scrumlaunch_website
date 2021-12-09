@@ -11,8 +11,8 @@ import ScopeCaseStudy from '../views/ScopeCaseStudy.vue'
 import HelmmCaseStudy from '../views/HelmmCaseStudy.vue'
 import VestaCaseStudy from '../views/VestaCaseStudy.vue'
 import Services from '../views/Services.vue'
-import Articles from '../views/Articles.vue'
-import Article from '../views/Article.vue'
+// import Articles from '../views/Articles.vue'
+// import Article from '../views/Article.vue'
 
 const routes = [
 	{
@@ -75,21 +75,21 @@ const routes = [
 		name: 'Services',
 		component: Services
 	},
-	{
-		path: '/blog',
-		name: 'ArticlesAll',
-		component: Articles
-	},
-	{
-		path: '/blog/category/:id',
-		name: 'Articles',
-		component: Articles
-	},
-	{
-		path: '/blog/post/:id',
-		name: 'Article',
-		component: Article
-	},
+	// {
+	// 	path: '/blog',
+	// 	name: 'ArticlesAll',
+	// 	component: Articles
+	// },
+	// {
+	// 	path: '/blog/category/:id',
+	// 	name: 'Articles',
+	// 	component: Articles
+	// },
+	// {
+	// 	path: '/blog/post/:id',
+	// 	name: 'Article',
+	// 	component: Article
+	// },
 	{
 		path: "/:pathMatch(.*)*",
 		redirect: { name: 'Home' }
