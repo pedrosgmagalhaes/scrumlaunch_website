@@ -63,7 +63,8 @@
 	p {
 		margin-right: 8px;
 		width: 100%;
-		max-width: 540px;
+		// max-width: 540px;
+		max-width: 202px;
 		text-align: left;
 	}
 }
@@ -98,7 +99,8 @@
 
 		p {
 			margin-right: 29px;
-			width: 330px;
+			width: 100%;
+			max-width: 330px;
 		}
 	}
 }
@@ -132,7 +134,8 @@
 
 		p {
 			margin-right: 8px;
-			width: 550px;
+			width: 100%;
+			max-width: 430px;
 			text-align: left;
 		}
 	}

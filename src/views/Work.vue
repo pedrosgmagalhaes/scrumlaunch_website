@@ -39,6 +39,9 @@ export default {
 		display: flex;
 		flex-direction: column;
 		margin-bottom: 80px;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 375px;
 	}
 }
 
@@ -48,6 +51,7 @@ export default {
 			flex-direction: row;
 			flex-wrap: wrap;
 			margin-bottom: 140px;
+			max-width: 768px;
 		}
 	}
 }
@@ -58,6 +62,23 @@ export default {
 			flex-direction: row;
 			flex-wrap: wrap;
 			margin-bottom: 240px;
+			max-width: 1280px;
+		}
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.work {
+		&--wrapper {
+			max-width: 1440px;
+		}
+	}
+}
+
+@media screen and (min-width: 1880px) {
+	.work {
+		&--wrapper {
+			max-width: 1920px;
 		}
 	}
 }

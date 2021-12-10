@@ -21,7 +21,7 @@
 
     </div>
     <div class="footer--address">
-      <p>Portland, Oregon</p>
+      <p>Netechens'ka embankment 8,<br> Kharkiv, Ukraine</p>
     </div>
     <SocialBlock class="footer--social"/>
     <span>© ScrumLaunch 2021</span>
@@ -192,6 +192,27 @@ export default {
       position: absolute;
       right: 30px;
       bottom: 122px;
+    }
+  }
+}
+
+@media screen and (min-width: 1140px) {
+
+  .footer {
+
+    span {
+      text-align: right;
+      position: absolute;
+      bottom: 124px;
+      right: 34px;
+      left: inherit;
+      transform: none;
+    }
+
+    &--social {
+      position: relative;
+      right: inherit;
+      bottom: inherit;
     }
   }
 }

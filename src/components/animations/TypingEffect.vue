@@ -20,9 +20,15 @@ export default {
             type: String,
             default: null
         },
+
+        spaceWidth: {
+            type: String,
+            default: null
+        },
     },
 
     mounted () {
+        this.innerText = this.$refs.wrap.children[0].innerText
         this.init()
         window.addEventListener('scroll', this.play)
     },
@@ -31,11 +37,13 @@ export default {
         window.removeEventListener('scroll', this.play)
         this.$refs.wrap.removeAttribute("style")
         this.$refs.wrap.children[0].removeAttribute("style")
+        this.$refs.wrap.children[0].innerText = this.innerText
     },
 
     data() {
         return {
             is_played: false,
+            innerText: '',
         }
     },
 
@@ -70,6 +78,7 @@ export default {
             
             this.is_played = true
 
+            let spaceWidth = this.spaceWidth === null ? 'initial' : this.spaceWidth + 'px'
             let delay = 0
             let text_arr =  this.$refs.wrap.children[0].innerText.split('')
             text_arr = text_arr.map(item => {
@@ -88,7 +97,7 @@ export default {
                     return '<span style="animation-delay: '+delay.toFixed(2)+'s">'+item+'</span>'
                 }
                 else {
-                    return '</span><span style="animation-delay: '+delay.toFixed(2)+'s">&nbsp;</span><span>'
+                    return '</span><span style="animation-delay: '+delay.toFixed(2)+'s; width: '+spaceWidth+'">&nbsp;</span><span>'
                 }
             })
             text_arr.unshift('<span>')

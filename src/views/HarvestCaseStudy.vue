@@ -56,7 +56,7 @@ export default {
       },
       {
         order: 'Next',
-        name: 'FullCourtAI',
+        name: 'Full Court AI',
         image: 'full-court-preview',
         url: 'FullCourtAiCaseStudy'
       }

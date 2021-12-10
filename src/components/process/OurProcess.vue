@@ -2,7 +2,7 @@
   <div class="process">
     <div class="process--hero">
       <AppearFromMask><h1 class="header-big">OUR process</h1></AppearFromMask>
-      <AppearFromMask><p class="body-1">We focus on Communication, Collaboration, Context &amp; Clarity</p></AppearFromMask>
+      <AppearFromMask><p class="body-1">We deliver desired business outcomes because we lay</p></AppearFromMask>
 
       <div class="process--hero--icon">
         <vLottiePlayer

@@ -58,7 +58,7 @@ export default {
             },
             {
                 name: 'Dmitriy Khrystych',
-                position: 'Head of Fronted Department',
+                position: 'Head of Frontend Department',
                 inLink: '#',
                 photo: 'dmitriy_khrystych.jpg'
             },

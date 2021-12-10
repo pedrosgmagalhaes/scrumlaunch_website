@@ -71,7 +71,9 @@ export default {
 
 	.header-2 {
 		width: 100%;
-		max-width: 290px;
+		// max-width: 290px;
+		max-width: 225px;
+		font-size: 16px;
 	}
 }
 
@@ -90,6 +92,7 @@ export default {
 		.header-2 {
 			width: 100%;
 			max-width: 540px;
+			font-size: 18px;
 		}
 	}
 }
@@ -126,6 +129,7 @@ export default {
 			margin-right: 92px;
 			width: 100%;
 			max-width: 690px;
+			font-size: 30px;
 		}
 	}
 }

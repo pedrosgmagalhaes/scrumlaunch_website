@@ -30,7 +30,7 @@ export default {
     moreProjects: [
       {
         order: 'Previous',
-        name: 'FullCourtAI',
+        name: 'Full Court AI',
         image: 'full-court-preview',
         url: 'FullCourtAiCaseStudy',
       },

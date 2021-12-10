@@ -22,7 +22,7 @@ export default {
 				image: {full: 'full-court-preview-full.png', small: 'full-court-preview.png'},
 				type: 'Mobile app',
 				year: '2021',
-				name: 'FullCourtAI',
+				name: 'Full Court AI',
 				tags: ['Design', 'Frontend', 'Backend', 'QA', 'Support'],
 			},
 			{
@@ -30,7 +30,7 @@ export default {
 				image: {full: 'fgn-preview-full.png', small: 'fgn-preview.png'},
 				type: 'Mobile app',
 				year: '2021',
-				name: 'Seven',
+				name: 'Seven: brain teasers & puzzles',
 				tags: ['Design', 'Frontend', 'Backend', 'QA', 'Support'],
 			},
 			{
@@ -63,6 +63,10 @@ export default {
 	getters: {
 		getAllProjects: state => {
 			return state.projects
-		}
+		},
+
+		getMainPageProjects: state => {
+			return state.projects.slice(0, 4)
+		},
 	}
 }

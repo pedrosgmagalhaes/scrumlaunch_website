@@ -2,13 +2,13 @@
 	<div class="hero">
 
 		<h1 class="header-big">
-			<AppearFromMask><span>We design &amp; build</span></AppearFromMask>
-			<AppearFromMask><span>a lot of things</span></AppearFromMask>
+			<AppearFromMask><span>WE DESIGN</span></AppearFromMask>
+			<AppearFromMask><span>A LOT OF THINGS</span></AppearFromMask>
 		</h1>
 
 		<AppearFromMask>
 			<p class="body-3">
-				Our work &amp; client business outcomes speak for themselves.
+				We master digital production and development. What we also master is the fine art of listening. Truly listening.
 			</p>
 		</AppearFromMask>
 

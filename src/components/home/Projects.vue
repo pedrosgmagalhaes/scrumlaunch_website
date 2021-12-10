@@ -2,13 +2,13 @@
 
 	<div class="projects">
 
-		<TypingEffect>
+		<TypingEffect spaceWidth="70">
 			<h2 class="header-1">Latest projects</h2>
 		</TypingEffect>
 
 		<div class="projects--wrapper">
 			<ProjectItem
-				v-for="(item, i) in getAllProjects"
+				v-for="(item, i) in getMainPageProjects"
 				:key="i"
 				class="projects--wrapper--item"
 				:item="item"
@@ -38,7 +38,7 @@ export default {
 	},
 
 	computed: {
-		...mapGetters(['getAllProjects']),
+		...mapGetters(['getMainPageProjects']),
 	},
 
 }

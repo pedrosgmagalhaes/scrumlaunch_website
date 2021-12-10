@@ -28,7 +28,7 @@ export default {
 <style lang="scss" scoped>
 
 .contact-us {
-	padding: 0 20px;
+	padding: 0 19px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;

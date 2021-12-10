@@ -164,7 +164,7 @@ export default {
 	}
 
 	h2 {
-		margin-bottom: 80px;
+		margin-bottom: 40px;
 		text-align: left;
 	}
 
@@ -276,7 +276,7 @@ export default {
 		}
 
 		h2 {
-			margin-bottom: 140px;
+			margin-bottom: 60px;
 		}
 
 		&--wrapper {
@@ -318,6 +318,27 @@ export default {
 	}
 }
 
+@media screen and (min-width: 1140px) {
+	.news {
+		h2 {
+			margin-bottom: 80px;
+		}
+	}
+
+	.header-2 {
+		font-size: 30px;
+	}
+
+	.news--wrapper--item--content {
+		max-width: 90%;
+	}
+
+	.news--wrapper--item--arrow {
+		width: 75px;
+		height: 37px;
+	}
+}
+
 @media screen and (min-width: 1280px) {
 	.news {
 		padding: 420px 8.34% 0;
@@ -343,7 +364,7 @@ export default {
 		}
 
 		h2 {
-			margin-bottom: 152px;
+			margin-bottom: 40px;
 		}
 
 		&--wrapper {
@@ -368,22 +389,12 @@ export default {
 	}
 }
 
-@media screen and (min-width: 1140px) {
-	.header-2 {
-		font-size: 30px;
-	}
-
-	.news--wrapper--item--content {
-		max-width: 90%;
-	}
-
-	.news--wrapper--item--arrow {
-		width: 75px;
-		height: 37px;
-	}
-}
-
 @media screen and (min-width: 1900px) {
+	.news {
+		h2 {
+			margin-bottom: 200px;
+		}
+	}
 	.header-1 {
 		font-weight: 900;
 		font-size: 75px;

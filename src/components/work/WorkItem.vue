@@ -228,4 +228,18 @@ export default {
 	}
 }
 
+@media screen and (min-width: 1880px) {
+	.item {
+		height: 445px;
+
+		&--info {
+			&--desc {
+				&--header {
+					font-size: 40px;
+				}
+			}
+		}
+	}
+}
+
 </style>

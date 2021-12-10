@@ -58,6 +58,14 @@
 						<AppearFromMask><span>with client business</span></AppearFromMask>
 						<AppearFromMask><span>goals in mind</span></AppearFromMask>
 					</div>
+
+					<div class="v3">
+						<AppearFromMask><span>We build</span></AppearFromMask>
+						<AppearFromMask><span>flexible teams</span></AppearFromMask>
+						<AppearFromMask><span>with client</span></AppearFromMask>
+						<AppearFromMask><span>business goals</span></AppearFromMask>
+						<AppearFromMask><span>in mind</span></AppearFromMask>
+					</div>
 				</h2>
 			</div>
 
@@ -84,8 +92,16 @@
 		display: inline-block;
 	}
 
+	.v1 {
+		display: none;
+	}
+
 	.v2 {
 		display: none;
+	}
+
+	.v3 {
+		display: block;
 	}
 }
 
@@ -130,6 +146,20 @@
 }
 
 @media screen and (min-width: 768px) {
+	.header-1 {
+		& :deep(span) {
+			display: inline-block;
+		}
+
+		.v1 {
+			display: block;
+		}
+
+		.v3 {
+			display: none;
+		}
+	}
+
 	.flexible {
 		padding: 208px 3.9% 0;
 		margin-bottom: 140px;
@@ -238,6 +268,10 @@
 		font-weight: 900;
 		font-size: 75px;
 		line-height: 140%;
+	}
+
+	.body-1 {
+		max-width: 730px;
 	}
 }
 
