@@ -320,6 +320,12 @@ export default {
 
 @media screen and (min-width: 1140px) {
 	.news {
+
+		&--icon {
+			right: -126px;
+			width: 1206px;
+		}
+
 		h2 {
 			margin-bottom: 80px;
 		}

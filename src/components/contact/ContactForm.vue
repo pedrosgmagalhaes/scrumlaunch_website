@@ -271,7 +271,8 @@ export default {
 			}
 
 			& :deep(.input-item--input-wrapper--input) {
-				padding-left: 80px;
+				// padding-left: 80px;
+				text-align: center;
 			}
 		}
 
