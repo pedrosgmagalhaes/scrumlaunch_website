@@ -58,7 +58,7 @@ export default {
 				category: 'Insights',
 				date: 'November 14, 2021',
 				user: {
-					photo: 'https://cdn.pixabay.com/photo/2015/09/02/13/24/girl-919048__340.jpg',
+					photo: 'https://i.pinimg.com/736x/6d/ba/da/6dbada3de8fbf11cf1e6ca3cd7802c44.jpg',
 					name: 'Name Surname',
 					position: 'Head of marketing',
 				},
