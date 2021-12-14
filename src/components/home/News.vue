@@ -72,7 +72,7 @@
 									body-3
 								"
 							>
-								{{ news_item.short_text }}
+								{{ news_item.shortText }}
 							</p>
 						</div>
 						<span class="header-4">{{ news_item.date }}</span>
@@ -89,12 +89,26 @@
 
 
 <script>
+import * as Contentful from 'contentful'
+// import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
+
 export default {
 
 	mounted() {
-		this.news = this.news.map((item) => {
-			item.in_viewport = false
-			return item
+		const client = Contentful.createClient({
+			space: 'sxsg65tutm19',
+			accessToken: 'HMMSTPlxFlk94f-Y0QweBu61NlBG2gqzW8y8nxAQIB8'
+		})
+
+		client.getEntries({limit: 3}).then((res) => {
+			this.news = res.items.map((item) => {
+				let newItem = {}
+				newItem.title = item.fields.title
+				newItem.shortText = item.fields.shortText
+				newItem.date = item.fields.date
+				newItem.in_viewport = false
+				return newItem
+			})
 		})
 	},
 

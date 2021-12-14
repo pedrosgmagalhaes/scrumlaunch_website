@@ -10,8 +10,10 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "@contentful/rich-text-html-renderer": "^15.9.1",
     "airtable": "^0.11.1",
     "axios": "^0.24.0",
+    "contentful": "^9.1.5",
     "core-js": "^3.6.5",
     "express": "^4.17.1",
     "serve-static": "^1.14.1",
