@@ -2,7 +2,7 @@
 
 	<div class="projects">
 
-		<TypingEffect spaceWidth="70">
+		<TypingEffect>
 			<h2 class="header-1">Latest projects</h2>
 		</TypingEffect>
 

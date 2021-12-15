@@ -21,10 +21,6 @@ export default {
             default: null
         },
 
-        spaceWidth: {
-            type: String,
-            default: null
-        },
     },
 
     mounted () {
@@ -78,7 +74,10 @@ export default {
             
             this.is_played = true
 
-            let spaceWidth = this.spaceWidth === null ? 'initial' : this.spaceWidth + 'px'
+            this.$refs.wrap.children[0].innerHTML = '<span class="width_test" style="opacity: 0;">e</span>'
+            let spaceWidth = window.getComputedStyle(this.$refs.wrap.children[0].querySelectorAll('.width_test')[0], null).getPropertyValue('width')
+            this.$refs.wrap.children[0].innerHTML = this.innerText
+
             let delay = 0
             let text_arr =  this.$refs.wrap.children[0].innerText.split('')
             text_arr = text_arr.map(item => {
