@@ -53,7 +53,7 @@
 		</div>
 
 		<div class="contact-form--wrapper-btn">
-			<button class="btn" @click="sendForm()">Send</button>
+			<button class="btn" @click="validateForm()">Send</button>
 		</div>
 
 	</div>
@@ -102,6 +102,17 @@ export default {
 					this.email = ''
 					this.project = ''
 				})
+		},
+
+		validateForm() {
+			let emailRegEx = new RegExp('^(([^<>()[\\]\\.,;:\\s@\\"]+(\\.[^<>()[\\]\\.,;:\\s@\\"]+)*)|(\\".+\\"))@(([^<>()[\\]\\.,;:\\s@\\"]+\\.)+[^<>()[\\]\\.,;:\\s@\\"]{2,})$','i')
+			this.nameError = this.name === '' ? 'Please, add your name here' : null
+			this.emailError = !emailRegEx.test(this.email) ? 'Please, enter your correct email' : null
+			this.projectError = this.project === '' ? 'Please, specify your project details here' : null
+
+			if ( this.nameError === null && this.emailError === null && this.projectError === null ) {
+				this.sendForm()
+			}
 		},
 	}
 }

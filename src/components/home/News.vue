@@ -91,6 +91,7 @@
 <script>
 import * as Contentful from 'contentful'
 // import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
+import { dateConverter } from '@/utils.js'
 
 export default {
 
@@ -100,12 +101,17 @@ export default {
 			accessToken: 'HMMSTPlxFlk94f-Y0QweBu61NlBG2gqzW8y8nxAQIB8'
 		})
 
-		client.getEntries({limit: 3}).then((res) => {
+		let query = {
+			content_type: 'news',
+			limit: 3,
+		}
+
+		client.getEntries(query).then((res) => {
 			this.news = res.items.map((item) => {
 				let newItem = {}
 				newItem.title = item.fields.title
 				newItem.shortText = item.fields.shortText
-				newItem.date = item.fields.date
+				newItem.date = dateConverter(item.fields.date, 1)
 				newItem.in_viewport = false
 				return newItem
 			})

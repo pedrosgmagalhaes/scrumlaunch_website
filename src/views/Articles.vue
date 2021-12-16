@@ -46,11 +46,43 @@
 <script>
 import { mapGetters } from 'vuex'
 import ArticlePreview from '@/components/articles/ArticlePreview'
+// import * as Contentful from 'contentful'
+// import { dateConverter } from '@/utils.js'
 
 export default {
 
 	components: {
 		ArticlePreview,
+	},
+
+	mounted() {
+
+		// const client = Contentful.createClient({
+		// 	space: 'sxsg65tutm19',
+		// 	accessToken: 'HMMSTPlxFlk94f-Y0QweBu61NlBG2gqzW8y8nxAQIB8'
+		// })
+
+		// let query = {
+		// 	content_type: 'blog',
+		// 	limit: 3,
+		// }
+
+		// client.getEntries(query).then((res) => {
+		// 	let news = []
+		// 	news = res.items.map((item) => {
+		// 		let newItem = {}
+		// 		newItem.title = item.fields.title
+		// 		newItem.previewImage = item.fields.previewImage
+		// 		newItem.shortText = item.fields.shortText
+		// 		newItem.author = item.fields.author
+		// 		newItem.category = item.fields.category
+		// 		newItem.slug = item.fields.slug
+		// 		newItem.date = dateConverter(item.fields.date, 1)
+		// 		return newItem
+		// 	})
+			
+		// 	this.$store.dispatch('setArticles', news)
+		// })
 	},
 
 	computed: {

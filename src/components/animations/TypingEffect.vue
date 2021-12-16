@@ -74,7 +74,7 @@ export default {
             
             this.is_played = true
 
-            this.$refs.wrap.children[0].innerHTML = '<span class="width_test" style="opacity: 0;">e</span>'
+            this.$refs.wrap.children[0].innerHTML = '<span class="width_test" style="opacity: 0;">0</span>'
             let spaceWidth = window.getComputedStyle(this.$refs.wrap.children[0].querySelectorAll('.width_test')[0], null).getPropertyValue('width')
             this.$refs.wrap.children[0].innerHTML = this.innerText
 

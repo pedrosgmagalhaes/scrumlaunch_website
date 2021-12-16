@@ -3,41 +3,41 @@ export default {
 		articles: [
             {
                 category: 'Insights',
-                image: 'https://modulo.net/files/chunks/5b3a6589a0d55630da0001ae/5b3a65d6a0d55630ce000181.jpg',
+                previewImage: 'https://modulo.net/files/chunks/5b3a6589a0d55630da0001ae/5b3a65d6a0d55630ce000181.jpg',
                 title: 'Article name that is longer than one line',
-                short_text: 'Humans tend to subconsciously distort information and sculpt it to fit their existing beliefs. Humans tend to subconsciously distort information and sculpt it to fit their existing beliefs. Humans tend to subconsciously distort information and sculpt it to fit their existing beliefs.',
+                shortText: 'Humans tend to subconsciously distort information and sculpt it to fit their existing beliefs. Humans tend to subconsciously distort information and sculpt it to fit their existing beliefs. Humans tend to subconsciously distort information and sculpt it to fit their existing beliefs.',
                 date: 'November 14, 2021',
                 slug: 'article-name-that-is-longer-than-one-line',
             },
             {
                 category: 'Insights',
-                image: 'https://modulo.net/files/chunks/5b3a6589a0d55630da0001ae/5b3a65d6a0d55630ce000181.jpg',
+                previewImage: 'https://modulo.net/files/chunks/5b3a6589a0d55630da0001ae/5b3a65d6a0d55630ce000181.jpg',
                 title: 'Article name that is longer than one line',
-                short_text: 'Humans tend to subconsciously distort information and sculpt it to fit their existing beliefs.',
+                shortText: 'Humans tend to subconsciously distort information and sculpt it to fit their existing beliefs.',
                 date: 'November 14, 2021',
                 slug: 'article-name-that-is-longer-than-one-line',
             },
             {
                 category: 'Insights',
-                image: 'https://modulo.net/files/chunks/5b3a6589a0d55630da0001ae/5b3a65d6a0d55630ce000181.jpg',
+                previewImage: 'https://modulo.net/files/chunks/5b3a6589a0d55630da0001ae/5b3a65d6a0d55630ce000181.jpg',
                 title: 'Article name that is longer than one line',
-                short_text: 'Humans tend to subconsciously distort information and sculpt it to fit their existing beliefs.',
+                shortText: 'Humans tend to subconsciously distort information and sculpt it to fit their existing beliefs.',
                 date: 'November 14, 2021',
                 slug: 'article-name-that-is-longer-than-one-line',
             },
             {
                 category: 'Insights',
-                image: 'https://modulo.net/files/chunks/5b3a6589a0d55630da0001ae/5b3a65d6a0d55630ce000181.jpg',
+                previewImage: 'https://modulo.net/files/chunks/5b3a6589a0d55630da0001ae/5b3a65d6a0d55630ce000181.jpg',
                 title: 'Article name that is longer than one line',
-                short_text: 'Humans tend to subconsciously distort information and sculpt it to fit their existing beliefs.',
+                shortText: 'Humans tend to subconsciously distort information and sculpt it to fit their existing beliefs.',
                 date: 'November 14, 2021',
                 slug: 'article-name-that-is-longer-than-one-line',
             },
             {
                 category: 'Insights',
-                image: 'https://modulo.net/files/chunks/5b3a6589a0d55630da0001ae/5b3a65d6a0d55630ce000181.jpg',
+                previewImage: 'https://modulo.net/files/chunks/5b3a6589a0d55630da0001ae/5b3a65d6a0d55630ce000181.jpg',
                 title: 'Article name that is longer than one line',
-                short_text: 'Humans tend to subconsciously distort information and sculpt it to fit their existing beliefs.',
+                shortText: 'Humans tend to subconsciously distort information and sculpt it to fit their existing beliefs.',
                 date: 'November 14, 2021',
                 slug: 'article-name-that-is-longer-than-one-line',
             },
@@ -45,11 +45,15 @@ export default {
 	}),
 
 	mutations: {
-
+        SET_ARTICLES(state, articles) {
+            state.articles = articles
+        },
 	},
 
 	actions: {
-
+        setArticles({ commit }, articles) {
+            commit('SET_ARTICLES', articles)
+        },
 	},
 
 	getters: {
