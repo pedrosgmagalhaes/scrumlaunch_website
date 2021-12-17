@@ -17,6 +17,16 @@
         <router-link :to="{ name: 'Process' }">Process</router-link>
         <router-link to="/blog">Blog</router-link>
         <router-link :to="{ name: 'Leadership' }">Leadership</router-link>
+        <div class="dropdown__wrap" @click="dropdownToggle">
+          <span>F.A.Q.</span>
+          <ul class="dropdown">
+            <li><router-link to="/seo/web-development-company-outsourcing">2021 Guide to Outsourcing Web Development</router-link></li>
+            <li><router-link to="/seo/web-development-company-outsourcing/software-development-in-ukraine">The #1 Software Development Firm in Ukraine</router-link></li>
+            <li><router-link to="/seo/web-development-company-outsourcing/website-development-consultants">The #1 Website Development Consultant in 2021</router-link></li>
+            <li><router-link to="/seo/hire-developers">Hire Quality Developers in Minutes - Deploy in Hours</router-link></li>
+            <li><router-link to="/seo/hire-developers/python-developers-and-programmers">Hire Quality Python Developers in Minutes</router-link></li>
+          </ul>
+        </div>
         <router-link :to="{ name: 'ContactUs' }">Contact</router-link>
       </div>
       <div class="menu--desktop--wrapper-mobile">
@@ -94,7 +104,24 @@ export default {
         document.querySelector('body').classList.remove('overflow-hidden')
       }
       this.$router.push({ name: pageName });
-    }
+    },
+
+    dropdownToggle(e) {
+      if ( e.target.nextElementSibling !== null && e.target.nextElementSibling.classList.contains('dropdown') ) {
+        if ( !e.target.nextElementSibling.classList.contains('active') ) {
+          e.target.nextElementSibling.classList.add('active')
+          return
+        }
+        if ( e.target.nextElementSibling.classList.contains('active') ) {
+          e.target.nextElementSibling.classList.remove('active')
+          return
+        }
+      }
+      
+      if ( e.target.offsetParent.classList.contains('dropdown') ) {
+        e.target.offsetParent.classList.remove('active')
+      }
+    },
   }
 }
 </script>
@@ -170,6 +197,41 @@ export default {
   }
 }
 
+.dropdown {
+  position: absolute;
+  top: 32px;
+  right: 0;
+  padding-top: 15px;
+  text-align: right;
+  opacity: 0;
+  user-select: none;
+  pointer-events: none;
+  transition: opacity 0.15s;
+
+  &.active {
+    opacity: 1;
+    user-select: initial;
+    pointer-events: initial;
+  }
+
+  &__wrap {
+    position: relative;
+
+    & > span {
+      cursor: pointer;
+    }
+  }
+
+  li {
+    margin-bottom: 6px;
+
+    a {
+      white-space: nowrap;
+      font-size: 17px !important;
+    }
+  }
+}
+
 @media screen and (min-width: 768px) {
   .menu {
     padding: 30px;
@@ -209,7 +271,7 @@ export default {
           }
         }
 
-        a {
+        a, span {
           font-size: 18px;
           line-height: 150%;
           text-decoration: none;
@@ -244,7 +306,7 @@ export default {
     &.home {
       .menu--desktop {
         &--wrapper {
-          a {
+          a, span {
             font-size: 24px;
           }
         }

@@ -13,6 +13,7 @@ import VestaCaseStudy from '../views/VestaCaseStudy.vue'
 import Services from '../views/Services.vue'
 import Articles from '../views/Articles.vue'
 import Article from '../views/Article.vue'
+import Seo from '../views/Seo.vue'
 
 const routes = [
 	{
@@ -88,7 +89,12 @@ const routes = [
 	{
 		path: '/blog/post/:id',
 		name: 'Article',
-		component: Article
+		component: Article 
+	},
+	{
+		path: '/seo/:pathMatch(.*)*',
+		name: 'Seo',
+		component: Seo
 	},
 	{
 		path: "/:pathMatch(.*)*",
