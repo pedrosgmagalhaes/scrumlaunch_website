@@ -12,34 +12,58 @@
 
 <script>
 import articles from '@/seo/articles.json'
+import { computed, reactive, ref, onMounted, onBeforeUpdate } from 'vue'
+import { useRoute } from 'vue-router'
+import { useHead } from '@vueuse/head'
 
 export default {
 
-    mounted () {
-        this.getArticle()
-    },
+	setup() {
+		const route = useRoute()
 
-    beforeUpdate () {
-        this.getArticle()
-    },
-    
-	data() {
-		return {
-            article: null,
-		}
-	},
 
-    methods: {
 
-        getArticle() {
-            this.article = articles.filter((item) => {
-                if ( item.url === this.$route.params.pathMatch.join('/') ) {
+		const article = ref({})
+
+		function getArticle() {
+
+            article.value = articles.filter((item) => {
+                if ( item.url === route.params.pathMatch.join('/') ) {
                     return item
                 }
             })[0]
-        },
 
-    },
+			const metaData = reactive({
+				title: article.value.meta_title,
+				description: article.value.meta_description,
+			})
+
+			useHead({
+				title: computed(() => metaData.title),
+				meta: [
+					{
+						name: `description`,
+						content: computed(() => metaData.description),
+					},
+				],
+			})
+        }
+
+		onMounted(() => {
+			getArticle()
+		})
+
+		onBeforeUpdate(() => {
+			getArticle()
+		})
+
+
+
+		return {
+			article,
+		}
+
+	},
 
 }
 </script>
