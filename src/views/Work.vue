@@ -16,11 +16,25 @@
 import HeroBlock from '@/components/work/HeroBlock.vue'
 import WorkItem from '@/components/work/WorkItem.vue'
 import { mapGetters } from 'vuex'
+import { useHead } from '@vueuse/head'
 
 export default {
+
 	components: {
 		HeroBlock,
 		WorkItem
+	},
+
+	setup() {
+		useHead({
+			title: 'Work',
+			meta: [
+				{
+					name: `description`,
+					content: 'Work',
+				},
+			],
+		})
 	},
 
 	computed: {

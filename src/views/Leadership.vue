@@ -36,11 +36,25 @@ import TeamMember from '@/components/leadership/TeamMember.vue'
 import ContactUsBlock from '@/components/leadership/ContactUsBlock.vue'
 import { mapGetters } from 'vuex'
 
+import { useHead } from '@vueuse/head'
+
 export default {
 
 	components: {
 		TeamMember,
 		ContactUsBlock
+	},
+
+	setup() {
+		useHead({
+			title: 'Leadership',
+			meta: [
+				{
+					name: `description`,
+					content: 'Leadership',
+				},
+			],
+		})
 	},
 
 	computed: {

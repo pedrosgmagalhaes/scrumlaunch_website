@@ -1,15 +1,17 @@
 <template>
-  <div class="home">
-    <HeroBlock />
-    <SecondBlock />
-    <Projects />
-    <HistoryBlock />
-    <!-- <News /> -->
-    <TickerBlock />
-    <OurServices />
-    <ContactUs />
-  </div>
+	<div class="home">
+		<HeroBlock />
+		<SecondBlock />
+		<Projects />
+		<HistoryBlock />
+		<!-- <News /> -->
+		<TickerBlock />
+		<OurServices />
+		<ContactUs />
+	</div>
 </template>
+
+
 
 <script>
 // @ is an alias to /src
@@ -22,17 +24,35 @@ import TickerBlock from '@/components/home/TickerBlock.vue'
 import OurServices from '@/components/home/OurServices.vue'
 import ContactUs from '@/components/home/ContactUs.vue'
 
+import { useHead } from '@vueuse/head'
+
 export default {
-  name: 'Home',
-  components: {
-    HeroBlock,
-    SecondBlock,
-    Projects,
-    HistoryBlock,
-    // News,
-    TickerBlock,
-    OurServices,
-    ContactUs
-  }
+
+	name: 'Home',
+
+	components: {
+		HeroBlock,
+		SecondBlock,
+		Projects,
+		HistoryBlock,
+		// News,
+		TickerBlock,
+		OurServices,
+		ContactUs
+	},
+
+	setup() {
+		useHead({
+			title: 'Home',
+			meta: [
+				{
+					name: `description`,
+					content: 'Home',
+				},
+			],
+		})
+	},
+
+
 }
 </script>

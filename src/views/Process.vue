@@ -11,12 +11,26 @@ import OurProcess from '@/components/process/OurProcess.vue'
 import OurApproach from '@/components/process/OurApproach.vue'
 import ContactUsBlock from '@/components/leadership/ContactUsBlock.vue'
 
+import { useHead } from '@vueuse/head'
+
 export default {
   components: {
     OurProcess,
     OurApproach,
     ContactUsBlock
   },
+
+  setup() {
+		useHead({
+			title: 'Process',
+			meta: [
+				{
+					name: `description`,
+					content: 'Process',
+				},
+			],
+		})
+	},
 
   data: () => ({
     approachItems: [

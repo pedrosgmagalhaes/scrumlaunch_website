@@ -35,11 +35,25 @@
 <script>
 import ContactForm from '@/components/contact/ContactForm.vue'
 
+import { useHead } from '@vueuse/head'
+
 export default {
 
 	components: {
 		ContactForm
-	}
+	},
+
+	setup() {
+		useHead({
+			title: 'ContactUs',
+			meta: [
+				{
+					name: `description`,
+					content: 'ContactUs',
+				},
+			],
+		})
+	},
 
 }
 </script>

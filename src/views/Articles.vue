@@ -48,11 +48,24 @@ import { mapGetters } from 'vuex'
 import ArticlePreview from '@/components/articles/ArticlePreview'
 // import * as Contentful from 'contentful'
 // import { dateConverter } from '@/utils.js'
+import { useHead } from '@vueuse/head'
 
 export default {
 
 	components: {
 		ArticlePreview,
+	},
+
+	setup() {
+		useHead({
+			title: 'Blog',
+			meta: [
+				{
+					name: `description`,
+					content: 'Blog',
+				},
+			],
+		})
 	},
 
 	mounted() {

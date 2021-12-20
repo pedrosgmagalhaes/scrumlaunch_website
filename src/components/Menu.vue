@@ -266,7 +266,7 @@ export default {
         justify-content: space-between;
 
         &.white-wrapper {
-          a {
+          a, span {
             color: #FFFFFF;
           }
         }

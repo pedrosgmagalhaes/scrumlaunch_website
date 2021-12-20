@@ -15,11 +15,25 @@
 import ServiceItem from '@/components/services/ServiceItem.vue'
 import ContactUsBlock from '@/components/leadership/ContactUsBlock.vue'
 
+import { useHead } from '@vueuse/head'
+
 export default {
   components: {
     ServiceItem,
     ContactUsBlock
   },
+
+  setup() {
+		useHead({
+			title: 'Services',
+			meta: [
+				{
+					name: `description`,
+					content: 'Services',
+				},
+			],
+		})
+	},
 
   data: () => ({
     services: [
