@@ -82,7 +82,7 @@ const routes = [
 		component: Articles
 	},
 	{
-		path: '/blog/category/:id',
+		path: '/blog/category/:cat_id',
 		name: 'Articles',
 		component: Articles
 	},

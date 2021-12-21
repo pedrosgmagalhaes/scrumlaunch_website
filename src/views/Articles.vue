@@ -28,14 +28,20 @@
 		</ul>
 
 
-		<ArticlePreview :item="getFirstArticle" :first="true" />
+		<div v-if="getFirstArticle">
+			<ArticlePreview :item="getFirstArticle" :first="true" />
 
-		<div class="articles__preview_list">
-			<ArticlePreview v-for="(item, index) in getRestArticles" :key="index" :item="item" />
+			<div class="articles__preview_list">
+				<ArticlePreview v-for="(item, index) in getRestArticles" :key="index" :item="item" />
+			</div>
+
+			<div class="articles__all_articles_btn_wrapper">
+				<router-link class="btn" to="/blog">View all</router-link>
+			</div>
 		</div>
 
-		<div class="articles__all_articles_btn_wrapper">
-			<router-link class="btn" to="/blog">View all</router-link>
+		<div v-else>
+			<p>There are no articles in this section</p>
 		</div>
 
 	</div>
@@ -44,7 +50,9 @@
 
 
 <script>
-import { mapGetters } from 'vuex'
+import { onMounted, watch } from 'vue'
+import { mapGetters, useStore } from 'vuex'
+import { useRoute } from 'vue-router'
 import ArticlePreview from '@/components/articles/ArticlePreview'
 import * as Contentful from 'contentful'
 import { dateConverter } from '@/utils.js'
@@ -57,6 +65,21 @@ export default {
 	},
 
 	setup() {
+		const route = useRoute()
+		const store = useStore()
+
+		const client = Contentful.createClient({
+			space: 'sxsg65tutm19',
+			accessToken: 'HMMSTPlxFlk94f-Y0QweBu61NlBG2gqzW8y8nxAQIB8'
+		})
+
+		onMounted(() => {
+			getArticles()
+		})
+
+		watch(route, () => {
+			getArticles()
+		})
 		
 		useHead({
 			title: 'Blog',
@@ -67,51 +90,39 @@ export default {
 				},
 			],
 		})
-	},
 
-	mounted() {
+		function getArticles() {
+			
+			let query = {
+				content_type: 'blog',
+				limit: 3,
+			}
+			if ( route.params.cat_id !== undefined ) {
+				query['fields.category'] =  route.params.cat_id[0].toUpperCase() + route.params.cat_id.substr(1)
+			}
 
-		const client = Contentful.createClient({
-			space: 'sxsg65tutm19',
-			accessToken: 'HMMSTPlxFlk94f-Y0QweBu61NlBG2gqzW8y8nxAQIB8'
-		})
+			client.getEntries(query).then((res) => {
 
-		let query = {
-			content_type: 'blog',
-			limit: 3,
+				let news = []
+
+				news = res.items.map((item) => {
+					let newItem = {}
+					newItem.title = item.fields.title
+					newItem.previewImage = getAsset(item.fields.previewImage.sys.id, res.includes.Asset)
+					newItem.shortText = item.fields.shortText
+					newItem.author = item.fields.author
+					newItem.category = item.fields.category
+					newItem.slug = item.fields.slug
+					newItem.date = dateConverter(item.fields.date, 1)
+					return newItem
+				})
+				
+				store.dispatch('setArticles', news)
+			})
+
 		}
 
-		client.getEntries(query).then((res) => {
-
-			let news = []
-
-			news = res.items.map((item) => {
-				let newItem = {}
-				newItem.title = item.fields.title
-				newItem.previewImage = this.getAsset(item.fields.previewImage.sys.id, res.includes.Asset)
-				newItem.shortText = item.fields.shortText
-				newItem.author = item.fields.author
-				newItem.category = item.fields.category
-				newItem.slug = item.fields.slug
-				newItem.date = dateConverter(item.fields.date, 1)
-				return newItem
-			})
-			
-			this.$store.dispatch('setArticles', news)
-		})
-	},
-
-	beforeUpdate () {
-		console.log(this.$route);
-	},
-
-	computed: {
-		...mapGetters(['getFirstArticle', 'getRestArticles']),
-	},
-
-	methods: {
-
-		getAsset( id, assetsArr ) {
+		function getAsset( id, assetsArr ) {
 
 			let assetObj = assetsArr.filter((item) => {
 				return id === item.sys.id
@@ -121,8 +132,11 @@ export default {
 				url: assetObj.fields.file.url,
 				title: assetObj.fields.title,
 			}
-		},
+		}
+	},
 
+	computed: {
+		...mapGetters(['getFirstArticle', 'getRestArticles']),
 	},
 
 }

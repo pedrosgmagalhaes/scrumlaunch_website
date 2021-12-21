@@ -24,7 +24,7 @@ export default {
 	
 	props: {
 		item: {
-			type: Object,
+			type: [Object, Boolean],
 		},
 
 		first: {
