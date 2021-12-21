@@ -11,11 +11,11 @@
 
 		<div class="article__user">
 
-			<div class="article__user_photo" :style="{ 'background-image': `url('${post.user.photo}')` }"></div>
+			<div class="article__user_photo" :style="{ 'background-image': `url('${post.user_photo}')` }"></div>
 
 			<div class="article__user_data">
-				<div class="article__user_name">{{ post.user.name }}</div>
-				<div class="article__user_position">{{ post.user.position }}</div>
+				<div class="article__user_name">{{ post.user_name }}</div>
+				<div class="article__user_position">{{ post.user_position }}</div>
 			</div>
 
 		</div>
@@ -50,44 +50,101 @@
 
 
 <script>
+import { ref, onMounted, computed } from 'vue'
+import { useRoute } from 'vue-router'
+import { useHead } from '@vueuse/head'
+import * as Contentful from 'contentful'
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
+import { BLOCKS } from '@contentful/rich-text-types'
+import { dateConverter } from '@/utils.js'
+
 export default {
-	
-	data() {
-		return {
-			post: {
-				category: 'Insights',
-				date: 'November 14, 2021',
-				user: {
-					photo: 'https://i.pinimg.com/736x/6d/ba/da/6dbada3de8fbf11cf1e6ca3cd7802c44.jpg',
-					name: 'Name Surname',
-					position: 'Head of marketing',
-				},
-				title: 'Get more of our INSIGHTS, ideas, and guides',
-				text: '<p><i>Stop worrying about recruiting, hiring, payroll, office space, HR, perks for your design and development teams and focus on growing your business.</i></p><p><img src="https://dummyimage.com/1800x840/eee/fff" alt=""></p><p>&nbsp;</p><p>&nbsp;</p><h2>We build flexible teams with client business goals in mind</h2><p>Stop worrying about recruiting, hiring, payroll, office space, HR, perks for your design and development teams and focus on growing your business. Stop worrying about recruiting, hiring, payroll, office space, HR, perks for your design and development teams and focus on growing your business.</p><p>Stop worrying about recruiting, hiring, payroll, office space, HR, perks for your design and development teams and focus on growing your business.</p><p>Stop worrying about recruiting, hiring, payroll, office space, HR, perks for your design and development teams and focus on growing your business. Stop worrying about recruiting, hiring, payroll, office space, HR, perks for your design and development teams and focus on growing your business. Stop worrying about recruiting, hiring, payroll, office space, HR, perks for your design and development teams and focus on growing your business.</p><p><img src="https://dummyimage.com/1800x840/eee/fff" alt=""></p><p>Stop worrying about recruiting, hiring, payroll, office space, HR, perks for your design and development teams and focus on growing your business.</p><blockquote>Our leadership team is lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum non, odio nunc quisque lobortis ac proin vitae, eu. Lorem ac ipsum, senectus elementum venenatis aliquam.</blockquote><p>Stop worrying about recruiting, hiring, payroll, office space, HR, perks for your design and development teams and focus on growing your business. Stop worrying about recruiting, hiring, payroll, office space, HR, perks for your design and development teams and focus on growing your business. </p><p>Stop worrying about recruiting, hiring, payroll, office space, HR, perks for your design and development teams and focus on growing your business.</p><p>Stop worrying about recruiting, hiring, payroll, office space, HR, perks for your design and development teams and focus on growing your business. Stop worrying about recruiting, hiring, payroll, office space, HR, perks for your design and development teams and focus on growing your business. </p><p>Stop worrying about recruiting, hiring, payroll, office space, HR, perks for your design and development teams and focus on growing your business.</p><p>Stop worrying about recruiting, hiring, payroll, office space, HR, perks for your design and development teams and focus on growing your business. Stop worrying about recruiting, hiring, payroll, office space, HR, perks for your design and development teams and focus on growing your business. Stop worrying about recruiting, hiring, payroll, office space, HR, perks for your design and development teams and focus on growing your business.</p>',
 
+	setup() {
+		const route = useRoute()
+
+		let post = ref({})
+
+
+
+		let recommended_items = ref([
+			{
+				image: 'https://dummyimage.com/240x200/fff2e2/fff',
+				title: 'How does FGN app help seniors and why is it so important?',
+				text: 'Humans tend to subconsciously distort information and sculpt it to fit their existing beliefs. Confronting one’s own cognitive biases is critical when starting a company.',
+				date: '02 Dec 21',
 			},
+			{
+				image: 'https://dummyimage.com/240x200/fff2e2/fff',
+				title: 'How ScrumLaunch became the best company of 2021?',
+				text: 'Humans tend to subconsciously distort information and sculpt it to fit their existing beliefs. Confronting one’s own cognitive biases is critical when starting a company.',
+				date: '02 Dec 21',
+			},
+			{
+				image: 'https://dummyimage.com/240x200/fff2e2/fff',
+				title: 'What is the secret of startup success? Let’s find out!',
+				text: 'Humans tend to subconsciously distort information and sculpt it to fit their existing beliefs. Confronting one’s own cognitive biases is critical when starting a company.',
+				date: '02 Dec 21',
+			},
+		])
 
-			recommended_items: [
+
+
+		onMounted(() => {
+
+			const client = Contentful.createClient({
+				space: 'sxsg65tutm19',
+				accessToken: 'HMMSTPlxFlk94f-Y0QweBu61NlBG2gqzW8y8nxAQIB8'
+			})
+
+			let query = {
+				'content_type': 'blog',
+				'limit': 1,
+				'fields.slug': route.params.slug,
+			}
+
+			client.getEntries(query).then((res) => {
+
+				const options = {
+					renderNode: {
+						[BLOCKS.EMBEDDED_ASSET]: (node) => `<img src="${`https://${node.data.target.fields.file.url}`}">`
+					}
+				}
+
+				let fields = res.items[0].fields
+
+				post.value = {
+					category: fields.category,
+					date: dateConverter(fields.date, 2),
+					user_photo: fields.author.fields.photo.fields.file.url,
+					user_name: fields.author.fields.name,
+					user_position: fields.author.fields.position,
+					title: fields.title,
+					text: documentToHtmlString(fields.fullText, options),
+				}
+				
+			})
+		})
+
+
+
+		useHead({
+			title: computed(() => post.value.title),
+			meta: [
 				{
-					image: 'https://dummyimage.com/240x200/fff2e2/fff',
-					title: 'How does FGN app help seniors and why is it so important?',
-					text: 'Humans tend to subconsciously distort information and sculpt it to fit their existing beliefs. Confronting one’s own cognitive biases is critical when starting a company.',
-					date: '02 Dec 21',
-				},
-				{
-					image: 'https://dummyimage.com/240x200/fff2e2/fff',
-					title: 'How ScrumLaunch became the best company of 2021?',
-					text: 'Humans tend to subconsciously distort information and sculpt it to fit their existing beliefs. Confronting one’s own cognitive biases is critical when starting a company.',
-					date: '02 Dec 21',
-				},
-				{
-					image: 'https://dummyimage.com/240x200/fff2e2/fff',
-					title: 'What is the secret of startup success? Let’s find out!',
-					text: 'Humans tend to subconsciously distort information and sculpt it to fit their existing beliefs. Confronting one’s own cognitive biases is critical when starting a company.',
-					date: '02 Dec 21',
+					name: `description`,
+					content: computed(() => post.value.title),
 				},
 			],
+		})
+
+
+
+		return {
+			post,
+			recommended_items,
 		}
+
 	},
 
 }
@@ -263,6 +320,14 @@ export default {
 			font-size: 26px;
 			line-height: 150%;
 			background: url(../assets/icons/quotes.svg) 0 0 no-repeat;
+		}
+
+		:deep(b) {
+			font-weight: bold;
+		}
+
+		:deep(i) {
+			font-style: italic;
 		}
 	}
 

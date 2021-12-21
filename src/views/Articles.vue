@@ -46,8 +46,8 @@
 <script>
 import { mapGetters } from 'vuex'
 import ArticlePreview from '@/components/articles/ArticlePreview'
-// import * as Contentful from 'contentful'
-// import { dateConverter } from '@/utils.js'
+import * as Contentful from 'contentful'
+import { dateConverter } from '@/utils.js'
 import { useHead } from '@vueuse/head'
 
 export default {
@@ -57,6 +57,7 @@ export default {
 	},
 
 	setup() {
+		
 		useHead({
 			title: 'Blog',
 			meta: [
@@ -70,36 +71,58 @@ export default {
 
 	mounted() {
 
-		// const client = Contentful.createClient({
-		// 	space: 'sxsg65tutm19',
-		// 	accessToken: 'HMMSTPlxFlk94f-Y0QweBu61NlBG2gqzW8y8nxAQIB8'
-		// })
+		const client = Contentful.createClient({
+			space: 'sxsg65tutm19',
+			accessToken: 'HMMSTPlxFlk94f-Y0QweBu61NlBG2gqzW8y8nxAQIB8'
+		})
 
-		// let query = {
-		// 	content_type: 'blog',
-		// 	limit: 3,
-		// }
+		let query = {
+			content_type: 'blog',
+			limit: 3,
+		}
 
-		// client.getEntries(query).then((res) => {
-		// 	let news = []
-		// 	news = res.items.map((item) => {
-		// 		let newItem = {}
-		// 		newItem.title = item.fields.title
-		// 		newItem.previewImage = item.fields.previewImage
-		// 		newItem.shortText = item.fields.shortText
-		// 		newItem.author = item.fields.author
-		// 		newItem.category = item.fields.category
-		// 		newItem.slug = item.fields.slug
-		// 		newItem.date = dateConverter(item.fields.date, 1)
-		// 		return newItem
-		// 	})
+		client.getEntries(query).then((res) => {
+
+			let news = []
+
+			news = res.items.map((item) => {
+				let newItem = {}
+				newItem.title = item.fields.title
+				newItem.previewImage = this.getAsset(item.fields.previewImage.sys.id, res.includes.Asset)
+				newItem.shortText = item.fields.shortText
+				newItem.author = item.fields.author
+				newItem.category = item.fields.category
+				newItem.slug = item.fields.slug
+				newItem.date = dateConverter(item.fields.date, 1)
+				return newItem
+			})
 			
-		// 	this.$store.dispatch('setArticles', news)
-		// })
+			this.$store.dispatch('setArticles', news)
+		})
+	},
+
+	beforeUpdate () {
+		console.log(this.$route);
 	},
 
 	computed: {
 		...mapGetters(['getFirstArticle', 'getRestArticles']),
+	},
+
+	methods: {
+
+		getAsset( id, assetsArr ) {
+
+			let assetObj = assetsArr.filter((item) => {
+				return id === item.sys.id
+			})[0]
+
+			return {
+				url: assetObj.fields.file.url,
+				title: assetObj.fields.title,
+			}
+		},
+
 	},
 
 }
