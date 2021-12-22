@@ -19,12 +19,12 @@
 		</div>
 
 
-		<ul class="articles__categories">
-			<li class="articles__category_item active"><router-link to="/blog" class="articles__category_item_a">All Articles <span class="articles__category_counter">124</span></router-link></li>
-			<li class="articles__category_item"><router-link to="/blog/category/guides" class="articles__category_item_a">Guides</router-link></li>
-			<li class="articles__category_item"><router-link to="/blog/category/insights" class="articles__category_item_a">Insights</router-link></li>
-			<li class="articles__category_item"><router-link to="/blog/category/development" class="articles__category_item_a">Development</router-link></li>
-			<li class="articles__category_item"><router-link to="/blog/category/enterpreunership" class="articles__category_item_a">Enterpreunership</router-link></li>
+		<ul class="articles__categories" @click="scrollToCategories">
+			<ArticleLink to="/blog">All Articles <span class="articles__category_counter">124</span></ArticleLink>
+			<ArticleLink to="/blog/category/guides">Guides</ArticleLink>
+			<ArticleLink to="/blog/category/insights">Insights</ArticleLink>
+			<ArticleLink to="/blog/category/development">Development</ArticleLink>
+			<ArticleLink to="/blog/category/enterpreunership">Enterpreunership</ArticleLink>
 		</ul>
 
 
@@ -54,6 +54,7 @@ import { onMounted, watch } from 'vue'
 import { mapGetters, useStore } from 'vuex'
 import { useRoute } from 'vue-router'
 import ArticlePreview from '@/components/articles/ArticlePreview'
+import ArticleLink from '@/components/articles/ArticleLink'
 import * as Contentful from 'contentful'
 import { dateConverter } from '@/utils.js'
 import { useHead } from '@vueuse/head'
@@ -62,6 +63,7 @@ export default {
 
 	components: {
 		ArticlePreview,
+		ArticleLink,
 	},
 
 	setup() {
@@ -132,6 +134,16 @@ export default {
 				url: assetObj.fields.file.url,
 				title: assetObj.fields.title,
 			}
+		}
+
+		function scrollToCategories(e) {
+			setTimeout(() => {
+				e.target.scrollIntoView({ block: 'start', behavior: 'smooth' })
+			}, 150);
+		}
+
+		return {
+			scrollToCategories,
 		}
 	},
 
@@ -218,30 +230,6 @@ export default {
 		display: flex;
 		flex-wrap: wrap;
 		margin-bottom: 60px;
-	}
-
-	&__category_item {
-		margin-right: 64px;
-
-		&.active {
-			background: #12E2B0;
-		}
-
-		&:last-child {
-			margin-right: 0;
-		}
-	}
-
-	&__category_item_a {
-		font-size: 30px;
-		line-height: 140%;
-		font-weight: 700;
-		text-decoration: none;
-		color: #1E1F21;
-
-		@media screen and (max-width: 768px) {
-			font-size: 18px;
-		}
 	}
 
 	&__category_counter {
