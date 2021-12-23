@@ -7,7 +7,7 @@
 				<AppearFromMask><p class="header-big">Product Design</p></AppearFromMask>
 				<AppearFromMask><p class="header-big">& Software</p></AppearFromMask>
 				<AppearFromMask><p class="header-big">Development</p></AppearFromMask>
-				<AppearFromMask><p class="header-big">for Startups</p></AppearFromMask>
+				<AppearFromMask><p class="header-big mark">for Startups</p></AppearFromMask>
 			</div>
 			
 			<!-- <inline-svg
@@ -21,15 +21,15 @@
 				loop
 				renderer="svg"
 				:animationData="
-					require('../../assets/animation/pangea2.json')
+					require('../../assets/animation/map.json')
 				"
 			/>
 
 		</div>
 
 		<div class="hero--bottom">
-			<SocialBlock />
-			<inline-svg :src="require('@/assets/icons/scroll-down.svg')" @click="scrollDown()" class="hero--bottom__scroll_down" />
+			<SocialBlock iconSufix="-white" />
+			<inline-svg :src="require('@/assets/icons/scroll-down-white.svg')" @click="scrollDown()" class="hero--bottom__scroll_down" />
 		</div>
 
 	</div>
@@ -70,6 +70,7 @@ export default {
 	display: flex;
 	flex-direction: column;
 	text-align: left;
+	background: #1E1F21;
 
 	&--text-wrapper {
 		// margin-bottom: 80px;
@@ -96,6 +97,9 @@ export default {
 		}
 
 		&__header {
+			display: flex;
+			flex-direction: column;
+			align-self: center;
 			position: relative;
 			z-index: 1;
 		}
@@ -113,6 +117,12 @@ export default {
 
 	.header-big {
 		text-align: center;
+		color: #FFFFFF;
+
+		&.mark {
+			background: #12E2B0;
+			color: #1E1F21;
+		}
 	}
 }
 
@@ -142,6 +152,8 @@ export default {
 
 @media screen and (min-width: 375px) {
 	.hero {
+		padding-bottom: 20px;
+
 		&--text-wrapper {
 			&--illustration {
 				width: 375px !important;
@@ -152,7 +164,7 @@ export default {
 				// transform: translateX(-50%);
 
 				::v-deep {
-					transform: scale(1.18) translateX(-15px);
+					transform: scale(0.9) translateX(-23px);
 				}
 			}
 		}
@@ -161,12 +173,14 @@ export default {
 
 @media screen and (min-width: 425px) {
 	.hero {
+		padding-bottom: 40px;
+
 		&--text-wrapper {
-			margin-bottom: 80px;
+			// margin-bottom: 80px;
 			
 			&--illustration {
 				::v-deep {
-					transform: scale(1.18) translateX(0px);
+					transform: scale(1) translateX(0px);
 				}
 			}
 		}
@@ -175,12 +189,13 @@ export default {
 
 @media screen and (min-width: 768px) {
 	.hero {
-		padding: 197px 3.9% 0;
+		padding: 197px 3.9% 40px 3.9%;
 
 		&--text-wrapper {
 			display: flex;
 			justify-content: center;
 			flex-direction: column;
+			margin-bottom: 80px;
 
 			h1 {
 				margin-bottom: 60px;
@@ -196,7 +211,7 @@ export default {
 				transform: none;
 
 				::v-deep {
-					transform: scale(1.5) translateX(0);
+					transform: scale(1.2) translateX(0);
 				}
 			}
 		}
@@ -205,9 +220,15 @@ export default {
 
 @media screen and (min-width: 1140px) {
 	.hero {
+		padding-bottom: 42px;
+
 		&--text-wrapper {
 			flex-direction: row;
 			justify-content: space-between;
+
+			&__header {
+				align-items: flex-start;
+			}
 
 			.header-big {
 				text-align: left;
@@ -217,7 +238,7 @@ export default {
 				margin-top: -90px;
 
 				::v-deep {
-					transform: scale(1.2) translateX(30px);
+					transform: scale(1) translateX(0);
 				}
 			}
 		}
@@ -226,7 +247,7 @@ export default {
 
 @media screen and (min-width: 1280px) {
 	.hero {
-		padding: 206px 3.9% 0;
+		padding: 206px 3.9% 82px 3.9%;
 
 		&--text-wrapper {
 			margin-bottom: 100px;
@@ -241,6 +262,11 @@ export default {
 				height: 503px;
 				top: 83px;
 				right: 0;
+
+				::v-deep {
+					top: 50px;
+					transform: scale(1) translateX(0);
+				}
 			}
 		}
 
@@ -253,7 +279,7 @@ export default {
 
 @media screen and (min-width: 1440px) {
 	.hero {
-		padding: 269px 8.34% 0;
+		padding: 269px 8.34% 82px 8.34%;
 		position: relative;
 		display: flex;
 		flex-direction: column;
@@ -273,6 +299,11 @@ export default {
 				width: auto;
 				height: auto;
 				margin: 0;
+
+				::v-deep {
+					top: 220px;
+					transform: scale(1.2) translateX(-80px);
+				}
 			}
 		}
 
@@ -303,7 +334,7 @@ export default {
 			&--illustration {
 
 				::v-deep {
-					transform: scale(1.8) translateX(-84px);
+					transform: scale(1.4) translateX(-100px);
 					top: 282px;
 				}
 			}

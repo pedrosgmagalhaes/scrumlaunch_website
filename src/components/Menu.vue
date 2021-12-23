@@ -74,7 +74,8 @@ export default {
 
   watch: {
     $route() {
-      if (this.$route.name === "ContactUs" ||
+      if (this.$route.name === "Home" ||
+          this.$route.name === "ContactUs" ||
           this.$route.name === "FamilyGameNightCaseStudy" ||
           this.$route.name === "HarvestCaseStudy" ||
           this.$route.name === "FullCourtAiCaseStudy" ||

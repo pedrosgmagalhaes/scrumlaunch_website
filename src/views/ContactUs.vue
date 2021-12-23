@@ -124,7 +124,7 @@ export default {
 	.contact-us {
 
 		:deep(.header-big) {
-			font-size: 70px;
+			// font-size: 70px;
 			line-height: 140%;
 		}
 
@@ -155,8 +155,8 @@ export default {
 			justify-content: flex-start;
 
 			p {
-				margin-top: 97px;
-				margin-left: 146px;
+				margin-top: 60px;
+				margin-left: 184px;
 				width: 62%;
 				max-width: 100%;
 			}

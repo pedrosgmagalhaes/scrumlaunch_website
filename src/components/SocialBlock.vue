@@ -3,27 +3,42 @@
 
 		<a href="https://www.behance.net/code_catalyst" target="_blank" class="social--icon_wrap">
 			<inline-svg
-				:src="require('@/assets/icons/behance.svg')"
+				:src="require('@/assets/icons/behance'+iconSufix+'.svg')"
 				class="social--icon"
 			/>
 		</a>
 
 		<a href="https://www.linkedin.com/company/scrumlaunch/" target="_blank" class="social--icon_wrap">
 			<inline-svg
-				:src="require('@/assets/icons/linkedin.svg')"
+				:src="require('@/assets/icons/linkedin'+iconSufix+'.svg')"
 				class="social--icon"
 			/>
 		</a>
 
 		<a href="https://dribbble.com/scrumlaunch" target="_blank" class="social--icon_wrap">
 			<inline-svg
-				:src="require('@/assets/icons/dribbble.svg')"
+				:src="require('@/assets/icons/dribbble'+iconSufix+'.svg')"
 				class="social--icon"
 			/>
 		</a>
 
 	</div>
 </template>
+
+
+
+<script>
+export default {
+
+	props: {
+		iconSufix: {
+			type: String,
+			default: ''
+		},
+	},
+
+}
+</script>
 
 
 
