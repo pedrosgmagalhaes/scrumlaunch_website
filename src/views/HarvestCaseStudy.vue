@@ -63,9 +63,9 @@ export default {
     ],
     projectInfo: {
       name: 'Harvest',
-      description: 'Harvest is a negotiation fee platform where you can manage debts and expenses. US banks charge clients enormous amount of fee for each transaction or ATM cash transactions. People struggle with negotiating fees through banks and return their money so Harvest helps with this problem and provides and automatic and fast solution to eliminate this problem.',
-      details: '2021',
-      work: ['UI/UX design', 'Development'],
+      description: 'Harvest is a web application that uses AI-powered chatbots to auto-negotiate bank fees on behalf of its customers and get them refunds.  The company was acquired in 2021 by Acorns.  Its early investors included Techstars and Barclays Capital.',
+      details: '2019-2021 (Acquisition)',
+      work: ['Vue', 'Python', 'Machine Learning', 'UI/UX Design'],
       team: ['Dasha Shyf', 'Yulia Hlushkina', 'Yevheniia Tkachenko']
     }
   }),

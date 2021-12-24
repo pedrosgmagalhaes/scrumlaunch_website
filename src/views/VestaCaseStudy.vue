@@ -37,9 +37,9 @@ export default {
 
 		projectInfo: {
 			name: 'Vesta Home',
-			description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id est mi dignissim iaculis sed mi interdum egestas. Eget cursus at aliquet in bibendum eget. Varius ac pellentesque elementum ullamcorper posuere.',
-			details: '2021',
-			work: ['UI/UX design'],
+			description: 'Vesta Home is a leading luxury home staging company that is powered by a sophisticated logistics and e-commerce platform.  The platform is dual purpose– it acts as an inventory management and booking system for the internal team to coordinate, schedule and reserve furniture items from its collection for use in home staging events.  It also enables consumers to buy gently used luxury furniture.',
+			details: '2020-2021',
+			work: ['React', 'Swift', 'RubyOnRails', 'Shopify', 'Heroku', 'Product Management', 'UI', 'UX Design'],
 			team: ['Yulia Hlushkina', 'Denis Didenko', 'Anton Kharytonov']
 		},
 

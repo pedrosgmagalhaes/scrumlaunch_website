@@ -49,10 +49,10 @@ export default {
     ],
     projectInfo: {
       name: 'Full Court AI',
-      description: 'This application allows users to record games in real time. You can record using two phones with the Full Court AI mount which allows to create panoramic videos.',
-      details: '2021',
-      work: ['UI/UX design', 'Development'],
-      team: ['Dasha Shyf', 'Yulia Hlushkina']
+      description: 'FullCourtAI is an AI-powered mobile application and cloud video processing pipeline that enables users to effortlessly record, edit and share youth sports games as if they were recorded by a cameraman by combining computer vision and neural networks to automatically track the action.  The company is backed by Silicon Valley investors.',
+      details: '2018-Present',
+      work: ['Swift', 'Composable Architecture', 'AWS', 'GCP', 'Python', 'Machine Learning', 'Neural Networks', 'Computer Vision', 'Video Transcoding', 'ETL Pipeline', 'Product Management', 'Webflow', 'Rollbar'],
+      team: ['Dasha Shyf', 'Yulia Hlushkina'],
     },
     mainInfo: {
       title: 'Product Objective',

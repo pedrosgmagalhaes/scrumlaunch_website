@@ -45,8 +45,8 @@ export default {
     projectInfo: {
       name: 'Seven',
       description: 'Discovery, design and development of a social gaming platform specifically designed for seniors to play intellectually stimulating games and stay connected with family members while collecting data and monitoring for cognitive decline.',
-      details: '2021',
-      work: ['UI/UX design'],
+      details: '2018-2021',
+      work: ['Angular', 'RubyOnRails', 'Heroku', 'Ionic', 'Twilio', 'Product Management', 'UI/UX Design', 'User Research',],
       team: ['Yulia Hlushkina', 'Denis Didenko', 'Anton Kharytonov']
     },
     mainInfo: {
