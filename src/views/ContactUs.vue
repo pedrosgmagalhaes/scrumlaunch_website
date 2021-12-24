@@ -155,7 +155,7 @@ export default {
 			justify-content: flex-start;
 
 			p {
-				margin-top: 60px;
+				margin-top: 90px;
 				margin-left: 184px;
 				width: 62%;
 				max-width: 100%;
