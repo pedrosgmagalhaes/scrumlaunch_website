@@ -36,13 +36,13 @@ export default {
     moreProjects: [
       {
         order: 'Previous',
-        name: 'project name',
+        name: 'Harvest',
         image: 'harvest-preview',
         url: 'HarvestCaseStudy'
       },
       {
         order: 'Next',
-        name: 'Scope',
+        name: 'Community Funded',
         image: 'scope-preview',
         url: 'ScopeCaseStudy'
       }

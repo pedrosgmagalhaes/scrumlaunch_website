@@ -2,12 +2,12 @@
 
 	<div class="article_preview" :class="{ first: first }">
 
-		<div class="article_preview__image" :style="{ 'background-image': `url('${item.previewImage.url}')` }"></div>
+		<div v-if="item.previewImage.url" class="article_preview__image" :style="{ 'background-image': `url('${item.previewImage.url}')` }"></div>
 
 		<div class="article_preview__info">
 
 			<div class="article_preview__category"><span>Articles</span> {{ item.category }}</div>
-			<router-link class="article_preview__title" :to="'/blog/' + item.slug">{{ item.title }}</router-link>
+			<router-link class="article_preview__title" :to="item.slug">{{ item.title }}</router-link>
 			<div class="article_preview__short_text">{{ item.shortText }}</div>
 			<div class="article_preview__date">{{ item.date }}</div>
 

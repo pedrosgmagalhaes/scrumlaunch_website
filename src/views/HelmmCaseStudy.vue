@@ -33,9 +33,9 @@ export default {
 
 		projectInfo: {
 			name: 'helmm',
-			description: 'HELMM is lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus eu sit aliquam diam vulputate. Morbi viverra bibendum sed ultrices nisl, id. Etiam venenatis pellentesque eget semper congue et. Eu, mi molestie dictum arcu cursus posuere feugiat nulla lacus.',
-			details: '2021',
-			work: ['Development'],
+			description: 'Helmm is a rapidly growing direct to consumer e-commerce brand that provides environmentally sustainable deodorant for me.  The product has gained significant adoption over the past 5 years and we’ve built a highly scalable end to end e-Commerce system.',
+			details: '2017-2021',
+			work: ['Ruby on Rails', 'Javascript', 'Payment & Order Management Integrations'],
 			team: ['Dmitriy Hmaruk', 'Ekaterina Andreeva']
 		},
 

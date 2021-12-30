@@ -17,7 +17,7 @@
         <router-link :to="{ name: 'Process' }">Process</router-link>
         <router-link to="/blog">Blog</router-link>
         <router-link :to="{ name: 'Leadership' }">Leadership</router-link>
-        <div class="dropdown__wrap" @click="dropdownToggle">
+        <div v-if="false" class="dropdown__wrap" @click="dropdownToggle">
           <span>F.A.Q.</span>
           <ul class="dropdown">
             <li><router-link to="/seo/web-development-company-outsourcing">2021 Guide to Outsourcing Web Development</router-link></li>

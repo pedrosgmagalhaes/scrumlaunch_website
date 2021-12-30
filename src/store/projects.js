@@ -4,7 +4,7 @@ export default {
 			{
 				url: 'HarvestCaseStudy',
 				image: {full: 'harvest-preview-full.png', small: 'harvest-preview.png'},
-				type: 'Mobile app',
+				type: 'Web Application',
 				year: '2021',
 				name: 'Harvest',
 				tags: ['Design', 'Frontend', 'Backend', 'QA', 'Support'],
@@ -12,15 +12,15 @@ export default {
 			{
 				url: 'ScopeCaseStudy',
 				image: {full: 'scope-preview-full.png', small: 'scope-preview.png'},
-				type: 'Mobile app',
+				type: 'Web Application',
 				year: '2021',
-				name: 'Scope',
+				name: 'Community Funded',
 				tags: ['Design', 'Frontend', 'Backend', 'QA', 'Support'],
 			},
 			{
 				url: 'FullCourtAiCaseStudy',
 				image: {full: 'full-court-preview-full.png', small: 'full-court-preview.png'},
-				type: 'Mobile app',
+				type: 'Mobile Application & Data Pipeline',
 				year: '2021',
 				name: 'Full Court AI',
 				tags: ['Design', 'Frontend', 'Backend', 'QA', 'Support'],
@@ -28,7 +28,7 @@ export default {
 			{
 				url: 'FamilyGameNightCaseStudy',
 				image: {full: 'fgn-preview-full.png', small: 'fgn-preview.png'},
-				type: 'Mobile app',
+				type: 'Mobile Application',
 				year: '2021',
 				name: 'Seven: brain teasers & puzzles',
 				tags: ['Design', 'Frontend', 'Backend', 'QA', 'Support'],
@@ -36,7 +36,7 @@ export default {
 			{
 				url: 'HelmmCaseStudy',
 				image: {full: 'helmm-preview-full.png', small: 'helmm-preview.png'},
-				type: 'Mobile app',
+				type: 'e-Commerce',
 				year: '2021',
 				name: 'Helmm',
 				tags: ['Design', 'Frontend', 'Backend', 'QA', 'Support'],
@@ -44,7 +44,7 @@ export default {
 			{
 				url: 'VestaCaseStudy',
 				image: {full: 'vesta-preview-full.png', small: 'vesta-preview.png'},
-				type: 'Mobile app',
+				type: 'Web & Mobile Application',
 				year: '2021',
 				name: 'Vesta Home',
 				tags: ['Design', 'Frontend', 'Backend', 'QA', 'Support'],

@@ -8,7 +8,7 @@
     <div class="footer--contact">
 
       
-      <div class="footer--contact--item">
+      <div v-if="false" class="footer--contact--item">
         <p>Phone</p>
         <a href="tel:+380989999999">+38 (098) 99 99 999</a>
       </div>
@@ -21,7 +21,7 @@
 
     </div>
     <div class="footer--address">
-      <p>Netechens'ka embankment 8,<br> Kharkiv, Ukraine</p>
+      <p>Portland, OR<br>Los Angeles, CA<br>Ukraine<br>Brazil<br>Poland</p>
     </div>
     <SocialBlock class="footer--social"/>
     <span>© ScrumLaunch 2021</span>

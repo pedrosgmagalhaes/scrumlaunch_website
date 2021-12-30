@@ -28,7 +28,7 @@ export default {
 		function getArticle() {
 
             article.value = articles.filter((item) => {
-                if ( item.url === route.params.pathMatch.join('/') ) {
+                if ( item.url === '/seo/' + route.params.pathMatch.join('/') ) {
                     return item
                 }
             })[0]
@@ -44,6 +44,10 @@ export default {
 					{
 						name: `description`,
 						content: computed(() => metaData.description),
+					},
+					{
+						name: `robots`,
+						content: 'noindex, nofollow',
 					},
 				],
 			})

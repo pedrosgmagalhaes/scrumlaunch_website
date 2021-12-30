@@ -25,6 +25,7 @@
 			<ArticleLink to="/blog/category/insights">Insights</ArticleLink>
 			<ArticleLink to="/blog/category/development">Development</ArticleLink>
 			<ArticleLink to="/blog/category/enterpreunership">Enterpreunership</ArticleLink>
+			<ArticleLink to="/blog/category/faq">F.A.Q.</ArticleLink>
 		</ul>
 
 
@@ -58,6 +59,7 @@ import ArticleLink from '@/components/articles/ArticleLink'
 import * as Contentful from 'contentful'
 import { dateConverter } from '@/utils.js'
 import { useHead } from '@vueuse/head'
+import articles from '@/seo/articles.json'
 
 export default {
 
@@ -90,37 +92,66 @@ export default {
 					name: `description`,
 					content: 'Blog',
 				},
+				{
+					name: `robots`,
+					content: 'noindex, nofollow',
+				},
 			],
 		})
 
 		function getArticles() {
-			
-			let query = {
-				content_type: 'blog',
-				limit: 3,
-			}
-			if ( route.params.cat_id !== undefined ) {
-				query['fields.category'] =  route.params.cat_id[0].toUpperCase() + route.params.cat_id.substr(1)
-			}
 
-			client.getEntries(query).then((res) => {
+			if ( route.params.cat_id === 'faq' ) {
 
-				let news = []
+				let seoArticles = []
 
-				news = res.items.map((item) => {
+				seoArticles = articles.map((item) => {
 					let newItem = {}
-					newItem.title = item.fields.title
-					newItem.previewImage = getAsset(item.fields.previewImage.sys.id, res.includes.Asset)
-					newItem.shortText = item.fields.shortText
-					newItem.author = item.fields.author
-					newItem.category = item.fields.category
-					newItem.slug = item.fields.slug
-					newItem.date = dateConverter(item.fields.date, 1)
+					newItem.title = item.title
+					newItem.previewImage = {
+						url: ''
+					}
+					newItem.shortText = null
+					newItem.author = null
+					newItem.category = 'F.A.Q.'
+					newItem.slug = item.url
+					newItem.date = null
 					return newItem
 				})
 				
-				store.dispatch('setArticles', news)
-			})
+				store.dispatch('setArticles', seoArticles)
+
+			}
+			else {
+
+				let query = {
+					content_type: 'blog',
+					limit: 3,
+				}
+				if ( route.params.cat_id !== undefined ) {
+					query['fields.category'] =  route.params.cat_id[0].toUpperCase() + route.params.cat_id.substr(1)
+				}
+
+				client.getEntries(query).then((res) => {
+
+					let news = []
+
+					news = res.items.map((item) => {
+						let newItem = {}
+						newItem.title = item.fields.title
+						newItem.previewImage = getAsset(item.fields.previewImage.sys.id, res.includes.Asset)
+						newItem.shortText = item.fields.shortText
+						newItem.author = item.fields.author
+						newItem.category = item.fields.category
+						newItem.slug = '/blog/' + item.fields.slug
+						newItem.date = dateConverter(item.fields.date, 1)
+						return newItem
+					})
+					
+					store.dispatch('setArticles', news)
+				})
+
+			}
 
 		}
 

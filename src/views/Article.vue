@@ -135,6 +135,10 @@ export default {
 					name: `description`,
 					content: computed(() => post.value.title),
 				},
+				{
+					name: `robots`,
+					content: 'noindex, nofollow',
+				},
 			],
 		})
 

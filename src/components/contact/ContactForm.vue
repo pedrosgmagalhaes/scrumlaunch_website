@@ -27,7 +27,7 @@
 		</div>
 
 		<div class="contact-form--wrapper">
-			<TypingEffect delay="0.05"><label class="header-1" for="email">HERE are my contacts</label></TypingEffect>
+			<TypingEffect delay="0.05"><label class="header-1" for="email">You can contact me at</label></TypingEffect>
 			<InputComponent
 				class="contact-form--wrapper--input input-email"
 				:modelValue="email"
