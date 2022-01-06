@@ -9,6 +9,18 @@ import TypingEffect from '@/components/animations/TypingEffect.vue'
 import { InViewport } from './directives/InViewport'
 import { createHead } from '@vueuse/head'
 
-const head = createHead()
+const app = createApp(App)
 
-createApp(App).use(store).use(router).use(head).component('inline-svg', InlineSvg).use(VueLottiePlayer).component('AppearFromMask', AppearFromMask).component('TypingEffect', TypingEffect).directive('in-viewport', InViewport).mount('#app')
+app.use(store)
+app.use(router)
+app.use(createHead())
+app.component('inline-svg', InlineSvg)
+app.use(VueLottiePlayer)
+app.component('AppearFromMask', AppearFromMask)
+app.component('TypingEffect', TypingEffect)
+app.directive('in-viewport', InViewport)
+
+
+
+
+app.mount('#app')
