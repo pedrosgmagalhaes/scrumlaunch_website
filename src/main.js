@@ -8,6 +8,7 @@ import AppearFromMask from '@/components/animations/AppearFromMask.vue'
 import TypingEffect from '@/components/animations/TypingEffect.vue'
 import { InViewport } from './directives/InViewport'
 import { createHead } from '@vueuse/head'
+// import VueGtag from 'vue-gtag-next'
 
 const app = createApp(App)
 
@@ -21,6 +22,11 @@ app.component('TypingEffect', TypingEffect)
 app.directive('in-viewport', InViewport)
 
 
+// app.use(VueGtag, {
+//     property: {
+//         id: "UA-123456-7"
+//     }
+// })
 
 
 app.mount('#app')

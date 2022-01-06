@@ -23,7 +23,7 @@ export default {
 
         whiteSpace: {
             type: String,
-            default: '0'
+            default: '&#8196;'
         },
 
     },
