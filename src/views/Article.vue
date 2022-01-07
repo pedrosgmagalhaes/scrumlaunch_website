@@ -9,7 +9,7 @@
 
 		<h1 class="header-big">{{ post.title }}</h1>
 
-		<div class="article__user">
+		<!-- <div class="article__user">
 
 			<div class="article__user_photo" :style="{ 'background-image': `url('${post.user_photo}')` }"></div>
 
@@ -18,7 +18,7 @@
 				<div class="article__user_position">{{ post.user_position }}</div>
 			</div>
 
-		</div>
+		</div> -->
 
 		<div class="article__body" v-html="post.text"></div>
 
@@ -301,6 +301,16 @@ export default {
 			text-transform: uppercase;
 		}
 
+		:deep(h3) {
+			font-style: normal;
+			font-weight: bold;
+			font-size: 30px;
+			line-height: 140%;
+			display: flex;
+			align-items: center;
+			color: #1E1F21;
+		}
+
 		:deep(p) {
 			margin-bottom: 23px;
 			
@@ -332,6 +342,15 @@ export default {
 
 		:deep(i) {
 			font-style: italic;
+		}
+
+		:deep(ul) {
+			padding-left: 30px;
+			list-style: initial;
+		}
+
+		:deep(ul p) {
+			margin-bottom: 0;
 		}
 	}
 

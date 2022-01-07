@@ -20,12 +20,12 @@
 
 
 		<ul class="articles__categories" @click="scrollToCategories">
-			<ArticleLink to="/blog">All Articles <span class="articles__category_counter">124</span></ArticleLink>
-			<ArticleLink to="/blog/category/guides">Guides</ArticleLink>
+			<ArticleLink to="/blog">All Articles <!-- <span class="articles__category_counter">124</span> --></ArticleLink>
+			<!-- <ArticleLink to="/blog/category/guides">Guides</ArticleLink>
 			<ArticleLink to="/blog/category/insights">Insights</ArticleLink>
 			<ArticleLink to="/blog/category/development">Development</ArticleLink>
 			<ArticleLink to="/blog/category/enterpreunership">Enterpreunership</ArticleLink>
-			<ArticleLink to="/blog/category/faq">F.A.Q.</ArticleLink>
+			<ArticleLink to="/blog/category/faq">F.A.Q.</ArticleLink> -->
 		</ul>
 
 
@@ -126,7 +126,7 @@ export default {
 
 				let query = {
 					content_type: 'blog',
-					limit: 3,
+					limit: 9,
 				}
 				if ( route.params.cat_id !== undefined ) {
 					query['fields.category'] =  route.params.cat_id[0].toUpperCase() + route.params.cat_id.substr(1)
