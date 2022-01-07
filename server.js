@@ -28,7 +28,7 @@ app.post('/contact-us', (req, res) => {
 				'Details': req.body.details,
 			}
 		},
-	], function (err, records) {
+	], function (err) {
 		if (err) {
 			console.error(err);
 			return;

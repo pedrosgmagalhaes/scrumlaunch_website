@@ -8,7 +8,7 @@ import AppearFromMask from '@/components/animations/AppearFromMask.vue'
 import TypingEffect from '@/components/animations/TypingEffect.vue'
 import { InViewport } from './directives/InViewport'
 import { createHead } from '@vueuse/head'
-// import VueGtag from 'vue-gtag-next'
+import VueGtag from 'vue-gtag-next'
 
 const app = createApp(App)
 
@@ -21,12 +21,23 @@ app.component('AppearFromMask', AppearFromMask)
 app.component('TypingEffect', TypingEffect)
 app.directive('in-viewport', InViewport)
 
+// gtag
+let gtag_id = ''
 
-// app.use(VueGtag, {
-//     property: {
-//         id: "UA-123456-7"
-//     }
-// })
+if ( window.location.hostname.indexOf('scrumlaunch-staging.herokuapp.com') !== -1 ) {
+    gtag_id = 'G-MDM13CZTDC'
+}
+
+if ( window.location.hostname.indexOf('scrumlaunch.com') !== -1 ) {
+    gtag_id = 'G-3S83Y9CE5Q'
+}
+
+app.use(VueGtag, {
+    property: {
+        id: gtag_id
+    }
+})
+// gtag
 
 
 app.mount('#app')
