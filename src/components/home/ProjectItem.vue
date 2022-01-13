@@ -1,6 +1,6 @@
 <template>
 
-	<div class="project-item" @click="handleNavigate(item.url)">
+	<router-link class="project-item" :to="{ name: item.url }">
 
 		<div class="project-item--image" :style="{ 'background-image': `url('${setBackgroundImage}')` }"></div>
 
@@ -18,7 +18,7 @@
 			<div class="project-item--info--year">{{ item.year }}</div>
 
 		</div>
-	</div>
+	</router-link>
 
 </template>
 
@@ -53,6 +53,8 @@ export default {
 	border: 1px solid #1e1f21;
 	display: flex;
 	flex-direction: column;
+	color: #1e1f21;
+	text-decoration: none;
 	cursor: pointer;
 
 	&--image {

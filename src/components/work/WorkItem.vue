@@ -1,9 +1,9 @@
 <template>
-	<div
+	<router-link
 		class="item"
 		@mouseover="hover = true"
 		@mouseleave="hover = false"
-		@click="handleNavigation(item.url)"
+		:to="{ name: item.url }"
 	>
 		<div
 			v-if="!hover"
@@ -37,7 +37,7 @@
 			</div>
 
 		</div>
-	</div>
+	</router-link>
 </template>
 
 
@@ -72,6 +72,8 @@ export default {
 	width: 100%;
 	height: 265px;
 	position: relative;
+	color: #1e1f21;
+	text-decoration: none;
 	cursor: pointer;
 
 	&--preview {
