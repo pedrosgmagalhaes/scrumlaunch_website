@@ -11,7 +11,7 @@ export default {
 			},
 			{
 				url: 'ScopeCaseStudy',
-				image: {full: 'scope-preview-full.png', small: 'scope-preview.png'},
+				image: {full: 'community_funded-preview-full.png', small: 'community_funded-preview.png'},
 				type: 'Web Application',
 				year: '2021',
 				name: 'Community Funded',
