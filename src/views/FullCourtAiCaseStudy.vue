@@ -2,7 +2,7 @@
   <div class="case-study">
     <div class="case-study--hero">
       <inline-svg
-        :src="require('@/assets/images/case-study/full-court-ai/hero.svg')"
+        :src="require('@/assets/images/case-study/full-court-ai/hero-2.svg')"
         class="case-study--hero--icon"
       />
     </div>

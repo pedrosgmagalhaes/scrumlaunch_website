@@ -37,22 +37,22 @@ export default {
       {
         number: '01',
         title: 'Pre-Kick Off',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        description: 'Your team is assembled from our highly vetted talent pool based on your resourcing needs.'
       },
       {
         number: '02',
         title: 'Comprehensive understanding of product and business objectives',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        description: 'We collaboratively review your business goals & product requirements to build a clear understanding of your vision, key metrics and desired product outcomes.'
       },
       {
         number: '03',
         title: 'Kick Off',
-        description: 'Set uping digital communication tools; building or integrate into existing project management tools; establishing call standup cadence with appropriate stakeholders are implemented to ensure consistent communication, collaboration and set an appropriate working schedule.'
+        description: 'We adhere to your desired project management workflow so our team can seamlessly fit into your larger organization. Our goal is to become an important part of your ongoing team and plans.'
       },
       {
         number: '04',
         title: 'Post Kick Off',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        description: 'Frequent communication and transparency are the keys to success in any engagement. We strive to produce high quality work output and be responsive to your ongoing business needs.'
       },
     ]
   }),
