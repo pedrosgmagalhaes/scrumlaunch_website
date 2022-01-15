@@ -1,59 +1,78 @@
 <template>
 	<div class="contact-form">
 
-		<AppearFromMask><p class="header-big">HeLLO,</p></AppearFromMask>
+		<div class="contact-form__frame_1">
 
-		<div class="contact-form--wrapper">
-			<TypingEffect delay="0.05"><label class="header-1" for="name">MY name is</label></TypingEffect>
-			<div class="contact-form__input_wrap">
+			<AppearFromMask><p class="header-big">HeLLO,</p></AppearFromMask>
+
+			<div class="contact-form--wrapper">
+				<TypingEffect delay="0.05"><label class="header-1" for="name">MY name is</label></TypingEffect>
+				<div class="contact-form__input_wrap">
+					<InputComponent
+						class="contact-form--wrapper--input"
+						:modelValue="name"
+						@update:modelValue="handleFieldChange('name', $event)"
+						placeholder="Enter your name here"
+						id="name"
+						name="name"
+						:errorMessage="nameError"
+					/>
+					<inline-svg
+						:src="require('@/assets/icons/pencil_separate.svg')"
+						class="contact-form__pencil_separate"
+					/>
+					<inline-svg
+						:src="require('@/assets/icons/pencil_line.svg')"
+						class="contact-form__pencil_line"
+					/>
+				</div>
+			</div>
+
+			<div class="contact-form--wrapper">
+				<TypingEffect delay="0.05"><label class="header-1" for="email">You can contact me at</label></TypingEffect>
 				<InputComponent
-					class="contact-form--wrapper--input"
-					:modelValue="name"
-					@update:modelValue="handleFieldChange('name', $event)"
-					placeholder="Enter your name here"
-					id="name"
-					name="name"
-					:errorMessage="nameError"
-				/>
-				<inline-svg
-					:src="require('@/assets/icons/pencil_separate.svg')"
-					class="contact-form__pencil_separate"
-				/>
-				<inline-svg
-					:src="require('@/assets/icons/pencil_line.svg')"
-					class="contact-form__pencil_line"
+					class="contact-form--wrapper--input input-email"
+					:modelValue="email"
+					@update:modelValue="handleFieldChange('email', $event)"
+					placeholder="Enter your email or phone number here"
+					id="email"
+					name="email"
+					:errorMessage="emailError"
 				/>
 			</div>
+
+			<div class="contact-form--wrapper">
+				<TypingEffect delay="0.05"><label class="header-1" for="email">I’m interested in</label></TypingEffect>
+				<InputComponent
+					class="contact-form--wrapper--input input-project"
+					:modelValue="project"
+					@update:modelValue="handleFieldChange('project', $event)"
+					placeholder="Enter your project details here"
+					id="project"
+					name="project"
+					:errorMessage="projectError"
+				/>
+			</div>
+
+			<div class="contact-form--wrapper-btn">
+				<button class="btn" @click="validateForm()">Send</button>
+			</div>
+
 		</div>
 
-		<div class="contact-form--wrapper">
-			<TypingEffect delay="0.05"><label class="header-1" for="email">You can contact me at</label></TypingEffect>
-			<InputComponent
-				class="contact-form--wrapper--input input-email"
-				:modelValue="email"
-				@update:modelValue="handleFieldChange('email', $event)"
-				placeholder="Enter your email or phone number here"
-				id="email"
-				name="email"
-				:errorMessage="emailError"
+
+		<div v-if="is_sent" :class="{ blocked: is_blocked }" class="contact-form__frame_2">
+			<vLottiePlayer
+				v-if="is_done"
+				class="contact-form__frame_2__image"
+				name="reliabilityDesktopAnim"
+				loop
+				renderer="svg"
+				:animationData="
+					require('../../assets/animation/rocket_launch.json')
+				"
 			/>
-		</div>
-
-		<div class="contact-form--wrapper">
-			<TypingEffect delay="0.05"><label class="header-1" for="email">I’m interested in</label></TypingEffect>
-			<InputComponent
-				class="contact-form--wrapper--input input-project"
-				:modelValue="project"
-				@update:modelValue="handleFieldChange('project', $event)"
-				placeholder="Enter your project details here"
-				id="project"
-				name="project"
-				:errorMessage="projectError"
-			/>
-		</div>
-
-		<div class="contact-form--wrapper-btn">
-			<button class="btn" @click="validateForm()">Send</button>
+			<div v-if="is_done" class="header-1">Your message<br>has been sent</div>
 		</div>
 
 	</div>
@@ -78,6 +97,10 @@ export default {
 		emailError: null,
 		project: '',
 		projectError: null,
+
+		is_blocked: false,
+		is_sent: false,
+		is_done: false,
 	}),
 
 	methods: {
@@ -87,6 +110,9 @@ export default {
 		},
 
 		sendForm() {
+			this.is_sent = true
+			this.is_blocked = true
+
 			axios({
 				method: 'POST',
 				url: '/contact-us',
@@ -101,6 +127,13 @@ export default {
 					this.name = ''
 					this.email = ''
 					this.project = ''
+
+					this.is_blocked = false
+					this.is_done = true
+					setTimeout(() => {
+						this.is_sent = false
+						this.is_done = false
+					}, 5000);
 				})
 		},
 
@@ -196,6 +229,35 @@ export default {
 		right: 76px;
 		width: 50px;
 		z-index: 1;
+	}
+
+	&__frame_1 {
+		width: 100%;
+	}
+
+	&__frame_2 {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background-color: rgba(255,255,255,1);
+		text-align: center;
+		z-index: 2;
+		transition: background-color 0.2s;
+
+		&.blocked {
+			background-color: rgba(255,255,255,0.8);
+		}
+
+		&__image {
+			width: 290px !important;
+			height: 290px !important;
+		}
 	}
 }
 
