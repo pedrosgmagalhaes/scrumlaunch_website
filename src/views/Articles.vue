@@ -148,7 +148,7 @@ export default {
 						return newItem
 					})
 					
-					store.dispatch('setArticles', news)
+					store.dispatch('setArticles', news.concat(articles))
 				})
 
 			}

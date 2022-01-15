@@ -15,16 +15,16 @@
         <router-link :to="{ name: 'Work' }">Work</router-link>
         <router-link :to="{ name: 'Services' }">Services</router-link>
         <router-link :to="{ name: 'Process' }">Process</router-link>
-        <router-link to="/blog">Blog</router-link>
         <router-link :to="{ name: 'Leadership' }">Leadership</router-link>
-        <div v-if="false" class="dropdown__wrap" @click="dropdownToggle">
-          <span>F.A.Q.</span>
+        <div class="dropdown__wrap">
+          <span>Blog</span>
           <ul class="dropdown">
             <li><router-link to="/seo/web-development-company-outsourcing">2021 Guide to Outsourcing Web Development</router-link></li>
             <li><router-link to="/seo/web-development-company-outsourcing/software-development-in-ukraine">The #1 Software Development Firm in Ukraine</router-link></li>
             <li><router-link to="/seo/web-development-company-outsourcing/website-development-consultants">The #1 Website Development Consultant in 2021</router-link></li>
             <li><router-link to="/seo/hire-developers">Hire Quality Developers in Minutes - Deploy in Hours</router-link></li>
             <li><router-link to="/seo/hire-developers/python-developers-and-programmers">Hire Quality Python Developers in Minutes</router-link></li>
+            <li><router-link to="/blog">View All</router-link></li>
           </ul>
         </div>
         <router-link :to="{ name: 'ContactUs' }">Contact</router-link>
@@ -209,6 +209,8 @@ export default {
   pointer-events: none;
   transition: opacity 0.15s;
 
+  $root: &;
+
   &.active {
     opacity: 1;
     user-select: initial;
@@ -217,6 +219,14 @@ export default {
 
   &__wrap {
     position: relative;
+
+    &:hover {
+      #{$root} {
+        opacity: 1;
+        user-select: initial;
+        pointer-events: initial;
+      }
+    }
 
     & > span {
       cursor: pointer;

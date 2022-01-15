@@ -2,7 +2,14 @@
 
 	<div class="seo">
 
-		<div class="seo__body" v-if="article" v-html="article.html"></div>
+		<div class="seo__meta">
+			<div class="seo__category">{{ article.category }}</div>
+			<div class="seo__date">Published on {{ article.date }}</div>
+		</div>
+
+		<h1 class="header-big">{{ article.title }}</h1>
+
+		<div class="seo__body" v-if="article" v-html="article.fullText"></div>
 
 	</div>
 
@@ -12,52 +19,55 @@
 
 <script>
 import articles from '@/seo/articles.json'
-import { computed, reactive, ref, onMounted, onBeforeUpdate } from 'vue'
+import { /* computed, reactive, */ ref, onMounted, watch } from 'vue'
 import { useRoute } from 'vue-router'
-import { useHead } from '@vueuse/head'
+// import { useHead } from '@vueuse/head'
+// import { dateConverter } from '@/utils.js'
 
 export default {
 
 	setup() {
 		const route = useRoute()
 
-
-
 		const article = ref({})
 
 		function getArticle() {
 
             article.value = articles.filter((item) => {
-                if ( item.url === '/seo/' + route.params.pathMatch.join('/') ) {
+				if ( item.slug === '/seo/' + route.params.pathMatch.join('/') ) {
+					// item.date = dateConverter(item.date, 2)
                     return item
                 }
             })[0]
 
-			const metaData = reactive({
-				title: article.value.meta_title,
-				description: article.value.meta_description,
-			})
+			// const metaData = reactive({
+			// 	title: article.value.meta_title,
+			// 	description: article.value.meta_description,
+			// })
 
-			useHead({
-				title: computed(() => metaData.title),
-				meta: [
-					{
-						name: `description`,
-						content: computed(() => metaData.description),
-					},
-					{
-						name: `robots`,
-						content: 'noindex, nofollow',
-					},
-				],
-			})
+			// useHead({
+			// 	title: computed(() => metaData.title),
+			// 	meta: [
+			// 		{
+			// 			name: `description`,
+			// 			content: computed(() => metaData.description),
+			// 		},
+			// 		{
+			// 			name: `robots`,
+			// 			content: 'noindex, nofollow',
+			// 		},
+			// 	],
+			// })
+
         }
 
-		onMounted(() => {
-			getArticle()
+		watch(() => route.path, () => {
+			if ( route.name === "Seo" ) {
+				getArticle()
+			}
 		})
 
-		onBeforeUpdate(() => {
+		onMounted(() => {
 			getArticle()
 		})
 
@@ -128,6 +138,37 @@ export default {
 		}
 	}
 
+	&__meta {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 60px;
+
+		@media screen and (max-width: 1900px) {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__category {
+		margin-right: 20px;
+		font-weight: bold;
+		font-size: 20px;
+		line-height: 140%;
+
+		@media screen and (max-width: 1900px) {
+			font-size: 16px;
+		}
+	}
+
+	&__date {
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 140%;
+
+		@media screen and (max-width: 1900px) {
+			font-size: 16px;
+		}
+	}
+
 	&__body {
 		margin: 0 auto;
 		max-width: 1200px;
@@ -145,10 +186,6 @@ export default {
 			max-width: 900px;
 		}
 
-        :deep(h1) {
-			margin-bottom: 40px;
-		}
-
 		:deep(h2) {
 			margin-bottom: 40px;
 			font-style: normal;
@@ -159,14 +196,13 @@ export default {
 			text-transform: uppercase;
 		}
 
-        :deep(h3) {
-			margin-bottom: 6px;
+		:deep(h3) {
+			margin-bottom: 21px;
 			font-style: normal;
-			font-weight: 900;
-			font-size: 34px;
+			font-weight: bold;
+			font-size: 30px;
 			line-height: 140%;
-			letter-spacing: 0.02em;
-			text-transform: uppercase;
+			color: #1E1F21;
 		}
 
 		:deep(p) {
@@ -176,10 +212,6 @@ export default {
 				margin-bottom: 20px;
 			}
 		}
-
-        :deep(p + h2) {
-            margin-top: 60px;
-        }
 
 		:deep(img) {
 			display: block;
@@ -198,39 +230,34 @@ export default {
 			background: url(../assets/icons/quotes.svg) 0 0 no-repeat;
 		}
 
-        :deep(strong) {
-            font-weight: 800;
-        }
+		:deep(b) {
+			font-weight: bold;
+		}
 
-        :deep([itemtype="https://schema.org/Question"]) {
-            margin-bottom: 40px;
-        }
+		:deep(i) {
+			font-style: italic;
+		}
 
-        :deep(ol) {
-            padding-left: 22px;
-            list-style: decimal;
-        }
+		:deep(ul) {
+			padding-left: 30px;
+			list-style: initial;
+		}
 
-        :deep(ol li) {
-            margin-bottom: 20px;
-        }
+		:deep(ul p) {
+			margin-bottom: 0;
+		}
 
-        :deep(ol li p) {
-            margin-bottom: 0;
-        }
+		:deep(ul a) {
+			text-decoration: none;
+		}
 
-        :deep(ul) {
-            padding-left: 22px;
-            list-style: disc;
-        }
+		:deep(a) {
+			color: currentColor;
 
-        :deep(ul li) {
-            margin-bottom: 20px;
-        }
-
-        :deep(ul li p) {
-            margin-bottom: 0;
-        }
+			&:hover {
+				text-decoration: none;
+			}
+		}
 	}
 	
 }
