@@ -80,7 +80,8 @@ export default {
           this.$route.name === "HarvestCaseStudy" ||
           this.$route.name === "FullCourtAiCaseStudy" ||
           this.$route.name === "HelmmCaseStudy" ||
-          this.$route.name === "ScopeCaseStudy") {
+          this.$route.name === "ScopeCaseStudy" ||
+          this.$route.name === "ProgLang") {
         this.contactPage = true;
       } else {
         this.contactPage = false;

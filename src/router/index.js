@@ -14,6 +14,7 @@ import Services from '../views/Services.vue'
 import Articles from '../views/Articles.vue'
 import Article from '../views/Article.vue'
 import Seo from '../views/Seo.vue'
+import ProgLang from '../views/ProgLang2.vue'
 
 const routes = [
 	{
@@ -95,6 +96,11 @@ const routes = [
 		path: '/seo/:pathMatch(.*)*',
 		name: 'Seo',
 		component: Seo
+	},
+	{
+		path: '/hire-developers/:prog_lang',
+		name: 'ProgLang',
+		component: ProgLang
 	},
 	{
 		path: "/:pathMatch(.*)*",
