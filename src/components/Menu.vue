@@ -19,11 +19,11 @@
         <div class="dropdown__wrap">
           <span>Blog</span>
           <ul class="dropdown">
-            <li><router-link to="/seo/web-development-company-outsourcing">2021 Guide to Outsourcing Web Development</router-link></li>
-            <li><router-link to="/seo/web-development-company-outsourcing/software-development-in-ukraine">The #1 Software Development Firm in Ukraine</router-link></li>
-            <li><router-link to="/seo/web-development-company-outsourcing/website-development-consultants">The #1 Website Development Consultant in 2021</router-link></li>
-            <li><router-link to="/seo/hire-developers">Hire Quality Developers in Minutes - Deploy in Hours</router-link></li>
-            <li><router-link to="/seo/hire-developers/python-developers-and-programmers">Hire Quality Python Developers in Minutes</router-link></li>
+            <li><router-link to="/blog/web-development-company-outsourcing">2021 Guide to Outsourcing Web Development</router-link></li>
+            <li><router-link to="/blog/web-development-company-outsourcing/software-development-in-ukraine">The #1 Software Development Firm in Ukraine</router-link></li>
+            <li><router-link to="/blog/web-development-company-outsourcing/website-development-consultants">The #1 Website Development Consultant in 2021</router-link></li>
+            <li><router-link to="/blog/hire-developers">Hire Quality Developers in Minutes - Deploy in Hours</router-link></li>
+            <li><router-link to="/blog/hire-developers/python-developers-and-programmers">Hire Quality Python Developers in Minutes</router-link></li>
             <li><router-link to="/blog">View All</router-link></li>
           </ul>
         </div>

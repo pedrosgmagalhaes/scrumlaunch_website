@@ -12,7 +12,7 @@ import HelmmCaseStudy from '../views/HelmmCaseStudy.vue'
 import VestaCaseStudy from '../views/VestaCaseStudy.vue'
 import Services from '../views/Services.vue'
 import Articles from '../views/Articles.vue'
-import Article from '../views/Article.vue'
+// import Article from '../views/Article.vue'
 import Seo from '../views/Seo.vue'
 import ProgLang from '../views/ProgLang2.vue'
 
@@ -78,22 +78,22 @@ const routes = [
 		component: Services
 	},
 	{
-		path: '/blog',
+		path: '/blog/',
 		name: 'ArticlesAll',
 		component: Articles
 	},
+	// {
+	// 	path: '/blog/category/:cat_id',
+	// 	name: 'Articles',
+	// 	component: Articles
+	// },
+	// {
+	// 	path: '/blog/:slug',
+	// 	name: 'Article',
+	// 	component: Article 
+	// },
 	{
-		path: '/blog/category/:cat_id',
-		name: 'Articles',
-		component: Articles
-	},
-	{
-		path: '/blog/:slug',
-		name: 'Article',
-		component: Article 
-	},
-	{
-		path: '/seo/:pathMatch(.*)*',
+		path: '/blog/:pathMatch(.*)*',
 		name: 'Seo',
 		component: Seo
 	},

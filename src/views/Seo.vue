@@ -20,25 +20,31 @@
 <script>
 import articles from '@/seo/articles.json'
 import { /* computed, reactive, */ ref, onMounted, watch } from 'vue'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 // import { useHead } from '@vueuse/head'
 // import { dateConverter } from '@/utils.js'
 
 export default {
 
 	setup() {
+		const router = useRouter()
 		const route = useRoute()
 
 		const article = ref({})
 
 		function getArticle() {
 
-            article.value = articles.filter((item) => {
-				if ( item.slug === '/seo/' + route.params.pathMatch.join('/') ) {
-					// item.date = dateConverter(item.date, 2)
-                    return item
-                }
-            })[0]
+			if ( route.params.pathMatch !== '' ) {
+				article.value = articles.filter((item) => {
+					if ( item.slug === '/blog/' + route.params.pathMatch.join('/') ) {
+						// item.date = dateConverter(item.date, 2)
+						return item
+					}
+				})[0]
+			}
+			else {
+				router.push({ path: route.path })
+			}
 
 			// const metaData = reactive({
 			// 	title: article.value.meta_title,
