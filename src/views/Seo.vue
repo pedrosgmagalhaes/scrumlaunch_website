@@ -11,6 +11,8 @@
 
 		<div class="seo__body" v-if="article" v-html="article.fullText"></div>
 
+		<ProgLangList class="prog_lang_list" v-if="article.slug === '/blog/hire-developers'" />
+
 	</div>
 
 </template>
@@ -23,8 +25,13 @@ import { /* computed, reactive, */ ref, onMounted, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 // import { useHead } from '@vueuse/head'
 // import { dateConverter } from '@/utils.js'
+import ProgLangList from '@/components/hire-developers/ProgLangList.vue'
 
 export default {
+
+	components: {
+		ProgLangList,
+	},
 
 	setup() {
 		const router = useRouter()
@@ -266,6 +273,14 @@ export default {
 		}
 	}
 	
+}
+
+.prog_lang_list {
+	margin-top: 100px;
+
+	:deep(.langs__item) {
+		text-align: left;
+	}
 }
 
 </style>

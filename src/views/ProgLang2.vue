@@ -201,15 +201,7 @@
 
             <h2 class="tar">looking for another<br> language or skill?</h2>
 
-            <div class="langs">
-
-                <div class="langs__item" v-for="(lang_item, index) in all_langs" :key="index"><router-link :to="'/hire-developers/' + lang_item.url">{{ lang_item.lang }}</router-link></div>
-
-            </div>
-
-            <div class="btn_wrap">
-                <button class="btn" @click="getLangsList()">view all</button>
-            </div>
+            <ProgLangList />
 
         </div>
 
@@ -236,17 +228,20 @@
 
 <script>
 import dev_langs from '@/seo/development_languages.json'
+import ProgLangList from '@/components/hire-developers/ProgLangList.vue'
 
 export default {
 
+    components: {
+        ProgLangList,
+    },
+
     mounted() {
         this.getDevLang()
-        this.getLangsList(18)
     },
 
     data: () => ({
         dev_lang: null,
-        all_langs: null
     }),
 
     methods: {
@@ -257,10 +252,6 @@ export default {
             })[0].lang
         },
 
-        getLangsList(num) {
-            this.all_langs = num === undefined ? dev_langs : dev_langs.slice(0, num)
-        },
-
     },
 
     watch: {
@@ -268,7 +259,6 @@ export default {
         $route: function() {
             if ( this.$route.name === "ProgLang" ) {
                 this.getDevLang()
-                this.getLangsList(18)
 			}
         },
 
@@ -618,37 +608,6 @@ export default {
     
     h2 {
         margin-bottom: 80px;
-    }
-
-    .langs {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        margin: 0 auto;
-        max-width: 1200px;
-
-
-        &__item {
-            flex: 0 0 33.33333%;
-            margin-bottom: 40px;
-
-            &:nth-child(3n) {
-                max-width: 270px;
-            }
-
-            a {
-                font-style: normal;
-                font-weight: bold;
-                font-size: 30px;
-                line-height: 140%;
-                color: #1E1F21;
-                text-decoration: none;
-
-                &:hover {
-                    color: #12E2B0;
-                }
-            }
-        }
     }
     
 }
