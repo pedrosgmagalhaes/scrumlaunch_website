@@ -27,6 +27,36 @@
             <li><router-link to="/blog">View All</router-link></li>
           </ul>
         </div>
+        <div class="dropdown__wrap">
+          <router-link to="/blog/hire-developers">Hire Developers</router-link>
+          <div class="dropdown">
+            <div class="flex">
+              <ul class="mr60">
+                <li><router-link to="/hire-developers/php-developers">PHP Developers</router-link></li>
+                <li><router-link to="/hire-developers/react-js-developers">React Js Developers</router-link></li>
+                <li><router-link to="/hire-developers/django-developers">Django Developers</router-link></li>
+                <li><router-link to="/hire-developers/wordpress-developers">Wordpress Developers</router-link></li>
+                <li><router-link to="/hire-developers/java-developers">Java Developers</router-link></li>
+                <li><router-link to="/hire-developers/ios-developers">iOS Developers</router-link></li>
+              </ul>
+              <ul class="mr60">
+                <li><router-link to="/hire-developers/android-developers">Android Developers</router-link></li>
+                <li><router-link to="/hire-developers/web-developers">Web Developers</router-link></li>
+                <li><router-link to="/hire-developers/angular-js-developers">Angular Js Developers</router-link></li>
+                <li><router-link to="/hire-developers/node-js-developers">Node Js Developers</router-link></li>
+                <li><router-link to="/hire-developers/ruby-on-rails-developers">Ruby On Rails Developers</router-link></li>
+                <li><router-link to="/hire-developers/software-developers">Software Developers</router-link></li>
+              </ul>
+              <ul>
+                <li><router-link to="/hire-developers/python-developers">Python Developers</router-link></li>
+                <li><router-link to="/hire-developers/solidity-developers">Solidity Developers</router-link></li>
+                <li><router-link to="/hire-developers/react-native-developers">React Native Developers</router-link></li>
+                <li><router-link to="/hire-developers/ruby-developers">Ruby Developers</router-link></li>
+                <li><router-link to="/blog/hire-developers">View All Languages</router-link></li>
+              </ul>
+            </div>
+          </div>
+        </div>
         <router-link :to="{ name: 'ContactUs' }">Contact</router-link>
       </div>
       <div class="menu--desktop--wrapper-mobile">
@@ -146,6 +176,12 @@ export default {
 
     &--wrapper {
       display: none;
+
+      a, span {
+        &:hover {
+          color: #12E2B0;
+        }
+      }
     }
 
     &--wrapper-mobile {
@@ -201,11 +237,13 @@ export default {
 
 .dropdown {
   position: absolute;
-  top: 32px;
+  top: 64px;
   right: 0;
-  padding-top: 15px;
-  text-align: right;
+  padding: 40px 40px 24px 40px;
+  text-align: left;
   opacity: 0;
+  background: #FFFFFF;
+  border: 1px solid #1E1F21;
   user-select: none;
   pointer-events: none;
   transition: opacity 0.15s;
@@ -221,11 +259,25 @@ export default {
   &__wrap {
     position: relative;
 
+    &:before {
+      content: '';
+      position: absolute;
+      top: 33px;
+      left: -100px;
+      right: 0;
+      bottom: -30px;
+      display: none;
+    }
+
     &:hover {
       #{$root} {
         opacity: 1;
         user-select: initial;
         pointer-events: initial;
+      }
+
+      &:before {
+        display: block;
       }
     }
 
@@ -235,13 +287,25 @@ export default {
   }
 
   li {
-    margin-bottom: 6px;
+    margin-bottom: 16px;
 
     a {
       white-space: nowrap;
-      font-size: 17px !important;
+      font-size: 18px !important;
+      color: #1E1F21 !important;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 150%;
+
+      &:hover {
+        color: #12E2B0 !important;
+      }
     }
   }
+}
+
+.mr60 {
+  margin-right: 60px;
 }
 
 @media screen and (min-width: 768px) {
@@ -272,7 +336,9 @@ export default {
       }
 
       &--wrapper {
-        width: 47.67%;
+        // width: 47.67%;
+        width: 100%;
+        max-width: 700px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -280,6 +346,10 @@ export default {
         &.white-wrapper {
           a, span {
             color: #FFFFFF;
+
+            &:hover {
+              color: #12E2B0;
+            }
           }
         }
 
@@ -310,6 +380,22 @@ export default {
 @media screen and (min-width: 1280px) {
   .menu {
     padding: 35px 8.34%;
+
+    &--desktop {
+      &--wrapper {
+        max-width: 800px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .menu {
+    &--desktop {
+      &--wrapper {
+        max-width: 900px;
+      }
+    }
   }
 }
 
@@ -327,6 +413,12 @@ export default {
           width: 100px;
           height: 41px;
         }
+      }
+    }
+
+    &--desktop {
+      &--wrapper {
+        max-width: 1000px;
       }
     }
   }
