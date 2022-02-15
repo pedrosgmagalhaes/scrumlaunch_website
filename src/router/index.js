@@ -5,7 +5,8 @@ import ContactUs from '../views/ContactUs.vue'
 import Work from '../views/Work.vue'
 import Process from '../views/Process.vue'
 import FamilyGameNightCaseStudy from '../views/FamilyGameNightCaseStudy.vue'
-import HarvestCaseStudy from '../views/HarvestCaseStudy.vue'
+// import HarvestCaseStudy from '../views/HarvestCaseStudy.vue'
+import CampusReelCaseStudy from '../views/CampusReelCaseStudy.vue'
 import FullCourtAiCaseStudy from '../views/FullCourtAiCaseStudy.vue'
 import ScopeCaseStudy from '../views/ScopeCaseStudy.vue'
 import HelmmCaseStudy from '../views/HelmmCaseStudy.vue'
@@ -47,10 +48,15 @@ const routes = [
 		name: 'FamilyGameNightCaseStudy',
 		component: FamilyGameNightCaseStudy
 	},
+	// {
+	// 	path: '/harvest-case-study',
+	// 	name: 'HarvestCaseStudy',
+	// 	component: HarvestCaseStudy
+	// },
 	{
-		path: '/harvest-case-study',
-		name: 'HarvestCaseStudy',
-		component: HarvestCaseStudy
+		path: '/campus-reel-case-study',
+		name: 'CampusReelCaseStudy',
+		component: CampusReelCaseStudy
 	},
 	{
 		path: '/full-court-ai-case-study',

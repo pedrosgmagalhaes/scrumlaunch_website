@@ -1,13 +1,21 @@
 export default {
 	state: () => ({
 		projects: [
+			// {
+			// 	url: 'HarvestCaseStudy',
+			// 	image: {full: 'harvest-preview-full.png', small: 'harvest-preview.png'},
+			// 	type: 'Web Application',
+			// 	year: '2021',
+			// 	name: 'Harvest',
+			// 	tags: ['Design', 'Frontend', 'Backend', 'QA', 'Support'],
+			// },
 			{
-				url: 'HarvestCaseStudy',
-				image: {full: 'harvest-preview-full.png', small: 'harvest-preview.png'},
+				url: 'CampusReelCaseStudy',
+				image: {full: 'campus-reel-preview-full.png', small: 'campus-reel-preview.png'},
 				type: 'Web Application',
 				year: '2021',
-				name: 'Harvest',
-				tags: ['Design', 'Frontend', 'Backend', 'QA', 'Support'],
+				name: 'CampusReel',
+				tags: ['Design', 'Frontend', 'Backend'],
 			},
 			{
 				url: 'ScopeCaseStudy',

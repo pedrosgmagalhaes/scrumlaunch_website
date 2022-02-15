@@ -38,12 +38,12 @@ export default {
                 inLink: 'https://www.linkedin.com/in/mykhailo-khizov-002934173/',
                 photo: 'mikhaylo_khizov.jpg'
             },
-            {
-                name: 'Kaylee-Anna Jayaweera',
-                position: 'VP of Product',
-                inLink: 'https://www.linkedin.com/in/kaylee-anna-jayaweera/',
-                photo: 'kaylee_anna_jayaweera.jpg'
-            },
+            // {
+            //     name: 'Kaylee-Anna Jayaweera',
+            //     position: 'VP of Product',
+            //     inLink: 'https://www.linkedin.com/in/kaylee-anna-jayaweera/',
+            //     photo: 'kaylee_anna_jayaweera.jpg'
+            // },
             {
                 name: 'Dmitriy Yefremov',
                 position: 'Head of Mobile Department',

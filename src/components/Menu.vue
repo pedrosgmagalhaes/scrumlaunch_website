@@ -111,7 +111,8 @@ export default {
           this.$route.name === "FullCourtAiCaseStudy" ||
           this.$route.name === "HelmmCaseStudy" ||
           this.$route.name === "ScopeCaseStudy" ||
-          this.$route.name === "ProgLang") {
+          this.$route.name === "ProgLang" ||
+          this.$route.name === "CampusReelCaseStudy") {
         this.contactPage = true;
       } else {
         this.contactPage = false;
