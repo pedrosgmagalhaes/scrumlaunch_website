@@ -263,10 +263,12 @@ export default {
     &:before {
       content: '';
       position: absolute;
-      top: 33px;
-      left: -100px;
+      // top: 33px;
+      // left: -100px;
       right: 0;
       bottom: -30px;
+      width: 200px;
+      height: 33px;
       display: none;
     }
 
