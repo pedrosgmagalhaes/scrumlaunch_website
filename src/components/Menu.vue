@@ -266,7 +266,7 @@ export default {
       // top: 33px;
       // left: -100px;
       right: 0;
-      bottom: -35px;
+      bottom: -40px;
       width: 200px;
       height: 50px;
       display: none;
