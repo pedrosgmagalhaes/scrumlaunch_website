@@ -29,14 +29,14 @@ if ( window.location.hostname.indexOf('scrumlaunch-staging.herokuapp.com') !== -
 }
 
 if ( window.location.hostname.indexOf('scrumlaunch.com') !== -1 ) {
-    gtag_id = 'G-3S83Y9CE5Q'
+    gtag_id = 'UA-216538520'
+    
+    app.use(VueGtag, {
+        property: {
+            id: gtag_id
+        }
+    })
 }
-
-app.use(VueGtag, {
-    property: {
-        id: gtag_id
-    }
-})
 // gtag
 
 
