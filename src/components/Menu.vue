@@ -268,7 +268,7 @@ export default {
       right: 0;
       bottom: -30px;
       width: 200px;
-      height: 33px;
+      height: 40px;
       display: none;
     }
 
