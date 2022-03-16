@@ -73,7 +73,9 @@
 				<p class="body-1">
 					Stop worrying about recruiting, hiring, payroll, office
 					space, HR, perks for your design and development teams and
-					focus on growing your business.
+					focus on growing your business. Whether you're hiring python,
+					Node JS, ruby, or mobile developers, Scrumlaunch can easily
+					match and scale with your needs.
 				</p>
 			</AppearFromMask>
 

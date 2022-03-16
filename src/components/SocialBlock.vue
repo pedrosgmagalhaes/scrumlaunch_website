@@ -1,7 +1,7 @@
 <template>
 	<div class="social" :class="{ home: $route.name === 'Home' }">
 
-		<a href="https://www.behance.net/code_catalyst" target="_blank" class="social--icon_wrap">
+		<a href="https://www.behance.net/scrumlaunch" target="_blank" class="social--icon_wrap">
 			<inline-svg
 				:src="require('@/assets/icons/behance'+iconSufix+'.svg')"
 				class="social--icon"
