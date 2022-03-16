@@ -102,6 +102,7 @@ export default {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 
     &:first-child {
       .header-2 {
@@ -114,6 +115,7 @@ export default {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+      width: 100%;
     }
 
     &--header {

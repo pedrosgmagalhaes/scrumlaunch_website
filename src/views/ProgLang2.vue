@@ -83,7 +83,9 @@
                 <div class="text">Hiring {{ dev_lang }} developers can be tricky - Scrumlaunch makes it easy. Your website is the lifeblood of your business. Our team has built and sold multiple companies, and we understand first-hand how important competent software engineers are. That’s why at Scrumlaunch, we vet all {{ dev_lang }} developers and employ rigorous tests to assess development and English-language competency. All clients are assigned a dedicated account manager available at all times to ensure you are meeting your {{ dev_lang }} goals in a timely and cost-effective manner.</div>
             </div>
 
-            <div class="developers">
+            <!-- add actual developers -->
+
+            <!-- <div class="developers">
 
                 <div class="developers__item">
                     <div class="developers__item__img">
@@ -157,7 +159,7 @@
                     </div>
                 </div>
 
-            </div>
+            </div> -->
 
         </div>
 

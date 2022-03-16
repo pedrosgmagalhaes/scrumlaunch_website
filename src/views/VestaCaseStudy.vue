@@ -59,9 +59,9 @@ export default {
 			},
 			{
 				order: 'Next',
-				name: 'Harvest',
-				image: 'harvest-preview',
-				url: 'HarvestCaseStudy'
+				name: 'CampusReel',
+				image: 'campus-reel-preview',
+				url: 'CampusReelCaseStudy'
 			},
 		],
 

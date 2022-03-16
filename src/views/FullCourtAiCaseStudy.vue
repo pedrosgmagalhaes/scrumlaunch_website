@@ -36,9 +36,9 @@ export default {
     moreProjects: [
       {
         order: 'Previous',
-        name: 'Harvest',
-        image: 'harvest-preview',
-        url: 'HarvestCaseStudy'
+        name: 'CampusReel',
+        image: 'campus-reel-preview',
+        url: 'CampusReelCaseStudy'
       },
       {
         order: 'Next',
