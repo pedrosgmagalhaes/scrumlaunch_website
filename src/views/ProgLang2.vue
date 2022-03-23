@@ -230,37 +230,54 @@
 import dev_langs from '@/seo/development_languages.json'
 import ProgLangList from '@/components/hire-developers/ProgLangList.vue'
 
+import { ref, computed, onMounted, watch } from 'vue'
+import { useRoute } from 'vue-router'
+import { useHead } from '@vueuse/head'
+
 export default {
 
     components: {
         ProgLangList,
     },
 
-    mounted() {
-        this.getDevLang()
-    },
+    setup() {
+        const route = useRoute()
 
-    data: () => ({
-        dev_lang: null,
-    }),
+        let dev_lang = ref(null)
 
-    methods: {
-
-        getDevLang() {
-            this.dev_lang = dev_langs.filter((item) => {
-                return this.$route.params.prog_lang === item.url
+        function getDevLang() {
+            return dev_langs.filter((item) => {
+                return route.params.prog_lang === item.url
             })[0].lang
-        },
+        }
 
-    },
+        onMounted(() => {
+			dev_lang.value = getDevLang()
+		})
 
-    watch: {
-
-        $route: function() {
-            if ( this.$route.name === "ProgLang" ) {
-                this.getDevLang()
+        watch(() => route.path, () => {
+			if ( route.name === "ProgLang" ) {
+				dev_lang.value = getDevLang()
 			}
-        },
+		})
+
+        useHead({
+			title: computed(() => 'Hire '+ dev_lang.value +' Developers - Top Rated |Scrumlaunch'),
+			meta: [
+				{
+					name: `description`,
+					content: computed(() => 'Hire and scale '+ dev_lang.value +' developers with the best-in-class website development and design consulting firm. Book a free consultation now.'),
+				},
+				{
+					name: `robots`,
+					content: 'noindex, nofollow',
+				},
+			],
+		})
+
+        return {
+            dev_lang,
+        }
 
     },
     
