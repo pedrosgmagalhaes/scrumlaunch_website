@@ -96,15 +96,17 @@ export default {
 }
 
 .btn {
+    padding: 16px 40px;
+    min-width: 360px;
+    height: 82px;
+    width: auto;
+    border-radius: 54px;
+    font-size: 21.6867px;
+    line-height: 150%;
     text-align: center;
 
-    @media screen and (min-width: 1900px) {
-        padding: 16px;
-        width: 220px;
-        height: 220px;
-        border-radius: 50%;
-        font-size: 21.6867px;
-        line-height: 150%;
+    @media screen and (max-width: 1899px) {
+        font-size: 18px;
     }
 }
 </style>

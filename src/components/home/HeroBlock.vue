@@ -27,6 +27,10 @@
 
 		</div>
 
+		<div class="btn_wrap">
+			<router-link :to="{ path: '/contact-us' }" class="btn">Talk to us</router-link>
+		</div>
+
 		<div class="hero--bottom">
 			<SocialBlock iconSufix="-white" />
 			<inline-svg :src="require('@/assets/icons/scroll-down-white.svg')" @click="scrollDown()" class="hero--bottom__scroll_down" />
@@ -65,7 +69,7 @@ export default {
 
 <style lang="scss" scoped>
 .hero {
-	padding: 125px 20px 0;
+	padding: 125px 20px 20px 20px;
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -150,6 +154,19 @@ export default {
 	}
 }
 
+.btn_wrap {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 40px;
+}
+
+.btn {
+	min-width: 302px;
+	height: 82px;
+	width: auto;
+	font-size: 18px;
+}
+
 @media screen and (min-width: 375px) {
 	.hero {
 		padding-bottom: 20px;
@@ -225,6 +242,7 @@ export default {
 		&--text-wrapper {
 			flex-direction: row;
 			justify-content: space-between;
+			margin-bottom: 60px;
 
 			&__header {
 				align-items: flex-start;
@@ -242,6 +260,11 @@ export default {
 				}
 			}
 		}
+	}
+
+	.btn_wrap {
+		justify-content: flex-start;
+		margin-bottom: 60px;
 	}
 }
 
@@ -285,7 +308,7 @@ export default {
 		flex-direction: column;
 
 		&--text-wrapper {
-			margin-bottom: 208px;
+			margin-bottom: 80px;
 
 			h1 {
 				text-align: left;
@@ -316,6 +339,10 @@ export default {
 			text-align: left;
 		}
 	}
+
+	.btn_wrap {
+		margin-bottom: 80px;
+	}
 }
 
 @media screen and (min-width: 1900px) {
@@ -326,10 +353,11 @@ export default {
 	}
 
 	.hero {
-		padding-top: 230px;
+		padding-top: 180px;
+		padding-bottom: 60px;
 
 		&--text-wrapper {
-			margin-bottom: 150px;
+			margin-bottom: 80px;
 
 			&--illustration {
 
@@ -339,6 +367,15 @@ export default {
 				}
 			}
 		}
+	}
+
+	.btn_wrap {
+		margin-bottom: 60px;
+	}
+
+	.btn {
+		font-size: 21.6867px;
+		line-height: 150%;
 	}
 }
 </style>

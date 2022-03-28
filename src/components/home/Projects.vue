@@ -70,7 +70,12 @@ export default {
 
 	&--btn-wrapper {
 		display: flex;
-		justify-content: flex-end;
+		justify-content: center;
+
+		.btn {
+			min-width: 302px;
+			font-size: 18px;
+		}
 	}
 }
 
@@ -101,6 +106,16 @@ export default {
 	}
 }
 
+@media screen and (min-width: 1024px) {
+
+	.projects {
+		&--btn-wrapper {
+			justify-content: flex-end;
+		}
+	}
+	
+}
+
 @media screen and (min-width: 1140px) {
 	.projects {
 		margin-left: auto;
@@ -112,9 +127,11 @@ export default {
 		margin-top: 40px;
 
 		.btn {
-			width: 166px;
-			height: 166px;
-			border-radius: 50%;
+			padding: 16px 40px;
+			min-width: 302px;
+			height: 82px;
+			width: auto;
+			border-radius: 54px;
 			font-size: 18px;
 			line-height: 150%;
 		}
@@ -162,6 +179,18 @@ export default {
 	}
 }
 
+@media screen and (min-width: 1440px) {
+	.projects--btn-wrapper {
+		.btn {
+			padding: 16px 40px;
+			min-width: 302px;
+			height: 82px;
+			width: auto;
+			border-radius: 54px;
+		}
+	}
+}
+
 @media screen and (min-width: 1900px) {
 	.header-1 {
 		font-weight: 900;
@@ -179,9 +208,11 @@ export default {
 
 	.projects--btn-wrapper {
 		.btn {
-			width: 220px;
-			height: 220px;
-			border-radius: 50%;
+			padding: 16px 40px;
+			min-width: 302px;
+			height: 82px;
+			width: auto;
+			border-radius: 54px;
 			font-size: 21.6867px;
 			line-height: 150%;
 		}

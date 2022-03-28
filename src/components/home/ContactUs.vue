@@ -58,6 +58,10 @@ export default {
 	}
 }
 
+.btn {
+	font-size: 18px;
+}
+
 @media screen and (min-width: 375px) {
 	.contact-us--icon {
 		width: 334px;
@@ -88,9 +92,9 @@ export default {
 @media screen and (min-width: 1140px) {
 
 	.btn {
-		width: 166px;
-		height: 166px;
-		font-size: 18px;
+		min-width: 302px;
+		height: 82px;
+        width: auto;
 	}
 
 	.contact-us {
@@ -146,6 +150,12 @@ export default {
 			margin-right: 152px;
 		}
 	}
+
+	.btn {
+		min-width: 302px;
+		height: 82px;
+        width: auto;
+	}
 }
 
 @media screen and (min-width: 1900px) {
@@ -171,9 +181,9 @@ export default {
 	}
 
 	.btn {
-		width: 220px;
-		height: 220px;
-		border-radius: 50%;
+		min-width: 302px;
+		height: 82px;
+        width: auto;
 		font-size: 21.6867px;
 		line-height: 150%;
 	}
