@@ -3,6 +3,8 @@
 		<HeroBlock />
 		<SecondBlock />
 		<ExtensiveVetting />
+		<SoftwareDesign />
+		<HowScrumLaunchWorks />
 		<TickerBlock />
 		<Projects />
 		<HistoryBlock />
@@ -27,6 +29,8 @@ import OurServices from '@/components/home/OurServices.vue'
 import ContactUs from '@/components/home/ContactUs.vue'
 import ExtensiveVetting from '@/components/home/ExtensiveVetting.vue'
 import OurTechnologies from '@/components/home/OurTechnologies.vue'
+import HowScrumLaunchWorks from '@/components/home/HowScrumLaunchWorks.vue'
+import SoftwareDesign from '@/components/home/SoftwareDesign.vue'
 
 import { useHead } from '@vueuse/head'
 
@@ -45,6 +49,8 @@ export default {
 		ContactUs,
 		ExtensiveVetting,
 		OurTechnologies,
+		HowScrumLaunchWorks,
+		SoftwareDesign,
 	},
 
 	setup() {
