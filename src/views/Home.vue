@@ -3,11 +3,12 @@
 		<HeroBlock />
 		<SecondBlock />
 		<ExtensiveVetting />
+		<TickerBlock />
 		<Projects />
 		<HistoryBlock />
 		<!-- <News /> -->
-		<TickerBlock />
 		<OurServices />
+		<OurTechnologies />
 		<ContactUs />
 	</div>
 </template>
@@ -25,6 +26,7 @@ import TickerBlock from '@/components/home/TickerBlock.vue'
 import OurServices from '@/components/home/OurServices.vue'
 import ContactUs from '@/components/home/ContactUs.vue'
 import ExtensiveVetting from '@/components/home/ExtensiveVetting.vue'
+import OurTechnologies from '@/components/home/OurTechnologies.vue'
 
 import { useHead } from '@vueuse/head'
 
@@ -42,6 +44,7 @@ export default {
 		OurServices,
 		ContactUs,
 		ExtensiveVetting,
+		OurTechnologies,
 	},
 
 	setup() {
