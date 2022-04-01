@@ -247,6 +247,15 @@
   }
 }
 
+
 .flex {
   display: flex;
+}
+
+.fdc {
+  flex-direction: column;
+}
+
+.jcfs {
+  justify-content: flex-start;
 }
