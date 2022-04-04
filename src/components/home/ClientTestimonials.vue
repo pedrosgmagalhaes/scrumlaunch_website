@@ -8,6 +8,8 @@
 
             <div class="client_testimonials__testimonials_section">
 
+                <div class="client_testimonials__testimonials_pencil"></div>
+
                 <div class="client_testimonials__testimonials_items">
 
                     <div class="client_testimonials__testimonials_item">
@@ -95,7 +97,16 @@ export default {
     }
 
     &__testimonials_section {
+        position: relative;
+    }
 
+    &__testimonials_pencil {
+        position: absolute;
+        top: -416px;
+        right: 0;
+        width: 355px;
+        height: 416px;
+        background: url(/images/home/client_testimonials_1.svg);
     }
 
     &__testimonials_items {
@@ -104,7 +115,7 @@ export default {
     }
 
     &__testimonials_item {
-        flex: 0 0 calc(50% - 60px);
+        flex: 0 0 calc(50% - 30px);
         margin-bottom: 60px;
         padding: 60px 40px;
         background: #fff;
@@ -120,7 +131,7 @@ export default {
 
     &__testimonials_item__text {
         margin-bottom: 40px;
-        min-height: 273px;
+        min-height: 234px;
         font-style: normal;
         font-weight: 400;
         font-size: 26px;
