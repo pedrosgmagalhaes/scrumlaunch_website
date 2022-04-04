@@ -4,6 +4,7 @@
 		<SecondBlock />
 		<ExtensiveVetting />
 		<SoftwareDesign />
+		<ClientTestimonials />
 		<HowScrumLaunchWorks />
 		<TickerBlock />
 		<Projects />
@@ -31,6 +32,7 @@ import ExtensiveVetting from '@/components/home/ExtensiveVetting.vue'
 import OurTechnologies from '@/components/home/OurTechnologies.vue'
 import HowScrumLaunchWorks from '@/components/home/HowScrumLaunchWorks.vue'
 import SoftwareDesign from '@/components/home/SoftwareDesign.vue'
+import ClientTestimonials from '@/components/home/ClientTestimonials.vue'
 
 import { useHead } from '@vueuse/head'
 
@@ -51,6 +53,7 @@ export default {
 		OurTechnologies,
 		HowScrumLaunchWorks,
 		SoftwareDesign,
+		ClientTestimonials,
 	},
 
 	setup() {
