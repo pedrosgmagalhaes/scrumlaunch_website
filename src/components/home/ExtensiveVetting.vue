@@ -47,7 +47,23 @@ export default {
 
 .container {
     margin: 0 auto;
+    padding-left: 8.34%;
+    padding-right: 8.34%;
     max-width: 1600px;
+
+    @media screen and (max-width: 1440px) {
+        max-width: 1200px;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    @media screen and (max-width: 375px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
 table {
@@ -60,10 +76,29 @@ table {
     line-height: 140%;
     color: #fff;
 
+    @media screen and (max-width: 1440px) {
+        font-size: 30px;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: 24px;
+    }
+
+    @media screen and (max-width: 375px) {
+        display: block;
+        font-size: 18px;
+    }
+
     tr {
         &:first-child {
             td {
                 border-top: 1px solid #fff;
+
+                &:first-child {
+                    @media screen and (max-width: 375px) {
+                        border-bottom: 1px solid transparent;
+                    }
+                }
             }
         }
     }
@@ -73,9 +108,38 @@ table {
         height: 344px;
         vertical-align: middle;
         border-bottom: 1px solid #fff;
+        box-sizing: border-box;
+
+        @media screen and (max-width: 1440px) {
+            padding: 40px 50px 40px 30px;
+            height: 248px;
+        }
+
+        @media screen and (max-width: 768px) {
+            padding: 32px 30px 32px 20px;
+            height: 234px;
+
+            &:last-child {
+                padding: 32px 0px 32px 30px;
+            }
+        }
+
+        @media screen and (max-width: 375px) {
+            display: block;
+            padding: 30px 0px;
+            height: auto;
+
+            &:last-child {
+                padding: 30px 0px;
+            }
+        }
 
         &:first-child {
             border-right: 1px solid #fff;
+            
+            @media screen and (max-width: 375px) {
+                border-right: 1px solid transparent;
+            }
         }
 
         span {
@@ -86,11 +150,26 @@ table {
 }
 
 .header-1 {
-    margin-bottom: 46px;
+    margin-bottom: 40px;
     font-weight: 900;
     font-size: 75px;
     line-height: 140%;
     color: #fff;
+
+    @media screen and (max-width: 1440px) {
+        margin-bottom: 40px;
+        font-size: 56px;
+    }
+
+    @media screen and (max-width: 768px) {
+        margin-bottom: 24px;
+        font-size: 48px;
+    }
+
+    @media screen and (max-width: 375px) {
+        margin-bottom: 17px;
+        font-size: 24px;
+    }
 }
 
 .body-1 {
@@ -100,6 +179,20 @@ table {
     font-size: 35px;
     line-height: 150%;
     color: #fff;
+
+    @media screen and (max-width: 1440px) {
+        max-width: 728px;
+        font-size: 26px;
+    }
+
+    @media screen and (max-width: 768px) {
+        max-width: 100%;
+        font-size: 20px;
+    }
+
+    @media screen and (max-width: 375px) {
+        font-size: 14px;
+    }
 }
 
 .extensive_vetting {
@@ -108,9 +201,38 @@ table {
     background: #1E1F21;
     text-align: left;
 
+    @media screen and (max-width: 1440px) {
+        padding-top: 240px;
+        padding-bottom: 240px;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding-top: 140px;
+        padding-bottom: 140px;
+    }
+
+    @media screen and (max-width: 375px) {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
     &__text_block {
         margin-bottom: 120px;
         max-width: 980px;
+
+        @media screen and (max-width: 1440px) {
+            margin-bottom: 80px;
+            max-width: 812px;
+        }
+
+        @media screen and (max-width: 768px) {
+            margin-bottom: 60px;
+            max-width: 100%;
+        }
+
+        @media screen and (max-width: 375px) {
+            margin-bottom: 40px;
+        }
     }
 }
 

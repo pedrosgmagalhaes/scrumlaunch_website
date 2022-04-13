@@ -12,14 +12,15 @@
         </div>
 
         <div class="our_technologies__technologies_list_block">
-            <div class="our_technologies__technologies_list_row">
+            <div class="our_technologies__technologies_list_row flex:lg">
                 <router-link to="" class="our_technologies__technologies_list_item green">Python</router-link>
                 <router-link to="" class="our_technologies__technologies_list_item">PHP</router-link>
                 <router-link to="" class="our_technologies__technologies_list_item green">NodeJS</router-link>
                 <img src="/images/home/our_technologies_1.svg" alt="our_technologies_1" class="our_technologies__technologies_list_icon">
                 <router-link to="" class="our_technologies__technologies_list_item">RubyOnRails</router-link>
             </div>
-            <div class="our_technologies__technologies_list_row">
+
+            <div class="our_technologies__technologies_list_row flex:lg hide:xs">
                 <router-link to="" class="our_technologies__technologies_list_item">Solidity</router-link>
                 <img src="/images/home/our_technologies_2.svg" alt="our_technologies_2" class="our_technologies__technologies_list_icon">
                 <router-link to="" class="our_technologies__technologies_list_item green">ReactJS</router-link>
@@ -27,7 +28,14 @@
                 <router-link to="" class="our_technologies__technologies_list_item green">.NET</router-link>
                 <router-link to="" class="our_technologies__technologies_list_item">Vue</router-link>
             </div>
-            <div class="our_technologies__technologies_list_row">
+            <div class="our_technologies__technologies_list_row hide:lg flex:xs">
+                <router-link to="" class="our_technologies__technologies_list_item">Solidity</router-link>
+                <img src="/images/home/our_technologies_2.svg" alt="our_technologies_2" class="our_technologies__technologies_list_icon">
+                <router-link to="" class="our_technologies__technologies_list_item green">ReactJS</router-link>
+                <router-link to="" class="our_technologies__technologies_list_item">ReactNative</router-link>
+            </div>
+
+            <div class="our_technologies__technologies_list_row flex:lg hide:xs">
                 <router-link to="" class="our_technologies__technologies_list_item green">Angular</router-link>
                 <router-link to="" class="our_technologies__technologies_list_item">Swift</router-link>
                 <router-link to="" class="our_technologies__technologies_list_item green">Kotlin</router-link>
@@ -35,11 +43,31 @@
                 <router-link to="" class="our_technologies__technologies_list_item">Flutter</router-link>
                 <router-link to="" class="our_technologies__technologies_list_item green">DevOps</router-link>
             </div>
-            <div class="our_technologies__technologies_list_row">
+            <div class="our_technologies__technologies_list_row hide:lg flex:xs">
+                <router-link to="" class="our_technologies__technologies_list_item green">.NET</router-link>
+                <router-link to="" class="our_technologies__technologies_list_item">Vue</router-link>
+                <router-link to="" class="our_technologies__technologies_list_item green">Angular</router-link>
+                <img src="/images/home/our_technologies_3.svg" alt="our_technologies_3" class="our_technologies__technologies_list_icon">
+                <router-link to="" class="our_technologies__technologies_list_item">Swift</router-link>
+                <router-link to="" class="our_technologies__technologies_list_item green">Kotlin</router-link>
+            </div>
+
+            <div class="our_technologies__technologies_list_row flex:lg hide:xs">
                 <router-link to="" class="our_technologies__technologies_list_item">Machine Learning</router-link>
                 <img src="/images/home/our_technologies_4.svg" alt="our_technologies_4" class="our_technologies__technologies_list_icon">
                 <router-link to="" class="our_technologies__technologies_list_item green">AWS</router-link>
                 <router-link to="" class="our_technologies__technologies_list_item">UI/UX Design</router-link>
+                <router-link to="" class="our_technologies__technologies_list_item green">Agile Development</router-link>
+            </div>
+            <div class="our_technologies__technologies_list_row hide:lg flex:xs">
+                <router-link to="" class="our_technologies__technologies_list_item">Flutter</router-link>
+                <router-link to="" class="our_technologies__technologies_list_item green">DevOps</router-link>
+                <router-link to="" class="our_technologies__technologies_list_item">Machine Learning</router-link>
+                <router-link to="" class="our_technologies__technologies_list_item green">AWS</router-link>
+            </div>
+            <div class="our_technologies__technologies_list_row hide:lg flex:xs">
+                <router-link to="" class="our_technologies__technologies_list_item">UI/UX Design</router-link>
+                <img src="/images/home/our_technologies_4.svg" alt="our_technologies_4" class="our_technologies__technologies_list_icon">
                 <router-link to="" class="our_technologies__technologies_list_item green">Agile Development</router-link>
             </div>
         </div>
@@ -68,6 +96,19 @@ export default {
     line-height: 100%;
     color: #fff;
     white-space: nowrap;
+
+    @media screen and (max-width: 1440px) {
+        font-size: 56px;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 0 20px;
+        font-size: 48px;
+    }
+
+    @media screen and (max-width: 375px) {
+        font-size: 24px;
+    }
 }
 
 .our_technologies {
@@ -76,6 +117,25 @@ export default {
     background: #1E1F21;
     box-sizing: border-box;
 
+    @media screen and (max-width: 1440px) {
+        padding-top: 240px;
+        padding-bottom: 240px;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding-top: 140px;
+        padding-bottom: 140px;
+    }
+
+    @media screen and (max-width: 375px) {
+        padding-top: 40px;
+        padding-bottom: 70px;
+    }
+
+    & * {
+        box-sizing: border-box;
+    }
+
     &__header {
         display: flex;
         align-items: center;
@@ -83,6 +143,18 @@ export default {
         margin-bottom: 120px;
         height: 105px;
         overflow: hidden;
+
+        @media screen and (max-width: 1440px) {
+            margin-bottom: 80px;
+        }
+
+        @media screen and (max-width: 768px) {
+            margin-bottom: 50px;
+        }
+
+        @media screen and (max-width: 375px) {
+            margin-bottom: 5px;
+        }
     }
 
     &__line {
@@ -99,17 +171,17 @@ export default {
     }
 
     &__technologies_list_row {
-        display: flex;
         justify-content: center;
-        margin-bottom: 26px;
 
-        &:last-child {
-            margin-bottom: 0;
+        @media screen and (max-width: 768px) {
+            flex-wrap: wrap;
         }
+
     }
 
     &__technologies_list_item {
         margin-right: 26px;
+        margin-bottom: 26px;
         padding: 10px 26px;
         font-style: normal;
         font-weight: 700;
@@ -118,6 +190,24 @@ export default {
         color: #fff;
         border: 1px solid #FFFFFF;
         text-decoration: none;
+
+        @media screen and (max-width: 1440px) {
+            font-size: 30px;
+        }
+
+        @media screen and (max-width: 768px) {
+            margin-right: 17px;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            font-size: 24px;
+        }
+
+        @media screen and (max-width: 375px) {
+            margin-right: 10px;
+            margin-bottom: 10px;
+            padding: 8px 12px 6px 12px;
+            font-size: 12px;
+        }
 
         &:hover {
             color: #12e2b0;
@@ -137,8 +227,20 @@ export default {
     }
 
     &__technologies_list_icon {
-        display: block;
         margin-right: 26px;
+        margin-bottom: 26px;
+
+        @media screen and (max-width: 768px) {
+            margin-right: 17px;
+            margin-bottom: 20px;
+            max-width: 40px;
+        }
+
+        @media screen and (max-width: 375px) {
+            margin-right: 10px;
+            margin-bottom: 10px;
+            max-width: 18px;
+        }
     }
 
 }

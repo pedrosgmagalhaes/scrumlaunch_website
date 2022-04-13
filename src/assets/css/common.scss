@@ -263,3 +263,22 @@
 .jcsb {
   justify-content: space-between;
 }
+
+
+.flex\:lg {
+  display: flex;
+}
+
+.hide\:lg {
+  display: none;
+}
+
+@media screen and (max-width: 375px) {
+  .flex\:xs {
+    display: flex;
+  }
+  
+  .hide\:xs {
+    display: none;
+  }
+}
