@@ -94,7 +94,7 @@ export default {
         padding-bottom: 140px;
     }
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 425px) {
         padding-top: 80px;
         padding-bottom: 80px;
     }
@@ -120,7 +120,7 @@ export default {
             text-align: left;
         }
 
-        @media screen and (max-width: 375px) {
+        @media screen and (max-width: 425px) {
             margin-bottom: 40px;
             font-size: 24px;
         }
@@ -149,7 +149,7 @@ export default {
             min-height: 183px;
         }
 
-        @media screen and (max-width: 375px) {
+        @media screen and (max-width: 425px) {
             padding: 30px 0;
             min-height: 166px;
         }
@@ -180,7 +180,7 @@ export default {
             margin-right: auto;
         }
 
-        @media screen and (max-width: 375px) {
+        @media screen and (max-width: 425px) {
             margin-bottom: 17px;
         }
     }
@@ -199,7 +199,7 @@ export default {
             font-size: 24px;
         }
 
-        @media screen and (max-width: 375px) {
+        @media screen and (max-width: 425px) {
             font-size: 18px;
         }
     }
@@ -212,7 +212,7 @@ export default {
             margin-right: 20px;
         }
 
-        @media screen and (max-width: 375px) {
+        @media screen and (max-width: 425px) {
             max-width: 25px;
             margin-right: 18px;
         }
@@ -236,7 +236,7 @@ export default {
             align-self: flex-end;
         }
 
-        @media screen and (max-width: 375px) {
+        @media screen and (max-width: 425px) {
             font-size: 12px;
         }
     }

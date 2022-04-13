@@ -60,7 +60,7 @@ export default {
         padding-right: 30px;
     }
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 425px) {
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -84,7 +84,7 @@ table {
         font-size: 24px;
     }
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 425px) {
         display: block;
         font-size: 18px;
     }
@@ -95,7 +95,7 @@ table {
                 border-top: 1px solid #fff;
 
                 &:first-child {
-                    @media screen and (max-width: 375px) {
+                    @media screen and (max-width: 425px) {
                         border-bottom: 1px solid transparent;
                     }
                 }
@@ -124,7 +124,7 @@ table {
             }
         }
 
-        @media screen and (max-width: 375px) {
+        @media screen and (max-width: 425px) {
             display: block;
             padding: 30px 0px;
             height: auto;
@@ -137,7 +137,7 @@ table {
         &:first-child {
             border-right: 1px solid #fff;
             
-            @media screen and (max-width: 375px) {
+            @media screen and (max-width: 425px) {
                 border-right: 1px solid transparent;
             }
         }
@@ -166,7 +166,7 @@ table {
         font-size: 48px;
     }
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 425px) {
         margin-bottom: 17px;
         font-size: 24px;
     }
@@ -190,7 +190,7 @@ table {
         font-size: 20px;
     }
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 425px) {
         font-size: 14px;
     }
 }
@@ -211,7 +211,7 @@ table {
         padding-bottom: 140px;
     }
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 425px) {
         padding-top: 80px;
         padding-bottom: 80px;
     }
@@ -230,7 +230,7 @@ table {
             max-width: 100%;
         }
 
-        @media screen and (max-width: 375px) {
+        @media screen and (max-width: 425px) {
             margin-bottom: 40px;
         }
     }

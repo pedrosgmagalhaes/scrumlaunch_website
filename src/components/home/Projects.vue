@@ -50,7 +50,7 @@ export default {
 
 .projects {
 	padding: 0 20px;
-	margin: 0 0 80px;
+	margin: 80px 0 80px 0;
 
 	h2 {
 		text-align: left;
@@ -82,7 +82,7 @@ export default {
 @media screen and (min-width: 768px) {
 	.projects {
 		padding: 0 30px;
-		margin: 0 0 140px;
+		margin: 140px 0 140px 0;
 
 		h2 {
 			margin-bottom: 30px;
@@ -141,7 +141,7 @@ export default {
 @media screen and (min-width: 1280px) {
 	.projects {
 		padding: 0 8.34% 0;
-		margin: 0 0 240px;
+		margin: 240px 0 240px 0;
 		max-width: initial;
 
 		h2 {

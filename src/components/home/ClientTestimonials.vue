@@ -11,7 +11,7 @@
                 <div class="client_testimonials__testimonials_pencil"></div>
 
                 <Swiper
-                    v-if="window_width > 375"
+                    v-if="window_width > 425"
                     :slides-per-view="1"
                     :space-between="50"
                     :modules="modules"
@@ -62,7 +62,7 @@
                 </Swiper>
 
                 <Swiper
-                    v-if="window_width <= 375"
+                    v-if="window_width <= 425"
                     :slides-per-view="1"
                     :space-between="50"
                     :modules="modules"
@@ -186,7 +186,7 @@ export default {
         font-size: 48px;
     }
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 425px) {
         margin-bottom: 40px;
         max-width: 250px;
         font-size: 24px;
@@ -211,7 +211,7 @@ export default {
         padding-bottom: 140px;
     }
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 425px) {
         padding-top: 80px;
         padding-bottom: 80px;
         padding-left: 20px;
@@ -247,7 +247,7 @@ export default {
             height: 288px;
         }
 
-        @media screen and (max-width: 375px) {
+        @media screen and (max-width: 425px) {
             top: -151px;
             width: 128px;
             height: 151px;
@@ -289,7 +289,7 @@ export default {
             padding: 40px 24px;
         }
 
-        @media screen and (max-width: 375px) {
+        @media screen and (max-width: 425px) {
             padding: 26px 16px;
         }
     }
@@ -314,7 +314,7 @@ export default {
             margin-bottom: 24px;
         }
 
-        @media screen and (max-width: 375px) {
+        @media screen and (max-width: 425px) {
             margin-bottom: 16px;
 
             img {
@@ -341,7 +341,7 @@ export default {
             font-size: 18px;
         }
 
-        @media screen and (max-width: 375px) {
+        @media screen and (max-width: 425px) {
             min-height: 216px;
             font-size: 16px;
         }
@@ -357,7 +357,7 @@ export default {
             font-size: 18px;
         }
 
-        @media screen and (max-width: 375px) {
+        @media screen and (max-width: 425px) {
             font-size: 16px;
         }
     }

@@ -106,7 +106,7 @@ export default {
         font-size: 48px;
     }
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 425px) {
         font-size: 24px;
     }
 }
@@ -127,7 +127,7 @@ export default {
         padding-bottom: 140px;
     }
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 425px) {
         padding-top: 40px;
         padding-bottom: 70px;
     }
@@ -152,7 +152,7 @@ export default {
             margin-bottom: 50px;
         }
 
-        @media screen and (max-width: 375px) {
+        @media screen and (max-width: 425px) {
             margin-bottom: 5px;
         }
     }
@@ -202,7 +202,7 @@ export default {
             font-size: 24px;
         }
 
-        @media screen and (max-width: 375px) {
+        @media screen and (max-width: 425px) {
             margin-right: 10px;
             margin-bottom: 10px;
             padding: 8px 12px 6px 12px;
@@ -236,7 +236,7 @@ export default {
             max-width: 40px;
         }
 
-        @media screen and (max-width: 375px) {
+        @media screen and (max-width: 425px) {
             margin-right: 10px;
             margin-bottom: 10px;
             max-width: 18px;

@@ -34,6 +34,7 @@ export default {
 	align-items: center;
 	justify-content: space-between;
 	position: relative;
+	margin-top: 80px;
 	margin-bottom: 80px;
 
 	&--icon {
@@ -72,6 +73,7 @@ export default {
 @media screen and (min-width: 768px) {
 	.contact-us {
 		padding: 0 30px;
+		margin-top: 140px;
 		margin-bottom: 140px;
 
 		&--icon {
@@ -124,6 +126,7 @@ export default {
 		padding: 0 8.34% 0;
 		flex-direction: row;
 		justify-content: space-between;
+		margin-top: 240px;
 		margin-bottom: 240px;
 
 		&--icon {

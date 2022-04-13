@@ -56,7 +56,7 @@ export default {
         max-width: 1200px;
     }
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 425px) {
         max-width: 336px;
     }
 }
@@ -75,7 +75,7 @@ export default {
         font-size: 48px;
     }
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 425px) {
         font-size: 24px;
     }
 }
@@ -96,7 +96,7 @@ export default {
         padding-right: 30px;
     }
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 425px) {
         padding-top: 123px;
         padding-bottom: 80px;
         padding-left: 15px;
@@ -121,7 +121,7 @@ export default {
             margin-bottom: 60px;
         }
 
-        @media screen and (max-width: 375px) {
+        @media screen and (max-width: 425px) {
             margin-bottom: 40px;
         }
     }
@@ -143,7 +143,7 @@ export default {
             transform: rotate(-15deg);
         }
 
-        @media screen and (max-width: 375px) {
+        @media screen and (max-width: 425px) {
             max-width: 260px;
             top: -130px;
             left: -60px;
@@ -163,7 +163,7 @@ export default {
             max-width: 530px;
         }
 
-        @media screen and (max-width: 375px) {
+        @media screen and (max-width: 425px) {
             max-width: 225px;
         }
     }
@@ -179,7 +179,7 @@ export default {
             margin-bottom: 24px;
         }
 
-        @media screen and (max-width: 375px) {
+        @media screen and (max-width: 425px) {
             margin-bottom: 16px;
         }
     }
@@ -198,7 +198,7 @@ export default {
             font-size: 20px;
         }
 
-        @media screen and (max-width: 375px) {
+        @media screen and (max-width: 425px) {
             font-size: 14px;
         }
     }
@@ -239,7 +239,7 @@ export default {
             width: 354px;
         }
 
-        @media screen and (max-width: 375px) {
+        @media screen and (max-width: 425px) {
             padding: 18px;
             height: 168px;
             width: 168px;
