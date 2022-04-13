@@ -11,7 +11,7 @@
 
 		<div class="seo__body" v-if="article" v-html="article.fullText"></div>
 
-		<ProgLangList class="prog_lang_list" v-if="article.slug === '/blog/hire-developers'" />
+		<ProgLangList class="prog_lang_list" v-if="article.slug === '/hire-developers'" />
 
 	</div>
 
@@ -41,16 +41,15 @@ export default {
 
 		function getArticle() {
 
-			if ( route.params.pathMatch !== '' ) {
-				article.value = articles.filter((item) => {
-					if ( item.slug === '/blog/' + route.params.pathMatch.join('/') ) {
-						// item.date = dateConverter(item.date, 2)
-						return item
-					}
-				})[0]
-			}
-			else {
-				router.push({ path: route.path })
+			article.value = articles.filter((item) => {
+				if ( item.slug === route.path ) {
+					// item.date = dateConverter(item.date, 2)
+					return item
+				}
+			})[0]
+
+			if ( article.value === undefined ) {
+				router.push({ path: '/' })
 			}
 
 			// const metaData = reactive({
@@ -75,7 +74,7 @@ export default {
         }
 
 		watch(() => route.path, () => {
-			if ( route.name === "Seo" ) {
+			if ( route.name === 'Seo' || route.name === 'MainSeo' ) {
 				getArticle()
 			}
 		})

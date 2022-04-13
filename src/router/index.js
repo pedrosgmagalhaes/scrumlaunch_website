@@ -104,6 +104,11 @@ const routes = [
 		component: Seo
 	},
 	{
+		path: '/hire-developers',
+		name: 'MainSeo',
+		component: Seo
+	},
+	{
 		path: '/hire-developers/:prog_lang',
 		name: 'ProgLang',
 		component: ProgLang
