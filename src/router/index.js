@@ -16,6 +16,7 @@ import Articles from '../views/Articles.vue'
 // import Article from '../views/Article.vue'
 import Seo from '../views/Seo.vue'
 import ProgLang from '../views/ProgLang2.vue'
+import Location from '../views/Location.vue'
 
 const routes = [
 	{
@@ -112,6 +113,16 @@ const routes = [
 		path: '/hire-developers/:prog_lang',
 		name: 'ProgLang',
 		component: ProgLang
+	},
+	{
+		path: '/locations/:state_slug',
+		name: 'LocationState',
+		component: Location
+	},
+	{
+		path: '/locations/:state_slug/:city_slug',
+		name: 'LocationCity',
+		component: Location
 	},
 	{
 		path: "/:pathMatch(.*)*",

@@ -52,7 +52,7 @@
                 <li><router-link to="/hire-developers/solidity-developers">Solidity Developers</router-link></li>
                 <li><router-link to="/hire-developers/react-native-developers">React Native Developers</router-link></li>
                 <li><router-link to="/hire-developers/ruby-developers">Ruby Developers</router-link></li>
-                <li><router-link to="/blog/hire-developers">View All Languages</router-link></li>
+                <li><router-link to="/hire-developers">View All Languages</router-link></li>
               </ul>
             </div>
           </div>
@@ -112,7 +112,9 @@ export default {
           this.$route.name === "HelmmCaseStudy" ||
           this.$route.name === "ScopeCaseStudy" ||
           this.$route.name === "ProgLang" ||
-          this.$route.name === "CampusReelCaseStudy") {
+          this.$route.name === "CampusReelCaseStudy" ||
+          this.$route.name === "LocationState" ||
+          this.$route.name === "LocationCity") {
         this.contactPage = true;
       } else {
         this.contactPage = false;
