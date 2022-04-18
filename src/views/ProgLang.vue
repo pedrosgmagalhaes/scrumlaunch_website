@@ -5,7 +5,7 @@
 
 		<div class="dev_langs__body">
 
-            <h2>Scrumlaunch’s {{ dev_lang }} developers are highly skilled software engineers based around the world with deep expertise in full-stack development.</h2>
+            <h2>ScrumLaunch’s {{ dev_lang }} developers are highly skilled software engineers based around the world with deep expertise in full-stack development.</h2>
 
             <h3>How it Works</h3>
 
@@ -23,17 +23,17 @@
 
             <h2>About our Python Developers</h2>
 
-            <p>Hiring {{ dev_lang }} can be tricky - Scrumlaunch makes it easy. Your website is the lifeblood of your business. Our team has built and sold multiple companies, and we understand first-hand how important competent software engineers are. That’s why at Scrumlaunch, we vet all {{ dev_lang }} and employ rigorous tests to assess development and English-language competency. All clients are assigned a dedicated account manager available at all times to ensure you are meeting your {{ dev_lang }} goals in a timely and cost-effective manner.</p>
+            <p>Hiring {{ dev_lang }} can be tricky - ScrumLaunch makes it easy. Your website is the lifeblood of your business. Our team has built and sold multiple companies, and we understand first-hand how important competent software engineers are. That’s why at ScrumLaunch, we vet all {{ dev_lang }} and employ rigorous tests to assess development and English-language competency. All clients are assigned a dedicated account manager available at all times to ensure you are meeting your {{ dev_lang }} goals in a timely and cost-effective manner.</p>
 
             <h2>Frequently Asked Questions</h2>
 
             <div itemscope="" itemtype="https://schema.org/FAQPage">
 
                 <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question">
-                    <h3 itemprop="name">Why should I use Scrumlaunch to Hire {{ dev_lang }}?</h3>
+                    <h3 itemprop="name">Why should I use ScrumLaunch to Hire {{ dev_lang }}?</h3>
                     <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                         <div itemprop="text">
-                            <p>At Scrumlaunch, we hire and train every member of our team individually. All dedicated {{ dev_lang }} (and any developer or designer, for that matter) undergo in-depth assessment and training to test for skill level, adaptability, creativity, system architecture, and other key components of software development. Our {{ dev_lang }} experts have worked on a range of projects from video analysis and machine learning to custom marketplaces.</p>
+                            <p>At ScrumLaunch, we hire and train every member of our team individually. All dedicated {{ dev_lang }} (and any developer or designer, for that matter) undergo in-depth assessment and training to test for skill level, adaptability, creativity, system architecture, and other key components of software development. Our {{ dev_lang }} experts have worked on a range of projects from video analysis and machine learning to custom marketplaces.</p>
                         </div>
                     </div>
                 </div>
@@ -42,10 +42,10 @@
             <div itemscope="" itemtype="https://schema.org/FAQPage">
 
                 <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question">
-                    <h3 itemprop="name">How Quickly can I hire {{ dev_lang }} through Scrumlaunch?</h3>
+                    <h3 itemprop="name">How Quickly can I hire {{ dev_lang }} through ScrumLaunch?</h3>
                     <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                         <div itemprop="text">
-                            <p>Many of our clients have been up and running in under 24 hours. Scrumlaunch has the capacity to scale instantly and on-demand. If you already know what you’re building, then book a free consultation with our team to explain your {{ dev_lang }} requirements. We’ll match you with {{ dev_lang }} experts and a project manager on our team in a matter of hours.</p>
+                            <p>Many of our clients have been up and running in under 24 hours. ScrumLaunch has the capacity to scale instantly and on-demand. If you already know what you’re building, then book a free consultation with our team to explain your {{ dev_lang }} requirements. We’ll match you with {{ dev_lang }} experts and a project manager on our team in a matter of hours.</p>
                         </div>
                     </div>
                 </div>
@@ -54,7 +54,7 @@
             <div itemscope="" itemtype="https://schema.org/FAQPage">
 
                 <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question">
-                    <h3 itemprop="name">Is Scrumlaunch well-known for {{ dev_lang }}?</h3>
+                    <h3 itemprop="name">Is ScrumLaunch well-known for {{ dev_lang }}?</h3>
                     <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                         <div itemprop="text">
                             <p>{{ dev_lang }} is one of our primary development languages. Our team has a collective 600 years of development experience, and we’ve built incredibly complex projects in the language</p>
@@ -77,8 +77,8 @@
             </div>
             <p>&nbsp;</p>
 
-            <h2>About Scrumlaunch</h2>
-            <p>Scrumlaunch is home to top developers, designers, engineers, coders, architects, and consultants. Companies choose to work with Scrumlaunch because our team has succeeded with all types of companies and projects, supporting business owners from idea to acquisition.</p>
+            <h2>About ScrumLaunch</h2>
+            <p>ScrumLaunch is home to top developers, designers, engineers, coders, architects, and consultants. Companies choose to work with ScrumLaunch because our team has succeeded with all types of companies and projects, supporting business owners from idea to acquisition.</p>
 
         </div>
 

@@ -6,8 +6,8 @@
                 <div class="flex aife">
                     <h1 class="clr-fff">Hire Software Developers in <span class="clr-12e2b0"> {{ location.state_name }} </span></h1>
                     <div class="text clr-fff">
-                        <p>Scrumlaunch is a U.S.-based website design development firm, with <span class="marked">operations in {{ location.state_name }}</span>, specializing in web-based development, mobile applications, UI/UX design and prototyping, QA automation, and more.</p>
-                        <p>Finding qualified software development <span class="marked">agencies in {{ location.state_name }}</span> can be difficult for a variety of reasons. For example, you may require a very specific skillset for your software needs or you may need to increase and decrease staffing quickly. Scrumlaunch works with all types of <span class="marked">clients in {{ location.state_name }}</span> and across the U.S. and succeeds due to our highly selective hiring and recruitment process.</p>
+                        <p>ScrumLaunch is a U.S.-based website design development firm, with <span class="marked">operations in {{ location.state_name }}</span>, specializing in web-based development, mobile applications, UI/UX design and prototyping, QA automation, and more.</p>
+                        <p>Finding qualified software development <span class="marked">agencies in {{ location.state_name }}</span> can be difficult for a variety of reasons. For example, you may require a very specific skillset for your software needs or you may need to increase and decrease staffing quickly. ScrumLaunch works with all types of <span class="marked">clients in {{ location.state_name }}</span> and across the U.S. and succeeds due to our highly selective hiring and recruitment process.</p>
                         <p>Each of our <span class="marked">{{ location.state_name }} clients</span> has a dedicated project manager responsible for your success.</p>
                     </div>
                 </div>
@@ -26,7 +26,7 @@
                     <div class="faq__item">
                         <div class="faq__item__q">What makes a good {{ location.state_name }} software development company?</div>
                         <div class="faq__item__img"><img src="/images/hire-developers/faq_1.svg" alt="faq_1"></div>
-                        <div class="faq__item__a">Most software companies in {{ location.state_name }} suffer from scale. For example, providing mobile app development, NodeJS or Ruby development, and designs services can take a large toll on a small software company. Scrumlaunch has more than 200 highly skilled developers specializing in nearly three hundred different languages. Additionally, we have worked with all types of companies from publicly traded corporations to venture-backed startups. We know what it takes to turn your idea into a reality.</div>
+                        <div class="faq__item__a">Most software companies in {{ location.state_name }} suffer from scale. For example, providing mobile app development, NodeJS or Ruby development, and designs services can take a large toll on a small software company. ScrumLaunch has more than 200 highly skilled developers specializing in nearly three hundred different languages. Additionally, we have worked with all types of companies from publicly traded corporations to venture-backed startups. We know what it takes to turn your idea into a reality.</div>
                     </div>
 
                     <div class="faq__item">
@@ -52,8 +52,8 @@
                 <div class="flex aife">
                     <h1 class="clr-fff">Hire Software Developers in <span class="clr-12e2b0">{{ location.city }}, {{ location.state_name }}</span></h1>
                     <div class="text clr-fff">
-                        <p>Scrumlaunch is a U.S.-based website design development firm, with <span class="marked">operations in {{ location.city }}</span>, specializing in web-based development, mobile applications, UI/UX design and prototyping, QA automation, and more.</p>
-                        <p>Finding qualified software development <span class="marked">agencies in {{ location.city }}</span> can be difficult for a variety of reasons. For example, you may require a very specific skillset for your software needs or you may need to increase and decrease staffing quickly. Scrumlaunch works with all types of clients in across the U.S. and can easily cater to <span class="marked">the needs of {{ location.city }}-based business</span>. We succeed due to our highly selective hiring and recruitment process.</p>
+                        <p>ScrumLaunch is a U.S.-based website design development firm, with <span class="marked">operations in {{ location.city }}</span>, specializing in web-based development, mobile applications, UI/UX design and prototyping, QA automation, and more.</p>
+                        <p>Finding qualified software development <span class="marked">agencies in {{ location.city }}</span> can be difficult for a variety of reasons. For example, you may require a very specific skillset for your software needs or you may need to increase and decrease staffing quickly. ScrumLaunch works with all types of clients in across the U.S. and can easily cater to <span class="marked">the needs of {{ location.city }}-based business</span>. We succeed due to our highly selective hiring and recruitment process.</p>
                         <p>Each of our clients has a dedicated project manager responsible for your success.</p>
                     </div>
                 </div>
@@ -72,7 +72,7 @@
                     <div class="faq__item">
                         <div class="faq__item__q">What makes a good {{ location.city }} software development company?</div>
                         <div class="faq__item__img"><img src="/images/hire-developers/faq_1.svg" alt="faq_1"></div>
-                        <div class="faq__item__a">Most software companies in {{ location.city }} and {{ location.state_name }} suffer from scale. For example, providing mobile app development, NodeJS or Ruby development, and designs services can take a large toll on a small software company. Scrumlaunch has more than 200 highly skilled developers specializing in nearly three hundred different languages. Additionally, we have worked with all types of companies from publicly traded corporations to venture-backed startups. We know what it takes to turn your idea into a reality.</div>
+                        <div class="faq__item__a">Most software companies in {{ location.city }} and {{ location.state_name }} suffer from scale. For example, providing mobile app development, NodeJS or Ruby development, and designs services can take a large toll on a small software company. ScrumLaunch has more than 200 highly skilled developers specializing in nearly three hundred different languages. Additionally, we have worked with all types of companies from publicly traded corporations to venture-backed startups. We know what it takes to turn your idea into a reality.</div>
                     </div>
 
                     <div class="faq__item">
@@ -171,14 +171,14 @@ export default {
 		})
 
         let meta_title = computed(() => {
-            let state = 'Hire Software Developers in [State Name] |Scrumlaunch'
-            let city = 'Hire Software Developers in [City], [State Abbr] |Scrumlaunch'
+            let state = 'Hire Software Developers in [State Name] |ScrumLaunch'
+            let city = 'Hire Software Developers in [City], [State Abbr] |ScrumLaunch'
             return is_city.value ? city : state
         })
 
         let meta_description = computed(() => {
-            let state = 'Scrumlaunch is a top-rated software development and design firm serving customers in [State Name] and across the U.S and world. Whether you’re looking for mobile app development, website design, or any other type of software development, Scrumlaunch can easily adapt and scale with your needs.'
-            let city = 'Scrumlaunch is a top-rated software development and design firm serving customers in [City] and across the U.S and world. Whether you’re looking for mobile app development, website design, or any other type of software development, Scrumlaunch can easily adapt and scale with your needs.'
+            let state = 'ScrumLaunch is a top-rated software development and design firm serving customers in [State Name] and across the U.S and world. Whether you’re looking for mobile app development, website design, or any other type of software development, ScrumLaunch can easily adapt and scale with your needs.'
+            let city = 'ScrumLaunch is a top-rated software development and design firm serving customers in [City] and across the U.S and world. Whether you’re looking for mobile app development, website design, or any other type of software development, ScrumLaunch can easily adapt and scale with your needs.'
             return is_city.value ? city : state
         })
 
