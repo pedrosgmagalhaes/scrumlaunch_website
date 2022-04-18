@@ -33,7 +33,7 @@
             <div class="flex">
               <ul class="mr60">
                 <li><router-link to="/hire-developers/php-developers">PHP Developers</router-link></li>
-                <li><router-link to="/hire-developers/react-js-developers">React Js Developers</router-link></li>
+                <li><router-link to="/hire-developers/react-js-developers">React JS Developers</router-link></li>
                 <li><router-link to="/hire-developers/django-developers">Django Developers</router-link></li>
                 <li><router-link to="/hire-developers/wordpress-developers">Wordpress Developers</router-link></li>
                 <li><router-link to="/hire-developers/java-developers">Java Developers</router-link></li>
@@ -42,8 +42,8 @@
               <ul class="mr60">
                 <li><router-link to="/hire-developers/android-developers">Android Developers</router-link></li>
                 <li><router-link to="/hire-developers/web-developers">Web Developers</router-link></li>
-                <li><router-link to="/hire-developers/angular-js-developers">Angular Js Developers</router-link></li>
-                <li><router-link to="/hire-developers/node-js-developers">Node Js Developers</router-link></li>
+                <li><router-link to="/hire-developers/angular-js-developers">Angular JS Developers</router-link></li>
+                <li><router-link to="/hire-developers/node-js-developers">Node JS Developers</router-link></li>
                 <li><router-link to="/hire-developers/ruby-on-rails-developers">Ruby On Rails Developers</router-link></li>
                 <li><router-link to="/hire-developers/software-developers">Software Developers</router-link></li>
               </ul>

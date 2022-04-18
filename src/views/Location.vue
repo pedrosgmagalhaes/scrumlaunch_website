@@ -170,17 +170,29 @@ export default {
 			}
 		})
 
+        let meta_title = computed(() => {
+            let state = 'Hire Software Developers in [State Name] |Scrumlaunch'
+            let city = 'Hire Software Developers in [City], [State Abbr] |Scrumlaunch'
+            return is_city.value ? city : state
+        })
+
+        let meta_description = computed(() => {
+            let state = 'Scrumlaunch is a top-rated software development and design firm serving customers in [State Name] and across the U.S and world. Whether you’re looking for mobile app development, website design, or any other type of software development, Scrumlaunch can easily adapt and scale with your needs.'
+            let city = 'Scrumlaunch is a top-rated software development and design firm serving customers in [City] and across the U.S and world. Whether you’re looking for mobile app development, website design, or any other type of software development, Scrumlaunch can easily adapt and scale with your needs.'
+            return is_city.value ? city : state
+        })
+
         useHead({
-			title: computed(() => 'Hire state_name Developers - Top Rated |Scrumlaunch'),
+			title: meta_title,
 			meta: [
 				{
 					name: `description`,
-					content: computed(() => 'Hire and scale state_name developers with the best-in-class website development and design consulting firm. Book a free consultation now.'),
+					content: meta_description,
 				},
-				{
-					name: `robots`,
-					content: 'noindex, nofollow',
-				},
+				// {
+				// 	name: `robots`,
+				// 	content: 'noindex, nofollow',
+				// },
 			],
 		})
 

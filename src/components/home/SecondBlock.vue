@@ -46,7 +46,10 @@
 
 			<div class="h2_wrap">
 				<h2 class="header-1">
-					<div class="v1">
+					<AppearFromMask><span>Scale your software</span></AppearFromMask>
+					<AppearFromMask><span>development team.</span></AppearFromMask>
+					<AppearFromMask><span>Fast.</span></AppearFromMask>
+					<!-- <div class="v1">
 						<AppearFromMask><span>We build flexible</span></AppearFromMask>
 						<AppearFromMask><span>teams with client</span></AppearFromMask>
 						<AppearFromMask><span>business goals</span></AppearFromMask>
@@ -65,18 +68,19 @@
 						<AppearFromMask><span>with client</span></AppearFromMask>
 						<AppearFromMask><span>business goals</span></AppearFromMask>
 						<AppearFromMask><span>in mind</span></AppearFromMask>
-					</div>
+					</div> -->
 				</h2>
 			</div>
 
 			<AppearFromMask>
-				<p class="body-1">
+				<!-- <p class="body-1">
 					Stop worrying about recruiting, hiring, payroll, office
 					space, HR, perks for your design and development teams and
 					focus on growing your business. Whether you're hiring python,
 					Node JS, ruby, or mobile developers, Scrumlaunch can easily
 					match and scale with your needs.
-				</p>
+				</p> -->
+				<p class="body-1">Get access to best in class development resources that can scale with your needs. ScrumLaunch is consistent in success. Our client's outperform industry benchmarks of business success by 5x.</p>
 			</AppearFromMask>
 
 		</div>

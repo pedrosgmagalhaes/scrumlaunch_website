@@ -4,7 +4,7 @@
 
         <div class="container section_1">
             <div class="flex aife">
-                <h1 class="clr-fff">Hire <span class="clr-12e2b0">{{ dev_lang }} experts</span> in minutes</h1>
+                <h1 class="clr-fff">Hire <span class="clr-12e2b0">{{ dev_lang }} Experts</span> in Minutes</h1>
                 <div class="text clr-fff">Hire {{ dev_lang }} developers that are <span class="marked">vetted, trained and managed</span> by Scrumlaunch. We place high-quality {{ dev_lang }} developers across all types of businesses from venture-backed startups to large corporations.</div>
             </div>
 
@@ -268,10 +268,10 @@ export default {
 					name: `description`,
 					content: computed(() => 'Hire and scale '+ dev_lang.value +' developers with the best-in-class website development and design consulting firm. Book a free consultation now.'),
 				},
-				{
-					name: `robots`,
-					content: 'noindex, nofollow',
-				},
+				// {
+				// 	name: `robots`,
+				// 	content: 'noindex, nofollow',
+				// },
 			],
 		})
 

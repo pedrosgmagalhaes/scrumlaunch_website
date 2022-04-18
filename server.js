@@ -20,12 +20,20 @@ app.get(/.*/, function (req, res) {
 
 app.post('/contact-us', (req, res) => {
 
+	let date_str = new Date();
+	let get_month = parseInt(date_str.getMonth());
+	let year = parseInt(date_str.getFullYear());
+	let month = get_month + 1;
+	month = month < 10 ? '0' + month : month;
+	let date = date_str.getDate() < 10 ? '0' + date_str.getDate() : date_str.getDate();
+
 	base('Contact form').create([
 		{
 			"fields": {
 				'Name': req.body.name,
 				'Email': req.body.email,
 				'Details': req.body.details,
+				'Date': month+'.'+date+'.'+year,
 			}
 		},
 	], function (err) {
