@@ -171,14 +171,14 @@ export default {
 		})
 
         let meta_title = computed(() => {
-            let state = 'Hire Software Developers in [State Name] |ScrumLaunch'
-            let city = 'Hire Software Developers in [City], [State Abbr] |ScrumLaunch'
+            let state = `Hire Software Developers in ${location.value.state_name} |ScrumLaunch`
+            let city = `Hire Software Developers in ${location.value.city}, ${location.value.state_id} |ScrumLaunch`
             return is_city.value ? city : state
         })
 
         let meta_description = computed(() => {
-            let state = 'ScrumLaunch is a top-rated software development and design firm serving customers in [State Name] and across the U.S and world. Whether you’re looking for mobile app development, website design, or any other type of software development, ScrumLaunch can easily adapt and scale with your needs.'
-            let city = 'ScrumLaunch is a top-rated software development and design firm serving customers in [City] and across the U.S and world. Whether you’re looking for mobile app development, website design, or any other type of software development, ScrumLaunch can easily adapt and scale with your needs.'
+            let state = `ScrumLaunch is a top-rated software development and design firm serving customers in ${location.value.state_name} and across the U.S and world. Whether you’re looking for mobile app development, website design, or any other type of software development, ScrumLaunch can easily adapt and scale with your needs.`
+            let city = `ScrumLaunch is a top-rated software development and design firm serving customers in ${location.value.city} and across the U.S and world. Whether you’re looking for mobile app development, website design, or any other type of software development, ScrumLaunch can easily adapt and scale with your needs.`
             return is_city.value ? city : state
         })
 
