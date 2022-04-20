@@ -9,6 +9,7 @@ import TypingEffect from '@/components/animations/TypingEffect.vue'
 import { InViewport } from './directives/InViewport'
 import { createHead } from '@vueuse/head'
 import VueGtag from 'vue-gtag-next'
+import Hotjar from 'vue-hotjar'
 
 const app = createApp(App)
 
@@ -38,6 +39,12 @@ if ( window.location.hostname.indexOf('scrumlaunch.com') !== -1 ) {
             id: gtag_id
         }
     })
+
+    app.use (Hotjar, {
+        id: '2929533',
+        isProduction: true,
+        snippetVersion: 6
+    })
 }
 
 // if ( window.location.hostname.indexOf('localhost') !== -1 ) {
@@ -45,6 +52,12 @@ if ( window.location.hostname.indexOf('scrumlaunch.com') !== -1 ) {
 //         property: {
 //             id: 'G-MDM13CZTDC'
 //         }
+//     })
+
+//     app.use (Hotjar, {
+//         id: '2929533',
+//         isProduction: true,
+//         snippetVersion: 6
 //     })
 // }
 
