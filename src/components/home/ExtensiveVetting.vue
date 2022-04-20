@@ -7,7 +7,7 @@
             <div class="extensive_vetting__text_block flex jcfs fdc">
                 <div class="header-1">Extensive Vetting &<br> High Talent Retention</div>
 
-                <p class="body-1">We recruit top technical talent and design from around the world with hubs in Latin America and Eastern Europe. Each candidate goes through a 5+ hour process of technical and soft skills interviews.  These include detailed technical questions, key software development concepts and English proficiency.</p>
+                <p class="body-1">We recruit top technical and design talent from around the world with hubs in Latin America and Eastern Europe. Each candidate goes through a 5+ hour process of technical and soft skills interviews.  These include detailed technical questions, key software development concepts and English proficiency.</p>
             </div>
 
             <div>

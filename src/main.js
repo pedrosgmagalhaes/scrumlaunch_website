@@ -30,7 +30,8 @@ if ( window.location.hostname.indexOf('scrumlaunch-staging.herokuapp.com') !== -
 
 if ( window.location.hostname.indexOf('scrumlaunch.com') !== -1 ) {
     // gtag_id = 'UA-216538520'
-    gtag_id = 'UA-146499571-7'
+    // gtag_id = 'UA-146499571-7'
+    gtag_id = 'UA-146499571-1'
     
     app.use(VueGtag, {
         property: {
@@ -38,7 +39,26 @@ if ( window.location.hostname.indexOf('scrumlaunch.com') !== -1 ) {
         }
     })
 }
+
+// if ( window.location.hostname.indexOf('localhost') !== -1 ) {
+//     app.use(VueGtag, {
+//         property: {
+//             id: 'G-MDM13CZTDC'
+//         }
+//     })
+// }
+
 // gtag
+
+
+
+// http to https redirect
+if ( window.location.protocol.substring(0, window.location.protocol.length - 1) === 'http' && window.location.hostname !== 'localhost') {
+    let protocol = window.location.protocol.substring(0, window.location.protocol.length - 1)
+    let href = window.location.href.substring(protocol.length)
+    window.location = 'https' + href
+}
+// http to https redirect
 
 
 app.mount('#app')

@@ -122,14 +122,16 @@ export default {
 					details: this.project,
 				}
 			})
-				.then((res) => {
-					console.log(res);
+				.then(() => {
 					this.name = ''
 					this.email = ''
 					this.project = ''
 
 					this.is_blocked = false
 					this.is_done = true
+
+					this.track()
+
 					setTimeout(() => {
 						this.is_sent = false
 						this.is_done = false
@@ -145,6 +147,13 @@ export default {
 
 			if ( this.nameError === null && this.emailError === null && this.projectError === null ) {
 				this.sendForm()
+			}
+		},
+
+		track() {
+			if ( this.$gtag != undefined ) {
+				console.log('conversion');
+				this.$gtag.event('conversion', {'send_to': 'AW-10868833249/37WpCK7nhbQDEOH31L4o'})
 			}
 		},
 	}
