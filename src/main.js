@@ -8,7 +8,7 @@ import AppearFromMask from '@/components/animations/AppearFromMask.vue'
 import TypingEffect from '@/components/animations/TypingEffect.vue'
 import { InViewport } from './directives/InViewport'
 import { createHead } from '@vueuse/head'
-import VueGtag from 'vue-gtag-next'
+// import VueGtag from 'vue-gtag-next'
 import Hotjar from 'vue-hotjar'
 
 const app = createApp(App)
@@ -23,22 +23,22 @@ app.component('TypingEffect', TypingEffect)
 app.directive('in-viewport', InViewport)
 
 // gtag
-let gtag_id = ''
+// let gtag_id = ''
 
 if ( window.location.hostname.indexOf('scrumlaunch-staging.herokuapp.com') !== -1 ) {
-    gtag_id = 'G-MDM13CZTDC'
+    // gtag_id = 'G-MDM13CZTDC'
 }
 
 if ( window.location.hostname.indexOf('scrumlaunch.com') !== -1 ) {
     // gtag_id = 'UA-216538520'
     // gtag_id = 'UA-146499571-7'
-    gtag_id = 'UA-146499571-1'
+    // gtag_id = 'UA-146499571-1'
     
-    app.use(VueGtag, {
-        property: {
-            id: gtag_id
-        }
-    })
+    // app.use(VueGtag, {
+    //     property: {
+    //         id: gtag_id
+    //     }
+    // })
 
     app.use (Hotjar, {
         id: '2929533',
