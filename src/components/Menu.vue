@@ -57,6 +57,7 @@
             </div>
           </div>
         </div>
+        <!-- <router-link :to="{ name: 'Vacancies' }">Vacancies</router-link> -->
         <router-link :to="{ name: 'ContactUs' }">Contact</router-link>
       </div>
       <div class="menu--desktop--wrapper-mobile">
@@ -114,7 +115,8 @@ export default {
           this.$route.name === "ProgLang" ||
           this.$route.name === "CampusReelCaseStudy" ||
           this.$route.name === "LocationState" ||
-          this.$route.name === "LocationCity") {
+          this.$route.name === "LocationCity" ||
+          this.$route.name === "Vacancies") {
         this.contactPage = true;
       } else {
         this.contactPage = false;

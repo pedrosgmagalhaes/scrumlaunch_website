@@ -17,6 +17,8 @@ import Articles from '../views/Articles.vue'
 import Seo from '../views/Seo.vue'
 import ProgLang from '../views/ProgLang2.vue'
 import Location from '../views/Location.vue'
+import Vacancies from '../views/Vacancies.vue'
+import Vacancy from '../views/Vacancy.vue'
 
 const routes = [
 	{
@@ -123,6 +125,16 @@ const routes = [
 		path: '/locations/:state_slug/:city_slug',
 		name: 'LocationCity',
 		component: Location
+	},
+	{
+		path: '/vacancies',
+		name: 'Vacancies',
+		component: Vacancies
+	},
+	{
+		path: '/vacancy/:vacancy_slug',
+		name: 'Vacancy',
+		component: Vacancy
 	},
 	{
 		path: "/:pathMatch(.*)*",
