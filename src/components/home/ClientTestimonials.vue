@@ -26,7 +26,7 @@
                             <div class="client_testimonials__testimonials_item_logo"><img src="/images/home/client_testimonials/gipper.png" alt="gipper"></div>
                             <div class="client_testimonials__testimonials_item__text">“I have been working with ScrumLaunch for the past 5 years since even before my product was launched.  Since then, we’ve built a business that supports thousands of customers and recently raised venture capital funding.”</div>
                             <div class="flex jcsb">
-                                <div class="client_testimonials__testimonials_item__person">– Matthew Glick, CEO</div>
+                                <div class="client_testimonials__testimonials_item__person">– Ryan Dranginis, CMO</div>
                                 <div class="client_testimonials__testimonials_item__site">www.gogipper.com</div>
                             </div>
                         </div>
@@ -53,7 +53,7 @@
                             <div class="client_testimonials__testimonials_item_logo"><img src="/images/home/client_testimonials/vesta.png" alt="vesta"></div>
                             <div class="client_testimonials__testimonials_item__text">“ScrumLaunch has been an amazing software partner.  After a bad experience with a different team a few years ago, we started working with ScrumLaunch from a personal referral.  Their developers are really talented and work very efficiently.  They care about our business success and I would recommend working with them to anyone.”</div>
                             <div class="flex jcsb">
-                                <div class="client_testimonials__testimonials_item__person">– Matthew Glick, CEO</div>
+                                <div class="client_testimonials__testimonials_item__person">– Ryan Dranginis, CMO</div>
                                 <div class="client_testimonials__testimonials_item__site">www.vestahome.com</div>
                             </div>
                         </div>
@@ -76,7 +76,7 @@
                         <div class="client_testimonials__testimonials_item_logo"><img src="/images/home/client_testimonials/gipper.png" alt="gipper"></div>
                         <div class="client_testimonials__testimonials_item__text">“I have been working with ScrumLaunch for the past 5 years since even before my product was launched.  Since then, we’ve built a business that supports thousands of customers and recently raised venture capital funding.”</div>
                         <div class="flex jcsb">
-                            <div class="client_testimonials__testimonials_item__person">– Matthew Glick, CEO</div>
+                            <div class="client_testimonials__testimonials_item__person">– Ryan Dranginis, CMO</div>
                             <div class="client_testimonials__testimonials_item__site">www.gogipper.com</div>
                         </div>
                     </SwiperSlide>
@@ -103,7 +103,7 @@
                         <div class="client_testimonials__testimonials_item_logo"><img src="/images/home/client_testimonials/vesta.png" alt="vesta"></div>
                         <div class="client_testimonials__testimonials_item__text">“ScrumLaunch has been an amazing software partner.  After a bad experience with a different team a few years ago, we started working with ScrumLaunch from a personal referral.  Their developers are really talented and work very efficiently.  They care about our business success and I would recommend working with them to anyone.”</div>
                         <div class="flex jcsb">
-                            <div class="client_testimonials__testimonials_item__person">– Matthew Glick, CEO</div>
+                            <div class="client_testimonials__testimonials_item__person">– Ryan Dranginis, CMO</div>
                             <div class="client_testimonials__testimonials_item__site">www.vestahome.com</div>
                         </div>
                     </SwiperSlide>

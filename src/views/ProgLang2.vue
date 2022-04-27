@@ -4,8 +4,8 @@
 
         <div class="container section_1">
             <div class="flex aife">
-                <h1 class="clr-fff">Hire <span class="clr-12e2b0">{{ dev_lang }} Experts</span> in Minutes</h1>
-                <div class="text clr-fff">Hire {{ dev_lang }} developers that are <span class="marked">vetted, trained and managed</span> by ScrumLaunch. We place high-quality {{ dev_lang }} developers across all types of businesses from venture-backed startups to large corporations.</div>
+                <h1 class="clr-fff">Hire <span class="clr-12e2b0">{{ dev_lang }} Experts</span> on Demand</h1>
+                <div class="text clr-fff">Hire {{ dev_lang }} developers that are <span class="marked">vetted, trained and managed</span> by ScrumLaunch. We place high-quality {{ dev_lang }} developers across all types of businesses from venture-backed startups to large corporations. ScrumLaunch provides scale of the world’s largest talent matching platforms with the personalization of a fully managed account team.</div>
             </div>
 
             <div class="btn_wrap">
@@ -30,7 +30,7 @@
 
             <h2>Hire {{ dev_lang }}<br> Developers with Ease</h2>
 
-            <div class="text">ScrumLaunch’s {{ dev_lang }} developers are highly skilled software engineers based around the world with deep expertise in full-stack development.</div>
+            <div class="text">ScrumLaunch’s {{ dev_lang }} developers are highly skilled software engineers based around the world with deep expertise in building scalable and high performance applications.</div>
 
             <div class="btn_wrap">
                 <router-link class="btn" to="/contact-us">hire developers</router-link>
@@ -57,7 +57,7 @@
 
                 <div class="card">
                     <div class="title">Step 3<div class="icon"><img src="/images/hire-developers/how_it_works__step_3.svg" alt=""></div></div>
-                    <div class="subtitle">You Select {{ dev_lang }} Developers</div>
+                    <div class="subtitle">{{ dev_lang }} Developers Are Staffed to your Project.</div>
                     <div class="text">Effortlessly scale your {{ dev_lang }} development needs up and down</div>
                 </div>
 
@@ -80,7 +80,7 @@
             <h2>About our {{ dev_lang }} Developers</h2>
 
             <div class="flex jcfe">
-                <div class="text">Hiring {{ dev_lang }} developers can be tricky - ScrumLaunch makes it easy. Your website is the lifeblood of your business. Our team has built and sold multiple companies, and we understand first-hand how important competent software engineers are. That’s why at ScrumLaunch, we vet all {{ dev_lang }} developers and employ rigorous tests to assess development and English-language competency. All clients are assigned a dedicated account manager available at all times to ensure you are meeting your {{ dev_lang }} goals in a timely and cost-effective manner.</div>
+                <div class="text">Hiring {{ dev_lang }} developers can be tricky - ScrumLaunch makes it easy. Your website is the lifeblood of your business. Our executive team has built and sold multiple companies, and we understand first-hand how important competent software engineers are. That’s why at ScrumLaunch, we vet all {{ dev_lang }} developers and employ rigorous tests to assess development and English-language competency. All clients are assigned a dedicated account manager available at all times to ensure you are meeting your {{ dev_lang }} goals in a timely and cost-effective manner. Our technical evaluation process includes 5+ hours of coding interviews.</div>
             </div>
 
             <!-- <div class="developers">
