@@ -20,13 +20,13 @@
                         nextEl: '.client_testimonials__testimonials_nav_next',
                     }"
                 >
-                    <SwiperSlide class="client_testimonials__testimonials_items" v-for="(item, i) in 3" :key="i">
+                    <SwiperSlide class="client_testimonials__testimonials_items">
 
                         <div class="client_testimonials__testimonials_item">
                             <div class="client_testimonials__testimonials_item_logo"><img src="/images/home/client_testimonials/gipper.png" alt="gipper"></div>
                             <div class="client_testimonials__testimonials_item__text">“I have been working with ScrumLaunch for the past 5 years since even before my product was launched.  Since then, we’ve built a business that supports thousands of customers and recently raised venture capital funding.”</div>
                             <div class="flex jcsb">
-                                <div class="client_testimonials__testimonials_item__person">– Ryan Dranginis, CMO</div>
+                                <div class="client_testimonials__testimonials_item__person">– Matthew Glick, CEO </div>
                                 <div class="client_testimonials__testimonials_item__site">www.gogipper.com</div>
                             </div>
                         </div>
@@ -44,7 +44,7 @@
                             <div class="client_testimonials__testimonials_item_logo"><img src="/images/home/client_testimonials/campusreel.png" alt="campusreel"></div>
                             <div class="client_testimonials__testimonials_item__text">“I have been working with ScrumLaunch for the past 5 years since even before my product was launched.  Since then, we’ve built a business that supports thousands of customers and recently raised venture capital funding.”</div>
                             <div class="flex jcsb">
-                                <div class="client_testimonials__testimonials_item__person">– Rob Carroll</div>
+                                <div class="client_testimonials__testimonials_item__person">– Nick Freud</div>
                                 <div class="client_testimonials__testimonials_item__site">www.campusreel.org</div>
                             </div>
                         </div>
@@ -76,7 +76,7 @@
                         <div class="client_testimonials__testimonials_item_logo"><img src="/images/home/client_testimonials/gipper.png" alt="gipper"></div>
                         <div class="client_testimonials__testimonials_item__text">“I have been working with ScrumLaunch for the past 5 years since even before my product was launched.  Since then, we’ve built a business that supports thousands of customers and recently raised venture capital funding.”</div>
                         <div class="flex jcsb">
-                            <div class="client_testimonials__testimonials_item__person">– Ryan Dranginis, CMO</div>
+                            <div class="client_testimonials__testimonials_item__person">– Matthew Glick, CEO </div>
                             <div class="client_testimonials__testimonials_item__site">www.gogipper.com</div>
                         </div>
                     </SwiperSlide>
@@ -94,7 +94,7 @@
                         <div class="client_testimonials__testimonials_item_logo"><img src="/images/home/client_testimonials/campusreel.png" alt="campusreel"></div>
                         <div class="client_testimonials__testimonials_item__text">“I have been working with ScrumLaunch for the past 5 years since even before my product was launched.  Since then, we’ve built a business that supports thousands of customers and recently raised venture capital funding.”</div>
                         <div class="flex jcsb">
-                            <div class="client_testimonials__testimonials_item__person">– Rob Carroll</div>
+                            <div class="client_testimonials__testimonials_item__person">– Nick Freud</div>
                             <div class="client_testimonials__testimonials_item__site">www.campusreel.org</div>
                         </div>
                     </SwiperSlide>

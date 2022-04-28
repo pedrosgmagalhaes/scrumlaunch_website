@@ -28,7 +28,7 @@
 		</div>
 
 		<div class="btn_wrap">
-			<router-link :to="{ path: '/contact-us' }" class="btn">Talk to us</router-link>
+			<router-link :to="{ path: '/contact-us' }" class="btn">Hire Talent</router-link>
 		</div>
 
 		<div class="hero--bottom">
