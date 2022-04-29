@@ -12,7 +12,7 @@
                 </div>
 
                 <div class="btn_wrap">
-                    <router-link class="btn" to="/contact-us">hire  developers</router-link>
+                    <router-link class="btn on_dark_bg" to="/contact-us">hire  developers</router-link>
                 </div>
             </div>
 
@@ -136,7 +136,7 @@
                 </div>
 
                 <div class="btn_wrap">
-                    <router-link class="btn" to="/contact-us">hire  developers</router-link>
+                    <router-link class="btn on_dark_bg" to="/contact-us">hire  developers</router-link>
                 </div>
             </div>
 

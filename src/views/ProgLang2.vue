@@ -9,7 +9,7 @@
             </div>
 
             <div class="btn_wrap">
-                <router-link class="btn" to="/contact-us">hire {{ dev_lang }} developers</router-link>
+                <router-link class="btn on_dark_bg" to="/contact-us">hire {{ dev_lang }} developers</router-link>
             </div>
         </div>
 

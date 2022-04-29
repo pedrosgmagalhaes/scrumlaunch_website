@@ -29,6 +29,13 @@
     background: #1E1F21;
     color: #12E2B0;
   }
+
+  &.on_dark_bg {
+    &:hover {
+      background: #FFFFFF;
+      color: #1E1F21;
+    }
+  }
 }
 
 .button-link {
