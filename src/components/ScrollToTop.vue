@@ -58,7 +58,7 @@ export default {
 
     &__btn {
         position: fixed;
-        bottom: 20px;
+        bottom: 100px;
         right: 20px;
         display: flex;
         justify-content: center;
@@ -76,8 +76,10 @@ export default {
         z-index: 999;
 
         @media screen and (max-width: 768px) {
-            bottom: 10px;
-            right: 10px;
+            bottom: 90px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
         }
 
         @media screen and (max-width: 420px) {
