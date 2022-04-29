@@ -2,18 +2,87 @@
     <div class="hire_developers">
 
         <div v-if="!is_city">
+
             <div class="container section_1">
                 <div class="flex aife">
                     <h1 class="clr-fff">Hire Software Developers in <span class="clr-12e2b0"> {{ location.state_name }} </span></h1>
                     <div class="text clr-fff">
                         <p>ScrumLaunch is a U.S.-based website design development firm, with <span class="marked">operations in {{ location.state_name }}</span>, specializing in web-based development, mobile applications, UI/UX design and prototyping, QA automation, and more.</p>
-                        <p>Finding qualified software development <span class="marked">agencies in {{ location.state_name }}</span> can be difficult for a variety of reasons. For example, you may require a very specific skillset for your software needs or you may need to increase and decrease staffing quickly. ScrumLaunch works with all types of <span class="marked">clients in {{ location.state_name }}</span> and across the U.S. and succeeds due to our highly selective hiring and recruitment process.</p>
-                        <p>Each of our <span class="marked">{{ location.state_name }} clients</span> has a dedicated project manager responsible for your success.</p>
                     </div>
                 </div>
 
                 <div class="btn_wrap">
                     <router-link class="btn" to="/contact-us">hire  developers</router-link>
+                </div>
+            </div>
+
+            <div class="container section_2">
+
+                <div class="animation">
+                    <vLottiePlayer
+                        name="scrumlaunchMobileAnim"
+                        loop
+                        width="100%"
+                        height="100%"
+                        :animationData="
+                            require('../assets/animation/scrumlaunch-mobile.json')
+                        "
+                    />
+                </div>
+
+                <h2>Hire {{ location.state_name }}<br> Developers with Ease</h2>
+
+                <div class="text">
+                    <p>Finding qualified software development <span class="marked">agencies in {{ location.state_name }}</span> can be difficult for a variety of reasons. For example, you may require a very specific skillset for your software needs or you may need to increase and decrease staffing quickly. ScrumLaunch works with all types of <span class="marked">clients in {{ location.state_name }}</span> and across the U.S. and succeeds due to our highly selective hiring and recruitment process.</p>
+                    <p>Each of our <span class="marked">{{ location.state_name }} clients</span> has a dedicated project manager responsible for your success.</p>
+                </div>
+
+                <div class="btn_wrap">
+                    <router-link class="btn" to="/contact-us">hire developers</router-link>
+                </div>
+            </div>
+
+            <div class="container section_3">
+                <h2 class="tac">how it works</h2>
+
+                <div class="cards">
+
+                    <div class="card">
+                        <div class="title">Step 1<div class="icon"><img src="/images/hire-developers/how_it_works__step_1.svg" alt=""></div></div>
+                        <div class="subtitle">Book a Free Consulation</div>
+                        <div class="text">We want to hear your {{ location.state_name }} needs firsthand to ensure we’re a good fit.</div>
+                    </div>
+
+                    <div class="card">
+                        <div class="title">Step 2<div class="icon"><img src="/images/hire-developers/how_it_works__step_2.svg" alt=""></div></div>
+                        <div class="subtitle">We Match Talent</div>
+                        <div class="text">We  search our pool of hundreds of {{ location.state_name }} developers to identify potential fits for your project.</div>
+                    </div>
+
+                    <div class="card">
+                        <div class="title">Step 3<div class="icon"><img src="/images/hire-developers/how_it_works__step_3.svg" alt=""></div></div>
+                        <div class="subtitle">{{ location.state_name }} Developers Are Staffed to your Project.</div>
+                        <div class="text">Effortlessly scale your {{ location.state_name }} development needs up and down</div>
+                    </div>
+
+                    <div class="card">
+                        <div class="title">Step 4<div class="icon"><img src="/images/hire-developers/how_it_works__step_4.svg" alt=""></div></div>
+                        <div class="subtitle">We Start Building</div>
+                        <div class="text">We vet all {{ location.state_name }} developers and employ rigorous tests to assess development and English-language competency.</div>
+                    </div>
+
+                </div>
+
+                <div class="btn_wrap">
+                    <router-link class="btn" to="/contact-us">hire {{ location.state_name }} developers</router-link>
+                </div>
+            </div>
+
+            <div class="container section_4">
+                <h2>About our {{ location.state_name }} Developers</h2>
+
+                <div class="flex jcfe">
+                    <div class="text">Hiring {{ location.state_name }} developers can be tricky - ScrumLaunch makes it easy. Your website is the lifeblood of your business. Our executive team has built and sold multiple companies, and we understand first-hand how important competent software engineers are. That’s why at ScrumLaunch, we vet all {{ location.state_name }} developers and employ rigorous tests to assess development and English-language competency. All clients are assigned a dedicated account manager available at all times to ensure you are meeting your {{ location.state_name }} goals in a timely and cost-effective manner. Our technical evaluation process includes 5+ hours of coding interviews.</div>
                 </div>
             </div>
 
@@ -44,22 +113,100 @@
                 </div>
 
             </div>
+
+            <div class="container section_6">
+
+                <h2 class="tar">looking for another<br> language or skill?</h2>
+
+                <LocationsList />
+
+            </div>
+
         </div>
 
 
         <div v-if="is_city">
+
             <div class="container section_1">
                 <div class="flex aife">
                     <h1 class="clr-fff">Hire Software Developers in <span class="clr-12e2b0">{{ location.city }}, {{ location.state_name }}</span></h1>
                     <div class="text clr-fff">
                         <p>ScrumLaunch is a U.S.-based website design development firm, with <span class="marked">operations in {{ location.city }}</span>, specializing in web-based development, mobile applications, UI/UX design and prototyping, QA automation, and more.</p>
-                        <p>Finding qualified software development <span class="marked">agencies in {{ location.city }}</span> can be difficult for a variety of reasons. For example, you may require a very specific skillset for your software needs or you may need to increase and decrease staffing quickly. ScrumLaunch works with all types of clients in across the U.S. and can easily cater to <span class="marked">the needs of {{ location.city }}-based business</span>. We succeed due to our highly selective hiring and recruitment process.</p>
-                        <p>Each of our clients has a dedicated project manager responsible for your success.</p>
                     </div>
                 </div>
 
                 <div class="btn_wrap">
                     <router-link class="btn" to="/contact-us">hire  developers</router-link>
+                </div>
+            </div>
+
+            <div class="container section_2">
+
+                <div class="animation">
+                    <vLottiePlayer
+                        name="scrumlaunchMobileAnim"
+                        loop
+                        width="100%"
+                        height="100%"
+                        :animationData="
+                            require('../assets/animation/scrumlaunch-mobile.json')
+                        "
+                    />
+                </div>
+
+                <h2>Hire {{ location.city }}<br> Developers with Ease</h2>
+
+                <div class="text">
+                    <p>Finding qualified software development <span class="marked">agencies in {{ location.city }}</span> can be difficult for a variety of reasons. For example, you may require a very specific skillset for your software needs or you may need to increase and decrease staffing quickly. ScrumLaunch works with all types of clients in across the U.S. and can easily cater to <span class="marked">the needs of {{ location.city }}-based business</span>. We succeed due to our highly selective hiring and recruitment process.</p>
+                    <p>Each of our clients has a dedicated project manager responsible for your success.</p>
+                </div>
+
+                <div class="btn_wrap">
+                    <router-link class="btn" to="/contact-us">hire developers</router-link>
+                </div>
+            </div>
+
+            <div class="container section_3">
+                <h2 class="tac">how it works</h2>
+
+                <div class="cards">
+
+                    <div class="card">
+                        <div class="title">Step 1<div class="icon"><img src="/images/hire-developers/how_it_works__step_1.svg" alt=""></div></div>
+                        <div class="subtitle">Book a Free Consulation</div>
+                        <div class="text">We want to hear your {{ location.city }} needs firsthand to ensure we’re a good fit.</div>
+                    </div>
+
+                    <div class="card">
+                        <div class="title">Step 2<div class="icon"><img src="/images/hire-developers/how_it_works__step_2.svg" alt=""></div></div>
+                        <div class="subtitle">We Match Talent</div>
+                        <div class="text">We  search our pool of hundreds of {{ location.city }} developers to identify potential fits for your project.</div>
+                    </div>
+
+                    <div class="card">
+                        <div class="title">Step 3<div class="icon"><img src="/images/hire-developers/how_it_works__step_3.svg" alt=""></div></div>
+                        <div class="subtitle">{{ location.city }} Developers Are Staffed to your Project.</div>
+                        <div class="text">Effortlessly scale your {{ location.city }} development needs up and down</div>
+                    </div>
+
+                    <div class="card">
+                        <div class="title">Step 4<div class="icon"><img src="/images/hire-developers/how_it_works__step_4.svg" alt=""></div></div>
+                        <div class="subtitle">We Start Building</div>
+                        <div class="text">We vet all {{ location.city }} developers and employ rigorous tests to assess development and English-language competency.</div>
+                    </div>
+
+                </div>
+
+                <div class="btn_wrap">
+                    <router-link class="btn" to="/contact-us">hire {{ location.city }} developers</router-link>
+                </div>
+            </div>
+
+            <div class="container section_4">
+                <h2>About our {{ location.city }} Developers</h2>
+
+                <div class="flex jcfe">
+                    <div class="text">Hiring {{ location.city }} developers can be tricky - ScrumLaunch makes it easy. Your website is the lifeblood of your business. Our executive team has built and sold multiple companies, and we understand first-hand how important competent software engineers are. That’s why at ScrumLaunch, we vet all {{ location.city }} developers and employ rigorous tests to assess development and English-language competency. All clients are assigned a dedicated account manager available at all times to ensure you are meeting your {{ location.city }} goals in a timely and cost-effective manner. Our technical evaluation process includes 5+ hours of coding interviews.</div>
                 </div>
             </div>
 
@@ -91,6 +238,14 @@
 
             </div>
 
+            <div class="container section_6">
+
+                <h2 class="tar">looking for another<br> language or skill?</h2>
+
+                <LocationsList />
+
+            </div>
+
         </div>
 
 
@@ -101,12 +256,18 @@
 
 <script>
 import locations from '@/seo/locations.json'
+import LocationsList from '@/components/locations/LocationsList.vue'
+
 
 import { ref, computed, onMounted, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useHead } from '@vueuse/head'
 
 export default {
+
+    components: {
+        LocationsList,
+    },
 
     setup() {
         const router = useRouter()
@@ -164,7 +325,7 @@ export default {
 		})
 
         watch(() => route.path, () => {
-			if ( route.name === "LocationState" ) {
+			if ( route.name === "LocationState" || route.name === "LocationCity" ) {
 				location.value = getLocation()
                 is_city.value = IsCity()
 			}
@@ -233,6 +394,7 @@ export default {
     flex-direction: column;
     justify-content: center;
     padding-top: 120px;
+    padding-bottom: 80px;
     min-height: 1009px;
     background-color: #1E1F21;
 
@@ -252,6 +414,130 @@ export default {
         @media screen and (max-width: 1439px) {
             padding-left: 82px;
         }
+    }
+    
+}
+
+.section_2 {
+    position: relative;
+    padding-top: 240px;
+    min-height: 1009px;
+    overflow: hidden;
+
+    .animation {
+        position: absolute;
+        top: -80px;
+        right: 0;
+        width: 900px;
+        transform: rotate(60deg);
+        z-index: -1;
+    }
+    
+    h2 {
+        margin-bottom: 40px;
+    }
+
+    .text {
+        max-width: 1120px;
+
+        @media screen and (max-width: 1439px) {
+            max-width: 712px;
+        }
+    }
+    
+}
+
+.section_3 {
+    position: relative;
+    padding-top: 80px;
+    min-height: 1009px;
+    
+    h2 {
+        margin-bottom: 60px;
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+
+    .card {
+        margin-bottom: 20px;
+        padding: 60px;
+        max-width: 590px;
+        background: #FFFFFF;
+        border: 1px solid #1E1F21;
+
+        &:nth-child(odd) {
+            margin-right: 20px;
+        }
+
+        .title {
+            margin-bottom: 28px;
+            position: relative;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 48px;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: #fff;
+            -webkit-text-stroke: 1px #1E1F21;
+        }
+
+        .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 70px;
+            height: 70px;
+            transform: translateY(-25%);
+        }
+
+        .subtitle {
+            margin-bottom: 20px;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 140%;
+            color: #1E1F21;
+        }
+
+        .text {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 150%;
+            color: #1E1F21;
+        }
+        
+
+
+    }
+
+    .btn_wrap {
+        margin-top: 60px;
+    }
+    
+}
+
+.section_4 {
+    position: relative;
+    padding-top: 240px;
+    min-height: 1009px;
+    
+    h2 {
+        margin-bottom: 60px;
+
+        @media screen and (max-width: 1023px) {
+            
+        }
+    }
+
+    .text {
+        margin-bottom: 80px;
+        max-width: 1000px;
     }
     
 }
@@ -302,6 +588,18 @@ export default {
                 color: #1E1F21;
             }
         }
+    }
+    
+}
+
+.section_6 {
+    position: relative;
+    // padding-top: 240px;
+    padding-bottom: 240px;
+    min-height: 1009px;
+    
+    h2 {
+        margin-bottom: 80px;
     }
     
 }
