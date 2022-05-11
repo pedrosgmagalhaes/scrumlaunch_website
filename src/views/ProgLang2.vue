@@ -262,7 +262,7 @@ export default {
 		})
 
         useHead({
-			title: computed(() => 'Hire '+ dev_lang.value +' Developers - Top Rated |ScrumLaunch'),
+			title: computed(() => 'Hire '+ dev_lang.value +' Developers - Top Rated | ScrumLaunch'),
 			meta: [
 				{
 					name: `description`,

@@ -332,8 +332,8 @@ export default {
 		})
 
         let meta_title = computed(() => {
-            let state = `Hire Software Developers in ${location.value.state_name} |ScrumLaunch`
-            let city = `Hire Software Developers in ${location.value.city}, ${location.value.state_id} |ScrumLaunch`
+            let state = `Hire Software Developers in ${location.value.state_name} | ScrumLaunch`
+            let city = `Hire Software Developers in ${location.value.city}, ${location.value.state_id} | ScrumLaunch`
             return is_city.value ? city : state
         })
 
