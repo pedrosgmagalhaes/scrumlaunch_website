@@ -248,7 +248,7 @@ export default {
         function getDevLang() {
             return dev_langs.filter((item) => {
                 return route.params.prog_lang === item.url
-            })[0].lang
+            })[0]?.lang || ""
         }
 
         onMounted(() => {
