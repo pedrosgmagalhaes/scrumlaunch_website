@@ -74,7 +74,7 @@ export default {
         }
 
 		watch(() => route.path, () => {
-			if ( route.name === 'Seo' || route.name === 'MainSeo' ) {
+			if ( route.name === 'Seo' ) {
 				getArticle()
 			}
 		})

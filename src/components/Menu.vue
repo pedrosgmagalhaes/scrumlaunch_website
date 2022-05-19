@@ -116,6 +116,7 @@ export default {
           this.$route.name === "CampusReelCaseStudy" ||
           this.$route.name === "LocationState" ||
           this.$route.name === "LocationCity" ||
+          this.$route.name === "HireDevelopers" ||
           this.$route.name === "Vacancies") {
         this.contactPage = true;
       } else {
