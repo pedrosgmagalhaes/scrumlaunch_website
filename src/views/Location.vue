@@ -82,7 +82,7 @@
                 <h2>About our {{ location.state_name }} Developers</h2>
 
                 <div class="flex jcfe">
-                    <div class="text">Finding qualified software development agencies in {{ location.city }} can be difficult for a variety of reasons. For example, you may require a very specific skillset for your software needs or you may need to increase and decrease staffing quickly. ScrumLaunch works with all types of clients in across the U.S. and can easily cater to the needs of {{ location.state_name }}-based business. We succeed due to our highly selective hiring and recruitment process. Each of our clients has a dedicated project manager responsible for your success.</div>
+                    <div class="text">Finding qualified software development agencies in {{ location.state_name }} can be difficult for a variety of reasons. For example, you may require a very specific skillset for your software needs or you may need to increase and decrease staffing quickly. ScrumLaunch works with all types of clients in across the U.S. and can easily cater to the needs of {{ location.state_name }}-based business. We succeed due to our highly selective hiring and recruitment process. Each of our clients has a dedicated project manager responsible for your success.</div>
                 </div>
             </div>
 
