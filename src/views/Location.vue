@@ -82,7 +82,7 @@
                 <h2>About our {{ location.state_name }} Developers</h2>
 
                 <div class="flex jcfe">
-                    <div class="text">Hiring {{ location.state_name }} developers can be tricky - ScrumLaunch makes it easy. Your website is the lifeblood of your business. Our executive team has built and sold multiple companies, and we understand first-hand how important competent software engineers are. That’s why at ScrumLaunch, we vet all {{ location.state_name }} developers and employ rigorous tests to assess development and English-language competency. All clients are assigned a dedicated account manager available at all times to ensure you are meeting your {{ location.state_name }} goals in a timely and cost-effective manner. Our technical evaluation process includes 5+ hours of coding interviews.</div>
+                    <div class="text">Finding qualified software development agencies in {{ location.city }} can be difficult for a variety of reasons. For example, you may require a very specific skillset for your software needs or you may need to increase and decrease staffing quickly. ScrumLaunch works with all types of clients in across the U.S. and can easily cater to the needs of {{ location.state_name }}-based business. We succeed due to our highly selective hiring and recruitment process. Each of our clients has a dedicated project manager responsible for your success.</div>
                 </div>
             </div>
 
@@ -206,7 +206,7 @@
                 <h2>About our {{ location.city }} Developers</h2>
 
                 <div class="flex jcfe">
-                    <div class="text">Hiring {{ location.city }} developers can be tricky - ScrumLaunch makes it easy. Your website is the lifeblood of your business. Our executive team has built and sold multiple companies, and we understand first-hand how important competent software engineers are. That’s why at ScrumLaunch, we vet all {{ location.city }} developers and employ rigorous tests to assess development and English-language competency. All clients are assigned a dedicated account manager available at all times to ensure you are meeting your {{ location.city }} goals in a timely and cost-effective manner. Our technical evaluation process includes 5+ hours of coding interviews.</div>
+                    <div class="text">Finding qualified software development agencies in {{ location.city }} can be difficult for a variety of reasons. For example, you may require a very specific skillset for your software needs or you may need to increase and decrease staffing quickly. ScrumLaunch works with all types of clients in across the U.S. and can easily cater to the needs of {{ location.state_name }}-based business. We succeed due to our highly selective hiring and recruitment process. Each of our clients has a dedicated project manager responsible for your success.</div>
                 </div>
             </div>
 
