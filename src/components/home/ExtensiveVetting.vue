@@ -17,11 +17,11 @@
                         <td>Our annual talent retention is over <span>90%</span> (industry averages are close to <span>50%</span>).</td>
                     </tr>
                     <tr>
-                        <td>Developers we hire have an average <br>of <span>5 YEARS</span> of experience.</td>
+                        <td>Developers we hire have an average of <span>5 YEARS</span> of experience.</td>
                         <td>Our average client lifetime duration is <span>4+ YEARS</span>.</td>
                     </tr>
                     <tr>
-                        <td>Our UI/UX design team has created interfaces that are used by <br><span>100M+ USERS</span>.</td>
+                        <td>Our UI/UX design team has created interfaces that are used by <span>100M+ USERS</span>.</td>
                         <td><span>We provide</span> either fully managed teams including designers, product owners and QA or staff augmentation of vetted resources.</td>
                     </tr>
                 </table>
