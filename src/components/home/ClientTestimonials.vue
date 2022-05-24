@@ -51,7 +51,7 @@
 
                         <div class="client_testimonials__testimonials_item">
                             <div class="client_testimonials__testimonials_item_logo"><img src="/images/home/client_testimonials/vesta.png" alt="vesta"></div>
-                            <div class="client_testimonials__testimonials_item__text">“ScrumLaunch has been an amazing software partner.  After a bad experience with a different team a few years ago, we started working with ScrumLaunch from a personal referral.  Their developers are really talented and work very efficiently.  They care about our business success and I would recommend working with them to anyone.”</div>
+                            <div class="client_testimonials__testimonials_item__text">“ScrumLaunch is a key partner in the ongoing development of our luxury furniture and logistics platform.  I've been working with them for over 2 years and they made my life so much easier as we were scaling Vesta across the country and building more complex digital tools.”</div>
                             <div class="flex jcsb">
                                 <div class="client_testimonials__testimonials_item__person">– Ryan Dranginis, CMO</div>
                                 <div class="client_testimonials__testimonials_item__site">www.vestahome.com</div>
@@ -101,7 +101,7 @@
 
                     <SwiperSlide class="client_testimonials__testimonials_item">
                         <div class="client_testimonials__testimonials_item_logo"><img src="/images/home/client_testimonials/vesta.png" alt="vesta"></div>
-                        <div class="client_testimonials__testimonials_item__text">“ScrumLaunch has been an amazing software partner.  After a bad experience with a different team a few years ago, we started working with ScrumLaunch from a personal referral.  Their developers are really talented and work very efficiently.  They care about our business success and I would recommend working with them to anyone.”</div>
+                        <div class="client_testimonials__testimonials_item__text">“ScrumLaunch is a key partner in the ongoing development of our luxury furniture and logistics platform.  I've been working with them for over 2 years and they made my life so much easier as we were scaling Vesta across the country and building more complex digital tools.”</div>
                         <div class="flex jcsb">
                             <div class="client_testimonials__testimonials_item__person">– Ryan Dranginis, CMO</div>
                             <div class="client_testimonials__testimonials_item__site">www.vestahome.com</div>
