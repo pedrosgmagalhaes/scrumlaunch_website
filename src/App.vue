@@ -47,6 +47,16 @@ export default {
 			document.body.appendChild(intercomScript);
 			// intercom
 
+			// linkedin
+			let linkedinSettings = document.createElement('script')
+			linkedinSettings.innerHTML = `_linkedin_partner_id = "3906108"; window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || []; window._linkedin_data_partner_ids.push(_linkedin_partner_id);`;
+            
+			let linkedinScript = document.createElement('script');
+			linkedinScript.innerHTML = `(function(l) { if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])}; window.lintrk.q=[]} var s = document.getElementsByTagName("script")[0]; var b = document.createElement("script"); b.type = "text/javascript";b.async = true; b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js"; s.parentNode.insertBefore(b, s);})(window.lintrk);`;
+			
+			document.body.appendChild(linkedinSettings);
+			document.body.appendChild(linkedinScript);
+			// linkedin
 		}
 
 		if ( window.location.hostname.indexOf('scrumlaunch-staging.herokuapp.com') !== -1 ) {
