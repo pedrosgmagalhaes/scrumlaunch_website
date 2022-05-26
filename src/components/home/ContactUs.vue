@@ -63,6 +63,13 @@ export default {
 	font-size: 18px;
 }
 
+@media screen and (max-width: 375px) {
+	.btn {
+		min-width: auto;
+		width: 100%;
+	}
+}
+
 @media screen and (min-width: 375px) {
 	.contact-us--icon {
 		width: 334px;
