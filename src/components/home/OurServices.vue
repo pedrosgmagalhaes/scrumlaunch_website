@@ -42,6 +42,7 @@ export default {
     width: fit-content;
     font-size: 20px;
     position: relative;
+    text-align: right;
 
     &:hover {
       color: #12E2B0;
@@ -152,6 +153,7 @@ export default {
     p {
       margin-bottom: 36px;
       font-size: 40px;
+      width: auto;
 
       &::before {
         width: 213px;

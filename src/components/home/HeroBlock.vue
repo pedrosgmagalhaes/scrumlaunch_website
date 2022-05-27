@@ -4,10 +4,10 @@
 		<div class="hero--text-wrapper">
 
 			<div class="hero--text-wrapper__header">
-				<AppearFromMask><p class="header-big">Product Design</p></AppearFromMask>
-				<AppearFromMask><p class="header-big">& Software</p></AppearFromMask>
-				<AppearFromMask><p class="header-big">Development</p></AppearFromMask>
-				<AppearFromMask><p class="header-big mark">for Startups</p></AppearFromMask>
+				<AppearFromMask><p class="header-big">Software</p></AppearFromMask>
+				<AppearFromMask><p class="header-big">Development &</p></AppearFromMask>
+				<AppearFromMask><p class="header-big">Design Teams</p></AppearFromMask>
+				<AppearFromMask><p class="header-big mark">On Demand</p></AppearFromMask>
 			</div>
 			
 			<!-- <inline-svg

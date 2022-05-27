@@ -166,14 +166,10 @@ export default {
         flex-wrap: nowrap;
     }
 
-    &__technologies_list_block {
-        
-    }
-
     &__technologies_list_row {
         justify-content: center;
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1440px) {
             flex-wrap: wrap;
         }
 
@@ -192,7 +188,8 @@ export default {
         text-decoration: none;
 
         @media screen and (max-width: 1440px) {
-            font-size: 30px;
+            padding: 10px 20px;
+            font-size: 24px;
         }
 
         @media screen and (max-width: 768px) {
@@ -229,6 +226,11 @@ export default {
     &__technologies_list_icon {
         margin-right: 26px;
         margin-bottom: 26px;
+
+        @media screen and (max-width: 1440px) {
+            margin-right: 15px;
+            margin-bottom: 15px;
+        }
 
         @media screen and (max-width: 768px) {
             margin-right: 17px;
