@@ -112,13 +112,14 @@ export default {
     &__wrap {
         position: relative;
         width: 100%;
+        cursor: pointer;
     }
 
     &__base {
         position: relative;
         padding: 8px 0;
         font-style: normal;
-        font-weight: 600;
+        font-weight: 500;
         font-size: 18px;
         line-height: 150%;
         border-bottom: 1px solid #1E1F21;
@@ -171,7 +172,7 @@ export default {
         font-weight: 600;
         font-size: 18px;
         line-height: 150%;
-        cursor: default;
+        cursor: pointer;
         user-select: none;
 
         &:hover {

@@ -71,7 +71,7 @@
                 </div>
 
                 <div class="projects--btn-wrapper">
-                    <router-link class="btn" :to="{ name: 'Work' }">Apply now</router-link>
+                    <router-link class="btn" :to="{ name: 'SendCV' }">Apply now</router-link>
                 </div>
             </div>
         </div>
