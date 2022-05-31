@@ -154,6 +154,7 @@ export default {
         background: #fff;
         border: 1px solid #1E1F21;
         overflow: auto;
+        z-index: 2;
         
         &::-webkit-scrollbar {
             display: none;

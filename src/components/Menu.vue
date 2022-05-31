@@ -57,7 +57,7 @@
             </div>
           </div>
         </div>
-        <!-- <router-link :to="{ name: 'Vacancies' }">Vacancies</router-link> -->
+        <router-link :to="{ name: 'Vacancies' }">Vacancies</router-link>
         <router-link :to="{ name: 'ContactUs' }">Contact</router-link>
       </div>
       <div class="menu--desktop--wrapper-mobile">
@@ -90,6 +90,7 @@
         <span @click="handleNavigation('Services')" class="menu--burger--links--item">Services</span>
         <span @click="handleNavigation('Process')" class="menu--burger--links--item">Process</span>
         <span @click="handleNavigation('Leadership')" class="menu--burger--links--item">Leadership</span>
+        <span @click="handleNavigation('Vacancies')" class="menu--burger--links--item">Vacancies</span>
         <span @click="handleNavigation('ContactUs')" class="menu--burger--links--item">Contact</span>
       </div>
     </div>

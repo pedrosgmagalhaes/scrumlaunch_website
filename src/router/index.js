@@ -127,12 +127,12 @@ const routes = [
 		component: Location
 	},
 	{
-		path: '/vacancies',
+		path: '/remote-developer-jobs',
 		name: 'Vacancies',
 		component: Vacancies
 	},
 	{
-		path: '/vacancy/:vacancy_slug',
+		path: '/remote-developer-jobs/:vacancy_slug',
 		name: 'Vacancy',
 		component: Vacancy
 	},
