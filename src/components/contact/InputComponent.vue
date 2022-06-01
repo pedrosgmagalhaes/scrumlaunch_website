@@ -4,6 +4,7 @@
 			<input
 				:class="[
 					'input-item--input-wrapper--input',
+					{ spacing: this.spacing },
 					{ err: this.errorMessage },
 				]"
 				@input="handleChange"
@@ -61,6 +62,11 @@ export default {
 			type: String,
 			default: 'Error Notification'
 		},
+
+		spacing: {
+			type: Boolean,
+			default: true
+		}
 	},
 
 	methods: {
@@ -143,7 +149,10 @@ export default {
 
 @media screen and (min-width: 1280px) {
 	.input-item--input-wrapper--input {
-		padding-left: 80px;
+		.spacing {
+			padding-left: 80px;
+		}
+
 		font-size: 18px;
 	}
 }

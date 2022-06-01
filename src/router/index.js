@@ -19,6 +19,7 @@ import ProgLang from '../views/ProgLang2.vue'
 import Location from '../views/Location.vue'
 import Vacancies from '../views/Vacancies.vue'
 import Vacancy from '../views/Vacancy.vue'
+import SendCV from '../views/SendCV.vue'
 
 const routes = [
 	{
@@ -127,14 +128,19 @@ const routes = [
 		component: Location
 	},
 	{
-		path: '/vacancies',
+		path: '/remote-developer-jobs',
 		name: 'Vacancies',
 		component: Vacancies
 	},
 	{
-		path: '/vacancy/:vacancy_slug',
+		path: '/remote-developer-jobs/:vacancy_slug',
 		name: 'Vacancy',
 		component: Vacancy
+	},
+	{
+		path: '/send-cv',
+		name: 'SendCV',
+		component: SendCV
 	},
 	{
 		path: "/:pathMatch(.*)*",

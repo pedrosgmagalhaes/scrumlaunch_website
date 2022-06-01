@@ -2,7 +2,7 @@
 	<div id="nav">
 		<Menu />
 	</div>
-	<router-view />
+	<router-view :key="$route.fullPath" />
 	<Footer />
 </template>
 

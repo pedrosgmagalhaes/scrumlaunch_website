@@ -6,14 +6,14 @@
 
 			<div class="container">
 
-				<div class="flex jcsb">
+				<div class="header_container">
 
 					<h1 class="header-big">
 						<span>Scrumlaunch</span>
 						<span style="color: #12e2b0">Job openings</span>
 					</h1>
 
-					<div class=""><img src="/images/vacancies/magnifier.svg" alt=""></div>
+					<div class="header_image"><img src="/images/vacancies/magnifier.svg" alt=""></div>
 
 				</div>
 
@@ -43,10 +43,10 @@
 
 					<div class="vacancies__item" v-for="(vacancy, i) in vacancies" :key="i">
 
-						<div class="vacancies__item_skill"><router-link :to="vacancy.slug">{{ vacancy.skill }}</router-link></div>
-						<div class="vacancies__item_location">{{ vacancy.location }} <span class="vacancies__item_remote" v-if="vacancy.remote">Remote</span></div>
+						<div class="vacancies__item_skill"><router-link :to="vacancy.slug">{{ vacancy.name }}</router-link></div>
+						<div class="vacancies__item_location">{{ vacancy.jobLocation }} <span class="vacancies__item_remote" v-if="vacancy.remote">Remote</span></div>
 						<div class="vacancies__item_state open" v-if="vacancy.open">Open</div>
-						<div class="vacancies__item_state closed" v-if="!vacancy.open">Closed </div>
+						<div class="vacancies__item_state closed" v-if="!vacancy.open">Closed</div>
 
 					</div>
 
@@ -94,12 +94,52 @@ export default {
 
 <style lang="scss" scoped>
 
+.header_container {
+	display: flex;
+	justify-content: space-between;
+
+	@media screen and (max-width: 1440px) {
+        justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		gap: 40px;
+    }
+}
+
+.header_image {
+	& > img {
+		@media screen and (max-width: 1440px) {
+			width: 400px;
+		}
+
+		@media screen and (max-width: 768px) {
+			width: 300px;
+		}
+
+		@media screen and (max-width: 425px) {
+			width: 200px;
+		}
+    }
+}
+
 .header-big {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	font-size: 90px;
 	color: #fff;
+
+	@media screen and (max-width: 1440px) {
+		font-size: 56px;
+    }
+
+	@media screen and (max-width: 768px) {
+		font-size: 34px;
+    }
+
+	@media screen and (max-width: 425px) {
+		font-size: 24px;
+	}
 }
 
 .container {
@@ -118,21 +158,59 @@ export default {
 		padding-top: 266px;
 		padding-bottom: 240px;
 		background: #1E1F21;
+
+		@media screen and (max-width: 1440px) {
+			padding-top: 150px;
+			padding-bottom: 150px;
+		}
+
+		@media screen and (max-width: 425px) {
+			padding-top: 80px;
+			padding-bottom: 80px;
+		}
 	}
 
 	&__section_2 {
 		padding-top: 240px;
 		padding-bottom: 240px;
+
+		@media screen and (max-width: 1440px) {
+			padding-top: 150px;
+			padding-bottom: 150px;
+		}
+
+		@media screen and (max-width: 425px) {
+			padding-top: 80px;
+			padding-bottom: 80px;
+		}
 	}
 
 	&__filters {
 		display: flex;
 		margin-bottom: 56px;
+
+		@media screen and (max-width: 1440px) {
+			flex-direction: column;
+			gap: 24px;
+		}
+
+		@media screen and (max-width: 768px) {
+			gap: 35px;
+		}
 	}
 
 	&__filter_wrap {
 		display: flex;
 		margin-right: 60px;
+
+		@media screen and (max-width: 1440px) {
+			margin-right: 0px;
+		}
+
+		@media screen and (max-width: 768px) {
+			flex-direction: column;
+			gap: 8px;
+		}
 
 		&:last-child {
 			margin-right: 0;
@@ -147,14 +225,18 @@ export default {
 		line-height: 100%;
 		letter-spacing: 0.02em;
 		text-transform: uppercase;
+
+		@media screen and (max-width: 768px) {
+			font-size: 24px;
+		}
 	}
 
 	&__filter {
 		width: 360px;
-	}
 
-	&__items {
-
+		@media screen and (max-width: 1440px) {
+			width: 100%;
+		}
 	}
 
 	&__item {
@@ -169,6 +251,10 @@ export default {
 
 		&:first-child {
 			border-top: 1px solid #1E1F21;
+		}
+
+		@media screen and (max-width: 425px) {
+			flex-wrap: wrap;
 		}
 	}
 
@@ -187,10 +273,21 @@ export default {
 				color: #12E2B0;
 			}
 		}
+
+		&:first-child {
+			@media screen and (max-width: 425px) {
+				flex: inherit;
+				width: 100%;
+			}
+		}
 	}
 
 	&__item_location {
 		flex: 0 0 47%;
+
+		@media screen and (max-width: 1440px) {
+			flex: inherit;
+		}
 	}
 
 	&__item_remote {
@@ -211,6 +308,7 @@ export default {
 			width: 8px;
 			height: 8px;
 			border-radius: 50%;
+			z-index: 1;
 		}
 
 		&.open {

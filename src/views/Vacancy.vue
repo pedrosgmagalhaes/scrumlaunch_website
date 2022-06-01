@@ -1,92 +1,511 @@
 <template>
-
     <div class="vacancy">
-
         <div class="container">
-
             <div class="vacancy__section_1">
-
-                <div class="vacancy__skill header-big">{{ vacancy.skill }}</div>
-
+                <div class="join_team--icon">
+                    <inline-svg :src="require('@/assets/illustrations/join_our_team.svg')" />
+                </div>
+                <div class="header-1">Scrumlaunch<br />{{ vacancy.name }} Developer</div>
                 <div class="vacancy__info">
-                    <div class="vacancy__location">{{ vacancy.location }} <span class="vacancy__remote" v-if="vacancy.remote">Remote</span></div>
+                    <div class="vacancy__location">
+                        <span class="vacancy__remote_2" v-if="vacancy.remote">Remote</span>
+                        {{ vacancy.jobLocation }}
+                    </div>
                     <div class="vacancy__state open" v-if="vacancy.open">Open</div>
                     <div class="vacancy__state closed" v-if="!vacancy.open">Closed</div>
+                    <p class="vacancy__date">{{ vacancy.datePosted }}</p>
                 </div>
-
             </div>
-
-            <div class="vacancy__section_2" v-if="vacancy.details && vacancy.details.length > 0">
-
-                <div class="vacancy__details_items">
-
-                    <div class="vacancy__details_item" v-for="(section, i) in vacancy.details" :key="i">
-
-                        <div class="vacancy__details_title_wrap">
-                            <div class="vacancy__details_title">{{ section.section_name }}</div>
-                            <div><img src="" alt=""></div>
+            <div class="vacancy__section_2">
+                <div class="how_scrumlaunch_works__items">
+                    <div class="how_scrumlaunch_works__item">
+                        <div class="how_scrumlaunch_works__item_title_wrap">
+                            <div class="how_scrumlaunch_works__item_title">Description</div>
+                            <div>
+                                <img src="/images/home/how_scrumlaunch_works_1.svg" alt="how_scrumlaunch_works_1" class="how_scrumlaunch_works__item_icon" />
+                            </div>
                         </div>
-
-                        <div class="vacancy__details_desc_wrap">
-                            <ul class="vacancy__details_desc" v-if="section.section_list && section.section_list.length > 0">
-                                <li class="vacancy__details_desc_item" v-for="(section_list_item, i2) in section.section_list" :key="i2">— {{ section_list_item }}</li>
-                            </ul>
+                        <div class="how_scrumlaunch_works__item_text">
+                            <div class="description__container">
+                                <p class="how_scrumlaunch_works__item_text">{{ vacancy.name }} Developers: do you have a passion for building software applications? Do you have an interest in web development and design, UI, or UX? Do you enjoy working on project-based teams and getting exposure to a variety of companies from venture-backed startups to large corporations?</p>
+                                <p class="how_scrumlaunch_works__item_text">ScrumLaunch is large, global software development and design company that employs more than 200 remote developers across the United States, Europe and South America. Our U.S. headquarters get us access to top projects from Silicon Valley to New York City, and we work from all types of clients around the world.</p>
+                                <p class="how_scrumlaunch_works__item_text">As a {{ vacancy.name }} developer, you will be responsible for working on different software teams requiring {{ vacancy.name }} expertise. With our consultant-based approach to client services, you will get to work on a variety of projects and gain exposure to all types of companies. You will be constantly challenged and always learning.</p>
+                                <p class="how_scrumlaunch_works__item_text">The role requires at least 40 hours per week.</p>
+                            </div>
                         </div>
-
                     </div>
 
+                    <div class="how_scrumlaunch_works__item">
+                        <div class="how_scrumlaunch_works__item_title_wrap">
+                            <div class="how_scrumlaunch_works__item_title">About the Company</div>
+                            <div>
+                                <img src="/images/home/how_scrumlaunch_works_2.svg" alt="how_scrumlaunch_works_2" class="how_scrumlaunch_works__item_icon" />
+                            </div>
+                        </div>
+                        <div class="how_scrumlaunch_works__item_text">Candidates are sourced through our internal talent pool or by our HR team in technical hubs around the world.</div>
+                    </div>
+
+                    <div class="how_scrumlaunch_works__item">
+                        <div class="how_scrumlaunch_works__item_title_wrap">
+                            <div class="how_scrumlaunch_works__item_title">Employment Type</div>
+                            <div>
+                                <img src="/images/home/how_scrumlaunch_works_3.svg" alt="how_scrumlaunch_works_3" class="how_scrumlaunch_works__item_icon" />
+                            </div>
+                        </div>
+                        <div class="how_scrumlaunch_works__item_text">
+                            {{ vacancy.employmentType }}
+                        </div>
+                    </div>
+
+                    <div class="how_scrumlaunch_works__item">
+                        <div class="how_scrumlaunch_works__item_title_wrap">
+                            <div class="how_scrumlaunch_works__item_title">Base Salary</div>
+                            <div>
+                                <img src="/images/home/how_scrumlaunch_works_4.svg" alt="how_scrumlaunch_works_4" class="how_scrumlaunch_works__item_icon" />
+                            </div>
+                        </div>
+                        <div class="how_scrumlaunch_works__item_text">
+                            {{ vacancy.baseSalary }}
+                        </div>
+                    </div>
                 </div>
 
+                <div class="projects--btn-wrapper">
+                    <router-link class="btn" :to="{ name: 'SendCV' }">Apply now</router-link>
+                </div>
             </div>
-
         </div>
-
+        <div class="container vacancy__section_3">
+            <div class="extensive_vetting__text_block">
+                <div class="header-1 white">More Remote Job</div>
+                <div class="more_job">
+                    <div v-for="(item, i) in more_vacancies" :key="i" class="more_job_card">
+                        <div class="more_job__info_container subtitle">
+                            <p>
+                                {{ item.hiringOrganisation }}
+                            </p>
+                            <p>{{ item.datePosted }}</p>
+                        </div>
+                        <div class="more_job__info_container title">
+                            <p>{{ item.name }} Developer</p>
+                        </div>
+                        <div class="more_job__info_container description">
+                            <p class="vacancy__remote_bold">
+                                <span class="vacancy__remote_2" v-if="item.remote">Remote</span>
+                                {{ item.jobLocation }}
+                            </p>
+                            <div class="marker default">{{ item.employmentType }}</div>
+                            <div class="marker default">{{ item.baseSalary }}</div>
+                        </div>
+                        <div class="more_job__info_container footer">
+                            <div class="vacancy__state open" v-if="item.open">Open</div>
+                            <div class="vacancy__state closed" v-if="!item.open">Closed</div>
+                            <router-link :to="item.slug"
+                                ><div class="scroll_top__btn">
+                                    <inline-svg :src="require('@/assets/icons/scroll-down-without-mask.svg')" class="scroll_top__arr" /></div
+                            ></router-link>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects--btn-wrapper">
+                    <router-link class="btn on_dark_bg" :to="{ name: 'Vacancies' }">View all</router-link>
+                </div>
+            </div>
+        </div>
     </div>
-
 </template>
-
-
 
 <script>
 export default {
+    created() {
+        this.vacancy = this.$store.getters.getVacancies("", "").filter((item) => {
+            return item.slug === this.$route.path;
+        })[0];
 
-    created () {
-        this.vacancy = this.$store.getters.getVacancies('','').filter((item) => {
-            return item.slug === this.$route.path
-        })[0]
+        this.more_vacancies = this.$store.getters.getVacancies("", "").filter((item) => {
+            return item.open && item.remote && item.slug !== this.$route.path;
+        });
     },
 
     data() {
         return {
             vacancy: null,
-        }
+            more_vacancies: [],
+        };
     },
-
-}
+};
 </script>
 
-
-
 <style lang="scss" scoped>
+.more_job {
+    display: flex;
+    align-items: center;
+    gap: 21px;
+    overflow-x: auto;
+    padding-bottom: 30px;
+
+    &_card {
+        min-width: 350px;
+        min-height: 200px;
+        padding: 30px;
+        background-color: #fff;
+        color: #1e1f21;
+    }
+
+    &__info_container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        line-height: 140%;
+    }
+}
+
+.join_team--icon {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: -100px;
+
+    @media screen and (max-width: 1440px) {
+        margin-bottom: 0px;
+        margin-top: -50px;
+        margin-right: -50px;
+    }
+
+    @media screen and (max-width: 768px) {
+        & * {
+            width: 200px;
+            height: 200px;
+        }
+
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: -70px;
+    }
+}
+
+.scroll_top {
+    &__btn {
+        cursor: pointer;
+        transform: rotate(-90deg);
+    }
+
+    &__arr {
+        position: relative;
+        display: block;
+    }
+}
+
+.subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.title {
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.description {
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 55px;
+}
+
+.footer {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.marker {
+    &:before {
+        content: "";
+        position: relative;
+        top: -1px;
+        display: inline-block;
+        margin-right: 10px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+    }
+
+    &.default {
+        &:before {
+            background: #1e1f21;
+        }
+    }
+}
+
+.header-1 {
+    margin-bottom: 40px;
+    font-weight: 900;
+    font-size: 75px;
+    line-height: 140%;
+    color: #1e1f21;
+
+    &.white {
+        color: #fff;
+    }
+
+    @media screen and (max-width: 1440px) {
+        margin-bottom: 40px;
+        font-size: 56px;
+    }
+
+    @media screen and (max-width: 768px) {
+        margin-bottom: 24px;
+        font-size: 32px;
+    }
+
+    @media screen and (max-width: 425px) {
+        margin-bottom: 17px;
+        font-size: 24px;
+    }
+}
+
+.body-1 {
+    max-width: 945px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 150%;
+    color: #fff;
+
+    @media screen and (max-width: 1440px) {
+        max-width: 728px;
+        font-size: 26px;
+    }
+
+    @media screen and (max-width: 768px) {
+        max-width: 100%;
+        font-size: 20px;
+    }
+
+    @media screen and (max-width: 425px) {
+        font-size: 14px;
+    }
+}
+
+.vacancy__section_3 {
+    padding-top: 240px;
+    padding-bottom: 240px;
+    background: #1e1f21;
+    text-align: left;
+    margin-bottom: 240px;
+
+    @media screen and (max-width: 768px) {
+        padding-top: 140px;
+        padding-bottom: 140px;
+        margin-bottom: 140px;
+    }
+
+    @media screen and (max-width: 425px) {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        margin-bottom: 80px;
+    }
+}
+
+.projects--btn-wrapper {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .btn {
+        padding: 16px 40px;
+        height: 82px;
+        width: 360px;
+        border-radius: 54px;
+        font-size: 18px;
+        line-height: 150%;
+
+        @media screen and (max-width: 425px) {
+            min-width: 100%;
+        }
+    }
+}
+
+.description__container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.how_scrumlaunch_works {
+    padding-top: 300px;
+    padding-bottom: 300px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: left;
+
+    @media screen and (max-width: 1440px) {
+        padding-top: 240px;
+        padding-bottom: 240px;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding-top: 140px;
+        padding-bottom: 140px;
+    }
+
+    @media screen and (max-width: 425px) {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    & * {
+        box-sizing: border-box;
+    }
+
+    &__title {
+        margin-bottom: 120px;
+        font-size: 75px;
+        text-align: right;
+
+        @media screen and (max-width: 1440px) {
+            margin-bottom: 80px;
+            font-size: 56px;
+        }
+
+        @media screen and (max-width: 768px) {
+            margin-bottom: 60px;
+            max-width: 530px;
+            font-size: 48px;
+            text-align: left;
+        }
+
+        @media screen and (max-width: 425px) {
+            margin-bottom: 40px;
+            font-size: 24px;
+        }
+    }
+
+    &__items {
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: flex-start;
+        padding: 60px 0;
+        min-height: 56px;
+        border-top: 1px solid #1e1f21;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            padding: 30px 0px;
+        }
+
+        &:last-child {
+            border-bottom: 1px solid #1e1f21;
+        }
+    }
+
+    &__item_title_wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex: 1;
+        margin-right: 80px;
+        max-width: 570px;
+
+        @media screen and (max-width: 1440px) {
+            margin-right: 63px;
+            max-width: 425px;
+        }
+
+        @media screen and (max-width: 768px) {
+            flex: 0 0 auto;
+            flex-direction: row-reverse;
+            margin-bottom: 20px;
+            align-items: flex-start;
+            margin-right: auto;
+        }
+    }
+
+    &__item_title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 140%;
+
+        @media screen and (max-width: 1440px) {
+            font-size: 30px;
+        }
+
+        @media screen and (max-width: 768px) {
+            font-size: 24px;
+        }
+
+        @media screen and (max-width: 425px) {
+            font-size: 18px;
+        }
+    }
+
+    &__item_icon {
+        max-width: 55px;
+
+        @media screen and (max-width: 768px) {
+            max-width: 35px;
+            margin-right: 20px;
+        }
+
+        @media screen and (max-width: 425px) {
+            max-width: 25px;
+            margin-right: 18px;
+        }
+    }
+
+    &__item_text {
+        flex: 1;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 150%;
+
+        @media screen and (max-width: 1440px) {
+            font-size: 20px;
+        }
+
+        @media screen and (max-width: 768px) {
+            flex: 0 0 auto;
+            font-size: 14px;
+        }
+
+        @media screen and (max-width: 425px) {
+            font-size: 12px;
+        }
+    }
+}
 
 .header-big {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	font-size: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 90px;
 }
 
 .container {
-	padding-left: 8.34%;
-	padding-right: 8.34%;
+    padding-left: 8.34%;
+    padding-right: 8.34%;
 }
 
 .vacancy {
     text-align: left;
 
-    &__section_1 {
-        padding-top: 320px;
-        padding-bottom: 80px;
+    &__date {
+        text-align: right;
+
+        @media screen and (max-width: 768px) {
+            text-align: left;
+            flex: auto;
+            width: 100%;
+        }
     }
 
     &__skill {
@@ -99,15 +518,36 @@ export default {
         font-weight: 700;
         font-size: 26px;
         line-height: 150%;
+
+        @media screen and (max-width: 1440px) {
+            font-size: 18px;
+        }
+
+        @media screen and (max-width: 768px) {
+            flex-wrap: wrap;
+        }
     }
 
     &__location {
         flex: 1;
         max-width: 488px;
+
+        @media screen and (max-width: 768px) {
+            width: 70%;
+        }
     }
 
     &__remote {
         margin-left: 10px;
+        padding: 0 3px;
+        background: #12e2b0;
+
+        &_bold {
+            font-weight: 700;
+        }
+    }
+
+    &__remote_2 {
         padding: 0 3px;
         background: #12e2b0;
     }
@@ -115,75 +555,52 @@ export default {
     &__state {
         flex: 1;
 
-		&:before {
-			content: '';
-			position: relative;
-			top: -4px;
-			display: inline-block;
-			margin-right: 10px;
-			width: 8px;
-			height: 8px;
-			border-radius: 50%;
-		}
+        @media screen and (max-width: 768px) {
+            width: 30%;
+            text-align: end;
+            flex: inherit;
+        }
 
-		&.open {
-			&:before {
-				background: #12E2B0;
-			}
-		}
+        &:before {
+            content: "";
+            position: relative;
+            top: -4px;
+            display: inline-block;
+            margin-right: 10px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
 
-		&.closed {
-			&:before {
-				background: #FF0000;
-			}
-		}
-    }
+        &.open {
+            &:before {
+                background: #12e2b0;
+            }
+        }
 
-    &__section_2 {
-        margin-bottom: 300px;
-    }
-
-    &__details_items {
-
-    }
-
-    &__details_item {
-        display: flex;
-        padding: 60px 0;
-        border-bottom: 1px solid #1E1F21;
-
-        &:first-child {
-            border-top: 1px solid #1E1F21;
+        &.closed {
+            &:before {
+                background: #ff0000;
+            }
         }
     }
 
-    &__details_title_wrap {
-        flex: 1;
-        max-width: 488px;
+    &__section_2 {
+        margin-bottom: 240px;
     }
 
-    &__details_title {
-        font-style: normal;
-        font-weight: 700;
-        font-size: 30px;
-        line-height: 140%;
+    &__section_1 {
+        padding-bottom: 80px;
+        padding-top: 150px;
+
+        @media screen and (max-width: 1440px) {
+            padding-top: 100px;
+        }
+
+        @media screen and (max-width: 768px) {
+            padding-bottom: 40px;
+            padding-top: 50px;
+        }
     }
-
-    &__details_desc_wrap {
-
-    }
-
-    &__details_desc {
-        font-style: normal;
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 180%;
-    }
-
-    &__details_desc_item {
-
-    }
-
 }
-
 </style>

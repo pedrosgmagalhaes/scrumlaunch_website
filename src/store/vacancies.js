@@ -1,7 +1,6 @@
 function make_slug(item) {
-    let remote = item.remote ? '-remote' : ''
-    let slug = item.skill + '-' + item.location + remote
-    item['slug'] = '/vacancy/' + slug.replace(/\s+/g, '-').toLowerCase()
+    let slug = item.name + '-' + item.jobLocation;
+    item['slug'] = '/remote-developer-jobs/' + slug.replace(/\s+/g, '-').toLowerCase()
     return item
 }
 
@@ -9,422 +8,114 @@ export default {
     state: () => ({
         vacancies: [
             {
-                skill: 'PHP Developer',
-                location: 'Brazil',
+                name: 'PHP',
+                jobLocation: 'Brazil',
                 remote: true,
                 open: true,
-                details: [
-                    {
-                        section_name: 'Requirements',
-                        section_list: [
-                            '2+ years of commercial experience;',
-                            'Proficient knowledge of the Kotlin/Java ;',
-                            'Deep understanding of OOP, design patterns, SOLID;',
-                            'Good understanding of MVP, MVVM, Clean Architecture',
-                            'Understanding of the full mobile life cycle (Activity, Fragment, CustomView);',
-                            'Dagger;',
-                            'RxJava, Coroutines;',
-                            'Android Jetpack;',
-                            'Retrofit/OkHttp;',
-                            'Google/Firebase services;',
-                            'Google maps',
-                            'Solid knowledge of git.',
-                            'Intermediate English level.',
-                        ]
-                    },
-                    {
-                        section_name: 'We offer',
-                        section_list: [
-                            'Opportunity to grow as an expert;',
-                            'Regular results-based salary review;',
-                            'Flexible working conditions;',
-                            '24 days of paid vacation (working days);',
-                            '10 sick days;',
-                            'Friendly and open-minded team;',
-                            'English classes.',
-                        ]
-                    },
-                ],
+                datePosted: "11 / 11 / 2022",
+                hiringOrganisation: "ScrumLaunch", 
+                employmentType: "Full Time",
+                baseSalary: "$10-20 / hour",
             },
             {
-                skill: 'React JS Developer',
-                location: 'Ukraine',
+                name: 'React JS',
+                jobLocation: 'Ukraine',
                 remote: false,
                 open: true,
-                details: [
-                    {
-                        section_name: 'Requirements',
-                        section_list: [
-                            '2+ years of commercial experience;',
-                            'Proficient knowledge of the Kotlin/Java ;',
-                            'Deep understanding of OOP, design patterns, SOLID;',
-                            'Good understanding of MVP, MVVM, Clean Architecture',
-                            'Understanding of the full mobile life cycle (Activity, Fragment, CustomView);',
-                            'Dagger;',
-                            'RxJava, Coroutines;',
-                            'Android Jetpack;',
-                            'Retrofit/OkHttp;',
-                            'Google/Firebase services;',
-                            'Google maps',
-                            'Solid knowledge of git.',
-                            'Intermediate English level.',
-                        ]
-                    },
-                    {
-                        section_name: 'We offer',
-                        section_list: [
-                            'Opportunity to grow as an expert;',
-                            'Regular results-based salary review;',
-                            'Flexible working conditions;',
-                            '24 days of paid vacation (working days);',
-                            '10 sick days;',
-                            'Friendly and open-minded team;',
-                            'English classes.',
-                        ]
-                    },
-                ],
+                datePosted: "11 / 11 / 2022",
+                hiringOrganisation: "ScrumLaunch", 
+                employmentType: "Full Time",
+                baseSalary: "$10-20 / hour",
             },
             {
-                skill: 'Django Developer',
-                location: 'Ukraine',
+                name: 'Django',
+                jobLocation: 'Ukraine',
                 remote: false,
                 open: true,
-                details: [
-                    {
-                        section_name: 'Requirements',
-                        section_list: [
-                            '2+ years of commercial experience;',
-                            'Proficient knowledge of the Kotlin/Java ;',
-                            'Deep understanding of OOP, design patterns, SOLID;',
-                            'Good understanding of MVP, MVVM, Clean Architecture',
-                            'Understanding of the full mobile life cycle (Activity, Fragment, CustomView);',
-                            'Dagger;',
-                            'RxJava, Coroutines;',
-                            'Android Jetpack;',
-                            'Retrofit/OkHttp;',
-                            'Google/Firebase services;',
-                            'Google maps',
-                            'Solid knowledge of git.',
-                            'Intermediate English level.',
-                        ]
-                    },
-                    {
-                        section_name: 'We offer',
-                        section_list: [
-                            'Opportunity to grow as an expert;',
-                            'Regular results-based salary review;',
-                            'Flexible working conditions;',
-                            '24 days of paid vacation (working days);',
-                            '10 sick days;',
-                            'Friendly and open-minded team;',
-                            'English classes.',
-                        ]
-                    },
-                ],
+                datePosted: "11 / 11 / 2022",
+                hiringOrganisation: "ScrumLaunch", 
+                employmentType: "Full Time",
+                baseSalary: "$10-20 / hour",
             },
             {
-                skill: 'Java Developer',
-                location: 'Ukraine',
+                name: 'Java',
+                jobLocation: 'Ukraine',
                 remote: true,
                 open: true,
-                details: [
-                    {
-                        section_name: 'Requirements',
-                        section_list: [
-                            '2+ years of commercial experience;',
-                            'Proficient knowledge of the Kotlin/Java ;',
-                            'Deep understanding of OOP, design patterns, SOLID;',
-                            'Good understanding of MVP, MVVM, Clean Architecture',
-                            'Understanding of the full mobile life cycle (Activity, Fragment, CustomView);',
-                            'Dagger;',
-                            'RxJava, Coroutines;',
-                            'Android Jetpack;',
-                            'Retrofit/OkHttp;',
-                            'Google/Firebase services;',
-                            'Google maps',
-                            'Solid knowledge of git.',
-                            'Intermediate English level.',
-                        ]
-                    },
-                    {
-                        section_name: 'We offer',
-                        section_list: [
-                            'Opportunity to grow as an expert;',
-                            'Regular results-based salary review;',
-                            'Flexible working conditions;',
-                            '24 days of paid vacation (working days);',
-                            '10 sick days;',
-                            'Friendly and open-minded team;',
-                            'English classes.',
-                        ]
-                    },
-                ],
+                datePosted: "11 / 11 / 2022",
+                hiringOrganisation: "ScrumLaunch", 
+                employmentType: "Full Time",
+                baseSalary: "$10-20 / hour",
             },
             {
-                skill: 'iOS Developer',
-                location: 'USA',
+                name: 'iOS',
+                jobLocation: 'USA',
                 remote: false,
                 open: true,
-                details: [
-                    {
-                        section_name: 'Requirements',
-                        section_list: [
-                            '2+ years of commercial experience;',
-                            'Proficient knowledge of the Kotlin/Java ;',
-                            'Deep understanding of OOP, design patterns, SOLID;',
-                            'Good understanding of MVP, MVVM, Clean Architecture',
-                            'Understanding of the full mobile life cycle (Activity, Fragment, CustomView);',
-                            'Dagger;',
-                            'RxJava, Coroutines;',
-                            'Android Jetpack;',
-                            'Retrofit/OkHttp;',
-                            'Google/Firebase services;',
-                            'Google maps',
-                            'Solid knowledge of git.',
-                            'Intermediate English level.',
-                        ]
-                    },
-                    {
-                        section_name: 'We offer',
-                        section_list: [
-                            'Opportunity to grow as an expert;',
-                            'Regular results-based salary review;',
-                            'Flexible working conditions;',
-                            '24 days of paid vacation (working days);',
-                            '10 sick days;',
-                            'Friendly and open-minded team;',
-                            'English classes.',
-                        ]
-                    },
-                ],
+                datePosted: "11 / 11 / 2022",
+                hiringOrganisation: "ScrumLaunch", 
+                employmentType: "Full Time",
+                baseSalary: "$10-20 / hour",
             },
             {
-                skill: 'Android Developer',
-                location: 'Ukraine',
+                name: 'Android',
+                jobLocation: 'Ukraine',
                 remote: false,
                 open: true,
-                details: [
-                    {
-                        section_name: 'Requirements',
-                        section_list: [
-                            '2+ years of commercial experience;',
-                            'Proficient knowledge of the Kotlin/Java ;',
-                            'Deep understanding of OOP, design patterns, SOLID;',
-                            'Good understanding of MVP, MVVM, Clean Architecture',
-                            'Understanding of the full mobile life cycle (Activity, Fragment, CustomView);',
-                            'Dagger;',
-                            'RxJava, Coroutines;',
-                            'Android Jetpack;',
-                            'Retrofit/OkHttp;',
-                            'Google/Firebase services;',
-                            'Google maps',
-                            'Solid knowledge of git.',
-                            'Intermediate English level.',
-                        ]
-                    },
-                    {
-                        section_name: 'We offer',
-                        section_list: [
-                            'Opportunity to grow as an expert;',
-                            'Regular results-based salary review;',
-                            'Flexible working conditions;',
-                            '24 days of paid vacation (working days);',
-                            '10 sick days;',
-                            'Friendly and open-minded team;',
-                            'English classes.',
-                        ]
-                    },
-                ],
+                datePosted: "11 / 11 / 2022",
+                hiringOrganisation: "ScrumLaunch", 
+                employmentType: "Full Time",
+                baseSalary: "$10-20 / hour",
             },
             {
-                skill: 'Node JS Developer',
-                location: 'Ukraine',
+                name: 'Node JS',
+                jobLocation: 'Ukraine',
                 remote: false,
                 open: true,
-                details: [
-                    {
-                        section_name: 'Requirements',
-                        section_list: [
-                            '2+ years of commercial experience;',
-                            'Proficient knowledge of the Kotlin/Java ;',
-                            'Deep understanding of OOP, design patterns, SOLID;',
-                            'Good understanding of MVP, MVVM, Clean Architecture',
-                            'Understanding of the full mobile life cycle (Activity, Fragment, CustomView);',
-                            'Dagger;',
-                            'RxJava, Coroutines;',
-                            'Android Jetpack;',
-                            'Retrofit/OkHttp;',
-                            'Google/Firebase services;',
-                            'Google maps',
-                            'Solid knowledge of git.',
-                            'Intermediate English level.',
-                        ]
-                    },
-                    {
-                        section_name: 'We offer',
-                        section_list: [
-                            'Opportunity to grow as an expert;',
-                            'Regular results-based salary review;',
-                            'Flexible working conditions;',
-                            '24 days of paid vacation (working days);',
-                            '10 sick days;',
-                            'Friendly and open-minded team;',
-                            'English classes.',
-                        ]
-                    },
-                ],
+                datePosted: "11 / 11 / 2022",
+                hiringOrganisation: "ScrumLaunch", 
+                employmentType: "Full Time",
+                baseSalary: "$10-20 / hour",
             },
             {
-                skill: 'Laravel Developer',
-                location: 'Ukraine',
+                name: 'Laravel',
+                jobLocation: 'Ukraine',
                 remote: false,
                 open: true,
-                details: [
-                    {
-                        section_name: 'Requirements',
-                        section_list: [
-                            '2+ years of commercial experience;',
-                            'Proficient knowledge of the Kotlin/Java ;',
-                            'Deep understanding of OOP, design patterns, SOLID;',
-                            'Good understanding of MVP, MVVM, Clean Architecture',
-                            'Understanding of the full mobile life cycle (Activity, Fragment, CustomView);',
-                            'Dagger;',
-                            'RxJava, Coroutines;',
-                            'Android Jetpack;',
-                            'Retrofit/OkHttp;',
-                            'Google/Firebase services;',
-                            'Google maps',
-                            'Solid knowledge of git.',
-                            'Intermediate English level.',
-                        ]
-                    },
-                    {
-                        section_name: 'We offer',
-                        section_list: [
-                            'Opportunity to grow as an expert;',
-                            'Regular results-based salary review;',
-                            'Flexible working conditions;',
-                            '24 days of paid vacation (working days);',
-                            '10 sick days;',
-                            'Friendly and open-minded team;',
-                            'English classes.',
-                        ]
-                    },
-                ],
+                datePosted: "11 / 11 / 2022",
+                hiringOrganisation: "ScrumLaunch", 
+                employmentType: "Full Time",
+                baseSalary: "$10-20 / hour",
             },
             {
-                skill: 'Python Developer',
-                location: 'Ukraine',
+                name: 'Python',
+                jobLocation: 'Ukraine',
                 remote: false,
                 open: false,
-                details: [
-                    {
-                        section_name: 'Requirements',
-                        section_list: [
-                            '2+ years of commercial experience;',
-                            'Proficient knowledge of the Kotlin/Java ;',
-                            'Deep understanding of OOP, design patterns, SOLID;',
-                            'Good understanding of MVP, MVVM, Clean Architecture',
-                            'Understanding of the full mobile life cycle (Activity, Fragment, CustomView);',
-                            'Dagger;',
-                            'RxJava, Coroutines;',
-                            'Android Jetpack;',
-                            'Retrofit/OkHttp;',
-                            'Google/Firebase services;',
-                            'Google maps',
-                            'Solid knowledge of git.',
-                            'Intermediate English level.',
-                        ]
-                    },
-                    {
-                        section_name: 'We offer',
-                        section_list: [
-                            'Opportunity to grow as an expert;',
-                            'Regular results-based salary review;',
-                            'Flexible working conditions;',
-                            '24 days of paid vacation (working days);',
-                            '10 sick days;',
-                            'Friendly and open-minded team;',
-                            'English classes.',
-                        ]
-                    },
-                ],
+                datePosted: "11 / 11 / 2022",
+                hiringOrganisation: "ScrumLaunch", 
+                employmentType: "Full Time",
+                baseSalary: "$10-20 / hour",
             },
             {
-                skill: 'Ruby Developer',
-                location: 'Ukraine',
+                name: 'Ruby',
+                jobLocation: 'Ukraine',
                 remote: false,
                 open: false,
-                details: [
-                    {
-                        section_name: 'Requirements',
-                        section_list: [
-                            '2+ years of commercial experience;',
-                            'Proficient knowledge of the Kotlin/Java ;',
-                            'Deep understanding of OOP, design patterns, SOLID;',
-                            'Good understanding of MVP, MVVM, Clean Architecture',
-                            'Understanding of the full mobile life cycle (Activity, Fragment, CustomView);',
-                            'Dagger;',
-                            'RxJava, Coroutines;',
-                            'Android Jetpack;',
-                            'Retrofit/OkHttp;',
-                            'Google/Firebase services;',
-                            'Google maps',
-                            'Solid knowledge of git.',
-                            'Intermediate English level.',
-                        ]
-                    },
-                    {
-                        section_name: 'We offer',
-                        section_list: [
-                            'Opportunity to grow as an expert;',
-                            'Regular results-based salary review;',
-                            'Flexible working conditions;',
-                            '24 days of paid vacation (working days);',
-                            '10 sick days;',
-                            'Friendly and open-minded team;',
-                            'English classes.',
-                        ]
-                    },
-                ],
+                datePosted: "11 / 11 / 2022",
+                hiringOrganisation: "ScrumLaunch", 
+                employmentType: "Full Time",
+                baseSalary: "$10-20 / hour",
             },
             {
-                skill: 'Ruby Developer',
-                location: 'Brazil',
+                name: 'Ruby',
+                jobLocation: 'Brazil',
                 remote: true,
                 open: true,
-                details: [
-                    {
-                        section_name: 'Requirements',
-                        section_list: [
-                            '2+ years of commercial experience;',
-                            'Proficient knowledge of the Kotlin/Java ;',
-                            'Deep understanding of OOP, design patterns, SOLID;',
-                            'Good understanding of MVP, MVVM, Clean Architecture',
-                            'Understanding of the full mobile life cycle (Activity, Fragment, CustomView);',
-                            'Dagger;',
-                            'RxJava, Coroutines;',
-                            'Android Jetpack;',
-                            'Retrofit/OkHttp;',
-                            'Google/Firebase services;',
-                            'Google maps',
-                            'Solid knowledge of git.',
-                            'Intermediate English level.',
-                        ]
-                    },
-                    {
-                        section_name: 'We offer',
-                        section_list: [
-                            'Opportunity to grow as an expert;',
-                            'Regular results-based salary review;',
-                            'Flexible working conditions;',
-                            '24 days of paid vacation (working days);',
-                            '10 sick days;',
-                            'Friendly and open-minded team;',
-                            'English classes.',
-                        ]
-                    },
-                ],
+                datePosted: "11 / 11 / 2022",
+                hiringOrganisation: "ScrumLaunch", 
+                employmentType: "Full Time",
+                baseSalary: "$10-20 / hour",
             },
         ],
     }),
@@ -441,13 +132,13 @@ export default {
 
         getVacancies: state => ( skill, location ) => {
             return state.vacancies.filter((item) => {
-                if ( item.skill == skill && location == '' ) {
+                if ( item.name == skill && location == '' ) {
                     return make_slug(item)
                 }
-                else if ( skill == '' && item.location == location ) {
+                else if ( skill == '' && item.jobLocation == location ) {
                     return make_slug(item)
                 }
-                else if ( item.skill == skill && item.location == location ) {
+                else if ( item.name == skill && item.jobLocation == location ) {
                     return make_slug(item)
                 }
                 else if ( skill == '' && location == ''  ) {
@@ -461,8 +152,8 @@ export default {
             let skills = []
 
             state.vacancies.map((item) => {
-                if ( skills.indexOf(item.skill) === -1 ) {
-                    skills.push(item.skill)
+                if ( skills.indexOf(item.name) === -1 ) {
+                    skills.push(item.name)
                 }
             })
 
@@ -474,8 +165,8 @@ export default {
             let locations = []
 
             state.vacancies.map((item) => {
-                if ( locations.indexOf(item.location) === -1 ) {
-                    locations.push(item.location)
+                if ( locations.indexOf(item.jobLocation) === -1 ) {
+                    locations.push(item.jobLocation)
                 }
             })
 
