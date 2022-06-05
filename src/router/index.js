@@ -21,6 +21,7 @@ import Vacancies from '../views/Vacancies.vue'
 import Vacancy from '../views/Vacancy.vue'
 import SendCV from '../views/SendCV.vue'
 import Quiz from '../views/Quiz.vue'
+import ReferralPartner from '../views/ReferralPartner.vue'
 
 const routes = [
 	{
@@ -150,6 +151,11 @@ const routes = [
 		meta: {
 			header: 1
 		},
+	},
+	{
+		path: '/referral-partner',
+		name: 'ReferralPartner',
+		component: ReferralPartner,
 	},
 	{
 		path: "/:pathMatch(.*)*",
