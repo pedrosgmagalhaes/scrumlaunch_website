@@ -20,6 +20,7 @@ import Location from '../views/Location.vue'
 import Vacancies from '../views/Vacancies.vue'
 import Vacancy from '../views/Vacancy.vue'
 import SendCV from '../views/SendCV.vue'
+import Quiz from '../views/Quiz.vue'
 
 const routes = [
 	{
@@ -141,6 +142,14 @@ const routes = [
 		path: '/send-cv',
 		name: 'SendCV',
 		component: SendCV
+	},
+	{
+		path: '/quiz',
+		name: 'Quiz',
+		component: Quiz,
+		meta: {
+			header: 1
+		},
 	},
 	{
 		path: "/:pathMatch(.*)*",

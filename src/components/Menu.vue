@@ -1,5 +1,5 @@
 <template>
-  <div class="menu home">
+  <div class="menu home" v-if="$route.meta.header !== 1">
     <div v-if="!showMenu" class="menu--desktop">
       <router-link :to="{ name: 'Home' }">
         <inline-svg
