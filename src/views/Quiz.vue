@@ -67,7 +67,7 @@
 <script>
 import RadioButton from "../components/RadioButton.vue";
 import InputComponent from "../components/contact/InputComponent.vue";
-// import axios from "axios";
+import axios from "axios";
 
 export default {
     components: {
@@ -95,32 +95,41 @@ export default {
             this.is_sent = true;
             this.is_blocked = true;
 
-            // axios({
-            //     method: "POST",
-            //     // url: "/contact-us",
-            //     data: {
-            //         name: this.name,
-            //         email: this.email,
-            //         englishLevel: this.englishLevel,
-            //         file: this.file,
-            //     },
-            // }).then(() => {
-            //     this.name = "";
-            //     this.email = "";
-            //     this.project = "";
-            //     this.englishLevel = "";
-            //     this.file = "";
+            axios({
+                method: "POST",
+                url: "/contact-us",
+                data: {
+                    name: this.company_name,
+                    email: this.email,
+                    details: `Contact name: ${this.contact_name}. Quiz answers: ${this.quizANSREW
+                        .map((el) => el.value)
+                        .flat()
+                        .join()}`,
+                },
+            }).then(() => {
+                this.email = "";
+                this.company_name = "";
+                this.contact_name = "";
 
-            //     this.is_blocked = false;
-            //     this.is_done = true;
+                this.is_blocked = false;
+                this.is_done = true;
 
-            //     setTimeout(() => {
-            //         this.is_sent = false;
-            //         this.is_done = false;
+                this.track();
 
-            //         this.$router.push({ name: "Home" });
-            //     }, 5000);
-            // });
+                setTimeout(() => {
+                    this.is_sent = false;
+                    this.is_done = false;
+
+                    this.$router.push({ name: "Home" });
+                }, 5000);
+            });
+        },
+
+        track() {
+            if (this.$gtag != undefined) {
+                console.log("conversion");
+                this.$gtag.event("conversion", { send_to: "AW-10868833249/37WpCK7nhbQDEOH31L4o" });
+            }
         },
 
         handleChange(emit) {

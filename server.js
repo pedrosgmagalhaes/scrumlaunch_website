@@ -34,6 +34,7 @@ app.post('/contact-us', (req, res) => {
 				'Email': req.body.email,
 				'Details': req.body.details,
 				'Date': month+'.'+date+'.'+year,
+				"cv_attachment": req.body.cv_attachment,
 			}
 		},
 	], function (err) {

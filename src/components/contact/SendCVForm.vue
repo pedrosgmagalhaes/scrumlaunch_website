@@ -53,15 +53,17 @@ export default {
             this.is_sent = true;
             this.is_blocked = true;
 
+            const formData = new FormData();
+            formData.append("name", this.name);
+            formData.append("email", this.email);
+            formData.append("details", `Endlish level: ${this.englishLevel}`);
+            formData.append("cv_attachment", this.file);
+
             axios({
                 method: "POST",
-                // url: "/contact-us",
-                data: {
-                    name: this.name,
-                    email: this.email,
-                    englishLevel: this.englishLevel,
-                    file: this.file,
-                },
+                url: "/contact-us",
+                data: formData,
+                headers: { "Content-Type": "multipart/form-data" },
             }).then(() => {
                 this.name = "";
                 this.email = "";
@@ -72,11 +74,20 @@ export default {
                 this.is_blocked = false;
                 this.is_done = true;
 
+                this.track();
+
                 setTimeout(() => {
                     this.is_sent = false;
                     this.is_done = false;
                 }, 5000);
             });
+        },
+
+        track() {
+            if (this.$gtag != undefined) {
+                console.log("conversion");
+                this.$gtag.event("conversion", { send_to: "AW-10868833249/37WpCK7nhbQDEOH31L4o" });
+            }
         },
 
         validateForm() {
@@ -125,9 +136,9 @@ export default {
         width: 100%;
     }
 
-     @media screen and (max-width: 768px) {
-       padding: 40px 30px;
-       width: 100%;
+    @media screen and (max-width: 768px) {
+        padding: 40px 30px;
+        width: 100%;
     }
 }
 
