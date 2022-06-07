@@ -1,10 +1,11 @@
 <template>
-  <div class="footer home">
+  <div class="footer home" v-if="$route.meta.header !== 1">
     <div class="footer--menu">
       <router-link :to="{ name: 'Home' }">Portfolio</router-link>
-      <router-link :to="{ name: 'Services' }">Services</router-link>
+      <!-- <router-link :to="{ name: 'Services' }">Services</router-link> -->
       <router-link :to="{ name: 'Process' }">About us</router-link>
-      <router-link :to="{ name: 'Leadership' }">Leadership</router-link>
+      <router-link :to="{ name: 'ReferralPartner' }">Referral Program</router-link>
+      <!-- <router-link :to="{ name: 'Leadership' }">Leadership</router-link> -->
       <router-link :to="{ name: 'ContactUs' }">Contact</router-link>
     </div>
     <div class="footer--contact">

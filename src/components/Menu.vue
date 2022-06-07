@@ -1,5 +1,5 @@
 <template>
-  <div class="menu home">
+  <div class="menu home" v-if="$route.meta.header !== 1">
     <div v-if="!showMenu" class="menu--desktop">
       <router-link :to="{ name: 'Home' }">
         <inline-svg
@@ -13,9 +13,9 @@
         :class="contactPage && 'white-wrapper'"
       >
         <router-link :to="{ name: 'Work' }">Work</router-link>
-        <!-- <router-link :to="{ name: 'Services' }">Services</router-link> -->
+        <router-link :to="{ name: 'Services' }">Services</router-link>
         <router-link :to="{ name: 'Process' }">Process</router-link>
-        <!-- <router-link :to="{ name: 'Leadership' }">Leadership</router-link> -->
+        <router-link :to="{ name: 'Leadership' }">Leadership</router-link>
         <div class="dropdown__wrap">
           <span>Blog</span>
           <ul class="dropdown">
