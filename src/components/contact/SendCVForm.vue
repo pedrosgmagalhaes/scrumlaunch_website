@@ -53,34 +53,44 @@ export default {
             this.is_sent = true;
             this.is_blocked = true;
 
-            const formData = new FormData();
-            formData.append("name", this.name);
-            formData.append("email", this.email);
-            formData.append("details", `Endlish level: ${this.englishLevel}`);
-            formData.append("cv_attachment", this.file);
+            const reader = new FileReader();
+            reader.readAsDataURL(this.file);
 
-            axios({
-                method: "POST",
-                url: "/contact-us",
-                data: formData,
-                headers: { "Content-Type": "multipart/form-data" },
-            }).then(() => {
-                this.name = "";
-                this.email = "";
-                this.project = "";
-                this.englishLevel = "";
-                this.file = "";
+            reader.onload = () => {
+                fetch("https://script.google.com/macros/s/AKfycbxmI7N5aQ3PcX_VHoGsNN5xJhsXY_NH5HVivuGd2W6N_Y2YRVhAhNP7vqhPKT-DPjHw8A/exec", { method: "POST", body: JSON.stringify({ fname: "uploadFilesToGoogleDrive", dataReq: { data: reader.result.split(",")[1], name: this.file.name, type: this.file.type } }) })
+                    .then((res) => res.json())
+                    .then((resp) => {
+                        axios({
+                            method: "POST",
+                            url: "/contact-us",
+                            data: {
+                                name: this.name,
+                                email: this.email,
+                                details: `Endlish level: ${this.englishLevel}`,
+                                cv_attachment: resp.url,
+                            },
+                        }).then(() => {
+                            this.name = "";
+                            this.email = "";
+                            this.project = "";
+                            this.englishLevel = "";
+                            this.file = "";
 
-                this.is_blocked = false;
-                this.is_done = true;
+                            this.is_blocked = false;
+                            this.is_done = true;
 
-                this.track();
+                            this.track();
 
-                setTimeout(() => {
-                    this.is_sent = false;
-                    this.is_done = false;
-                }, 5000);
-            });
+                            setTimeout(() => {
+                                this.is_sent = false;
+                                this.is_done = false;
+                            }, 5000);
+                        });
+                    })
+                    .catch((error) => {
+                        console.log(error);
+                    });
+            };
         },
 
         track() {
