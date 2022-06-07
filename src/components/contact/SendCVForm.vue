@@ -98,7 +98,7 @@ export default {
             this.englishLevelError = this.englishLevel === "" ? "Please, choose your english level" : null;
             this.fileError = this.file === "" ? "Please, upload your CV" : null;
 
-            if (this.nameError === null && this.emailError === null && this.englishLevel === null && this.fileError === null) {
+            if (this.nameError === null && this.emailError === null && this.englishLevelError === null && this.fileError === null) {
                 this.sendForm();
             }
         },
