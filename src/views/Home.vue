@@ -7,6 +7,7 @@
 		<ClientTestimonials />
 		<HowScrumLaunchWorks />
 		<WhyChooseScrumLaunch />
+		<IndustryLeadingResults />
 		<TickerBlock />
 		<Projects />
 		<HistoryBlock />
@@ -35,6 +36,7 @@ import HowScrumLaunchWorks from '@/components/home/HowScrumLaunchWorks.vue'
 import SoftwareDesign from '@/components/home/SoftwareDesign.vue'
 import ClientTestimonials from '@/components/home/ClientTestimonials.vue'
 import WhyChooseScrumLaunch from '@/components/home/WhyChooseScrumLaunch.vue'
+import IndustryLeadingResults from '@/components/home/IndustryLeadingResults.vue'
 
 import { useHead } from '@vueuse/head'
 
@@ -57,6 +59,7 @@ export default {
 		SoftwareDesign,
 		ClientTestimonials,
 		WhyChooseScrumLaunch,
+		IndustryLeadingResults,
 	},
 
 	setup() {

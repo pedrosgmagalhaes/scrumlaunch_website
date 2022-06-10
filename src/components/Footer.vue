@@ -2,7 +2,7 @@
     <div v-if="$route.meta.header !== 1">
         <div class="social_proof">
             <div class="social_proof__badge">
-                <inline-svg :src="require('@/assets/icons/clutch_badge.svg')" />
+                <inline-svg :src="require('@/assets/icons/clutch_badge.svg')" @click="openClutch" />
             </div>
             <p class="social_proof__title">Join <span class="mark">100+ high growth startups</span> and Fortune 500 companies that are building software teams with ScrumLaunch.</p>
             <div class="social_proof__img-conatiner">
@@ -52,6 +52,12 @@ export default {
     components: {
         SocialBlock,
         ScrollToTop,
+    },
+
+    methods: {
+        openClutch() {
+            window.open("https://clutch.co/profile/scrumlaunch#summary", "_blank");
+        },
     },
 };
 </script>
@@ -172,6 +178,10 @@ export default {
         display: flex;
         align-items: center;
         gap: 44px;
+    }
+
+    &__badge {
+        cursor: pointer;
     }
 
     @media screen and (max-width: 1440px) {
