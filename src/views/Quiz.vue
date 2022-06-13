@@ -9,7 +9,8 @@
                 </div>
                 <div v-if="quizStep !== 7">
                     <div v-for="text in quiz[quizStep].answers" :key="text" class="radio-element">
-                        <RadioButton :title="text" @click="handleChange(text)" :active="!!quizANSREW.filter((t) => t.value === text).length" />
+                        <Checkbox v-if="quizStep === 2" :title="text" @click="handleSelect(text)" :active="!!quizANSREW[quizStep - 1].value.some((t) => t === text)" />
+                        <RadioButton v-else :title="text" @click="handleChange(text)" :active="!!quizANSREW.filter((t) => t.value === text).length" />
                     </div>
                 </div>
 
@@ -68,11 +69,13 @@
 import RadioButton from "../components/RadioButton.vue";
 import InputComponent from "../components/contact/InputComponent.vue";
 import axios from "axios";
+import Checkbox from "../components/Checkbox.vue";
 
 export default {
     components: {
         RadioButton,
         InputComponent,
+        Checkbox,
     },
     methods: {
         handleFieldChange(name, value) {
@@ -139,9 +142,9 @@ export default {
         handleSelect(emit) {
             let currentQuizItem = this.quizANSREW[this.quizStep - 1];
 
-            const isExists = currentQuizItem.value.some((lng) => lng === emit);
+            const isExists = currentQuizItem.value.some((item) => item === emit);
             if (isExists) {
-                this.quizANSREW[this.quizStep - 1] = { step: this.quizStep, value: currentQuizItem.value.filter((lng) => lng !== emit) };
+                this.quizANSREW[this.quizStep - 1] = { step: this.quizStep, value: currentQuizItem.value.filter((item) => item !== emit) };
             } else {
                 this.quizANSREW[this.quizStep - 1] = { step: this.quizStep, value: [...currentQuizItem.value, emit] };
             }
@@ -178,7 +181,7 @@ export default {
             { step: 1, value: "Full team" },
             {
                 step: 2,
-                value: "Developer (Software Developer, Data Scientists, DevOps and QA)",
+                value: ["Developer (Software Developer, Data Scientists, DevOps or QA)"],
             },
             { step: 3, value: "Less than 10" },
             { step: 4, value: "New idea or project" },
@@ -193,7 +196,7 @@ export default {
             },
             2: {
                 question: "What role(s) would you like to hire?",
-                answers: ["Developer (Software Developer, Data Scientists, DevOps and QA)", "Designers (Web, Mobile, UI/UX, Branding, Illustration)", "Project Managers", "Product Managers"],
+                answers: ["Developer (Software Developer, Data Scientists, DevOps or QA)", "Designer (Web, Mobile, UI/UX, Branding, Illustration)", "Project Manager", "Product Manager"],
             },
             3: {
                 question: "How many people are employed at your company?",
