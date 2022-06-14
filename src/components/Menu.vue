@@ -113,7 +113,6 @@ export default {
           this.$route.name === "FullCourtAiCaseStudy" ||
           this.$route.name === "HelmmCaseStudy" ||
           this.$route.name === "ScopeCaseStudy" ||
-          this.$route.name === "ProgLang" ||
           this.$route.name === "CampusReelCaseStudy" ||
           this.$route.name === "LocationState" ||
           this.$route.name === "LocationCity" ||

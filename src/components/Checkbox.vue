@@ -27,7 +27,7 @@ export default {
         width: 100%;
         max-width: 36px;
 
-        border-radius: 10px;
+        border-radius: 5px;
         height: 36px;
         border: 2px solid #1e1f21;
         text-align: center;
@@ -64,13 +64,13 @@ export default {
         align-items: center;
 
         &_btn {
-            max-width: 32px;
-            height: 32px;
-        }
+            max-width: 24px;
+            height: 24px;
 
-        .active {
-            width: 25px;
-            height: 25px;
+            & > img {
+                width: 15px;
+                height: 14px;
+            }
         }
 
         &_title {
