@@ -3,8 +3,8 @@
         <div class="container section_1">
             <div class="flex">
                 <div>
-                    <p class="title">Hire <span class="mark">python Experts</span><br />On Demand</p>
-                    <p class="desc">Hire Python developers that are vetted, trained and managed by Scrumlaunch. We place high-quality Python developers across all types of businesses from venture-backed startups to large corporations.</p>
+                    <p class="title">Hire <span class="mark">{{ dev_lang }} Experts</span><br />On Demand</p>
+                    <p class="desc">Hire {{ dev_lang }} developers that are vetted, trained and managed by Scrumlaunch. We place high-quality Python developers across all types of businesses from venture-backed startups to large corporations.</p>
                 </div>
                 <div class="developer">
                     <div class="developer__image first"></div>
@@ -20,7 +20,7 @@
                 </div>
             </div>
             <div class="dev_map_tablet"><img src="/images/hire-developers/dev_map.svg" alt="" /></div>
-            <MetricsCard />
+            <MetricsCard :lang="dev_lang" />
         </div>
         <div class="container section_2">
             <h2>Developer Profiles</h2>
@@ -62,7 +62,7 @@
         </div>
 
         <div class="container section_4">
-            <p class="accordian_title">How to hire a PYTHON EXPERT?</p>
+            <p class="accordian_title">How to hire a {{ dev_lang }} EXPERT?</p>
             <p class="accordian_desc">Hiring fresh talent in Java requires testing and reviewing candidates for their technical skills and proficiency in the programming language. That means a fair amount of software development experience is expected.</p>
             <div>
                 <Accordion iconUrl="/images/hire-developers/faq_1.svg" title="High-level proficiency in Object-Oriented Programming (OOP)" description="Java is a popular programming language that is widely used in the construction of secure and reliable web applications and websites for different industries such as hospitality, healthcare, E-commerce." />

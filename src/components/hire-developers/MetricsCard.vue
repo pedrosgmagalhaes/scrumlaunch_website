@@ -1,33 +1,49 @@
 <template>
     <div class="metric">
         <ul class="conatiner_lng">
-            <li>Python Metrics</li>
+            <li>{{ lang }} Metrics</li>
             <li>April 2022</li>
         </ul>
         <div class="metric__items">
             <div class="item">
-                <p class="title">4 Days</p>
+                <p class="title">{{ this.isPopularLanguage ? "5 Days" : "9 Days" }}</p>
                 <p class="desc">Average time to staff a project</p>
             </div>
             <div class="item">
-                <p class="title">30+</p>
-                <p class="desc">Scrumlaunch React Developer Projects</p>
+                <p class="title">{{ this.isPopularLanguage ? "30+" : "7+" }}</p>
+                <p class="desc">Scrumlaunch {{ lang }} Developer Projects</p>
             </div>
 
             <div class="item">
-                <p class="title">Very High</p>
+                <p class="title">{{ this.isPopularLanguage ? "Very High" : "Medium High" }}</p>
                 <p class="desc">Global Demand</p>
             </div>
 
             <div class="btn_wrap">
-                <button class="btn">hire PYTHON developerS</button>
+                <button class="btn">hire {{ lang }} developerS</button>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-export default {};
+export default {
+    props: {
+        lang: { type: String },
+    },
+
+    watch: {
+        lang: function (newVal) {
+            this.isPopularLanguage = ["PHP", "Swift", "Python", "Node JS", "React JS", "React Native", "Kotlin", "Vue", "Web Developers", "Software Developers", "Django Developers", "iOS Developers", "Android Developers", "Laravel Developers"].includes(newVal);
+        },
+    },
+
+    data() {
+        return {
+            isPopularLanguage: false,
+        };
+    },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -46,7 +62,7 @@ export default {};
         align-items: center;
 
         .item {
-            padding: 0px 40px;
+            padding: 0px 50px;
             border-right: 1px solid #1e1f21;
             height: 104px;
 
@@ -66,7 +82,6 @@ export default {};
             font-weight: 400;
             font-size: 18px;
             line-height: 150%;
-            max-width: 160px;
         }
     }
 }

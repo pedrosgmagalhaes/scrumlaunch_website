@@ -246,12 +246,24 @@ export default {
             gap: 5px;
             flex-direction: column;
         }
-    }
 
-    & > p {
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 150%;
+        & > p {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 150%;
+        }
+
+        @media screen and (max-width: 1440px) {
+            & > p {
+                font-size: 14px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            & > p {
+                font-size: 12px;
+            }
+        }
     }
 
     &__dot {
