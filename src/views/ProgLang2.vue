@@ -3,7 +3,9 @@
         <div class="container section_1">
             <div class="flex">
                 <div>
-                    <p class="title">Hire <span class="mark">{{ dev_lang }} Experts</span><br />On Demand</p>
+                    <p class="title">
+                        Hire <span class="mark">{{ dev_lang }} Experts</span><br />On Demand
+                    </p>
                     <p class="desc">Hire {{ dev_lang }} developers that are vetted, trained and managed by Scrumlaunch. We place high-quality Python developers across all types of businesses from venture-backed startups to large corporations.</p>
                 </div>
                 <div class="developer">
@@ -64,11 +66,8 @@
         <div class="container section_4">
             <p class="accordian_title">How to hire a {{ dev_lang }} EXPERT?</p>
             <p class="accordian_desc">Hiring fresh talent in Java requires testing and reviewing candidates for their technical skills and proficiency in the programming language. That means a fair amount of software development experience is expected.</p>
-            <div>
-                <Accordion iconUrl="/images/hire-developers/faq_1.svg" title="High-level proficiency in Object-Oriented Programming (OOP)" description="Java is a popular programming language that is widely used in the construction of secure and reliable web applications and websites for different industries such as hospitality, healthcare, E-commerce." />
-                <Accordion iconUrl="/images/hire-developers/faq_2.svg" title="Good knowledge of wireframes, UI design and design patterns in Python" description="Java is a popular programming language that is widely used in the construction of secure and reliable web applications and websites for different industries such as hospitality, healthcare, E-commerce." />
-                <Accordion iconUrl="/images/hire-developers/faq_3.svg" title="Familiarity with Java application containers such as JBoss and Jetty" description="Java is a popular programming language that is widely used in the construction of secure and reliable web applications and websites for different industries such as hospitality, healthcare, E-commerce." />
-                <Accordion iconUrl="/images/hire-developers/faq_4.svg" title="Stronghold on Python web frameworks" description="Java is a popular programming language that is widely used in the construction of secure and reliable web applications and websites for different industries such as hospitality, healthcare, E-commerce." />
+            <div v-for="(item, i) in questions[dev_lang]?.length ? questions[dev_lang] : questions.other" :key="i">
+                <Accordion :title="item.title" :description="item.description" :list="item?.list" :imgNumber="item.number" />
             </div>
             <div class="btn_wrap">
                 <button class="btn on_dark_bg">hire our developers</button>
@@ -218,6 +217,51 @@ export default {
 
         return {
             dev_lang,
+        };
+    },
+
+    data() {
+        return {
+            questions: {
+                PHP: [
+                    { number: 1, title: "What is PHP?", description: ["PHP stands for Hypertext Preprocessor. It is an open source server-side scripting language which is widely used for web development. It supports many databases like MySQL, Oracle, Sybase, Solid, PostgreSQL, generic ODBC etc."] },
+                    { number: 2, title: "What is PEAR in PHP?", description: ["PEAR is a framework and repository for reusable PHP components. PEAR stands for PHP Extension and Application Repository. It contains all types of PHP code snippets and libraries.", "It also provides a command line interface to install 'packages' automatically."] },
+                    { number: 3, title: "Explain the difference b/w static and dynamic websites?", description: ["In static websites, content can't be changed after running the script. You can't change anything on the site. It is predefined.", "In dynamic websites, content of script can be changed at the run time. Its content is regenerated every time a user visit or reload. Google, yahoo and every search engine is the example of dynamic website."] },
+                    {
+                        number: 4,
+                        title: "What are the popular Content Management Systems (CMS) in PHP?",
+                        description: [
+                            "WordPress: WordPress is a free and open-source content management system (CMS) based on PHP & MySQL. It includes a plug-in architecture and template system. It is mostly connected with blogging but supports another kind of web content, containing more traditional mailing lists and forums, media displays, and online stores.",
+                            "Joomla: Joomla is a free and open-source content management system (CMS) for distributing web content, created by Open Source Matters, Inc. It is based on a model-view-controller web application framework that can be used independently of the CMS.",
+                            "Magento: Magento is an open source E-trade programming, made by Varien Inc., which is valuable for online business. It has a flexible measured design and is versatile with many control alternatives that are useful for clients. Magento utilizes E-trade stage which offers organization extreme E-business arrangements and extensive support network.",
+                            "Drupal: Drupal is a CMS platform developed in PHP and distributed under the GNU (General Public License).",
+                        ],
+                    },
+                    { number: 1, title: "What is 'echo' in PHP?", description: ["PHP echo outputs one or more strings. It is a language construct not a function. So the use of parentheses is not required. But if you want to pass more than one parameter to echo, the use of parentheses is required."] },
+                    { number: 2, title: "What is the difference between $message and $$message?", description: ["$message stores variable data while $$message is used to store a variable of variables", "$message stores fixed data whereas the data stored in $$message may be changed dynamically."] },
+                    { number: 3, title: "Describe how the Laravel Framework works.", description: ["Laravel has diverse features such as template engine, MVC architecture support, top security, artisan tool, database migration system and etc. These Laravel advanced features make it better than other PHP frameworks. It provides benchmarked and feature-packed solutions for high-end web application development."] },
+                ],
+                other: [
+                    { number: 1, title: "What is meant by the term OOP?", description: ["OOPs refers to Object-Oriented Programming. It is the programming paradigm that is defined using objects. Objects can be considered as real-world instances of entities like class, that have some characteristics and behaviors."] },
+                    { number: 2, title: "What are some major Object Oriented Programming languages?", description: ["The programming languages that use and follow the Object-Oriented Programming paradigm or OOPs, are known as Object-Oriented Programming languages. Some of the major Object-Oriented Programming languages include:"], list: ["Java", "C++", "Javascript", "Python", "PHP"] },
+                    { number: 3, title: "What is meant by Structured Programming?", description: ["Structured Programming refers to the method of programming which consists of a completely structured control flow. Here structure refers to a block, which contains a set of rules, and has a definitive control flow, such as (if/then/else), (while and for), block structures, and subroutines.", "Nearly all programming paradigms include Structured programming, including the OOPs model."] },
+                    {
+                        number: 4,
+                        title: "What is a class?",
+                        description: [
+                            "A class can be understood as a template or a blueprint, which contains some values, known as member data or member, and some set of rules, known as behaviors or functions. So when an object is created, it automatically takes the data and functions that are defined in the class.",
+                            "Therefore the class is basically a template or blueprint for objects. Also one can create as many objects as they want based on a class.",
+                            "For example, first, a car’s template is created. Then multiple units of car are created based on that template.",
+                        ],
+                    },
+                    { number: 1, title: "What is an object?", description: ["An object refers to the instance of the class, which contains the instance of the members and behaviors defined in the class template. In the real world, an object is an actual entity to which a user interacts, whereas class is just the blueprint for that object. So the objects consume space and have some characteristic behavior.", "For example, a specific car."] },
+                    {
+                        number: 2,
+                        title: "What is Polymorphism?",
+                        description: ["Polymorphism is composed of two words - “poly” which means “many”, and “morph” which means “shapes”. Therefore Polymorphism refers to something that has many shapes.", "In OOPs, Polymorphism refers to the process by which some code, data, method, or object behaves differently under different circumstances or contexts. Compile-time polymorphism and Run time polymorphism are the two types of polymorphisms in OOPs languages."],
+                    },
+                ],
+            },
         };
     },
 };

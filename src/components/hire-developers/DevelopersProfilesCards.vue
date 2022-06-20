@@ -2,7 +2,7 @@
     <div class="developers">
         <div class="developers__item">
             <div class="developers__item__img">
-                <div class="hover-btn"><button class="btn">HIRE</button></div>
+                <div class="hover-btn"><router-link to="/contact-us" class="btn">HIRE</router-link></div>
                 <img src="/images/hire-developers/ekaterina_a.png" alt="ekaterina_a" />
             </div>
             <div class="developers__item__info">
@@ -16,6 +16,7 @@
         </div>
         <div class="developers__item">
             <div class="developers__item__img">
+                <div class="hover-btn"><router-link to="/contact-us" class="btn">HIRE</router-link></div>
                 <img src="/images/hire-developers/oleg_v.png" alt="oleg_v" />
             </div>
             <div class="developers__item__info">
@@ -29,6 +30,7 @@
         </div>
         <div class="developers__item">
             <div class="developers__item__img">
+                <div class="hover-btn"><router-link to="/contact-us" class="btn">HIRE</router-link></div>
                 <img src="/images/hire-developers/oleksandr_b.png" alt="oleksandr_b" />
             </div>
             <div class="developers__item__info">
@@ -61,6 +63,19 @@ export default {};
         height: 520px;
         background: #ffffff;
         border: 1px solid #1e1f21;
+        position: relative;
+
+        &:hover &__img {
+            .hover-btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .btn {
+                    display: block;
+                }
+            }
+        }
 
         &__img {
             .hover-btn {
@@ -70,9 +85,13 @@ export default {};
                 background: #12e2b0;
                 height: 293px;
                 align-items: center;
+                position: absolute;
+
+                transition: all 0.3s linear;
 
                 .btn {
                     display: none;
+                    transition: all 0.3s linear;
 
                     font-weight: 400;
                     font-size: 20px;

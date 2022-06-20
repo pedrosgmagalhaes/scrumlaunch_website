@@ -2,15 +2,20 @@
     <div class="accordian_container">
         <div class="title_container">
             <div class="icon">
-                <img :src="iconUrl" alt="" />
+                <img :src="`/images/hire-developers/faq_${imgNumber}.svg`" alt="" />
             </div>
             <p class="title">{{ title }}</p>
             <div @click="toggleExpand()" class="expand_container">
                 <img class="expand_icon" :src="`/images/hire-developers/${isExpanded ? 'minus' : 'plus'}.svg`" alt="" />
             </div>
         </div>
-        <div v-if="this.isExpanded">
-            <p class="description">{{ description }}</p>
+        <div v-if="this.isExpanded" class="descr_container">
+            <p class="description" v-for="(item, i) in description" :key="i">{{ item }}</p>
+            <div v-if="!!list?.length">
+                <ul v-for="(ls, i) in list" :key="i">
+                    <li>{{ ls }}</li>
+                </ul>
+            </div>
         </div>
     </div>
 </template>
@@ -19,8 +24,9 @@
 export default {
     props: {
         title: { type: String },
-        iconUrl: { type: String },
-        description: { type: String },
+        description: { type: [String] },
+        list: { type: [String] },
+        imgNumber: { type: Number },
     },
 
     methods: {
@@ -59,6 +65,22 @@ export default {
     position: relative;
     cursor: pointer;
     margin-left: auto;
+}
+
+.descr_container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+ul {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    color: #1e1f21;
+    max-width: 910px;
+    margin-left: 97px;
+    list-style: disc;
 }
 
 .icon {
@@ -104,6 +126,11 @@ export default {
     .accordian_container {
         padding: 35px 0;
     }
+    ul {
+        font-size: 14px;
+        margin-left: 0px;
+        padding: 0 20px;
+    }
 
     .title {
         font-size: 24px;
@@ -141,6 +168,10 @@ export default {
 @media screen and (max-width: 768px) {
     .accordian_container {
         padding: 30px 0;
+    }
+    ul {
+        font-size: 12px;
+        padding: 0 10px;
     }
 
     .title {
