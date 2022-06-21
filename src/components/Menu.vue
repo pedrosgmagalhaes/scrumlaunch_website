@@ -12,10 +12,10 @@
         class="menu--desktop--wrapper"
         :class="contactPage && 'white-wrapper'"
       >
-        <router-link :to="{ name: 'Work' }">Work</router-link>
+        <!-- <router-link :to="{ name: 'Work' }">Work</router-link> -->
         <router-link :to="{ name: 'Services' }">Services</router-link>
-        <router-link :to="{ name: 'Process' }">Process</router-link>
-        <router-link :to="{ name: 'Leadership' }">Leadership</router-link>
+        <!-- <router-link :to="{ name: 'Process' }">Process</router-link> -->
+        <!-- <router-link :to="{ name: 'Leadership' }">Leadership</router-link> -->
         <div class="dropdown__wrap">
           <span>Blog</span>
           <ul class="dropdown">
@@ -113,7 +113,6 @@ export default {
           this.$route.name === "FullCourtAiCaseStudy" ||
           this.$route.name === "HelmmCaseStudy" ||
           this.$route.name === "ScopeCaseStudy" ||
-          this.$route.name === "ProgLang" ||
           this.$route.name === "CampusReelCaseStudy" ||
           this.$route.name === "LocationState" ||
           this.$route.name === "LocationCity" ||
