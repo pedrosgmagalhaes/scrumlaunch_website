@@ -7,7 +7,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: process.env.API_URL },
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }],
@@ -29,6 +29,7 @@ export default {
     '@nuxtjs/eslint-module',
     '@nuxtjs/style-resources',
     '@nuxtjs/svg',
+    '@nuxtjs/dotenv'
   ],
 
   styleResources: {
@@ -40,6 +41,10 @@ export default {
   robots: {
     UserAgent: '*',
     Allow: '/',
+  },
+
+  axios: {
+    baseURL: process.env.API_URL || 'http://localhost:3000',
   },
 
   build: {
