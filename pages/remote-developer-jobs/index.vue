@@ -42,7 +42,7 @@
             />
           </div>
         </div>
-
+        
         <div class="vacancies__items">
           <div
             v-for="(vacancy, i) in vacancies"
