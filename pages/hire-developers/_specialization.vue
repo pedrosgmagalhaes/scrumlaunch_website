@@ -15,15 +15,15 @@
         </div>
         <div class="developer">
           <div class="developer__image first"></div>
-          <p class="developer__name">Jonas Karakoro</p>
+          <p class="developer__name">Jonas K</p>
         </div>
         <div class="developer">
           <div class="developer__image second"></div>
-          <p class="developer__name">Jonas Karakoro</p>
+          <p class="developer__name">Yuliia G</p>
         </div>
         <div class="developer">
           <div class="developer__image third"></div>
-          <p class="developer__name">Jonas Karakoro</p>
+          <p class="developer__name">Joao P</p>
         </div>
       </div>
       <div class="dev_map_tablet">
@@ -488,7 +488,7 @@ export default {
       right: 65%;
     }
 
-    @media screen and (max-width: 460px) {
+    @media screen and (max-width: 425px) {
       top: 37%;
       right: 76%;
     }
@@ -508,7 +508,7 @@ export default {
       right: 38%;
     }
 
-    @media screen and (max-width: 460px) {
+    @media screen and (max-width: 425px) {
       top: 40%;
       right: 20%;
     }
@@ -528,7 +528,7 @@ export default {
       right: 66%;
     }
 
-    @media screen and (max-width: 460px) {
+    @media screen and (max-width: 425px) {
       top: 46%;
       right: 55%;
     }

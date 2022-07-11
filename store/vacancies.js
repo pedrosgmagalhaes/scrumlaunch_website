@@ -135,7 +135,7 @@ export const getters = {
           return item.name === skill && item.jobLocation === location
         }
 
-        return item
+        return item.open
       })
       .map((item) => ({
         ...item,

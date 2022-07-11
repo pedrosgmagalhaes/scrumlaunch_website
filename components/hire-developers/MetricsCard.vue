@@ -38,13 +38,7 @@ export default {
 
   data() {
     return {
-      isPopularLanguage: false,
-    }
-  },
-
-  watch: {
-    lang(newVal) {
-      this.isPopularLanguage = [
+      popularLanguages: [
         'PHP',
         'Swift',
         'Python',
@@ -59,9 +53,21 @@ export default {
         'iOS Developers',
         'Android Developers',
         'Laravel Developers',
-      ].includes(newVal)
-    },
+      ]
+    }
   },
+
+  // watch - better to use with events, computed for transforming data
+
+  computed: {
+    isPopularLanguage() {
+      if (this.popularLanguages.includes(this.lang)) {
+        return true
+      }
+      return false
+    }
+  },
+
 }
 </script>
 
@@ -75,6 +81,9 @@ export default {
 .metric {
   border: 1px solid #1e1f21;
   padding: 40px 60px;
+  padding-right: 0;
+  max-width: 1500px;
+  margin: auto;
 
   &__items {
     display: flex;
@@ -88,6 +97,7 @@ export default {
       &:first-child {
         padding-left: 0px;
       }
+
     }
 
     .title {
@@ -137,7 +147,8 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 50px;
+  margin: auto;
+  padding: 0 25px;
 
   .btn {
     padding: 26px 40px;
@@ -185,6 +196,7 @@ export default {
       grid-template-rows: repeat(3, 1fr);
 
       .item {
+        padding: 0px 25px;
         border-right: none;
         &:nth-child(1) {
           border-right: 1px solid #1e1f21;
