@@ -7,6 +7,15 @@ pipelines:
   branches:
     staging:
        - step:
+          name: 'Build app'
+          caches:
+            - node
+          script:
+            - npm install --quiet
+            - npm run build --progress=false
+          artifacts:
+            - dist/**
+       - step:
            name: Create artifact
            script: 
              - git archive --format=tar.gz master -o application.tar.gz 
