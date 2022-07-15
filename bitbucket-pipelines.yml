@@ -6,7 +6,7 @@ clone:
 pipelines:
   branches:
     staging:
-      - step:
+       - step:
           name: 'Build app'
           caches:
             - node
