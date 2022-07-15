@@ -43,6 +43,11 @@ Thumbs.db
 *.exe
 *.war
 
+.env.local
+.env
+.nuxt
+.eslintcache
+
 # Large media files
 *.mp4
 *.tiff

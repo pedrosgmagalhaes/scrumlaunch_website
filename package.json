@@ -1,89 +1,48 @@
 {
   "name": "ScrumLaunch",
-  "version": "0.1.0",
-  "engines": {
-    "node": "14.x"
-  },
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint",
-    "sitemap": "vue-cli-service sitemap",
-    "start": "node server.js"
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
+    "lint:prettier": "prettier --check .",
+    "lint": "npm run lint:js && npm run lint:prettier",
+    "lintfix": "prettier --write --list-different . && npm run lint:js -- --fix",
+    "heroku-postbuild": "nuxt build"
   },
   "dependencies": {
-    "@contentful/rich-text-html-renderer": "^15.9.1",
-    "@contentful/rich-text-types": "^15.10.0",
-    "@vueuse/head": "^0.7.4",
-    "airtable": "^0.11.1",
-    "axios": "^0.24.0",
-    "contentful": "^9.1.5",
-    "core-js": "^3.6.5",
-    "express": "^4.17.1",
-    "serve-static": "^1.14.1",
-    "vue": "^3.0.0",
-    "vue-gtag-next": "^1.14.0",
-    "vue-inline-svg": "^3.0.0-beta.3",
-    "vue-lottie-player": "^0.1.9",
-    "vue-router": "^4.0.0-0",
-    "vuex": "^4.0.0-0"
+    "@nuxt/http": "^0.6.4",
+    "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/dotenv": "^1.4.1",
+    "@nuxtjs/robots": "^2.5.0",
+    "@nuxtjs/sitemap": "^2.4.0",
+    "@nuxtjs/svg": "^0.4.0",
+    "airtable": "^0.11.4",
+    "contentful": "^9.1.32",
+    "core-js": "^3.19.3",
+    "express": "^4.18.1",
+    "nuxt": "^2.15.8",
+    "sass": "^1.52.3",
+    "sass-loader": "10.1.1",
+    "vue": "^2.6.14",
+    "vue-hotjar": "^1.4.0",
+    "vue-lottie": "^0.2.1",
+    "vue-server-renderer": "^2.6.14",
+    "vue-template-compiler": "^2.6.14",
+    "webpack": "^4.46.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-plugin-router": "~4.5.0",
-    "@vue/cli-plugin-unit-jest": "~4.5.0",
-    "@vue/cli-plugin-vuex": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "@vue/compiler-sfc": "^3.0.0",
-    "@vue/test-utils": "^2.0.0-0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^7.0.0",
-    "node-sass": "^4.12.0",
-    "sass": "^1.32.12",
-    "sass-loader": "^8.0.2",
-    "typescript": "~3.9.3",
-    "vue-cli-plugin-sitemap": "~2.3.0",
-    "vue-jest": "^5.0.0-0",
-    "vue-loader-v16": "^16.0.0-beta.5.4"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/vue3-essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
-    "rules": {},
-    "overrides": [
-      {
-        "files": [
-          "**/__tests__/*.{j,t}s?(x)",
-          "**/tests/unit/**/*.spec.{j,t}s?(x)"
-        ],
-        "env": {
-          "jest": true
-        }
-      }
-    ]
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ],
-  "jest": {
-    "preset": "@vue/cli-plugin-unit-jest",
-    "transform": {
-      "^.+\\.vue$": "vue-jest"
-    }
+    "@babel/eslint-parser": "^7.16.3",
+    "@nuxtjs/eslint-config": "^8.0.0",
+    "@nuxtjs/eslint-module": "^3.0.2",
+    "@nuxtjs/style-resources": "^1.2.1",
+    "eslint": "^8.4.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-nuxt": "^3.1.0",
+    "eslint-plugin-vue": "^8.2.0",
+    "prettier": "^2.5.1"
   }
 }
