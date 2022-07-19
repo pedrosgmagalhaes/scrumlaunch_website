@@ -63,10 +63,12 @@
                 />
               </div>
               <div class="client_testimonials__testimonials_item__text">
-                “I have been working with ScrumLaunch for the past 5 years since
-                even before my product was launched. Since then, we’ve built a
-                business that supports thousands of customers and recently
-                raised venture capital funding.”
+                “ScrumLaunch has been our most valuable partner in going from an
+                idea to a company that supports millions of monthly uniques. We
+                couldn't have done it without them. In addition to helping us
+                build a great product, we saved millions of dollars in cost over
+                the past 4 years compared to any alternative staffing plans we
+                might have pursued.”
               </div>
               <div class="flex jcsb">
                 <div class="client_testimonials__testimonials_item__person">

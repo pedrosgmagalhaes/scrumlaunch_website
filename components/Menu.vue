@@ -11,7 +11,7 @@
         class="menu--desktop--wrapper"
         :class="contactPage && 'white-wrapper'"
       >
-        <!-- <NuxtLink to="/work">Work</NuxtLink> -->
+        <NuxtLink to="/work">Work</NuxtLink>
         <NuxtLink to="/services">Services</NuxtLink>
         <!-- <NuxtLink to="/process">Process</NuxtLink> -->
         <!-- <NuxtLink to="/leadership">Leadership</NuxtLink> -->

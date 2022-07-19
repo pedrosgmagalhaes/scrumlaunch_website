@@ -12,12 +12,12 @@
         companies that are building software teams with ScrumLaunch.
       </p>
       <div class="social_proof__img-conatiner">
-        <img src="/images/quiz/community_funded.svg" alt="community_funded" />
-        <img src="/images/quiz/harvest.svg" alt="harvest" />
-        <img src="/images/quiz/vesta.svg" alt="vesta" />
-        <img src="/images/quiz/gipper.svg" alt="gipper" />
-        <img src="/images/quiz/campusreel.svg" alt="campusreel" />
-        <img src="/images/quiz/heli.svg" alt="heli" />
+        <a href="https://www.communityfunded.com/" target="_blank"><img src="/images/quiz/community_funded.svg" alt="community_funded" /></a>
+        <a href="https://www.acorns.com/" target="_blank"><img src="/images/quiz/harvest.svg" alt="harvest" /></a>
+        <a href="http://www.vestahome.com/" target="_blank"><img src="/images/quiz/vesta.svg" alt="vesta" /></a>
+        <a href="https://www.gipper.com/" target="_blank"><img src="/images/quiz/gipper.svg" alt="gipper" /></a>
+        <a href="https://www.campusreel.org/" target="_blank"><img src="/images/quiz/campusreel.svg" alt="campusreel" /></a>
+        <a href="https://www.heli.life/" target="_blank"><img src="/images/quiz/heli.svg" alt="heli" /></a>
       </div>
     </div>
     <div class="footer home">
