@@ -4,8 +4,8 @@ clone:
   depth: full
 
 pipelines:
-  branches:
-    staging:
+  custom:
+    deployment-to-staging:
        - step:
           name: 'Build app'
           caches:
@@ -33,7 +33,7 @@ pipelines:
                  HEROKU_APP_NAME: $HEROKU_STAGING_APP_NAME
                  ZIP_FILE: "application.tar.gz"
                  WAIT: 'true'
-    production:
+    deployment-to-prod:
        - step:
           name: 'Build app'
           caches:
