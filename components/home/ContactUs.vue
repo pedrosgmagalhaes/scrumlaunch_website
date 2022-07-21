@@ -9,7 +9,7 @@
       <TypingEffect type="2"
         ><p class="header-2">
           Want to talk new projects, collaborations, or just say hello? Get in
-          touch with me.
+          touch with us.
         </p></TypingEffect
       >
 

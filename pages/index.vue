@@ -9,7 +9,6 @@
     <WhyChooseScrumLaunch />
     <IndustryLeadingResults />
     <TickerBlock />
-    <Projects />
     <HistoryBlock />
     <!-- <News /> -->
     <OurServices />
@@ -22,7 +21,6 @@
 // @ is an alias to /src
 import HeroBlock from '@/components/home/HeroBlock.vue'
 import SecondBlock from '@/components/home/SecondBlock.vue'
-import Projects from '@/components/home/Projects.vue'
 import HistoryBlock from '@/components/home/HistoryBlock.vue'
 // import News from '@/components/home/News.vue'
 import TickerBlock from '@/components/home/TickerBlock.vue'
@@ -42,7 +40,6 @@ export default {
   components: {
     HeroBlock,
     SecondBlock,
-    Projects,
     HistoryBlock,
     // News,
     TickerBlock,
