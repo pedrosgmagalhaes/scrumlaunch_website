@@ -13,12 +13,13 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }],
   },
 
-  css: ['@/assets/css/main.scss'],
+  css: ['@/assets/css/main.scss', 'vue-slick-carousel/dist/vue-slick-carousel.css'],
 
   plugins: [
     '~/plugins/directives.js',
     '~/plugins/global-components.js',
     { src: '~/plugins/hotjar.js', mode: 'client' },
+    { src: '~/plugins/vue-slick-carousel.js' }
   ],
 
   components: true,

@@ -4,28 +4,28 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _1bbf4eab = () => interopDefault(import('..\\pages\\blog\\index.vue' /* webpackChunkName: "pages/blog/index" */))
-const _2739f9b4 = () => interopDefault(import('..\\pages\\campus-reel-case-study.vue' /* webpackChunkName: "pages/campus-reel-case-study" */))
-const _061a5380 = () => interopDefault(import('..\\pages\\contact-us.vue' /* webpackChunkName: "pages/contact-us" */))
-const _9ce3a7fe = () => interopDefault(import('..\\pages\\fgn-case-study.vue' /* webpackChunkName: "pages/fgn-case-study" */))
-const _022af906 = () => interopDefault(import('..\\pages\\full-court-ai-case-study.vue' /* webpackChunkName: "pages/full-court-ai-case-study" */))
-const _27024b5f = () => interopDefault(import('..\\pages\\helmm-case-study.vue' /* webpackChunkName: "pages/helmm-case-study" */))
-const _2929e9da = () => interopDefault(import('..\\pages\\leadership.vue' /* webpackChunkName: "pages/leadership" */))
-const _5d24fbaa = () => interopDefault(import('..\\pages\\process.vue' /* webpackChunkName: "pages/process" */))
-const _fbf6d9ac = () => interopDefault(import('..\\pages\\quiz.vue' /* webpackChunkName: "pages/quiz" */))
-const _136ab26d = () => interopDefault(import('..\\pages\\referral-partner.vue' /* webpackChunkName: "pages/referral-partner" */))
-const _29343fc7 = () => interopDefault(import('..\\pages\\remote-developer-jobs\\index.vue' /* webpackChunkName: "pages/remote-developer-jobs/index" */))
-const _9a73e14c = () => interopDefault(import('..\\pages\\scope-case-study.vue' /* webpackChunkName: "pages/scope-case-study" */))
-const _4b964cda = () => interopDefault(import('..\\pages\\send-cv.vue' /* webpackChunkName: "pages/send-cv" */))
-const _2c68a39a = () => interopDefault(import('..\\pages\\services.vue' /* webpackChunkName: "pages/services" */))
-const _58b04206 = () => interopDefault(import('..\\pages\\vesta-case-study.vue' /* webpackChunkName: "pages/vesta-case-study" */))
-const _7b230c34 = () => interopDefault(import('..\\pages\\work.vue' /* webpackChunkName: "pages/work" */))
-const _17e47046 = () => interopDefault(import('..\\pages\\hire-developers\\_specialization.vue' /* webpackChunkName: "pages/hire-developers/_specialization" */))
-const _743cf1c3 = () => interopDefault(import('..\\pages\\remote-developer-jobs\\_vacancy_slug.vue' /* webpackChunkName: "pages/remote-developer-jobs/_vacancy_slug" */))
-const _22fec2a2 = () => interopDefault(import('..\\pages\\locations\\_state_slug\\_city_slug.vue' /* webpackChunkName: "pages/locations/_state_slug/_city_slug" */))
-const _19fde038 = () => interopDefault(import('..\\pages\\blog\\_.vue' /* webpackChunkName: "pages/blog/_" */))
-const _1cdf494d = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
-const _d20f084c = () => interopDefault(import('..\\pages\\_.vue' /* webpackChunkName: "pages/_" */))
+const _13c73e28 = () => interopDefault(import('../pages/blog/index.vue' /* webpackChunkName: "pages/blog/index" */))
+const _757345d8 = () => interopDefault(import('../pages/campus-reel-case-study.vue' /* webpackChunkName: "pages/campus-reel-case-study" */))
+const _d5f8dd9c = () => interopDefault(import('../pages/contact-us.vue' /* webpackChunkName: "pages/contact-us" */))
+const _095d40b3 = () => interopDefault(import('../pages/fgn-case-study.vue' /* webpackChunkName: "pages/fgn-case-study" */))
+const _ef955190 = () => interopDefault(import('../pages/full-court-ai-case-study.vue' /* webpackChunkName: "pages/full-court-ai-case-study" */))
+const _714208de = () => interopDefault(import('../pages/helmm-case-study.vue' /* webpackChunkName: "pages/helmm-case-study" */))
+const _8fd9b0e8 = () => interopDefault(import('../pages/leadership.vue' /* webpackChunkName: "pages/leadership" */))
+const _19a1eb38 = () => interopDefault(import('../pages/process.vue' /* webpackChunkName: "pages/process" */))
+const _5d5b0348 = () => interopDefault(import('../pages/quiz.vue' /* webpackChunkName: "pages/quiz" */))
+const _98713ac2 = () => interopDefault(import('../pages/referral-partner.vue' /* webpackChunkName: "pages/referral-partner" */))
+const _f4d589a8 = () => interopDefault(import('../pages/remote-developer-jobs/index.vue' /* webpackChunkName: "pages/remote-developer-jobs/index" */))
+const _5322bf8c = () => interopDefault(import('../pages/scope-case-study.vue' /* webpackChunkName: "pages/scope-case-study" */))
+const _d29c6dbe = () => interopDefault(import('../pages/send-cv.vue' /* webpackChunkName: "pages/send-cv" */))
+const _86269f36 = () => interopDefault(import('../pages/services.vue' /* webpackChunkName: "pages/services" */))
+const _74048f2f = () => interopDefault(import('../pages/vesta-case-study.vue' /* webpackChunkName: "pages/vesta-case-study" */))
+const _11bc6518 = () => interopDefault(import('../pages/work.vue' /* webpackChunkName: "pages/work" */))
+const _53afae74 = () => interopDefault(import('../pages/hire-developers/_specialization.vue' /* webpackChunkName: "pages/hire-developers/_specialization" */))
+const _0872b828 = () => interopDefault(import('../pages/remote-developer-jobs/_vacancy_slug.vue' /* webpackChunkName: "pages/remote-developer-jobs/_vacancy_slug" */))
+const _3a16a68f = () => interopDefault(import('../pages/locations/_state_slug/_city_slug.vue' /* webpackChunkName: "pages/locations/_state_slug/_city_slug" */))
+const _7b0f8a0e = () => interopDefault(import('../pages/blog/_.vue' /* webpackChunkName: "pages/blog/_" */))
+const _9162774a = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
+const _1ce8a430 = () => interopDefault(import('../pages/_.vue' /* webpackChunkName: "pages/_" */))
 
 const emptyFn = () => {}
 
@@ -40,91 +40,91 @@ export const routerOptions = {
 
   routes: [{
     path: "/blog",
-    component: _1bbf4eab,
+    component: _13c73e28,
     name: "blog"
   }, {
     path: "/campus-reel-case-study",
-    component: _2739f9b4,
+    component: _757345d8,
     name: "campus-reel-case-study"
   }, {
     path: "/contact-us",
-    component: _061a5380,
+    component: _d5f8dd9c,
     name: "contact-us"
   }, {
     path: "/fgn-case-study",
-    component: _9ce3a7fe,
+    component: _095d40b3,
     name: "fgn-case-study"
   }, {
     path: "/full-court-ai-case-study",
-    component: _022af906,
+    component: _ef955190,
     name: "full-court-ai-case-study"
   }, {
     path: "/helmm-case-study",
-    component: _27024b5f,
+    component: _714208de,
     name: "helmm-case-study"
   }, {
     path: "/leadership",
-    component: _2929e9da,
+    component: _8fd9b0e8,
     name: "leadership"
   }, {
     path: "/process",
-    component: _5d24fbaa,
+    component: _19a1eb38,
     name: "process"
   }, {
     path: "/quiz",
-    component: _fbf6d9ac,
+    component: _5d5b0348,
     name: "quiz"
   }, {
     path: "/referral-partner",
-    component: _136ab26d,
+    component: _98713ac2,
     name: "referral-partner"
   }, {
     path: "/remote-developer-jobs",
-    component: _29343fc7,
+    component: _f4d589a8,
     name: "remote-developer-jobs"
   }, {
     path: "/scope-case-study",
-    component: _9a73e14c,
+    component: _5322bf8c,
     name: "scope-case-study"
   }, {
     path: "/send-cv",
-    component: _4b964cda,
+    component: _d29c6dbe,
     name: "send-cv"
   }, {
     path: "/services",
-    component: _2c68a39a,
+    component: _86269f36,
     name: "services"
   }, {
     path: "/vesta-case-study",
-    component: _58b04206,
+    component: _74048f2f,
     name: "vesta-case-study"
   }, {
     path: "/work",
-    component: _7b230c34,
+    component: _11bc6518,
     name: "work"
   }, {
     path: "/hire-developers/:specialization?",
-    component: _17e47046,
+    component: _53afae74,
     name: "hire-developers-specialization"
   }, {
     path: "/remote-developer-jobs/:vacancy_slug?",
-    component: _743cf1c3,
+    component: _0872b828,
     name: "remote-developer-jobs-vacancy_slug"
   }, {
     path: "/locations/:state_slug?/:city_slug?",
-    component: _22fec2a2,
+    component: _3a16a68f,
     name: "locations-state_slug-city_slug"
   }, {
     path: "/blog/*",
-    component: _19fde038,
+    component: _7b0f8a0e,
     name: "blog-all"
   }, {
     path: "/",
-    component: _1cdf494d,
+    component: _9162774a,
     name: "index"
   }, {
     path: "/*",
-    component: _d20f084c,
+    component: _1ce8a430,
     name: "all"
   }],
 
