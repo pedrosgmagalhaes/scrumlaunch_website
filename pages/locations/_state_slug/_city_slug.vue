@@ -1,5 +1,5 @@
 <template>
-  <Locations :location="location" :is_city="is_city" />
+  <Locations :lc="location" :is_city="is_city" />
 </template>
 
 <script>

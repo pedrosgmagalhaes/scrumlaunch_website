@@ -171,3 +171,18 @@ export const getters = {
     return locations
   },
 }
+
+export const mutations = {
+  add(state, obj) {
+    state.vacancies.push({
+      name: obj.name,
+      jobLocation: obj.jobLocation,
+      remote: true,
+      open: true,
+      datePosted: '11 / 11 / 2022',
+      hiringOrganisation: 'ScrumLaunch',
+      employmentType: 'Full Time',
+      baseSalary: '$10-20 / hour',
+    })
+  },
+}
