@@ -42,7 +42,7 @@
             />
           </div>
         </div>
-        
+
         <div class="vacancies__items">
           <div
             v-for="(vacancy, i) in vacancies"
@@ -72,7 +72,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapMutations } from 'vuex'
 import CustomSelect from '@/components/Select.vue'
 
 export default {
@@ -111,11 +111,29 @@ export default {
     },
 
     getVacancies() {
-      return this.$store.getters['vacancies/getVacancies'](
+      const allVacancies = this.$store.getters['vacancies/getVacancies'](
         this.skill,
         this.location
       )
+
+      if (!allVacancies.length) {
+        this.$store.commit('vacancies/add', {
+          name: this.skill,
+          jobLocation: this.location,
+        })
+
+        return this.$store.getters['vacancies/getVacancies'](
+          this.skill,
+          this.location
+        )
+      }
+
+      return allVacancies
     },
+
+    ...mapMutations({
+      addV: 'vacancies/add',
+    }),
   },
 }
 </script>

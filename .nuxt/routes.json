@@ -2,172 +2,172 @@
   {
     "name": "blog",
     "path": "/blog",
-    "component": "D:\\\\projects\\\\scrumLaunch\\\\pages\\\\blog\\\\index.vue",
+    "component": "/Users/admin/Desktop/vue_landing/pages/blog/index.vue",
     "chunkName": "pages/blog/index",
     "url": "/blog",
-    "_name": "_1bbf4eab"
+    "_name": "_13c73e28"
   },
   {
     "name": "campus-reel-case-study",
     "path": "/campus-reel-case-study",
-    "component": "D:\\\\projects\\\\scrumLaunch\\\\pages\\\\campus-reel-case-study.vue",
+    "component": "/Users/admin/Desktop/vue_landing/pages/campus-reel-case-study.vue",
     "chunkName": "pages/campus-reel-case-study",
     "url": "/campus-reel-case-study",
-    "_name": "_2739f9b4"
+    "_name": "_757345d8"
   },
   {
     "name": "contact-us",
     "path": "/contact-us",
-    "component": "D:\\\\projects\\\\scrumLaunch\\\\pages\\\\contact-us.vue",
+    "component": "/Users/admin/Desktop/vue_landing/pages/contact-us.vue",
     "chunkName": "pages/contact-us",
     "url": "/contact-us",
-    "_name": "_061a5380"
+    "_name": "_d5f8dd9c"
   },
   {
     "name": "fgn-case-study",
     "path": "/fgn-case-study",
-    "component": "D:\\\\projects\\\\scrumLaunch\\\\pages\\\\fgn-case-study.vue",
+    "component": "/Users/admin/Desktop/vue_landing/pages/fgn-case-study.vue",
     "chunkName": "pages/fgn-case-study",
     "url": "/fgn-case-study",
-    "_name": "_9ce3a7fe"
+    "_name": "_095d40b3"
   },
   {
     "name": "full-court-ai-case-study",
     "path": "/full-court-ai-case-study",
-    "component": "D:\\\\projects\\\\scrumLaunch\\\\pages\\\\full-court-ai-case-study.vue",
+    "component": "/Users/admin/Desktop/vue_landing/pages/full-court-ai-case-study.vue",
     "chunkName": "pages/full-court-ai-case-study",
     "url": "/full-court-ai-case-study",
-    "_name": "_022af906"
+    "_name": "_ef955190"
   },
   {
     "name": "helmm-case-study",
     "path": "/helmm-case-study",
-    "component": "D:\\\\projects\\\\scrumLaunch\\\\pages\\\\helmm-case-study.vue",
+    "component": "/Users/admin/Desktop/vue_landing/pages/helmm-case-study.vue",
     "chunkName": "pages/helmm-case-study",
     "url": "/helmm-case-study",
-    "_name": "_27024b5f"
+    "_name": "_714208de"
   },
   {
     "name": "leadership",
     "path": "/leadership",
-    "component": "D:\\\\projects\\\\scrumLaunch\\\\pages\\\\leadership.vue",
+    "component": "/Users/admin/Desktop/vue_landing/pages/leadership.vue",
     "chunkName": "pages/leadership",
     "url": "/leadership",
-    "_name": "_2929e9da"
+    "_name": "_8fd9b0e8"
   },
   {
     "name": "process",
     "path": "/process",
-    "component": "D:\\\\projects\\\\scrumLaunch\\\\pages\\\\process.vue",
+    "component": "/Users/admin/Desktop/vue_landing/pages/process.vue",
     "chunkName": "pages/process",
     "url": "/process",
-    "_name": "_5d24fbaa"
+    "_name": "_19a1eb38"
   },
   {
     "name": "quiz",
     "path": "/quiz",
-    "component": "D:\\\\projects\\\\scrumLaunch\\\\pages\\\\quiz.vue",
+    "component": "/Users/admin/Desktop/vue_landing/pages/quiz.vue",
     "chunkName": "pages/quiz",
     "url": "/quiz",
-    "_name": "_fbf6d9ac"
+    "_name": "_5d5b0348"
   },
   {
     "name": "referral-partner",
     "path": "/referral-partner",
-    "component": "D:\\\\projects\\\\scrumLaunch\\\\pages\\\\referral-partner.vue",
+    "component": "/Users/admin/Desktop/vue_landing/pages/referral-partner.vue",
     "chunkName": "pages/referral-partner",
     "url": "/referral-partner",
-    "_name": "_136ab26d"
+    "_name": "_98713ac2"
   },
   {
     "name": "remote-developer-jobs",
     "path": "/remote-developer-jobs",
-    "component": "D:\\\\projects\\\\scrumLaunch\\\\pages\\\\remote-developer-jobs\\\\index.vue",
+    "component": "/Users/admin/Desktop/vue_landing/pages/remote-developer-jobs/index.vue",
     "chunkName": "pages/remote-developer-jobs/index",
     "url": "/remote-developer-jobs",
-    "_name": "_29343fc7"
+    "_name": "_f4d589a8"
   },
   {
     "name": "scope-case-study",
     "path": "/scope-case-study",
-    "component": "D:\\\\projects\\\\scrumLaunch\\\\pages\\\\scope-case-study.vue",
+    "component": "/Users/admin/Desktop/vue_landing/pages/scope-case-study.vue",
     "chunkName": "pages/scope-case-study",
     "url": "/scope-case-study",
-    "_name": "_9a73e14c"
+    "_name": "_5322bf8c"
   },
   {
     "name": "send-cv",
     "path": "/send-cv",
-    "component": "D:\\\\projects\\\\scrumLaunch\\\\pages\\\\send-cv.vue",
+    "component": "/Users/admin/Desktop/vue_landing/pages/send-cv.vue",
     "chunkName": "pages/send-cv",
     "url": "/send-cv",
-    "_name": "_4b964cda"
+    "_name": "_d29c6dbe"
   },
   {
     "name": "services",
     "path": "/services",
-    "component": "D:\\\\projects\\\\scrumLaunch\\\\pages\\\\services.vue",
+    "component": "/Users/admin/Desktop/vue_landing/pages/services.vue",
     "chunkName": "pages/services",
     "url": "/services",
-    "_name": "_2c68a39a"
+    "_name": "_86269f36"
   },
   {
     "name": "vesta-case-study",
     "path": "/vesta-case-study",
-    "component": "D:\\\\projects\\\\scrumLaunch\\\\pages\\\\vesta-case-study.vue",
+    "component": "/Users/admin/Desktop/vue_landing/pages/vesta-case-study.vue",
     "chunkName": "pages/vesta-case-study",
     "url": "/vesta-case-study",
-    "_name": "_58b04206"
+    "_name": "_74048f2f"
   },
   {
     "name": "work",
     "path": "/work",
-    "component": "D:\\\\projects\\\\scrumLaunch\\\\pages\\\\work.vue",
+    "component": "/Users/admin/Desktop/vue_landing/pages/work.vue",
     "chunkName": "pages/work",
     "url": "/work",
-    "_name": "_7b230c34"
+    "_name": "_11bc6518"
   },
   {
     "name": "hire-developers-specialization",
     "path": "/hire-developers/:specialization?",
-    "component": "D:\\\\projects\\\\scrumLaunch\\\\pages\\\\hire-developers\\\\_specialization.vue",
+    "component": "/Users/admin/Desktop/vue_landing/pages/hire-developers/_specialization.vue",
     "chunkName": "pages/hire-developers/_specialization",
-    "_name": "_17e47046"
+    "_name": "_53afae74"
   },
   {
     "name": "remote-developer-jobs-vacancy_slug",
     "path": "/remote-developer-jobs/:vacancy_slug?",
-    "component": "D:\\\\projects\\\\scrumLaunch\\\\pages\\\\remote-developer-jobs\\\\_vacancy_slug.vue",
+    "component": "/Users/admin/Desktop/vue_landing/pages/remote-developer-jobs/_vacancy_slug.vue",
     "chunkName": "pages/remote-developer-jobs/_vacancy_slug",
-    "_name": "_743cf1c3"
+    "_name": "_0872b828"
   },
   {
     "name": "locations-state_slug-city_slug",
     "path": "/locations/:state_slug?/:city_slug?",
-    "component": "D:\\\\projects\\\\scrumLaunch\\\\pages\\\\locations\\\\_state_slug\\\\_city_slug.vue",
+    "component": "/Users/admin/Desktop/vue_landing/pages/locations/_state_slug/_city_slug.vue",
     "chunkName": "pages/locations/_state_slug/_city_slug",
-    "_name": "_22fec2a2"
+    "_name": "_3a16a68f"
   },
   {
     "name": "blog-all",
     "path": "/blog/*",
-    "component": "D:\\\\projects\\\\scrumLaunch\\\\pages\\\\blog\\\\_.vue",
+    "component": "/Users/admin/Desktop/vue_landing/pages/blog/_.vue",
     "chunkName": "pages/blog/_",
-    "_name": "_19fde038"
+    "_name": "_7b0f8a0e"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "D:\\\\projects\\\\scrumLaunch\\\\pages\\\\index.vue",
+    "component": "/Users/admin/Desktop/vue_landing/pages/index.vue",
     "chunkName": "pages/index",
     "url": "/",
-    "_name": "_1cdf494d"
+    "_name": "_9162774a"
   },
   {
     "name": "all",
     "path": "/*",
-    "component": "D:\\\\projects\\\\scrumLaunch\\\\pages\\\\_.vue",
+    "component": "/Users/admin/Desktop/vue_landing/pages/_.vue",
     "chunkName": "pages/_",
-    "_name": "_d20f084c"
+    "_name": "_1ce8a430"
   }
 ]

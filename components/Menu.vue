@@ -231,8 +231,7 @@ export default {
           this.$route.name === 'helmm-case-study' ||
           this.$route.name === 'scope-case-study' ||
           this.$route.name === 'campus-reel-case-study' ||
-          this.$route.name === 'location-state' ||
-          this.$route.name === 'location-city' ||
+          this.$route.name === 'locations-state_slug-city_slug' ||
           this.$route.name === 'hire-developers' ||
           this.$route.name === 'send-cv' ||
           this.$route.name === 'remote-developer-jobs'
