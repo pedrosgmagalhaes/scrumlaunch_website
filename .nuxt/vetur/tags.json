@@ -23,14 +23,14 @@
   "SocialBlock": {
     "description": "Auto imported from components/SocialBlock.vue"
   },
+  "Accordion": {
+    "description": "Auto imported from components/accordion/Accordion.vue"
+  },
   "AnimationsAppearFromMask": {
     "description": "Auto imported from components/animations/AppearFromMask.vue"
   },
   "AnimationsTypingEffect": {
     "description": "Auto imported from components/animations/TypingEffect.vue"
-  },
-  "Accordion": {
-    "description": "Auto imported from components/accordion/Accordion.vue"
   },
   "ArticlesArticleLink": {
     "description": "Auto imported from components/articles/ArticleLink.vue"
@@ -77,6 +77,18 @@
   "LeadershipTeamMember": {
     "description": "Auto imported from components/leadership/TeamMember.vue"
   },
+  "Locations": {
+    "description": "Auto imported from components/locations/Locations.vue"
+  },
+  "LocationsList": {
+    "description": "Auto imported from components/locations/LocationsList.vue"
+  },
+  "ProcessOurApproach": {
+    "description": "Auto imported from components/process/OurApproach.vue"
+  },
+  "ProcessOurProcess": {
+    "description": "Auto imported from components/process/OurProcess.vue"
+  },
   "HomeClientTestimonials": {
     "description": "Auto imported from components/home/ClientTestimonials.vue"
   },
@@ -122,20 +134,8 @@
   "HomeWhyChooseScrumLaunch": {
     "description": "Auto imported from components/home/WhyChooseScrumLaunch.vue"
   },
-  "Locations": {
-    "description": "Auto imported from components/locations/Locations.vue"
-  },
-  "LocationsList": {
-    "description": "Auto imported from components/locations/LocationsList.vue"
-  },
   "ServicesServiceItem": {
     "description": "Auto imported from components/services/ServiceItem.vue"
-  },
-  "ProcessOurApproach": {
-    "description": "Auto imported from components/process/OurApproach.vue"
-  },
-  "ProcessOurProcess": {
-    "description": "Auto imported from components/process/OurProcess.vue"
   },
   "WorkHeroBlock": {
     "description": "Auto imported from components/work/HeroBlock.vue"
