@@ -72,7 +72,7 @@
 </template>
 
 <script>
-import { mapGetters, mapMutations } from 'vuex'
+import { mapGetters } from 'vuex'
 import CustomSelect from '@/components/Select.vue'
 
 export default {
@@ -111,29 +111,11 @@ export default {
     },
 
     getVacancies() {
-      const allVacancies = this.$store.getters['vacancies/getVacancies'](
+      return this.$store.getters['vacancies/getVacancies'](
         this.skill,
         this.location
       )
-
-      if (!allVacancies.length) {
-        this.$store.commit('vacancies/add', {
-          name: this.skill,
-          jobLocation: this.location,
-        })
-
-        return this.$store.getters['vacancies/getVacancies'](
-          this.skill,
-          this.location
-        )
-      }
-
-      return allVacancies
     },
-
-    ...mapMutations({
-      addV: 'vacancies/add',
-    }),
   },
 }
 </script>
