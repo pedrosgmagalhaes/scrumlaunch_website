@@ -72,7 +72,7 @@
 </template>
 
 <script>
-import { mapGetters, mapMutations } from 'vuex'
+import { mapGetters } from 'vuex'
 import CustomSelect from '@/components/Select.vue'
 
 export default {
@@ -111,29 +111,11 @@ export default {
     },
 
     getVacancies() {
-      const allVacancies = this.$store.getters['vacancies/getVacancies'](
+      return this.$store.getters['vacancies/getVacancies'](
         this.skill,
         this.location
       )
-
-      if (!allVacancies.length) {
-        this.$store.commit('vacancies/add', {
-          name: this.skill,
-          jobLocation: this.location,
-        })
-
-        return this.$store.getters['vacancies/getVacancies'](
-          this.skill,
-          this.location
-        )
-      }
-
-      return allVacancies
     },
-
-    ...mapMutations({
-      addV: 'vacancies/add',
-    }),
   },
 }
 </script>
@@ -143,7 +125,7 @@ export default {
   display: flex;
   justify-content: space-between;
 
-  @media screen and (max-width: 1440px) {
+  @media screen and (max-width: 1439px) {
     justify-content: center;
     flex-direction: column;
     align-items: center;
@@ -153,7 +135,7 @@ export default {
 
 .header_image {
   & > img {
-    @media screen and (max-width: 1440px) {
+    @media screen and (max-width: 1439px) {
       width: 400px;
     }
 
@@ -174,7 +156,7 @@ export default {
   font-size: 90px;
   color: #fff;
 
-  @media screen and (max-width: 1440px) {
+  @media screen and (max-width: 1439px) {
     font-size: 56px;
   }
 
@@ -204,7 +186,7 @@ export default {
     padding-bottom: 240px;
     background: #1e1f21;
 
-    @media screen and (max-width: 1440px) {
+    @media screen and (max-width: 1439px) {
       padding-top: 150px;
       padding-bottom: 150px;
     }
@@ -219,7 +201,7 @@ export default {
     padding-top: 240px;
     padding-bottom: 240px;
 
-    @media screen and (max-width: 1440px) {
+    @media screen and (max-width: 1439px) {
       padding-top: 150px;
       padding-bottom: 150px;
     }
@@ -234,7 +216,7 @@ export default {
     display: flex;
     margin-bottom: 56px;
 
-    @media screen and (max-width: 1440px) {
+    @media screen and (max-width: 1439px) {
       flex-direction: column;
       gap: 24px;
     }
@@ -247,9 +229,11 @@ export default {
   &__filter_wrap {
     display: flex;
     margin-right: 60px;
+    width: 50%;
 
-    @media screen and (max-width: 1440px) {
+    @media screen and (max-width: 1439px) {
       margin-right: 0px;
+      width: 100%;
     }
 
     @media screen and (max-width: 768px) {
@@ -259,6 +243,10 @@ export default {
 
     &:last-child {
       margin-right: 0;
+    }
+
+    & > .select__base {
+      width: 10px;
     }
   }
 
@@ -277,11 +265,7 @@ export default {
   }
 
   &__filter {
-    width: 360px;
-
-    @media screen and (max-width: 1440px) {
-      width: 100%;
-    }
+    width: 100%;
   }
 
   &__item {
@@ -330,7 +314,7 @@ export default {
   &__item_location {
     flex: 0 0 47%;
 
-    @media screen and (max-width: 1440px) {
+    @media screen and (max-width: 1439px) {
       flex: inherit;
     }
   }

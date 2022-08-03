@@ -173,13 +173,20 @@
         />
       </div>
       <div class="menu--burger--links">
-        <span class="menu--burger--links--item" @click="handleNavigation('/')"
-          >Home</span
+        <span
+          class="menu--burger--links--item"
+          @click="handleNavigation('/contact-us')"
+          >Contact</span
         >
         <span
           class="menu--burger--links--item"
-          @click="handleNavigation('work')"
-          >Work</span
+          @click="handleNavigation('/hire-developers')"
+          >Hire Developers</span
+        >
+        <span
+          class="menu--burger--links--item"
+          @click="handleNavigation('/remote-developer-jobs')"
+          >Vacancies</span
         >
         <span
           class="menu--burger--links--item"
@@ -188,23 +195,8 @@
         >
         <span
           class="menu--burger--links--item"
-          @click="handleNavigation('/process')"
-          >Process</span
-        >
-        <span
-          class="menu--burger--links--item"
-          @click="handleNavigation('/leadership')"
-          >Leadership</span
-        >
-        <span
-          class="menu--burger--links--item"
-          @click="handleNavigation('/vacancies')"
-          >Vacancies</span
-        >
-        <span
-          class="menu--burger--links--item"
-          @click="handleNavigation('/contact-us')"
-          >Contact</span
+          @click="handleNavigation('/blog')"
+          >Blog</span
         >
       </div>
     </div>
@@ -314,6 +306,7 @@ export default {
 
     &--wrapper-mobile {
       display: block;
+      cursor: pointer;
     }
   }
 
@@ -337,6 +330,10 @@ export default {
       &--icon {
         width: 60px;
         height: 27px;
+
+        &-close {
+          cursor: pointer;
+        }
       }
     }
 
@@ -354,6 +351,7 @@ export default {
         text-transform: uppercase;
         color: #ffffff;
         margin-bottom: 40px;
+        cursor: pointer;
 
         &:last-child {
           margin-bottom: 0px;
