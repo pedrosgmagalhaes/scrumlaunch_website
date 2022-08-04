@@ -1,5 +1,5 @@
 <template>
-  <div class="how_scrumlaunch_works">
+  <div class="wrapper how_scrumlaunch_works">
     <div class="header-1 how_scrumlaunch_works__title">
       How ScrumLaunch Works
     </div>
@@ -20,6 +20,7 @@
         <div class="circle">
           <p class="circle_text">{{ i + 1 }}</p>
         </div>
+
         <h3 class="card_title">
           {{ item.title }}
         </h3>
@@ -33,39 +34,45 @@
         >
           Read more
         </p>
+        <div class="arrow">
+          <img :src="require('@/assets/icons/arrow_down_btn.svg')" />
+        </div>
       </div>
     </div>
-    <VueSlickCarousel v-bind="slickOptions" ref="carousel">
-      <div v-for="(item, i) in data" :key="i" class="card_item">
-        <div class="circle">
-          <p class="circle_text">{{ i + 1 }}</p>
+
+    <div class="carousel_wrapper">
+      <VueSlickCarousel v-bind="slickOptions" ref="carousel">
+        <div v-for="(item, i) in data" :key="i" class="card_item">
+          <div class="circle">
+            <p class="circle_text">{{ i + 1 }}</p>
+          </div>
+          <h3 class="card_title">
+            {{ item.title }}
+          </h3>
+          <p class="description" :class="{ truncate: item.isMore }">
+            {{ item.description }}
+          </p>
+          <p
+            v-if="item.isMore"
+            class="read_more"
+            @click="item.isMore = !item.isMore"
+          >
+            Read more
+          </p>
         </div>
-        <h3 class="card_title">
-          {{ item.title }}
-        </h3>
-        <p class="description" :class="{ truncate: item.isMore }">
-          {{ item.description }}
-        </p>
-        <p
-          v-if="item.isMore"
-          class="read_more"
-          @click="item.isMore = !item.isMore"
-        >
-          Read more
-        </p>
+      </VueSlickCarousel>
+      <div class="arrows">
+        <img
+          class="prev"
+          :src="require('@/assets/icons/arrow_btn.svg')"
+          @click="showPrev"
+        />
+        <img
+          class="next"
+          :src="require('@/assets/icons/arrow_btn.svg')"
+          @click="showNext"
+        />
       </div>
-    </VueSlickCarousel>
-    <div class="arrows">
-      <img
-        class="prev"
-        :src="require('@/assets/icons/arrow_btn.svg')"
-        @click="showPrev"
-      />
-      <img
-        class="next"
-        :src="require('@/assets/icons/arrow_btn.svg')"
-        @click="showNext"
-      />
     </div>
   </div>
 </template>
@@ -130,14 +137,34 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.arrow {
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    margin-top: 30px;
+    margin-left: 10px;
+  }
+}
+
 .circle {
   width: 80px;
   height: 80px;
   border: 1px solid #000000;
   border-radius: 130px;
-  display: flex;
   align-items: center;
   justify-content: center;
+  display: none;
+
+  @media screen and (max-width: 1439px) {
+    display: flex;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .circle_text {
@@ -154,6 +181,12 @@ export default {
   display: inline-block;
   cursor: pointer;
   padding: 5px 0;
+
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+    line-height: 140%;
+    padding: 2px 0;
+  }
 }
 
 .truncate {
@@ -164,21 +197,47 @@ export default {
   overflow: hidden !important;
   text-overflow: ellipsis;
   -webkit-line-clamp: 4;
+
+  @media screen and (max-width: 768px) {
+    -webkit-line-clamp: 2;
+  }
 }
 
 .anim_container {
   height: 120px;
   width: 1065px;
+  display: none;
+
+  @media screen and (min-width: 1440px) {
+    display: block;
+  }
 }
 
 .card_container {
-  display: flex;
-  justify-content: space-between;
   gap: 60px;
+  display: none;
+
+  @media screen and (min-width: 1440px) {
+    display: flex;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
 }
 
 .card_item {
   max-width: 255px;
+
+  @media screen and (max-width: 768px) {
+    max-width: 100%;
+
+    &:nth-child(4) .arrow {
+      display: none;
+    }
+  }
 }
 
 .card_title {
@@ -188,6 +247,12 @@ export default {
   color: #1e1f21;
   margin-bottom: 16px;
   margin-top: 40px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 18px;
+    margin-bottom: 8px;
+    margin-top: 26px;
+  }
 }
 
 .description {
@@ -195,6 +260,23 @@ export default {
   font-size: 18px;
   line-height: 150%;
   color: #1e1f21;
+
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+    line-height: 140%;
+  }
+}
+
+.carousel_wrapper {
+  display: none;
+
+  @media screen and (max-width: 1439px) {
+    display: block;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 }
 
 .arrows {
@@ -216,9 +298,6 @@ export default {
 .how_scrumlaunch_works {
   padding-top: 240px;
   padding-bottom: 240px;
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: left;
 
   & * {
     box-sizing: border-box;
