@@ -152,7 +152,7 @@
             </div>
           </div>
         </div>
-        <NuxtLink to="/remote-developer-jobs">Vacancies</NuxtLink>
+        <NuxtLink to="/remote-developer-jobs">Careers</NuxtLink>
         <NuxtLink to="/contact-us">Contact</NuxtLink>
       </div>
       <div class="menu--desktop--wrapper-mobile">
