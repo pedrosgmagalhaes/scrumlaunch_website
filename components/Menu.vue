@@ -173,10 +173,33 @@
         />
       </div>
       <div class="menu--burger--links">
+        <span class="menu--burger--links--item" @click="handleNavigation('/')"
+          >Home</span
+        >
         <span
           class="menu--burger--links--item"
-          @click="handleNavigation('/contact-us')"
-          >Contact</span
+          @click="handleNavigation('/work')"
+          >Work</span
+        >
+        <span
+          class="menu--burger--links--item"
+          @click="handleNavigation('/services')"
+          >Services</span
+        >
+        <span
+          class="menu--burger--links--item"
+          @click="handleNavigation('/process')"
+          >Process</span
+        >
+        <span
+          class="menu--burger--links--item"
+          @click="handleNavigation('/leadership')"
+          >Leadership</span
+        >
+        <span
+          class="menu--burger--links--item"
+          @click="handleNavigation('/blog')"
+          >Blog</span
         >
         <span
           class="menu--burger--links--item"
@@ -186,17 +209,12 @@
         <span
           class="menu--burger--links--item"
           @click="handleNavigation('/remote-developer-jobs')"
-          >Vacancies</span
+          >Job Openings</span
         >
         <span
           class="menu--burger--links--item"
-          @click="handleNavigation('/services')"
-          >Services</span
-        >
-        <span
-          class="menu--burger--links--item"
-          @click="handleNavigation('/blog')"
-          >Blog</span
+          @click="handleNavigation('/contact-us')"
+          >Contact</span
         >
       </div>
     </div>

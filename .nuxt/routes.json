@@ -4,170 +4,148 @@
     "path": "/blog",
     "component": "/Users/admin/Desktop/vue_landing/pages/blog/index.vue",
     "chunkName": "pages/blog/index",
-    "url": "/blog",
-    "_name": "_13c73e28"
+    "url": "/blog"
   },
   {
     "name": "campus-reel-case-study",
     "path": "/campus-reel-case-study",
     "component": "/Users/admin/Desktop/vue_landing/pages/campus-reel-case-study.vue",
     "chunkName": "pages/campus-reel-case-study",
-    "url": "/campus-reel-case-study",
-    "_name": "_757345d8"
+    "url": "/campus-reel-case-study"
   },
   {
     "name": "contact-us",
     "path": "/contact-us",
     "component": "/Users/admin/Desktop/vue_landing/pages/contact-us.vue",
     "chunkName": "pages/contact-us",
-    "url": "/contact-us",
-    "_name": "_d5f8dd9c"
+    "url": "/contact-us"
   },
   {
     "name": "fgn-case-study",
     "path": "/fgn-case-study",
     "component": "/Users/admin/Desktop/vue_landing/pages/fgn-case-study.vue",
     "chunkName": "pages/fgn-case-study",
-    "url": "/fgn-case-study",
-    "_name": "_095d40b3"
+    "url": "/fgn-case-study"
   },
   {
     "name": "full-court-ai-case-study",
     "path": "/full-court-ai-case-study",
     "component": "/Users/admin/Desktop/vue_landing/pages/full-court-ai-case-study.vue",
     "chunkName": "pages/full-court-ai-case-study",
-    "url": "/full-court-ai-case-study",
-    "_name": "_ef955190"
+    "url": "/full-court-ai-case-study"
   },
   {
     "name": "helmm-case-study",
     "path": "/helmm-case-study",
     "component": "/Users/admin/Desktop/vue_landing/pages/helmm-case-study.vue",
     "chunkName": "pages/helmm-case-study",
-    "url": "/helmm-case-study",
-    "_name": "_714208de"
+    "url": "/helmm-case-study"
   },
   {
     "name": "leadership",
     "path": "/leadership",
     "component": "/Users/admin/Desktop/vue_landing/pages/leadership.vue",
     "chunkName": "pages/leadership",
-    "url": "/leadership",
-    "_name": "_8fd9b0e8"
+    "url": "/leadership"
   },
   {
     "name": "process",
     "path": "/process",
     "component": "/Users/admin/Desktop/vue_landing/pages/process.vue",
     "chunkName": "pages/process",
-    "url": "/process",
-    "_name": "_19a1eb38"
+    "url": "/process"
   },
   {
     "name": "quiz",
     "path": "/quiz",
     "component": "/Users/admin/Desktop/vue_landing/pages/quiz.vue",
     "chunkName": "pages/quiz",
-    "url": "/quiz",
-    "_name": "_5d5b0348"
+    "url": "/quiz"
   },
   {
     "name": "referral-partner",
     "path": "/referral-partner",
     "component": "/Users/admin/Desktop/vue_landing/pages/referral-partner.vue",
     "chunkName": "pages/referral-partner",
-    "url": "/referral-partner",
-    "_name": "_98713ac2"
+    "url": "/referral-partner"
   },
   {
     "name": "remote-developer-jobs",
     "path": "/remote-developer-jobs",
     "component": "/Users/admin/Desktop/vue_landing/pages/remote-developer-jobs/index.vue",
     "chunkName": "pages/remote-developer-jobs/index",
-    "url": "/remote-developer-jobs",
-    "_name": "_f4d589a8"
+    "url": "/remote-developer-jobs"
   },
   {
     "name": "scope-case-study",
     "path": "/scope-case-study",
     "component": "/Users/admin/Desktop/vue_landing/pages/scope-case-study.vue",
     "chunkName": "pages/scope-case-study",
-    "url": "/scope-case-study",
-    "_name": "_5322bf8c"
+    "url": "/scope-case-study"
   },
   {
     "name": "send-cv",
     "path": "/send-cv",
     "component": "/Users/admin/Desktop/vue_landing/pages/send-cv.vue",
     "chunkName": "pages/send-cv",
-    "url": "/send-cv",
-    "_name": "_d29c6dbe"
+    "url": "/send-cv"
   },
   {
     "name": "services",
     "path": "/services",
     "component": "/Users/admin/Desktop/vue_landing/pages/services.vue",
     "chunkName": "pages/services",
-    "url": "/services",
-    "_name": "_86269f36"
+    "url": "/services"
   },
   {
     "name": "vesta-case-study",
     "path": "/vesta-case-study",
     "component": "/Users/admin/Desktop/vue_landing/pages/vesta-case-study.vue",
     "chunkName": "pages/vesta-case-study",
-    "url": "/vesta-case-study",
-    "_name": "_74048f2f"
+    "url": "/vesta-case-study"
   },
   {
     "name": "work",
     "path": "/work",
     "component": "/Users/admin/Desktop/vue_landing/pages/work.vue",
     "chunkName": "pages/work",
-    "url": "/work",
-    "_name": "_11bc6518"
+    "url": "/work"
   },
   {
     "name": "hire-developers-specialization",
     "path": "/hire-developers/:specialization?",
     "component": "/Users/admin/Desktop/vue_landing/pages/hire-developers/_specialization.vue",
-    "chunkName": "pages/hire-developers/_specialization",
-    "_name": "_53afae74"
+    "chunkName": "pages/hire-developers/_specialization"
   },
   {
     "name": "remote-developer-jobs-vacancy_slug",
     "path": "/remote-developer-jobs/:vacancy_slug?",
     "component": "/Users/admin/Desktop/vue_landing/pages/remote-developer-jobs/_vacancy_slug.vue",
-    "chunkName": "pages/remote-developer-jobs/_vacancy_slug",
-    "_name": "_0872b828"
+    "chunkName": "pages/remote-developer-jobs/_vacancy_slug"
   },
   {
     "name": "locations-state_slug-city_slug",
     "path": "/locations/:state_slug?/:city_slug?",
     "component": "/Users/admin/Desktop/vue_landing/pages/locations/_state_slug/_city_slug.vue",
-    "chunkName": "pages/locations/_state_slug/_city_slug",
-    "_name": "_3a16a68f"
+    "chunkName": "pages/locations/_state_slug/_city_slug"
   },
   {
     "name": "blog-all",
     "path": "/blog/*",
     "component": "/Users/admin/Desktop/vue_landing/pages/blog/_.vue",
-    "chunkName": "pages/blog/_",
-    "_name": "_7b0f8a0e"
+    "chunkName": "pages/blog/_"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/admin/Desktop/vue_landing/pages/index.vue",
     "chunkName": "pages/index",
-    "url": "/",
-    "_name": "_9162774a"
+    "url": "/"
   },
   {
     "name": "all",
     "path": "/*",
     "component": "/Users/admin/Desktop/vue_landing/pages/_.vue",
-    "chunkName": "pages/_",
-    "_name": "_1ce8a430"
+    "chunkName": "pages/_"
   }
 ]
