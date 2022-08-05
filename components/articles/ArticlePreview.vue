@@ -3,7 +3,10 @@
     <div
       v-show="item.previewImage.url"
       class="article_preview__image"
-      :style="{ 'background-image': `url('${item.previewImage.url}')` }"
+      :style="{
+        'background-image': `url(${require('@/assets/images/blog/' +
+          item.previewImage.url)}`,
+      }"
     ></div>
 
     <div class="article_preview__info">

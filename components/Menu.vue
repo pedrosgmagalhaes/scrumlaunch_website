@@ -19,6 +19,11 @@
           <span>Blog</span>
           <ul class="dropdown">
             <li>
+              <NuxtLink to="/blog/scrumlaunch-clutch-top-app"
+                >ScrumLaunch voted 2022 top app development company by Clutch</NuxtLink
+              >
+            </li>
+            <li>
               <NuxtLink to="/blog/web-development-company-outsourcing"
                 >2021 Guide to Outsourcing Web Development</NuxtLink
               >
