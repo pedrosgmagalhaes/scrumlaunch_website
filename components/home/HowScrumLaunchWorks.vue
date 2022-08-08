@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper how_scrumlaunch_works">
+  <div class="how_scrumlaunch_works wrapper">
     <div class="header-1 how_scrumlaunch_works__title">
       How ScrumLaunch Works
     </div>
@@ -160,7 +160,7 @@ export default {
     display: flex;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     display: flex;
     width: 50px;
     height: 50px;
@@ -182,7 +182,7 @@ export default {
   cursor: pointer;
   padding: 5px 0;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     font-size: 14px;
     line-height: 140%;
     padding: 2px 0;
@@ -198,7 +198,7 @@ export default {
   text-overflow: ellipsis;
   -webkit-line-clamp: 4;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     -webkit-line-clamp: 2;
   }
 }
@@ -208,7 +208,7 @@ export default {
   width: 1065px;
   display: none;
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 1439px) {
     display: block;
   }
 }
@@ -217,11 +217,11 @@ export default {
   gap: 60px;
   display: none;
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 1439px) {
     display: flex;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -231,7 +231,7 @@ export default {
 .card_item {
   max-width: 255px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     max-width: 100%;
 
     &:nth-child(4) .arrow {
@@ -248,7 +248,7 @@ export default {
   margin-bottom: 16px;
   margin-top: 40px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     font-size: 18px;
     margin-bottom: 8px;
     margin-top: 26px;
@@ -261,7 +261,7 @@ export default {
   line-height: 150%;
   color: #1e1f21;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     font-size: 14px;
     line-height: 140%;
   }
@@ -274,7 +274,7 @@ export default {
     display: block;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     display: none;
   }
 }
@@ -284,6 +284,7 @@ export default {
   align-items: center;
   justify-content: center;
   gap: 30px;
+  margin-top: 75px;
 }
 
 .prev {
@@ -296,19 +297,22 @@ export default {
 }
 
 .how_scrumlaunch_works {
-  padding-top: 240px;
-  padding-bottom: 240px;
-
-  & * {
-    box-sizing: border-box;
-  }
-
   &__title {
     margin-bottom: 80px;
     font-size: 56px;
     font-weight: 900;
     letter-spacing: 0.02em;
     text-transform: uppercase;
+
+    @media screen and (max-width: 767px) {
+      font-size: 48px;
+      margin-bottom: 60px;
+    }
+
+    @media screen and (max-width: 424px) {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
   }
 }
 </style>

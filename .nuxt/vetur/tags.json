@@ -26,12 +26,6 @@
   "Accordion": {
     "description": "Auto imported from components/accordion/Accordion.vue"
   },
-  "ArticlesArticleLink": {
-    "description": "Auto imported from components/articles/ArticleLink.vue"
-  },
-  "ArticlesArticlePreview": {
-    "description": "Auto imported from components/articles/ArticlePreview.vue"
-  },
   "AnimationsAppearFromMask": {
     "description": "Auto imported from components/animations/AppearFromMask.vue"
   },
@@ -50,6 +44,21 @@
   "CaseStudyProjectInfo": {
     "description": "Auto imported from components/case-study/ProjectInfo.vue"
   },
+  "ArticlesArticleLink": {
+    "description": "Auto imported from components/articles/ArticleLink.vue"
+  },
+  "ArticlesArticlePreview": {
+    "description": "Auto imported from components/articles/ArticlePreview.vue"
+  },
+  "HireDevelopersProfilesCards": {
+    "description": "Auto imported from components/hire-developers/DevelopersProfilesCards.vue"
+  },
+  "HireDevelopersMetricsCard": {
+    "description": "Auto imported from components/hire-developers/MetricsCard.vue"
+  },
+  "HireDevelopersProgLangList": {
+    "description": "Auto imported from components/hire-developers/ProgLangList.vue"
+  },
   "ContactForm": {
     "description": "Auto imported from components/contact/ContactForm.vue"
   },
@@ -61,15 +70,6 @@
   },
   "ContactSendCVForm": {
     "description": "Auto imported from components/contact/SendCVForm.vue"
-  },
-  "HireDevelopersProfilesCards": {
-    "description": "Auto imported from components/hire-developers/DevelopersProfilesCards.vue"
-  },
-  "HireDevelopersMetricsCard": {
-    "description": "Auto imported from components/hire-developers/MetricsCard.vue"
-  },
-  "HireDevelopersProgLangList": {
-    "description": "Auto imported from components/hire-developers/ProgLangList.vue"
   },
   "LeadershipContactUsBlock": {
     "description": "Auto imported from components/leadership/ContactUsBlock.vue"

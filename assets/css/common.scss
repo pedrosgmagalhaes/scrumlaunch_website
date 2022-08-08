@@ -287,26 +287,25 @@
 
 .wrapper {
   margin: 0 auto;
-  max-width: 1600px;
-  padding: 0px 160px;
   text-align: left;
+  padding: 240px 8.34%;
+  max-width: 1600px;
 
   .bg-black {
     background-color: #1e1f21;
   }
 
-  @media screen and (max-width: 1440px) {
+  @media screen and (max-width: 1439px) {
     max-width: 1200px;
-    padding: 0px 120px;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     max-width: 708px;
-    padding: 0px 30px;
+    padding: 140px 30px;
   }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 424px) {
     max-width: 335px;
-    padding: 0px 20px;
+    padding: 80px 20px;
   }
 }
