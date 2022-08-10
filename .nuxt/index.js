@@ -20,7 +20,6 @@ import nuxt_plugin_axios_3fe8c7e3 from 'nuxt_plugin_axios_3fe8c7e3' // Source: .
 import nuxt_plugin_directives_521c0486 from 'nuxt_plugin_directives_521c0486' // Source: ../plugins/directives.js (mode: 'all')
 import nuxt_plugin_globalcomponents_52ce1226 from 'nuxt_plugin_globalcomponents_52ce1226' // Source: ../plugins/global-components.js (mode: 'all')
 import nuxt_plugin_hotjar_6900f5d3 from 'nuxt_plugin_hotjar_6900f5d3' // Source: ../plugins/hotjar.js (mode: 'client')
-import nuxt_plugin_vueslickcarousel_1c6345a5 from 'nuxt_plugin_vueslickcarousel_1c6345a5' // Source: ../plugins/vue-slick-carousel.js (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
