@@ -4,8 +4,7 @@
       v-show="item.previewImage.url"
       class="article_preview__image"
       :style="{
-        'background-image': `url(${require('@/assets/images/blog/' +
-          item.previewImage.url)}`,
+        'background-image': `url(${item.previewImage.url})`,
       }"
     ></div>
 
@@ -27,6 +26,19 @@ export default {
   props: {
     item: {
       type: [Object, Boolean],
+      default: () => ({
+        category: '',
+        date: '',
+        metaDescription: '',
+        metaTitle: '',
+        shortText: '',
+        title: '',
+        previewImage: {
+          url: ``,
+        },
+        slug: '',
+        text: '',
+      }),
     },
 
     first: {

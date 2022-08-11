@@ -6,7 +6,7 @@
     </div>
 
     <h1 class="header-big">{{ article.title }}</h1>
-    <div v-show="article" class="seo__body" v-html="article.fullText"></div>
+    <div v-show="article" class="seo__body" v-html="article.text"></div>
     <ProgLangList
       v-show="article.slug === '/hire-developers'"
       class="prog_lang_list"
@@ -15,7 +15,8 @@
 </template>
 
 <script>
-import articles from '@/seo/articles.json'
+import * as Contentful from 'contentful'
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 import ProgLangList from '@/components/hire-developers/ProgLangList.vue'
 
 export default {
@@ -24,7 +25,26 @@ export default {
   },
   data() {
     return {
-      article: [],
+      article: {
+        category: '',
+        title: '',
+        text: null,
+        slug: '',
+        metaTitle: '',
+        metaDescription: '',
+      },
+    }
+  },
+
+  head() {
+    return {
+      title: this.article.metaTitle,
+      meta: [
+        {
+          name: 'description',
+          content: this.article.metaDescription,
+        },
+      ],
     }
   },
 
@@ -42,32 +62,50 @@ export default {
 
   methods: {
     getArticle() {
-      this.article = articles.filter(
-        (item) => item.slug === this.$route.path
-      )[0]
+      if (this.$store.getters['articles/getAllArticles'].length) {
+        const currentPost = this.$store.getters[
+          'articles/getAllArticles'
+        ].filter((item) => {
+          return item.slug === this.$route.path
+        })[0]
 
-      if (this.article === undefined) {
-        this.$route.push({ path: '/' })
+        if (currentPost) {
+          this.article = currentPost
+        } else {
+          this.$router.push('/')
+        }
+      } else {
+        const client = Contentful.createClient({
+          space: 'psyys3eoga8f',
+          accessToken: 'bOobZ65YNxX9q52-lWtWpmOmQZgdsjAR5sWkhJopKfg',
+        })
+
+        client.getEntries({ content_type: 'blog' }).then((res) => {
+          const posts = res.items.map((el) => ({
+            category: el.fields.category,
+            date: el.fields.date,
+            metaDescription: el.fields.metaDescription,
+            metaTitle: el.fields.metaTitle,
+            shortText: el.fields.shortText,
+            title: el.fields.title,
+            previewImage: {
+              url: `https:${el.fields.previewImage.fields.file.url}`,
+            },
+            slug: el.fields.slug,
+            text: documentToHtmlString(el.fields.ttt),
+          }))
+
+          const currentPost = posts.filter((item) => {
+            return item.slug === this.$route.path
+          })[0]
+
+          if (currentPost) {
+            this.article = currentPost
+          } else {
+            this.$router.push('/')
+          }
+        })
       }
-
-      // const metaData = reactive({
-      // 	title: article.value.meta_title,
-      // 	description: article.value.meta_description,
-      // })
-
-      // useHead({
-      // 	title: computed(() => metaData.title),
-      // 	meta: [
-      // 		{
-      // 			name: `description`,
-      // 			content: computed(() => metaData.description),
-      // 		},
-      // 		{
-      // 			name: `robots`,
-      // 			content: 'noindex, nofollow',
-      // 		},
-      // 	],
-      // })
     },
   },
 }

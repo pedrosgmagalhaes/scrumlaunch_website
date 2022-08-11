@@ -27,12 +27,12 @@
 			<ArticleLink to="/blog/category/faq">F.A.Q.</ArticleLink> -->
     </ul>
 
-    <div v-if="this['articles/getFirstArticle']">
-      <ArticlePreview :item="this['articles/getFirstArticle']" :first="true" />
+    <div v-if="articles[0]">
+      <ArticlePreview :item="articles[0]" :first="true" />
 
       <div class="articles__preview_list">
         <ArticlePreview
-          v-for="(item, index) in this['articles/getRestArticles']"
+          v-for="(item, index) in articles.slice(1)"
           :key="index"
           :item="item"
         />
@@ -50,12 +50,11 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapMutations } from 'vuex'
 import * as Contentful from 'contentful'
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 import ArticlePreview from '@/components/articles/ArticlePreview'
 import ArticleLink from '@/components/articles/ArticleLink'
-import { dateConverter } from '@/utils.js'
-import articles from '@/seo/articles.json'
 
 export default {
   components: {
@@ -78,12 +77,10 @@ export default {
   },
 
   computed: {
-    ...mapGetters(['articles/getFirstArticle', 'articles/getRestArticles']),
-  },
-
-  watch: {
-    $route() {
-      this.getArticles()
+    articles() {
+      return this.$store.state.articles.articles.length
+        ? this.$store.state.articles.articles
+        : false
     },
   },
 
@@ -92,79 +89,39 @@ export default {
   },
 
   methods: {
+    ...mapMutations({
+      SET_ARTICLES: 'articles/SET_ARTICLES',
+    }),
+
     scrollToCategories(e) {
       setTimeout(() => {
         e.target.scrollIntoView({ block: 'start', behavior: 'smooth' })
       }, 150)
     },
 
-    getAsset(id, assetsArr) {
-      const assetObj = assetsArr.filter((item) => {
-        return id === item.sys.id
-      })[0]
-
-      return {
-        url: assetObj.fields.file.url,
-        title: assetObj.fields.title,
-      }
-    },
-
     getArticles() {
       const client = Contentful.createClient({
-        space: 'sxsg65tutm19',
-        accessToken: 'HMMSTPlxFlk94f-Y0QweBu61NlBG2gqzW8y8nxAQIB8',
+        space: 'psyys3eoga8f',
+        accessToken: 'bOobZ65YNxX9q52-lWtWpmOmQZgdsjAR5sWkhJopKfg',
       })
 
-      if (this.$route.params.cat_id === 'faq') {
-        let seoArticles = []
+      client.getEntries({ content_type: 'blog' }).then((res) => {
+        const posts = res.items.map((el) => ({
+          category: el.fields.category,
+          date: el.fields.date,
+          metaDescription: el.fields.metaDescription,
+          metaTitle: el.fields.metaTitle,
+          shortText: el.fields.shortText,
+          title: el.fields.title,
+          previewImage: {
+            url: `https:${el.fields.previewImage.fields.file.url}`,
+          },
+          slug: el.fields.slug,
+          text: documentToHtmlString(el.fields.ttt),
+        }))
 
-        seoArticles = articles.map((item) => {
-          const newItem = {}
-          newItem.title = item.title
-          newItem.previewImage = {
-            url: '',
-          }
-          newItem.shortText = null
-          newItem.author = null
-          newItem.category = 'F.A.Q.'
-          newItem.slug = item.url
-          newItem.date = null
-          return newItem
-        })
-
-        this.$store.dispatch('setArticles', seoArticles)
-      } else {
-        const query = {
-          content_type: 'blog',
-          limit: 9,
-        }
-        if (this.$route.params.cat_id !== undefined) {
-          query['fields.category'] =
-            this.$route.params.cat_id[0].toUpperCase() +
-            this.$route.params.cat_id.substr(1)
-        }
-
-        client.getEntries(query).then((res) => {
-          let news = []
-
-          news = res.items.map((item) => {
-            const newItem = {}
-            newItem.title = item.fields.title
-            newItem.previewImage = this.getAsset(
-              item.fields.previewImage.sys.id,
-              res.includes.Asset
-            )
-            newItem.shortText = item.fields.shortText
-            newItem.author = item.fields.author
-            newItem.category = item.fields.category
-            newItem.slug = '/blog/' + item.fields.slug
-            newItem.date = dateConverter(item.fields.date, 1)
-            return newItem
-          })
-
-          this.$store.dispatch('articles/setArticles', news.concat(articles))
-        })
-      }
+        this.$store.commit('articles/SET_ARTICLES', posts)
+      })
     },
   },
 }

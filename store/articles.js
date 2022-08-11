@@ -24,6 +24,6 @@ export const getters = {
   },
 
   getRestArticles: (state) => {
-    return state.articles.slice(1, state.articles.length)
+    return state.articles.slice(1, state.articles.length) !== undefined ? state.articles.slice(1, state.articles.length) : false
   },
 }
