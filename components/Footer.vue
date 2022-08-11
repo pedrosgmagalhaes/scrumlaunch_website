@@ -12,17 +12,29 @@
         companies that are building software teams with ScrumLaunch.
       </p>
       <div class="social_proof__img-conatiner">
-        <a href="https://www.communityfunded.com/" target="_blank"><img src="/images/quiz/community_funded.svg" alt="community_funded" /></a>
-        <a href="https://www.acorns.com/" target="_blank"><img src="/images/quiz/harvest.svg" alt="harvest" /></a>
-        <a href="http://www.vestahome.com/" target="_blank"><img src="/images/quiz/vesta.svg" alt="vesta" /></a>
-        <a href="https://www.gipper.com/" target="_blank"><img src="/images/quiz/gipper.svg" alt="gipper" /></a>
-        <a href="https://www.campusreel.org/" target="_blank"><img src="/images/quiz/campusreel.svg" alt="campusreel" /></a>
-        <a href="https://www.heli.life/" target="_blank"><img src="/images/quiz/heli.svg" alt="heli" /></a>
+        <a href="https://www.communityfunded.com/" target="_blank"
+          ><img src="/images/quiz/community_funded.svg" alt="community_funded"
+        /></a>
+        <a href="https://www.acorns.com/" target="_blank"
+          ><img src="/images/quiz/harvest.svg" alt="harvest"
+        /></a>
+        <a href="http://www.vestahome.com/" target="_blank"
+          ><img src="/images/quiz/vesta.svg" alt="vesta"
+        /></a>
+        <a href="https://www.gipper.com/" target="_blank"
+          ><img src="/images/quiz/gipper.svg" alt="gipper"
+        /></a>
+        <a href="https://www.campusreel.org/" target="_blank"
+          ><img src="/images/quiz/campusreel.svg" alt="campusreel"
+        /></a>
+        <a href="https://www.heli.life/" target="_blank"
+          ><img src="/images/quiz/heli.svg" alt="heli"
+        /></a>
       </div>
     </div>
     <div class="footer home">
       <div class="footer--menu">
-        <NuxtLink to="/">Portfolio</NuxtLink>
+        <NuxtLink to="/work">Portfolio</NuxtLink>
         <NuxtLink to="/services">Services</NuxtLink>
         <NuxtLink to="/process">About us</NuxtLink>
         <NuxtLink to="/referral-partner">Referral Program</NuxtLink>
@@ -77,11 +89,12 @@ export default {
   width: 100%;
   padding: 0px 20px 40px;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   color: #1e1f21;
   position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 40px;
+  grid-column-gap: 25px;
 
   a,
   p {
@@ -114,7 +127,12 @@ export default {
   }
 
   &--menu {
-    display: none;
+    grid-area: 2 / 1 / 3 / 2;
+    margin-right: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
   }
 
   &--contact {
@@ -122,9 +140,7 @@ export default {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-    height: 100%;
-    margin-right: 0;
-    margin-bottom: 24px;
+    grid-area: 1 / 1 / 2 / 3;
 
     &--item {
       text-align: left;
@@ -145,8 +161,7 @@ export default {
   }
 
   &--address {
-    margin-right: 0;
-    margin-bottom: 40px;
+    grid-area: 2 / 2 / 3 / 3;
   }
 
   &--social {
@@ -254,14 +269,6 @@ export default {
       text-align: left;
     }
 
-    span {
-      text-align: center;
-      position: absolute;
-      bottom: 40px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
     &--menu {
       display: flex;
       flex-direction: column;
@@ -298,33 +305,9 @@ export default {
       margin-right: 0;
       margin-bottom: 0;
     }
-
-    &--social {
-      position: absolute;
-      right: 30px;
-      bottom: 122px;
-    }
   }
 }
 
-@media screen and (min-width: 1140px) {
-  .footer {
-    span {
-      text-align: right;
-      position: absolute;
-      bottom: 124px;
-      right: 34px;
-      left: inherit;
-      transform: none;
-    }
-
-    &--social {
-      position: relative;
-      right: inherit;
-      bottom: inherit;
-    }
-  }
-}
 
 @media screen and (min-width: 1280px) {
   .footer {

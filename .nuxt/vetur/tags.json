@@ -38,6 +38,18 @@
   "ArticlesArticlePreview": {
     "description": "Auto imported from components/articles/ArticlePreview.vue"
   },
+  "ContactForm": {
+    "description": "Auto imported from components/contact/ContactForm.vue"
+  },
+  "ContactFileInput": {
+    "description": "Auto imported from components/contact/FileInput.vue"
+  },
+  "ContactInputComponent": {
+    "description": "Auto imported from components/contact/InputComponent.vue"
+  },
+  "ContactSendCVForm": {
+    "description": "Auto imported from components/contact/SendCVForm.vue"
+  },
   "CaseStudyMainGoal": {
     "description": "Auto imported from components/case-study/MainGoal.vue"
   },
@@ -59,17 +71,11 @@
   "HireDevelopersProgLangList": {
     "description": "Auto imported from components/hire-developers/ProgLangList.vue"
   },
-  "ContactForm": {
-    "description": "Auto imported from components/contact/ContactForm.vue"
+  "ProcessOurApproach": {
+    "description": "Auto imported from components/process/OurApproach.vue"
   },
-  "ContactFileInput": {
-    "description": "Auto imported from components/contact/FileInput.vue"
-  },
-  "ContactInputComponent": {
-    "description": "Auto imported from components/contact/InputComponent.vue"
-  },
-  "ContactSendCVForm": {
-    "description": "Auto imported from components/contact/SendCVForm.vue"
+  "ProcessOurProcess": {
+    "description": "Auto imported from components/process/OurProcess.vue"
   },
   "LeadershipContactUsBlock": {
     "description": "Auto imported from components/leadership/ContactUsBlock.vue"
@@ -128,19 +134,13 @@
   "HomeWhyChooseScrumLaunch": {
     "description": "Auto imported from components/home/WhyChooseScrumLaunch.vue"
   },
-  "ProcessOurApproach": {
-    "description": "Auto imported from components/process/OurApproach.vue"
-  },
-  "ProcessOurProcess": {
-    "description": "Auto imported from components/process/OurProcess.vue"
-  },
-  "ServicesServiceItem": {
-    "description": "Auto imported from components/services/ServiceItem.vue"
-  },
   "WorkHeroBlock": {
     "description": "Auto imported from components/work/HeroBlock.vue"
   },
   "WorkItem": {
     "description": "Auto imported from components/work/WorkItem.vue"
+  },
+  "ServicesServiceItem": {
+    "description": "Auto imported from components/services/ServiceItem.vue"
   }
 }
