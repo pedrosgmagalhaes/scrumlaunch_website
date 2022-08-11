@@ -19,6 +19,11 @@
           <span>Blog</span>
           <ul class="dropdown">
             <li>
+              <NuxtLink to="/blog/scrumlaunch-clutch-top-app"
+                >ScrumLaunch voted 2022 top app development company by Clutch</NuxtLink
+              >
+            </li>
+            <li>
               <NuxtLink to="/blog/web-development-company-outsourcing"
                 >2021 Guide to Outsourcing Web Development</NuxtLink
               >
@@ -147,7 +152,7 @@
             </div>
           </div>
         </div>
-        <NuxtLink to="/remote-developer-jobs">Vacancies</NuxtLink>
+        <NuxtLink to="/remote-developer-jobs">Careers</NuxtLink>
         <NuxtLink to="/contact-us">Contact</NuxtLink>
       </div>
       <div class="menu--desktop--wrapper-mobile">
@@ -173,10 +178,33 @@
         />
       </div>
       <div class="menu--burger--links">
+        <span class="menu--burger--links--item" @click="handleNavigation('/')"
+          >Home</span
+        >
         <span
           class="menu--burger--links--item"
-          @click="handleNavigation('/contact-us')"
-          >Contact</span
+          @click="handleNavigation('/work')"
+          >Work</span
+        >
+        <span
+          class="menu--burger--links--item"
+          @click="handleNavigation('/services')"
+          >Services</span
+        >
+        <span
+          class="menu--burger--links--item"
+          @click="handleNavigation('/process')"
+          >Process</span
+        >
+        <span
+          class="menu--burger--links--item"
+          @click="handleNavigation('/leadership')"
+          >Leadership</span
+        >
+        <span
+          class="menu--burger--links--item"
+          @click="handleNavigation('/blog')"
+          >Blog</span
         >
         <span
           class="menu--burger--links--item"
@@ -186,17 +214,12 @@
         <span
           class="menu--burger--links--item"
           @click="handleNavigation('/remote-developer-jobs')"
-          >Vacancies</span
+          >Job Openings</span
         >
         <span
           class="menu--burger--links--item"
-          @click="handleNavigation('/services')"
-          >Services</span
-        >
-        <span
-          class="menu--burger--links--item"
-          @click="handleNavigation('/blog')"
-          >Blog</span
+          @click="handleNavigation('/contact-us')"
+          >Contact</span
         >
       </div>
     </div>
