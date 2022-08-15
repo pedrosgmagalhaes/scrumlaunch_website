@@ -15,8 +15,6 @@ You can directly use them in pages and other components without the need to impo
 - `<Select>` | `<select>` (components/Select.vue)
 - `<SocialBlock>` | `<social-block>` (components/SocialBlock.vue)
 - `<Accordion>` | `<accordion>` (components/accordion/Accordion.vue)
-- `<AnimationsAppearFromMask>` | `<animations-appear-from-mask>` (components/animations/AppearFromMask.vue)
-- `<AnimationsTypingEffect>` | `<animations-typing-effect>` (components/animations/TypingEffect.vue)
 - `<ArticlesArticleLink>` | `<articles-article-link>` (components/articles/ArticleLink.vue)
 - `<ArticlesArticlePreview>` | `<articles-article-preview>` (components/articles/ArticlePreview.vue)
 - `<ContactForm>` | `<contact-form>` (components/contact/ContactForm.vue)
