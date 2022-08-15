@@ -102,9 +102,10 @@
     <div class="container section_4">
       <p class="accordian_title">How to hire a {{ dev_lang }} EXPERT?</p>
       <p class="accordian_desc">
-        Hiring fresh talent in Java requires testing and reviewing candidates
-        for their technical skills and proficiency in the programming language.
-        That means a fair amount of software development experience is expected.
+        Hiring fresh talent in {{ dev_lang }} requires testing and reviewing
+        candidates for their technical skills and proficiency in the programming
+        language. That means a fair amount of software development experience is
+        expected.
       </p>
       <div class="accordion_wrapper">
         <div
