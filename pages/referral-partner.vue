@@ -52,14 +52,14 @@ export default {
   padding-top: 266px;
   padding-bottom: 240px;
 
-  @media screen and (max-width: 1440px) {
+  @media screen and (max-width: 1439px) {
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 200px;
     padding-bottom: 140px;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     padding-top: 125px;
     padding-bottom: 80px;
   }
@@ -71,7 +71,7 @@ export default {
   justify-content: space-between;
   gap: 20px;
 
-  @media screen and (max-width: 1440px) {
+  @media screen and (max-width: 1439px) {
     flex-direction: column;
   }
 }
@@ -87,17 +87,17 @@ export default {
     height: auto;
     min-width: auto;
 
-    @media screen and (max-width: 1440px) {
+    @media screen and (max-width: 1439px) {
       padding: 20px 77px;
       font-size: 14px;
     }
   }
 
-  @media screen and (max-width: 1440px) {
+  @media screen and (max-width: 1439px) {
     margin-bottom: 80px;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     margin-bottom: 40px;
   }
 }
@@ -116,7 +116,7 @@ export default {
     color: #1e1f21;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     font-size: 32px;
     padding-bottom: 20px;
   }
@@ -127,7 +127,7 @@ export default {
     width: 500px;
     height: 388px;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       width: 375px;
       height: 291px;
     }
@@ -142,7 +142,7 @@ export default {
   &.pc {
     display: block;
 
-    @media screen and (max-width: 1440px) {
+    @media screen and (max-width: 1439px) {
       display: none;
     }
   }
@@ -150,7 +150,7 @@ export default {
   &.other {
     display: none;
 
-    @media screen and (max-width: 1440px) {
+    @media screen and (max-width: 1439px) {
       display: block;
     }
   }
@@ -167,20 +167,20 @@ export default {
   &:last-child {
     margin-bottom: 80px;
 
-    @media screen and (max-width: 1440px) {
+    @media screen and (max-width: 1439px) {
       margin-bottom: 60px;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       margin-bottom: 40px;
     }
   }
 
-  @media screen and (max-width: 1440px) {
+  @media screen and (max-width: 1439px) {
     margin-bottom: 12px;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     font-size: 14px;
     margin-bottom: 8px;
   }

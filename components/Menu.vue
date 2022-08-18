@@ -15,135 +15,140 @@
         <!-- <NuxtLink to="/services">Services</NuxtLink> -->
         <!-- <NuxtLink to="/process">Process</NuxtLink> -->
         <!-- <NuxtLink to="/leadership">Leadership</NuxtLink> -->
-        <div class="dropdown__wrap">
-          <span>Blog</span>
+        <div class="dropdown__wrap" :class="{ hidden: isHiddenNav }">
+          <span @mouseenter="isHiddenNav = false">Blog</span>
           <ul class="dropdown">
-            <li>
+            <li @click="hiddenNav">
               <NuxtLink to="/blog/scrumlaunch-clutch-top-app"
-                >ScrumLaunch voted 2022 top app development company by Clutch</NuxtLink
+                >ScrumLaunch voted 2022 top app development company by
+                Clutch</NuxtLink
               >
             </li>
-            <li>
+            <li @click="hiddenNav">
               <NuxtLink to="/blog/web-development-company-outsourcing"
                 >2021 Guide to Outsourcing Web Development</NuxtLink
               >
             </li>
-            <li>
+            <li @click="hiddenNav">
               <NuxtLink
                 to="/blog/web-development-company-outsourcing/software-development-in-ukraine"
                 >The #1 Software Development Firm in Ukraine</NuxtLink
               >
             </li>
-            <li>
+            <li @click="hiddenNav">
               <NuxtLink
                 to="/blog/web-development-company-outsourcing/website-development-consultants"
                 >The #1 Website Development Consultant in 2021</NuxtLink
               >
             </li>
-            <li>
+            <li @click="hiddenNav">
               <NuxtLink to="/hire-developers"
                 >Hire Quality Developers in Minutes - Deploy in Hours</NuxtLink
               >
             </li>
-            <li>
+            <li @click="hiddenNav">
               <NuxtLink
                 to="/blog/hire-developers/python-developers-and-programmers"
                 >Hire Quality Python Developers in Minutes</NuxtLink
               >
             </li>
-            <li><NuxtLink to="/blog">View All</NuxtLink></li>
+            <li @click="hiddenNav">
+              <NuxtLink to="/blog">View All</NuxtLink>
+            </li>
           </ul>
         </div>
-        <div class="dropdown__wrap">
-          <NuxtLink to="/hire-developers">Hire Developers</NuxtLink>
+        <div class="dropdown__wrap" :class="{ hidden: isHiddenNav }">
+          <div @mouseenter="isHiddenNav = false">
+            <NuxtLink to="/hire-developers">Hire Developers</NuxtLink>
+          </div>
           <div class="dropdown">
             <div class="flex">
               <ul class="mr60">
-                <li>
+                <li @click="hiddenNav">
                   <NuxtLink to="/hire-developers/php-developers"
                     >PHP Developers</NuxtLink
                   >
                 </li>
-                <li>
+                <li @click="hiddenNav">
                   <NuxtLink to="/hire-developers/react-js-developers"
                     >React JS Developers</NuxtLink
                   >
                 </li>
-                <li>
+                <li @click="hiddenNav">
                   <NuxtLink to="/hire-developers/django-developers"
                     >Django Developers</NuxtLink
                   >
                 </li>
-                <li>
+                <li @click="hiddenNav">
                   <NuxtLink to="/hire-developers/wordpress-developers"
                     >Wordpress Developers</NuxtLink
                   >
                 </li>
-                <li>
+                <li @click="hiddenNav">
                   <NuxtLink to="/hire-developers/java-developers"
                     >Java Developers</NuxtLink
                   >
                 </li>
-                <li>
+                <li @click="hiddenNav">
                   <NuxtLink to="/hire-developers/ios-developers"
                     >iOS Developers</NuxtLink
                   >
                 </li>
               </ul>
               <ul class="mr60">
-                <li>
+                <li @click="hiddenNav">
                   <NuxtLink to="/hire-developers/android-developers"
                     >Android Developers</NuxtLink
                   >
                 </li>
-                <li>
+                <li @click="hiddenNav">
                   <NuxtLink to="/hire-developers/web-developers"
                     >Web Developers</NuxtLink
                   >
                 </li>
-                <li>
+                <li @click="hiddenNav">
                   <NuxtLink to="/hire-developers/angular-js-developers"
                     >Angular JS Developers</NuxtLink
                   >
                 </li>
-                <li>
+                <li @click="hiddenNav">
                   <NuxtLink to="/hire-developers/node-js-developers"
                     >Node JS Developers</NuxtLink
                   >
                 </li>
-                <li>
+                <li @click="hiddenNav">
                   <NuxtLink to="/hire-developers/ruby-on-rails-developers"
                     >Ruby On Rails Developers</NuxtLink
                   >
                 </li>
-                <li>
+                <li @click="hiddenNav">
                   <NuxtLink to="/hire-developers/software-developers"
                     >Software Developers</NuxtLink
                   >
                 </li>
               </ul>
               <ul>
-                <li>
+                <li @click="hiddenNav">
                   <NuxtLink to="/hire-developers/python-developers"
                     >Python Developers</NuxtLink
                   >
                 </li>
-                <li>
+                <li @click="hiddenNav">
                   <NuxtLink to="/hire-developers/solidity-developers"
                     >Solidity Developers</NuxtLink
                   >
                 </li>
-                <li>
+                <li @click="hiddenNav">
                   <NuxtLink to="/hire-developers/react-native-developers"
                     >React Native Developers</NuxtLink
                   >
                 </li>
-                <li>
+                <li @click="hiddenNav">
                   <NuxtLink to="/hire-developers/ruby-developers"
                     >Ruby Developers</NuxtLink
                   >
                 </li>
-                <li>
+                <li @click="hiddenNav">
                   <NuxtLink to="/hire-developers" exact
                     >View All Languages</NuxtLink
                   >
@@ -231,6 +236,7 @@ export default {
   data: () => ({
     showMenu: false,
     contactPage: false,
+    isHiddenNav: false,
   }),
 
   watch: {
@@ -277,24 +283,8 @@ export default {
       this.$nuxt.$options.router.push(pageName)
     },
 
-    dropdownToggle(e) {
-      if (
-        e.target.nextElementSibling !== null &&
-        e.target.nextElementSibling.classList.contains('dropdown')
-      ) {
-        if (!e.target.nextElementSibling.classList.contains('active')) {
-          e.target.nextElementSibling.classList.add('active')
-          return
-        }
-        if (e.target.nextElementSibling.classList.contains('active')) {
-          e.target.nextElementSibling.classList.remove('active')
-          return
-        }
-      }
-
-      if (e.target.offsetParent.classList.contains('dropdown')) {
-        e.target.offsetParent.classList.remove('active')
-      }
+    hiddenNav() {
+      this.isHiddenNav = true
     },
   },
 }
@@ -381,6 +371,18 @@ export default {
         }
       }
     }
+  }
+}
+
+.hidden.dropdown__wrap:hover {
+  .dropdown {
+    opacity: 0;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  .dropdown__wrap:before {
+    display: none;
   }
 }
 

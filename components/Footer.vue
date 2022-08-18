@@ -209,7 +209,7 @@ export default {
     cursor: pointer;
   }
 
-  @media screen and (max-width: 1440px) {
+  @media screen and (max-width: 1439px) {
     padding-bottom: 140px;
     padding-top: 140px;
     margin-bottom: 140px;
@@ -233,7 +233,7 @@ export default {
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     padding-bottom: 80px;
     padding-top: 80px;
     margin-bottom: 80px;
@@ -250,7 +250,7 @@ export default {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767px) {
   .footer {
     width: 100%;
     height: 278px;

@@ -252,7 +252,6 @@ export default {
 
   @media screen and (max-width: 1440px) {
     margin-bottom: 0px;
-    margin-top: -50px;
     margin-right: -50px;
   }
 
@@ -487,6 +486,10 @@ export default {
 
     &:last-child {
       border-bottom: 1px solid #1e1f21;
+    }
+
+    &:not(:first-child) {
+      align-items: center;
     }
   }
 

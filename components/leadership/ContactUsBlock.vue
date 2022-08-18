@@ -19,7 +19,6 @@
         Looking to build something amazing? We’d love to help.
       </p></TypingEffect
     >
-
     <NuxtLink class="btn" to="/contact-us">contact us</NuxtLink>
   </div>
 </template>
@@ -67,6 +66,23 @@ export default {}
     // max-width: 540px;
     max-width: 202px;
     text-align: left;
+  }
+}
+
+@media screen and (max-width: 962px) {
+  .contact-block {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    &--text-wrap {
+      flex: 1;
+    }
+
+    p {
+      width: 100%;
+      max-width: 100%;
+    }
   }
 }
 
