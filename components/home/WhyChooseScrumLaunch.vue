@@ -115,22 +115,18 @@ export default {}
 }
 
 .table_container {
-  @media screen and (max-width: 768px) {
-    overflow-x: auto;
-  }
+  overflow-x: auto;
 }
 
 .empty {
   @media screen and (min-width: 1440px) {
+    min-width: 500px;
     width: 500px;
   }
 
   @media screen and (max-width: 1440px) {
-    width: 200px;
-  }
-
-  @media screen and (max-width: 768px) {
-    min-width: 164px;
+    min-width: 390px;
+    width: 390px;
   }
 }
 
@@ -156,18 +152,14 @@ table {
       vertical-align: middle;
 
       &:not(:first-child) {
-        @media screen and (min-width: 1440px) {
-          max-height: 100px;
-          max-width: 180px;
-          font-size: 24px;
-        }
+        min-height: 100px;
+        max-width: 250px;
+        min-width: 200px;
+        width: 200px;
+        font-size: 24px;
 
         @media screen and (max-width: 1440px) {
           font-size: 18px;
-        }
-
-        @media screen and (max-width: 768px) {
-          width: 220px;
         }
       }
 

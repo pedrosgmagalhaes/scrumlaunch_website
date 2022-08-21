@@ -26,6 +26,12 @@
 
     <div class="btn_wrap">
       <NuxtLink to="/quiz" class="btn on_dark_bg">Hire Talent</NuxtLink>
+      <div class="clutch_badge">
+        <img
+          :src="require('@/assets/icons/clutch_badge.svg')"
+          @click="openClutch"
+        />
+      </div>
     </div>
 
     <div class="hero--bottom">
@@ -58,11 +64,23 @@ export default {
         behavior: 'smooth',
       })
     },
+
+    openClutch() {
+      window.open('https://clutch.co/profile/scrumlaunch#summary', '_blank')
+    },
   },
 }
 </script>
 
 <style lang="scss" scoped>
+.clutch_badge {
+  cursor: pointer;
+
+  & > img {
+    width: 250px;
+  }
+}
+
 .hero {
   padding: 125px 20px 20px 20px;
   position: relative;
@@ -151,8 +169,11 @@ export default {
 
 .btn_wrap {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
   margin-bottom: 40px;
+  flex-direction: column;
 }
 
 .btn {
@@ -163,6 +184,12 @@ export default {
 }
 
 @media screen and (min-width: 375px) {
+  .clutch_badge {
+    & > img {
+      width: initial;
+    }
+  }
+
   .hero {
     padding-bottom: 20px;
 
@@ -200,6 +227,10 @@ export default {
 }
 
 @media screen and (min-width: 768px) {
+  .btn_wrap {
+    flex-direction: row;
+  }
+
   .hero {
     padding: 197px 3.9% 40px 3.9%;
 
@@ -258,7 +289,6 @@ export default {
   }
 
   .btn_wrap {
-    justify-content: flex-start;
     margin-bottom: 60px;
   }
 }

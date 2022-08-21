@@ -47,6 +47,7 @@ Thumbs.db
 .env
 .nuxt
 .eslintcache
+package-lock.json
 
 # Large media files
 *.mp4

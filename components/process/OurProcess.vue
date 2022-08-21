@@ -3,7 +3,11 @@
     <div class="process--hero">
       <AppearFromMask><h1 class="header-big">OUR process</h1></AppearFromMask>
       <AppearFromMask
-        ><p class="body-1">
+        ><p class="body-1 with_br">
+          We focus on Communication, Collaboration,<br />
+          Context & Clarity
+        </p>
+        <p class="body-1 without_br">
           We focus on Communication, Collaboration, Context & Clarity
         </p></AppearFromMask
       >
@@ -138,6 +142,20 @@ export default {
         padding: 0 12px;
       }
     }
+  }
+}
+
+.with_br {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .with_br {
+    display: block;
+  }
+
+  .without_br {
+    display: none;
   }
 }
 

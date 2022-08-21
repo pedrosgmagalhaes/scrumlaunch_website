@@ -70,8 +70,6 @@ export default {}
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow-x: auto;
-  overflow-y: hidden;
   gap: 20px;
 
   &__item {
@@ -170,9 +168,9 @@ export default {}
   }
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1439px) {
   .developers {
-    overflow-x: scroll;
+    overflow-x: auto;
     overflow-y: hidden;
     justify-content: initial;
   }

@@ -102,9 +102,10 @@
     <div class="container section_4">
       <p class="accordian_title">How to hire a {{ dev_lang }} EXPERT?</p>
       <p class="accordian_desc">
-        Hiring fresh talent in Java requires testing and reviewing candidates
-        for their technical skills and proficiency in the programming language.
-        That means a fair amount of software development experience is expected.
+        Hiring fresh talent in {{ dev_lang }} requires testing and reviewing
+        candidates for their technical skills and proficiency in the programming
+        language. That means a fair amount of software development experience is
+        expected.
       </p>
       <div class="accordion_wrapper">
         <div
@@ -881,7 +882,7 @@ export default {
     top: 240px;
     right: 418px;
 
-    @media screen and (max-width: 1440px) {
+    @media screen and (max-width: 1439px) {
       top: 26%;
       right: 63%;
     }
@@ -901,7 +902,7 @@ export default {
     top: 304px;
     right: 110px;
 
-    @media screen and (max-width: 1440px) {
+    @media screen and (max-width: 1439px) {
       top: 31%;
       right: 40%;
     }
@@ -921,7 +922,7 @@ export default {
     top: 473px;
     right: 276px;
 
-    @media screen and (max-width: 1440px) {
+    @media screen and (max-width: 1439px) {
       top: 47%;
       right: 54%;
     }
@@ -979,7 +980,7 @@ export default {
 .dev_map_tablet {
   display: none;
 
-  @media screen and (max-width: 1440px) {
+  @media screen and (max-width: 1439px) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1033,7 +1034,7 @@ export default {
     max-width: 712px;
   }
 
-  @media screen and (max-width: 1440px) {
+  @media screen and (max-width: 1439px) {
     padding-top: 200px;
     background-image: none;
 
@@ -1076,7 +1077,7 @@ export default {
     text-transform: uppercase;
   }
 
-  @media screen and (max-width: 1440px) {
+  @media screen and (max-width: 1439px) {
     padding-top: 140px;
     padding-bottom: 200px;
 
@@ -1104,7 +1105,7 @@ export default {
   transform: rotate(77deg);
   z-index: -1;
 
-  @media screen and (max-width: 1440px) {
+  @media screen and (max-width: 1439px) {
     top: -187px;
     width: 300px;
   }
@@ -1123,7 +1124,7 @@ export default {
     max-width: 700px;
     margin-bottom: 40px;
 
-    @media screen and (max-width: 1440px) {
+    @media screen and (max-width: 1439px) {
       font-size: 48px;
       margin-bottom: 24px;
     }
@@ -1140,7 +1141,7 @@ export default {
     line-height: 150%;
     max-width: 712px;
 
-    @media screen and (max-width: 1440px) {
+    @media screen and (max-width: 1439px) {
       max-width: 100%;
       font-size: 20px;
     }
@@ -1188,7 +1189,7 @@ export default {
       line-height: 140%;
     }
 
-    @media screen and (max-width: 1440px) {
+    @media screen and (max-width: 1439px) {
       margin: 60px 0;
       overflow-x: auto;
       overflow-y: hidden;
@@ -1283,7 +1284,7 @@ export default {
     }
   }
 
-  @media screen and (max-width: 1440px) {
+  @media screen and (max-width: 1439px) {
     margin-top: 140px;
     margin-bottom: 140px;
 
@@ -1387,7 +1388,7 @@ export default {
     border-radius: 50%;
   }
 
-  @media screen and (max-width: 1440px) {
+  @media screen and (max-width: 1439px) {
     padding-top: 140px;
     padding-bottom: 140px;
 
@@ -1492,7 +1493,7 @@ export default {
     line-height: 140%;
   }
 
-  @media screen and (max-width: 1440px) {
+  @media screen and (max-width: 1439px) {
     padding-top: 140px;
     padding-bottom: 140px;
     flex-direction: column-reverse;
@@ -1567,7 +1568,7 @@ export default {
     }
   }
 
-  @media screen and (max-width: 1440px) {
+  @media screen and (max-width: 1439px) {
     padding-top: 140px;
     padding-bottom: 140px;
 
@@ -1664,7 +1665,7 @@ export default {
     }
   }
 
-  @media screen and (max-width: 1440px) {
+  @media screen and (max-width: 1439px) {
     margin-bottom: 140px;
 
     & > p {
@@ -1754,7 +1755,7 @@ export default {
     height: 100%;
   }
 
-  @media screen and (max-width: 1440px) {
+  @media screen and (max-width: 1439px) {
     .btn {
       padding: 20px 50px;
       font-size: 14px;
