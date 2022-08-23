@@ -3,6 +3,7 @@
     <HeroBlock />
     <SecondBlock />
     <ExtensiveVetting />
+    <GlobalTalent />
     <SoftwareDesign />
     <ClientTestimonials />
     <HowScrumLaunchWorks />
@@ -27,6 +28,7 @@ import TickerBlock from '@/components/home/TickerBlock.vue'
 import OurServices from '@/components/home/OurServices.vue'
 import ContactUs from '@/components/home/ContactUs.vue'
 import ExtensiveVetting from '@/components/home/ExtensiveVetting.vue'
+import GlobalTalent from '@/components/home/GlobalTalent.vue'
 import OurTechnologies from '@/components/home/OurTechnologies.vue'
 import HowScrumLaunchWorks from '@/components/home/HowScrumLaunchWorks.vue'
 import SoftwareDesign from '@/components/home/SoftwareDesign.vue'
@@ -46,6 +48,7 @@ export default {
     OurServices,
     ContactUs,
     ExtensiveVetting,
+    GlobalTalent,
     OurTechnologies,
     HowScrumLaunchWorks,
     SoftwareDesign,
