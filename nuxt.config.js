@@ -7,19 +7,22 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: "" },
+      { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }],
   },
 
-  css: ['@/assets/css/main.scss', 'vue-slick-carousel/dist/vue-slick-carousel.css'],
+  css: [
+    '@/assets/css/main.scss',
+    'vue-slick-carousel/dist/vue-slick-carousel.css',
+  ],
 
   plugins: [
     '~/plugins/directives.js',
     '~/plugins/global-components.js',
     { src: '~/plugins/hotjar.js', mode: 'client' },
-    { src: '~/plugins/vue-slick-carousel.js' }
+    { src: '~/plugins/vue-slick-carousel.js' },
   ],
 
   components: true,
@@ -30,7 +33,7 @@ export default {
     '@nuxtjs/eslint-module',
     '@nuxtjs/style-resources',
     '@nuxtjs/svg',
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
   ],
 
   styleResources: {

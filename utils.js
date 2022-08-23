@@ -1,3 +1,18 @@
+import { BLOCKS } from '@contentful/rich-text-types'
+
+const renderOptions = () => ({
+  renderNode: {
+    [BLOCKS.EMBEDDED_ASSET]: (node, children) => {
+      return `<img
+          src="https://${node.data.target.fields.file.url}"
+          height="${node.data.target.fields.file.details.image.height}"
+          width="${node.data.target.fields.file.details.image.width}"
+          alt="${node.data.target.fields.description}"
+        />`
+    },
+  },
+})
+
 function dateConverter(date_str, variant = 1) {
   const months_short = [
     'Jan',
@@ -58,6 +73,4 @@ function dateConverter(date_str, variant = 1) {
   return date_output_str
 }
 
-module.exports = {
-  dateConverter,
-}
+export { dateConverter, renderOptions }
