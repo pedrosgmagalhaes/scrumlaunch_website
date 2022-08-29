@@ -86,8 +86,8 @@ export default {}
     }
 
     @media screen and (max-width: 427px) {
-      width: 335px;
-      height: 335px;
+      width: 300px;
+      height: 300px;
     }
 
     & > img {
@@ -131,8 +131,8 @@ export default {}
       }
 
       @media screen and (max-width: 427px) {
-        width: 335px;
-        height: 335px;
+        width: 300px;
+        height: 300px;
       }
     }
   }
