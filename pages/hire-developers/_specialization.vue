@@ -95,12 +95,14 @@
         </div>
       </div>
       <div class="btn_wrap">
-        <button class="btn on_dark_bg">hire our developers</button>
+        <NuxtLink to="/contact-us" class="btn on_white_bg"
+          >hire developers</NuxtLink
+        >
       </div>
     </div>
 
     <div class="container section_4">
-      <p class="accordian_title">How to hire a {{ dev_lang }} EXPERT?</p>
+      <p class="accordian_title">Common Interview Questions</p>
       <p class="accordian_desc">
         Hiring fresh talent in {{ dev_lang }} requires testing and reviewing
         candidates for their technical skills and proficiency in the programming
@@ -123,7 +125,9 @@
         </div>
       </div>
       <div class="btn_wrap">
-        <button class="btn on_dark_bg">hire our developers</button>
+        <NuxtLink to="/contact-us" class="btn on_white_bg"
+          >hire developers</NuxtLink
+        >
       </div>
     </div>
 
@@ -154,7 +158,9 @@
         </div>
       </div>
       <div class="btn_wrap">
-        <button class="btn on_dark_bg">hire our developers</button>
+        <NuxtLink to="/contact-us" class="btn on_dark_bg"
+          >hire developers</NuxtLink
+        >
       </div>
     </div>
 
@@ -187,7 +193,9 @@
         />
       </div>
       <div class="btn_wrap">
-        <button class="btn on_dark_bg">hire our developers</button>
+        <NuxtLink to="/contact-us" class="btn on_dark_bg"
+          >hire developers</NuxtLink
+        >
       </div>
     </div>
 
@@ -262,10 +270,7 @@
             and efficient way to stand up new projects or build out existing
             ones. However, outsourcing {{ dev_lang }} development offshore
             should be done with a reputable firm that has a proven track record
-            of success. Read
-            <span class="link"
-              >our guide on outsourcing web development here.</span
-            >
+            of success.
           </div>
         </div>
       </div>
@@ -866,6 +871,16 @@ export default {
   border-bottom: 1px solid #1e1f21;
 }
 
+.on_white_bg {
+  background: #12e2b0;
+  color: #1e1f21;
+
+  &:hover {
+    background: #1e1f21;
+    color: #ffffff;
+  }
+}
+
 .developer {
   width: 142px;
   height: 142px;
@@ -1277,11 +1292,6 @@ export default {
   .btn_wrap {
     margin-top: 66px;
     justify-content: flex-end;
-
-    .btn:hover {
-      background: #1e1f21;
-      color: #ffffff;
-    }
   }
 
   @media screen and (max-width: 1439px) {

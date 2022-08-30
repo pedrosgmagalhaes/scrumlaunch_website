@@ -11,11 +11,11 @@
         class="menu--desktop--wrapper"
         :class="contactPage && 'white-wrapper'"
       >
-        <NuxtLink to="/work">Work</NuxtLink>
+        <NuxtLink to="/work">Case Studies</NuxtLink>
         <!-- <NuxtLink to="/services">Services</NuxtLink> -->
         <!-- <NuxtLink to="/process">Process</NuxtLink> -->
         <!-- <NuxtLink to="/leadership">Leadership</NuxtLink> -->
-        <div class="dropdown__wrap" :class="{ hidden: isHiddenNav }">
+        <!-- <div class="dropdown__wrap" :class="{ hidden: isHiddenNav }">
           <span @mouseenter="isHiddenNav = false">Blog</span>
           <ul class="dropdown">
             <li @click="hiddenNav">
@@ -56,7 +56,7 @@
               <NuxtLink to="/blog">View All</NuxtLink>
             </li>
           </ul>
-        </div>
+        </div> -->
         <div class="dropdown__wrap" :class="{ hidden: isHiddenNav }">
           <div @mouseenter="isHiddenNav = false">
             <NuxtLink to="/hire-developers">Hire Developers</NuxtLink>
@@ -158,7 +158,7 @@
           </div>
         </div>
         <NuxtLink to="/remote-developer-jobs">Careers</NuxtLink>
-        <NuxtLink to="/contact-us">Contact</NuxtLink>
+        <NuxtLink to="/contact-us">Contact Us</NuxtLink>
       </div>
       <div class="menu--desktop--wrapper-mobile">
         <img
@@ -189,7 +189,7 @@
         <span
           class="menu--burger--links--item"
           @click="handleNavigation('/work')"
-          >Work</span
+          >Case Studies</span
         >
         <span
           class="menu--burger--links--item"
@@ -206,11 +206,11 @@
           @click="handleNavigation('/leadership')"
           >Leadership</span
         >
-        <span
+        <!-- <span
           class="menu--burger--links--item"
           @click="handleNavigation('/blog')"
           >Blog</span
-        >
+        > -->
         <span
           class="menu--burger--links--item"
           @click="handleNavigation('/hire-developers')"
@@ -224,7 +224,7 @@
         <span
           class="menu--burger--links--item"
           @click="handleNavigation('/contact-us')"
-          >Contact</span
+          >Contact Us</span
         >
       </div>
     </div>

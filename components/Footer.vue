@@ -45,7 +45,7 @@
     </div>
     <div class="footer home">
       <div class="footer--menu">
-        <NuxtLink to="/work">Portfolio</NuxtLink>
+        <!-- <NuxtLink to="/work">Portfolio</NuxtLink> -->
         <NuxtLink to="/services">Services</NuxtLink>
         <NuxtLink to="/process">About us</NuxtLink>
         <NuxtLink to="/referral-partner">Referral Program</NuxtLink>
