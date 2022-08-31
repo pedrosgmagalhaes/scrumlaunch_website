@@ -9,7 +9,7 @@
     <HowScrumLaunchWorks />
     <WhyChooseScrumLaunch />
     <IndustryLeadingResults />
-    <TickerBlock />
+    <!-- <TickerBlock /> -->
     <HistoryBlock />
     <!-- <News /> -->
     <OurServices />
@@ -24,7 +24,7 @@ import HeroBlock from '@/components/home/HeroBlock.vue'
 import SecondBlock from '@/components/home/SecondBlock.vue'
 import HistoryBlock from '@/components/home/HistoryBlock.vue'
 // import News from '@/components/home/News.vue'
-import TickerBlock from '@/components/home/TickerBlock.vue'
+// import TickerBlock from '@/components/home/TickerBlock.vue'
 import OurServices from '@/components/home/OurServices.vue'
 import ContactUs from '@/components/home/ContactUs.vue'
 import ExtensiveVetting from '@/components/home/ExtensiveVetting.vue'
@@ -44,7 +44,7 @@ export default {
     SecondBlock,
     HistoryBlock,
     // News,
-    TickerBlock,
+    // TickerBlock,
     OurServices,
     ContactUs,
     ExtensiveVetting,

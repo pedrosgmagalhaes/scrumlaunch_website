@@ -60,8 +60,8 @@
 
         <div class="footer--contact--item">
           <p>Email</p>
-          <a href="mailto:charlie@scrumlaunch.com" style="color: #ff0000"
-            >charlie@scrumlaunch.com</a
+          <a href="mailto:hello@scrumlaunch.com" style="color: #ff0000"
+            >hello@scrumlaunch.com</a
           >
         </div>
       </div>
@@ -71,7 +71,7 @@
         </p>
       </div>
       <SocialBlock class="footer--social" />
-      <span>© ScrumLaunch 2021</span>
+      <span>© 2022 ScrumLaunch LLC. All rights reserved.</span>
       <ScrollToTop />
     </div>
   </div>

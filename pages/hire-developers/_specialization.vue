@@ -61,11 +61,10 @@
           <div class="approach__icon">
             <img src="/images/hire-developers/faq_3.svg" alt="" />
           </div>
-          <p class="approach__title">Intelligent Vetting</p>
+          <p class="approach__title">Discovery & Staffing</p>
           <p class="approach__desc">
-            Our team has built and sold multiple companies, and we understand
-            first-hand how important competent software engineers are. All
-            clients are assigned.
+            We have talent hubs in Eastern Europe and Latin America which allow
+            us to source and vet the world’s best talent on demand.
           </p>
         </div>
 
@@ -76,10 +75,11 @@
               alt=""
             />
           </div>
-          <p class="approach__title">Onboarding & Oversight</p>
+          <p class="approach__title">Onboarding</p>
           <p class="approach__desc">
-            Our team has built and sold multiple companies, and we understand
-            first-hand how important competent.
+            Each project is unique. We follow a very structured onboarding
+            process to ensure the team has detailed context about the project,
+            desired workflows and business objectives.
           </p>
         </div>
 
@@ -87,10 +87,12 @@
           <div class="approach__icon">
             <img src="/images/hire-developers/approach_1.svg" alt="" />
           </div>
-          <p class="approach__title">Collaboration & Efficiency</p>
+          <p class="approach__title">Ongoing Delivery</p>
           <p class="approach__desc">
-            Our team has built and sold multiple companies, and we understand
-            first-hand how important competent.
+            Communication, transparency and process are the key to any great
+            software team. Our processes have been refined across over 200
+            projects and provide an optimal framework for global team
+            collaboration.
           </p>
         </div>
       </div>
@@ -182,7 +184,7 @@
 
     <div class="container section_7">
       <p>
-        Trusted by over <span class="mark">400 clients</span> worldwide since
+        Trusted by over <span class="mark">200 clients</span> worldwide since
         2015
       </p>
       <div class="circle_container">

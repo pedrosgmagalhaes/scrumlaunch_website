@@ -90,72 +90,6 @@ export default {}
       z-index: 1;
     }
   }
-
-  .software-text {
-    &::before {
-      background-image: url('../../assets/images/services/sofrware.png');
-      left: -64px;
-    }
-  }
-
-  .devops-text {
-    &::before {
-      background-image: url('../../assets/images/services/devops.png');
-      left: -135px;
-    }
-  }
-
-  .design-text {
-    &::before {
-      background-image: url('../../assets/images/services/design.png');
-      left: -135px;
-    }
-  }
-
-  .product-text {
-    &::before {
-      background-image: url('../../assets/images/services/product.png');
-      left: -114px;
-    }
-  }
-
-  .brand-text {
-    &::before {
-      background-image: url('../../assets/images/services/brand.png');
-      left: -135px;
-    }
-  }
-
-  .pitch-text {
-    &::before {
-      background-image: url('../../assets/images/services/pitch.png');
-      left: -102px;
-    }
-  }
-
-  .strategy-text {
-    &::before {
-      background-image: url('../../assets/images/services/strategy.png');
-      left: -135px;
-    }
-  }
-}
-
-@media screen and (min-width: 414px) {
-  .services {
-    .software-text {
-      &::before {
-        left: -102px;
-      }
-    }
-
-    .product-text,
-    .pitch-text {
-      &::before {
-        left: -135px;
-      }
-    }
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -178,60 +112,17 @@ export default {}
         height: 162px;
       }
     }
-
-    .software-text {
-      &::before {
-        left: -167px;
-      }
-    }
-
-    .devops-text,
-    .design-text,
-    .brand-text,
-    .product-text,
-    .pitch-text,
-    .strategy-text {
-      &::before {
-        left: -233px;
-      }
-    }
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .services {
-    .software-text,
-    .devops-text,
-    .design-text,
-    .brand-text,
-    // .product-text,
-    .pitch-text,
-    .strategy-text {
-      &::before {
-        left: -233px;
-      }
-    }
-
-    .product-text {
-      &::before {
-        left: -140px;
-      }
-    }
-
-    .brake {
-      display: none;
-    }
+  .brake {
+    display: none;
   }
 }
 
 @media screen and (min-width: 1140px) {
   .services {
-    .product-text {
-      &::before {
-        left: -233px;
-      }
-    }
-
     p {
       margin-bottom: 50px;
     }
@@ -256,23 +147,6 @@ export default {}
         height: 276px;
       }
     }
-
-    .software-text {
-      &::before {
-        left: -367px;
-      }
-    }
-
-    .devops-text,
-    .design-text,
-    .brand-text,
-    .product-text,
-    .pitch-text,
-    .strategy-text {
-      &::before {
-        left: -417px;
-      }
-    }
   }
 }
 
@@ -280,18 +154,6 @@ export default {}
   .services {
     .brake {
       display: none;
-    }
-
-    .software-text {
-      &::before {
-        left: -417px;
-      }
-    }
-
-    .product-text {
-      &::before {
-        left: -46px;
-      }
     }
   }
 }
@@ -302,16 +164,6 @@ export default {}
     font-weight: 900;
     font-size: 75px;
     line-height: 140%;
-  }
-}
-
-@media screen and (min-width: 1920px) {
-  .services {
-    .product-text {
-      &::before {
-        // left: -417px;
-      }
-    }
   }
 }
 </style>
