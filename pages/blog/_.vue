@@ -18,6 +18,7 @@
 import * as Contentful from 'contentful'
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 import ProgLangList from '@/components/hire-developers/ProgLangList.vue'
+import { renderOptions } from '@/utils.js'
 
 export default {
   components: {
@@ -92,7 +93,7 @@ export default {
               url: `https:${el.fields.previewImage.fields.file.url}`,
             },
             slug: el.fields.slug,
-            text: documentToHtmlString(el.fields.ttt),
+            text: documentToHtmlString(el.fields.ttt, renderOptions()),
           }))
 
           const currentPost = posts.filter((item) => {

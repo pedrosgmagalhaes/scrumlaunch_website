@@ -53,6 +53,7 @@
 import { mapMutations } from 'vuex'
 import * as Contentful from 'contentful'
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
+import { renderOptions } from '@/utils.js'
 import ArticlePreview from '@/components/articles/ArticlePreview'
 import ArticleLink from '@/components/articles/ArticleLink'
 
@@ -117,7 +118,7 @@ export default {
             url: `https:${el.fields.previewImage.fields.file.url}`,
           },
           slug: el.fields.slug,
-          text: documentToHtmlString(el.fields.ttt),
+          text: documentToHtmlString(el.fields.ttt, renderOptions()),
         }))
 
         this.$store.commit('articles/SET_ARTICLES', posts)

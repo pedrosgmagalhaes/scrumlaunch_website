@@ -4,6 +4,49 @@ function make_slug(name, jobLocation) {
   return `/remote-developer-jobs/${slug.replace(/\s+/g, '-').toLowerCase()}`
 }
 
+const reallyExists = [
+  {
+    name: 'PHP',
+    jobLocation: 'Brazil',
+  },
+  {
+    name: 'ReactJS',
+    jobLocation: 'Ukraine',
+  },
+  {
+    name: 'Django',
+    jobLocation: 'Ukraine',
+  },
+  {
+    name: 'Java',
+    jobLocation: 'Ukraine',
+  },
+  {
+    name: 'Android',
+    jobLocation: 'Ukraine',
+  },
+  {
+    name: 'NodeJS',
+    jobLocation: 'Ukraine',
+  },
+  {
+    name: 'Laravel',
+    jobLocation: 'Ukraine',
+  },
+  {
+    name: 'Python',
+    jobLocation: 'Ukraine',
+  },
+  {
+    name: 'Ruby',
+    jobLocation: 'Ukraine',
+  },
+  {
+    name: 'Ruby',
+    jobLocation: 'Brazil',
+  },
+]
+
 const skills = [
   'ReactJS',
   'ReactNative',
@@ -57,23 +100,28 @@ const locations = [
 
 const createVacancies = () => {
   return skills.map((skill) =>
-    locations.map((location) => ({
-      name: skill,
-      jobLocation: location,
-      remote: true,
-      open: true,
-      datePosted: '12 / 06 / 2022',
-      hiringOrganisation: 'ScrumLaunch',
-      employmentType: 'Full Time',
-      baseSalary: '$10-20 / hour',
-    }))
+    locations.map((location) => {
+      const isExists = reallyExists.find(
+        (item) => item.jobLocation === location && item.name === skill
+      )
+
+      return {
+        name: skill,
+        jobLocation: location,
+        remote: true,
+        open: true,
+        datePosted: '12 / 06 / 2022',
+        hiringOrganisation: 'ScrumLaunch',
+        employmentType: 'Full Time',
+        baseSalary: '$10-20 / hour',
+        reallyExists: Boolean(Object.keys(isExists || {}).length),
+      }
+    })
   )
 }
 
 export const state = () => ({
-  vacancies: createVacancies()
-    .flat()
-    .sort(() => Math.random() - 0.5),
+  vacancies: createVacancies().flat(),
 })
 
 export const getters = {

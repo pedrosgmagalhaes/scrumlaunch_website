@@ -54,12 +54,12 @@ export default {
         withIcon: true,
         feedback:
           '“ScrumLaunch software developers have enabled CampusReel to go from an idea to a product with millions of monthly unique users over the past 5 years. We could not have gotten to where we are today without them.”',
-        name: 'Rob Carrol',
+        name: 'Rob Carroll',
         position: 'CEO',
         company: 'CampusReel',
       },
       2: {
-        image: '/images/industry-leading-results/matt_glick.png',
+        image: '/images/industry-leading-results/matt_glick.jpeg',
         withIcon: false,
         feedback:
           "“ScrumLaunch has been with us since day 1. We've been working with them for 5 years. From an idea to a market leader in our space backed by leading venture funds”",
@@ -68,7 +68,7 @@ export default {
         company: 'Gipper',
       },
       3: {
-        image: '/images/industry-leading-results/clare_maxwell.png',
+        image: '/images/industry-leading-results/clare_maxwell.jpeg',
         withIcon: false,
         feedback:
           '“ScrumLaunch enabled us to completely restructure Community Funded over the past two years and reduce costs by 5x making the company profitable and the technology much more scalable and solid.”',
@@ -77,7 +77,7 @@ export default {
         company: 'Community Funded',
       },
       4: {
-        image: '/images/industry-leading-results/clare_maxwell.png',
+        image: '/images/industry-leading-results/nami_baral.jpeg',
         withIcon: false,
         feedback:
           '“ScrumLaunch was an integral partner for the entire lifecycle of our project from launch, venture fundraising to acquisition by a FinTech Unicorn.”',
@@ -147,6 +147,10 @@ export default {
 }
 
 .image {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+
   @media screen and (max-width: 768px) {
     width: 132px;
     height: 132px;

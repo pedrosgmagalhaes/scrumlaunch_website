@@ -61,11 +61,10 @@
           <div class="approach__icon">
             <img src="/images/hire-developers/faq_3.svg" alt="" />
           </div>
-          <p class="approach__title">Intelligent Vetting</p>
+          <p class="approach__title">Discovery & Staffing</p>
           <p class="approach__desc">
-            Our team has built and sold multiple companies, and we understand
-            first-hand how important competent software engineers are. All
-            clients are assigned.
+            We have talent hubs in Eastern Europe and Latin America which allow
+            us to source and vet the world’s best talent on demand.
           </p>
         </div>
 
@@ -76,10 +75,11 @@
               alt=""
             />
           </div>
-          <p class="approach__title">Onboarding & Oversight</p>
+          <p class="approach__title">Onboarding</p>
           <p class="approach__desc">
-            Our team has built and sold multiple companies, and we understand
-            first-hand how important competent.
+            Each project is unique. We follow a very structured onboarding
+            process to ensure the team has detailed context about the project,
+            desired workflows and business objectives.
           </p>
         </div>
 
@@ -87,20 +87,24 @@
           <div class="approach__icon">
             <img src="/images/hire-developers/approach_1.svg" alt="" />
           </div>
-          <p class="approach__title">Collaboration & Efficiency</p>
+          <p class="approach__title">Ongoing Delivery</p>
           <p class="approach__desc">
-            Our team has built and sold multiple companies, and we understand
-            first-hand how important competent.
+            Communication, transparency and process are the key to any great
+            software team. Our processes have been refined across over 200
+            projects and provide an optimal framework for global team
+            collaboration.
           </p>
         </div>
       </div>
       <div class="btn_wrap">
-        <button class="btn on_dark_bg">hire our developers</button>
+        <NuxtLink to="/contact-us" class="btn on_white_bg"
+          >hire developers</NuxtLink
+        >
       </div>
     </div>
 
     <div class="container section_4">
-      <p class="accordian_title">How to hire a {{ dev_lang }} EXPERT?</p>
+      <p class="accordian_title">Common Interview Questions</p>
       <p class="accordian_desc">
         Hiring fresh talent in {{ dev_lang }} requires testing and reviewing
         candidates for their technical skills and proficiency in the programming
@@ -123,7 +127,9 @@
         </div>
       </div>
       <div class="btn_wrap">
-        <button class="btn on_dark_bg">hire our developers</button>
+        <NuxtLink to="/contact-us" class="btn on_white_bg"
+          >hire developers</NuxtLink
+        >
       </div>
     </div>
 
@@ -154,7 +160,9 @@
         </div>
       </div>
       <div class="btn_wrap">
-        <button class="btn on_dark_bg">hire our developers</button>
+        <NuxtLink to="/contact-us" class="btn on_dark_bg"
+          >hire developers</NuxtLink
+        >
       </div>
     </div>
 
@@ -176,7 +184,7 @@
 
     <div class="container section_7">
       <p>
-        Trusted by over <span class="mark">400 clients</span> worldwide since
+        Trusted by over <span class="mark">200 clients</span> worldwide since
         2015
       </p>
       <div class="circle_container">
@@ -187,7 +195,9 @@
         />
       </div>
       <div class="btn_wrap">
-        <button class="btn on_dark_bg">hire our developers</button>
+        <NuxtLink to="/contact-us" class="btn on_dark_bg"
+          >hire developers</NuxtLink
+        >
       </div>
     </div>
 
@@ -262,10 +272,7 @@
             and efficient way to stand up new projects or build out existing
             ones. However, outsourcing {{ dev_lang }} development offshore
             should be done with a reputable firm that has a proven track record
-            of success. Read
-            <span class="link"
-              >our guide on outsourcing web development here.</span
-            >
+            of success.
           </div>
         </div>
       </div>
@@ -866,6 +873,16 @@ export default {
   border-bottom: 1px solid #1e1f21;
 }
 
+.on_white_bg {
+  background: #12e2b0;
+  color: #1e1f21;
+
+  &:hover {
+    background: #1e1f21;
+    color: #ffffff;
+  }
+}
+
 .developer {
   width: 142px;
   height: 142px;
@@ -1277,11 +1294,6 @@ export default {
   .btn_wrap {
     margin-top: 66px;
     justify-content: flex-end;
-
-    .btn:hover {
-      background: #1e1f21;
-      color: #ffffff;
-    }
   }
 
   @media screen and (max-width: 1439px) {

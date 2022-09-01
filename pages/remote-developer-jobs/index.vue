@@ -45,7 +45,9 @@
 
         <div class="vacancies__items">
           <div
-            v-for="(vacancy, i) in vacancies"
+            v-for="(vacancy, i) in vacancies.filter((item) =>
+              !skill && !location ? item.reallyExists : true
+            )"
             :key="i"
             class="vacancies__item"
           >

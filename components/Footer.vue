@@ -32,9 +32,20 @@
         /></a>
       </div>
     </div>
+    <div class="form_wrapper">
+      <div class="text_form_wrapper">
+        <h3 class="form_title">Let’s talk</h3>
+        <p class="form_description">
+          Interested in working with us?
+          <span class="descr_mark">Fill out the form</span>
+          let us know what your project is about.
+        </p>
+      </div>
+      <FooterForm />
+    </div>
     <div class="footer home">
       <div class="footer--menu">
-        <NuxtLink to="/work">Portfolio</NuxtLink>
+        <!-- <NuxtLink to="/work">Portfolio</NuxtLink> -->
         <NuxtLink to="/services">Services</NuxtLink>
         <NuxtLink to="/process">About us</NuxtLink>
         <NuxtLink to="/referral-partner">Referral Program</NuxtLink>
@@ -49,8 +60,8 @@
 
         <div class="footer--contact--item">
           <p>Email</p>
-          <a href="mailto:charlie@scrumlaunch.com" style="color: #ff0000"
-            >charlie@scrumlaunch.com</a
+          <a href="mailto:hello@scrumlaunch.com" style="color: #ff0000"
+            >hello@scrumlaunch.com</a
           >
         </div>
       </div>
@@ -60,7 +71,7 @@
         </p>
       </div>
       <SocialBlock class="footer--social" />
-      <span>© ScrumLaunch 2021</span>
+      <span>© 2022 ScrumLaunch LLC. All rights reserved.</span>
       <ScrollToTop />
     </div>
   </div>
@@ -69,11 +80,13 @@
 <script>
 import SocialBlock from '@/components/SocialBlock.vue'
 import ScrollToTop from '@/components/ScrollToTop.vue'
+import FooterForm from '@/components/footer-form/FooterForm.vue'
 
 export default {
   components: {
     SocialBlock,
     ScrollToTop,
+    FooterForm,
   },
 
   methods: {
@@ -250,6 +263,87 @@ export default {
   }
 }
 
+.form_wrapper {
+  display: flex;
+  gap: 100px;
+  text-align: left;
+  justify-content: center;
+
+  padding-bottom: 240px;
+  padding-top: 240px;
+  padding-left: 8.32%;
+  padding-right: 8.32%;
+  margin-bottom: 240px;
+
+  @media screen and (max-width: 1439px) {
+    padding-bottom: 140px;
+    padding-top: 140px;
+    margin-bottom: 140px;
+    gap: 50px;
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding-bottom: 80px;
+    padding-top: 80px;
+    margin-bottom: 80px;
+  }
+}
+
+.text_form_wrapper {
+  @media screen and (max-width: 1439px) {
+    display: flex;
+    align-items: baseline;
+    gap: 45px;
+    margin: auto;
+  }
+
+  @media screen and (max-width: 767px) {
+    gap: 25px;
+  }
+}
+
+.form_title {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 70px;
+  line-height: 140%;
+
+  @media screen and (max-width: 1439px) {
+    font-size: 56px;
+  }
+
+  @media screen and (max-width: 790px) {
+    font-size: 32px;
+  }
+}
+
+.form_description {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 140%;
+  max-width: 420px;
+
+  @media screen and (max-width: 1439px) {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;
+    max-width: 520px;
+  }
+
+  @media screen and (max-width: 790px) {
+    font-size: 225px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 140%;
+  }
+}
+
+.descr_mark {
+  font-weight: 700;
+  background-color: #12e2b0;
+}
+
 @media screen and (min-width: 767px) {
   .footer {
     width: 100%;
@@ -307,7 +401,6 @@ export default {
     }
   }
 }
-
 
 @media screen and (min-width: 1280px) {
   .footer {

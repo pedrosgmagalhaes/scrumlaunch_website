@@ -43,6 +43,7 @@
         :value="file.name"
         @file-updated="captureFile($event)"
       />
+      <p class="help_text">Accept only .pdf</p>
     </div>
 
     <div class="form-btn">
@@ -204,6 +205,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.help_text {
+  margin-top: 5px;
+  font-size: 12px;
+}
+
 .send-cv-form {
   width: 610px;
   background-color: #fff;
