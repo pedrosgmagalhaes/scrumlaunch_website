@@ -246,7 +246,7 @@
           </div>
         </div>
 
-        <div class="faq__item">
+        <!-- <div class="faq__item">
           <div class="faq__item__q">
             Is ScrumLaunch well-known for {{ dev_lang }}?
           </div>
@@ -258,7 +258,7 @@
             has a collective 600 years of development experience, and we’ve
             built incredibly complex projects in the language
           </div>
-        </div>
+        </div> -->
 
         <div class="faq__item">
           <div class="faq__item__q">
