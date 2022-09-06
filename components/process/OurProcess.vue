@@ -113,8 +113,8 @@ export default {
       &.item-1 {
         top: 0;
         left: 0;
-        width: 125.52px;
-        height: 125.66px;
+        width: 140px;
+        height: 140px;
         padding: 0 13px;
       }
 

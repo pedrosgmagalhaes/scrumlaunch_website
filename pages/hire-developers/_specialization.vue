@@ -106,7 +106,7 @@
     <div class="container section_4">
       <p class="accordian_title">Common Interview Questions</p>
       <p class="accordian_desc">
-        Hiring fresh talent in {{ dev_lang }} requires testing and reviewing
+        Hiring fresh talent {{ dev_lang }} requires testing and reviewing
         candidates for their technical skills and proficiency in the programming
         language. That means a fair amount of software development experience is
         expected.
@@ -1197,7 +1197,6 @@ export default {
       line-height: 140%;
       margin-top: 20px;
       margin-bottom: 16px;
-      max-width: 215px;
     }
 
     &__desc {
@@ -1243,7 +1242,7 @@ export default {
         padding: 18px;
         width: 100%;
         min-width: 100%;
-        height: 200px;
+        height: auto;
       }
 
       &__item:not(:first-child) {

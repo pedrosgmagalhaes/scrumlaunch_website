@@ -3,7 +3,7 @@
     <div class="flex jcsb aic row">
       <p class="header-1 history--text-1 history--text-white">ScrumLaunch</p>
       <p class="header-1 header-1-stroke-2 history--text-2">was born in 2015</p>
-      <img :src="require('@/assets/icons/arrow.svg')" class="history--icon-1" />
+      <img class="history--icon-1" src="@/assets/icons/arrow.svg" />
     </div>
     <div class="flex jcsb aic row">
       <img src="@/assets/images/home-history-1.png" class="history--img-1" />

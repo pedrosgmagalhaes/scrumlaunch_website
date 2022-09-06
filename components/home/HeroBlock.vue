@@ -25,7 +25,7 @@
     </div>
 
     <div class="btn_wrap">
-      <NuxtLink to="/quiz" class="btn on_dark_bg">Contact Us</NuxtLink>
+      <NuxtLink to="/contact-us" class="btn on_dark_bg">Contact Us</NuxtLink>
       <div class="clutch_badge">
         <img
           :src="require('@/assets/icons/clutch_badge.svg')"
