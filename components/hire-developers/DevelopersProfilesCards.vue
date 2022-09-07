@@ -78,6 +78,7 @@ export default {}
     background: #ffffff;
     border: 1px solid #1e1f21;
     position: relative;
+    box-sizing: border-box;
 
     &:hover &__img {
       .hover-btn {
@@ -180,6 +181,16 @@ export default {}
   .developers {
     overflow-x: hidden;
     flex-direction: column;
+
+    &__item {
+      max-width: 387px;
+      width: 100%;
+      height: auto;
+    }
+
+    &__item__img > img {
+      width: 100%;
+    }
   }
 }
 </style>

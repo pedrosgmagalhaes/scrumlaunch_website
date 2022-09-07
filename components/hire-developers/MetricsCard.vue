@@ -250,6 +250,7 @@ export default {
 
     .btn_wrap {
       grid-area: 4 / 1 / 5 / 2;
+      padding: 0px;
     }
   }
 }

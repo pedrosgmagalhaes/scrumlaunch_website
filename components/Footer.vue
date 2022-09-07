@@ -34,7 +34,6 @@
     </div>
     <div class="form_wrapper">
       <div class="text_form_wrapper">
-        <h3 class="form_title">Let’s talk</h3>
         <p class="form_description">
           Interested in working with us?
           <span class="descr_mark">Fill out the form</span>
@@ -50,7 +49,7 @@
         <NuxtLink to="/process">About us</NuxtLink>
         <NuxtLink to="/referral-partner">Referral Program</NuxtLink>
         <NuxtLink to="/leadership">Leadership</NuxtLink>
-        <NuxtLink to="/contact-us">Contact</NuxtLink>
+        <NuxtLink to="/contact-us">Contact Us</NuxtLink>
       </div>
       <div class="footer--contact">
         <div v-show="false" class="footer--contact--item">

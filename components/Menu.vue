@@ -191,12 +191,12 @@
           @click="handleNavigation('/work')"
           >Case Studies</span
         >
-        <span
+        <!-- <span
           class="menu--burger--links--item"
           @click="handleNavigation('/services')"
           >Services</span
-        >
-        <span
+        > -->
+        <!-- <span
           class="menu--burger--links--item"
           @click="handleNavigation('/process')"
           >Process</span
@@ -205,7 +205,7 @@
           class="menu--burger--links--item"
           @click="handleNavigation('/leadership')"
           >Leadership</span
-        >
+        > -->
         <!-- <span
           class="menu--burger--links--item"
           @click="handleNavigation('/blog')"
@@ -219,7 +219,7 @@
         <span
           class="menu--burger--links--item"
           @click="handleNavigation('/remote-developer-jobs')"
-          >Job Openings</span
+          >Careers</span
         >
         <span
           class="menu--burger--links--item"
@@ -354,6 +354,7 @@ export default {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      text-align: left;
 
       &--item {
         font-style: normal;
