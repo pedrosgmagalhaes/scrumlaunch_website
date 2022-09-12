@@ -20,7 +20,7 @@
                 business that supports thousands of customers and recently
                 raised venture capital funding.”
               </div>
-              <div class="flex jcsb">
+              <div class="flex jcsb info_wrapper">
                 <div class="client_testimonials__testimonials_item__person">
                   – Matthew Glick, CEO
                 </div>
@@ -45,7 +45,7 @@
                 care about our business success and I would recommend working
                 with them to anyone.”
               </div>
-              <div class="flex jcsb">
+              <div class="flex jcsb info_wrapper">
                 <div class="client_testimonials__testimonials_item__person">
                   – Andy Culp, CEO
                 </div>
@@ -70,7 +70,7 @@
                 the past 4 years compared to any alternative staffing plans we
                 might have pursued.”
               </div>
-              <div class="flex jcsb">
+              <div class="flex jcsb info_wrapper">
                 <div class="client_testimonials__testimonials_item__person">
                   – Nick Freud
                 </div>
@@ -94,7 +94,7 @@
                 were scaling Vesta across the country and building more complex
                 digital tools.”
               </div>
-              <div class="flex jcsb">
+              <div class="flex jcsb info_wrapper">
                 <div class="client_testimonials__testimonials_item__person">
                   – Ryan Dranginis, CMO
                 </div>
@@ -122,7 +122,7 @@
               business that supports thousands of customers and recently raised
               venture capital funding.”
             </div>
-            <div class="flex jcsb">
+            <div class="flex jcsb info_wrapper">
               <div class="client_testimonials__testimonials_item__person">
                 – Matthew Glick, CEO
               </div>
@@ -144,7 +144,7 @@
               care about our business success and I would recommend working with
               them to anyone.”
             </div>
-            <div class="flex jcsb">
+            <div class="flex jcsb info_wrapper">
               <div class="client_testimonials__testimonials_item__person">
                 – Andy Culp, CEO
               </div>
@@ -167,7 +167,7 @@
               business that supports thousands of customers and recently raised
               venture capital funding.”
             </div>
-            <div class="flex jcsb">
+            <div class="flex jcsb info_wrapper">
               <div class="client_testimonials__testimonials_item__person">
                 – Nick Freud
               </div>
@@ -191,7 +191,7 @@
               were scaling Vesta across the country and building more complex
               digital tools.”
             </div>
-            <div class="flex jcsb">
+            <div class="flex jcsb info_wrapper">
               <div class="client_testimonials__testimonials_item__person">
                 – Ryan Dranginis, CMO
               </div>
@@ -261,6 +261,12 @@ export default {
     margin-bottom: 40px;
     max-width: 250px;
     font-size: 24px;
+  }
+}
+
+.info_wrapper {
+  @media screen and (max-width: 425px) {
+    flex-direction: column;
   }
 }
 

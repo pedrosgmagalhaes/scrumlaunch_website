@@ -222,7 +222,8 @@ export default {}
     width: 400px;
     padding: 70px;
     border: 1px solid #1e1f21;
-    border-left: 1px solid transparent;
+    border-collapse: collapse;
+    box-sizing: border-box;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -247,21 +248,17 @@ export default {}
       font-size: 12px;
     }
 
-    &:first-child {
-      border-left: 1px solid #1e1f21;
-
-      @media screen and (max-width: 768px) {
-        border-bottom: 1px solid transparent;
-      }
-    }
-
     &.round {
       background: #12e2b0;
-      border-color: transparent;
       border-radius: 50%;
+      border: none;
+      border-collapse: collapse;
+      box-sizing: border-box;
 
       & + * {
-        border-left: 1px solid #1e1f21;
+        box-sizing: border-box;
+        border-collapse: collapse;
+        border: 1px solid #1e1f21;
       }
     }
   }

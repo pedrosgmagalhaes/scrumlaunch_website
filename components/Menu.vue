@@ -58,7 +58,7 @@
           </ul>
         </div> -->
         <div class="dropdown__wrap" :class="{ hidden: isHiddenNav }">
-          <div @mouseenter="isHiddenNav = false">
+          <div @mouseenter="isHiddenNav = false" @click="hiddenNav">
             <NuxtLink to="/hire-developers">Hire Developers</NuxtLink>
           </div>
           <div class="dropdown">
@@ -265,7 +265,21 @@ export default {
     },
   },
 
+  beforeMount() {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll)
+  },
+
   methods: {
+    handleScroll() {
+      if (this.isHiddenNav) {
+        this.isHiddenNav = false
+      }
+    },
+
     toggleMenu() {
       this.showMenu = !this.showMenu
       if (this.showMenu) {
@@ -284,7 +298,11 @@ export default {
     },
 
     hiddenNav() {
-      this.isHiddenNav = true
+      if (this.isHiddenNav) {
+        this.isHiddenNav = false
+      } else {
+        this.isHiddenNav = true
+      }
     },
   },
 }
@@ -390,7 +408,7 @@ export default {
 .dropdown {
   position: absolute;
   top: 64px;
-  right: 0;
+  right: -100px;
   padding: 40px 40px 24px 40px;
   text-align: left;
   opacity: 0;
@@ -491,7 +509,7 @@ export default {
       &--wrapper {
         // width: 47.67%;
         width: 100%;
-        max-width: 700px;
+        max-width: 600px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -538,7 +556,7 @@ export default {
 
     &--desktop {
       &--wrapper {
-        max-width: 800px;
+        max-width: 700px;
       }
     }
   }

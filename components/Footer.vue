@@ -70,7 +70,9 @@
         </p>
       </div>
       <SocialBlock class="footer--social" />
-      <span>© 2022 ScrumLaunch LLC. All rights reserved.</span>
+      <div class="footer--private">
+        © 2022 ScrumLaunch LLC. All rights reserved.
+      </div>
       <ScrollToTop />
     </div>
   </div>
@@ -99,14 +101,13 @@ export default {
 <style lang="scss" scoped>
 .footer {
   width: 100%;
-  padding: 0px 20px 40px;
+  padding: 0px 20px 0px;
   box-sizing: border-box;
   color: #1e1f21;
-  position: relative;
   display: grid;
+  grid-column-gap: 10px;
+  grid-row-gap: 15px;
   grid-template-columns: repeat(2, 1fr);
-  grid-row-gap: 40px;
-  grid-column-gap: 25px;
 
   a,
   p {
@@ -139,12 +140,13 @@ export default {
   }
 
   &--menu {
-    grid-area: 2 / 1 / 3 / 2;
     margin-right: 0px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
+
+    grid-area: 2 / 1 / 3 / 2;
   }
 
   &--contact {
@@ -152,7 +154,7 @@ export default {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-    grid-area: 1 / 1 / 2 / 3;
+    grid-area: 1 / 1 / 2 / 5;
 
     &--item {
       text-align: left;
@@ -172,14 +174,20 @@ export default {
     }
   }
 
-  &--address {
-    grid-area: 2 / 2 / 3 / 3;
-  }
-
   &--social {
     position: relative;
     right: inherit;
     bottom: inherit;
+    grid-area: 3 / 1 / 4 / 5;
+  }
+
+  &--private {
+    grid-area: 4 / 1 / 5 / 5;
+    text-align: left;
+  }
+
+  &--address {
+    grid-area: 2 / 2 / 3 / 3;
   }
 }
 
@@ -350,6 +358,11 @@ export default {
     padding: 0px 30px 120px;
     flex-direction: row;
     justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 40px;
+    grid-column-gap: 25px;
 
     a,
     p {
@@ -368,7 +381,7 @@ export default {
       align-items: flex-start;
       justify-content: space-between;
       height: 100%;
-      margin-right: 10.17%;
+      grid-area: 1 / 1 / 2 / 2;
     }
 
     &--contact {
@@ -377,8 +390,7 @@ export default {
       align-items: flex-start;
       justify-content: space-between;
       height: 100%;
-      margin-right: 7.83%;
-      margin-bottom: 0;
+      grid-area: 1 / 2 / 2 / 3;
 
       &--item {
         text-align: left;
@@ -394,9 +406,18 @@ export default {
       }
     }
 
+    &--social {
+      grid-area: 1 / 4 / 2 / 5;
+      text-align: right;
+    }
+
     &--address {
-      margin-right: 0;
-      margin-bottom: 0;
+      grid-area: 1 / 3 / 2 / 4;
+    }
+
+    &--private {
+      grid-area: 2 / 1 / 3 / 5;
+      text-align: right;
     }
   }
 }
@@ -407,8 +428,6 @@ export default {
     height: 278px;
     padding: 0px 8.34% 60px;
     box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
     color: #1e1f21;
     position: relative;
 
@@ -438,7 +457,6 @@ export default {
       align-items: flex-start;
       justify-content: space-between;
       height: 100%;
-      margin-right: 14.17%;
     }
 
     &--contact {
@@ -447,7 +465,6 @@ export default {
       align-items: flex-start;
       justify-content: space-between;
       height: 100%;
-      margin-right: 7.83%;
 
       &--item {
         text-align: left;
@@ -460,10 +477,6 @@ export default {
           font-size: 24px;
         }
       }
-    }
-
-    &--address {
-      margin-right: 11.92%;
     }
 
     &--social {

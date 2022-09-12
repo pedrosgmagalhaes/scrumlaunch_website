@@ -155,6 +155,7 @@ export default {
     font-size: 20px;
     width: auto;
     height: 100%;
+    text-align: center;
   }
 }
 
