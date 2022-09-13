@@ -69,6 +69,12 @@ export default {
       visitorTrackerSettings.setAttribute('src', "http://script.crazyegg.com/pages/scripts/0114/5321.js")
       document.body.appendChild(visitorTrackerSettings)
       // visitor tracker
+
+      // feeder
+      const feederSettings = document.createElement('script')
+      feederSettings.innerHTML = `(function(ss,ex){ window.ldfdr=window.ldfdr||function(){(ldfdr._q=ldfdr._q||[]).push([].slice.call(arguments));}; (function(d,s){ fs=d.getElementsByTagName(s)[0]; function ce(src){ var cs=d.createElement(s); cs.src=src; cs.async=1; fs.parentNode.insertBefore(cs,fs); }; ce('https://sc.lfeeder.com/lftracker_v1_'+ss+(ex?'_'+ex:'')+'.js'); })(document,'script'); })('ywVkO4XVpRe8Z6Bj');`
+      document.body.appendChild(feederSettings)
+      // feeder
     }
 
     if (
