@@ -48,14 +48,20 @@ export default {
 
       // linkedin
       const linkedinSettings = document.createElement('script')
-      linkedinSettings.innerHTML = `_linkedin_partner_id = "3906108"; window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || []; window._linkedin_data_partner_ids.push(_linkedin_partner_id);`
+      linkedinSettings.innerHTML = `_linkedin_partner_id = "4702825";window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];window._linkedin_data_partner_ids.push(_linkedin_partner_id);`
 
       const linkedinScript = document.createElement('script')
-      linkedinScript.innerHTML = `(function(l) { if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])}; window.lintrk.q=[]} var s = document.getElementsByTagName("script")[0]; var b = document.createElement("script"); b.type = "text/javascript";b.async = true; b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js"; s.parentNode.insertBefore(b, s);})(window.lintrk);`
+      linkedinScript.innerHTML = `(function(l) {if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};window.lintrk.q=[]}var s = document.getElementsByTagName("script")[0];var b = document.createElement("script");b.type = "text/javascript";b.async = true;b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";s.parentNode.insertBefore(b, s);})(window.lintrk);;`
 
       document.body.appendChild(linkedinSettings)
       document.body.appendChild(linkedinScript)
       // linkedin
+
+      // meta pixel
+      const metaPixelSettings = document.createElement('script')
+      metaPixelSettings.innerHTML = `!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init', '411211710930789');fbq('track', 'PageView');`
+      document.body.appendChild(metaPixelSettings)
+      // meta pixel
     }
 
     if (

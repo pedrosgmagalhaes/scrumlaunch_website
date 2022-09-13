@@ -1205,6 +1205,18 @@ export default {
       line-height: 140%;
     }
 
+    &__icon {
+      height: 70px;
+    }
+
+    @media screen and (max-width: 976px) {
+      &__item {    height: 520px;}
+
+      &__title {
+      height: 68px;
+    }
+    }
+
     @media screen and (max-width: 1439px) {
       margin: 60px 0;
       overflow-x: auto;
@@ -1254,6 +1266,7 @@ export default {
         margin-top: 5px;
         margin-bottom: 8px;
         max-width: 100%;
+        height: auto;
       }
 
       &__desc {
@@ -1261,6 +1274,7 @@ export default {
       }
 
       &__icon {
+        height: 45px;
         & > img {
           width: 24px;
           height: 24px;

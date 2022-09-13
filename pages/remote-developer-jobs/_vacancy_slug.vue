@@ -229,7 +229,7 @@ export default {
   padding-bottom: 30px;
 
   &_card {
-    min-width: 350px;
+    min-width: 400px;
     min-height: 200px;
     padding: 30px;
     background-color: #fff;

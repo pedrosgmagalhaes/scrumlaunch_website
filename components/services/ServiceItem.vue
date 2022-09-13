@@ -40,6 +40,7 @@ export default {
   &--header {
     display: flex;
     margin-bottom: 16px;
+    text-align: left;
 
     &--icon {
       width: 24px;
