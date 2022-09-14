@@ -276,7 +276,7 @@ export default {
   methods: {
     handleScroll() {
       if (this.isHiddenNav) {
-        this.isHiddenNav = false
+        this.isHiddenNav = true
       }
     },
 
