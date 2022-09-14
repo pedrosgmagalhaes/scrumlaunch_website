@@ -32,16 +32,6 @@
         /></a>
       </div>
     </div>
-    <div class="form_wrapper">
-      <div class="text_form_wrapper">
-        <p class="form_description">
-          Interested in working with us?
-          <span class="descr_mark">Fill out the form</span>
-          let us know what your project is about.
-        </p>
-      </div>
-      <FooterForm />
-    </div>
     <div class="footer home">
       <div class="footer--menu">
         <!-- <NuxtLink to="/work">Portfolio</NuxtLink> -->
@@ -81,13 +71,11 @@
 <script>
 import SocialBlock from '@/components/SocialBlock.vue'
 import ScrollToTop from '@/components/ScrollToTop.vue'
-import FooterForm from '@/components/footer-form/FooterForm.vue'
 
 export default {
   components: {
     SocialBlock,
     ScrollToTop,
-    FooterForm,
   },
 
   methods: {
