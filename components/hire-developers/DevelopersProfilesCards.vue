@@ -70,7 +70,7 @@ export default {}
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 40px;
 
   &__item {
     width: 387px;

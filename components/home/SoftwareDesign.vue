@@ -147,7 +147,10 @@ export default {}
     @media screen and (max-width: 425px) {
       max-width: 260px;
       top: -130px;
-      left: -60px;
+      width: 200px;
+      height: 200px;
+      left: 60px;
+      transform: rotate(78deg);
     }
   }
 
@@ -207,7 +210,7 @@ export default {}
   &__section_2 {
     display: flex;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1440px) {
       flex-wrap: wrap;
       margin: 0 auto;
       max-width: 708px;

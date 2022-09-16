@@ -164,7 +164,7 @@
           </div>
         </div>
         <div class="projects--btn-wrapper">
-          <NuxtLink class="btn on_dark_bg" to="/vacancies">View all</NuxtLink>
+          <NuxtLink class="btn on_dark_bg" to="/remote-developer-jobs">View all</NuxtLink>
         </div>
       </div>
     </div>

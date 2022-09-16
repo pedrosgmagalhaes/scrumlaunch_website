@@ -174,6 +174,15 @@ export default {
   gap: 20px;
   margin-bottom: 40px;
   flex-direction: column;
+  width: 200px;
+
+  & > a {
+    min-width: auto;
+  }
+
+  .clutch_badge > img {
+    width: 100%;
+  }
 }
 
 .btn {

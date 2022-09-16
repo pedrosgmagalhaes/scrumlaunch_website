@@ -341,5 +341,11 @@ export default {
     margin-top: 40px;
     margin-bottom: 24px;
   }
+
+  @media screen and (max-width: 425px) {
+     & > img {
+      width: 100%;
+     }
+  }
 }
 </style>

@@ -1306,7 +1306,7 @@ export default {
 
   .btn_wrap {
     margin-top: 66px;
-    justify-content: flex-end;
+    justify-content: center;
   }
 
   @media screen and (max-width: 1439px) {

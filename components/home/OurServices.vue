@@ -1,33 +1,15 @@
 <template>
   <div class="services">
-    <TypingEffect>
-      <h2 class="header-1 header-1-stroke">Our Services</h2>
-    </TypingEffect>
-    <AppearFromMask :oh="false"
-      ><p class="header-1 software-text">
-        Software Development
-      </p></AppearFromMask
-    >
-    <AppearFromMask :oh="false"
-      ><p class="header-1 devops-text">DevOps</p></AppearFromMask
-    >
-    <AppearFromMask :oh="false"
-      ><p class="header-1 design-text">UI/UX Design</p></AppearFromMask
-    >
-    <AppearFromMask :oh="false"
-      ><p class="header-1 product-text">
-        User Research & <br class="brake" />Product Analytics
-      </p></AppearFromMask
-    >
-    <AppearFromMask :oh="false"
-      ><p class="header-1 brand-text">Brand Design</p></AppearFromMask
-    >
-    <AppearFromMask :oh="false"
-      ><p class="header-1 pitch-text">Pitch Deck Creation</p></AppearFromMask
-    >
-    <AppearFromMask :oh="false"
-      ><p class="header-1 strategy-text">Strategy</p></AppearFromMask
-    >
+    <h2 class="header-1 header-1-stroke">Our Services</h2>
+    <p class="header-1 software-text">Software Development</p>
+    <p class="header-1 devops-text">DevOps</p>
+    <p class="header-1 design-text">UI/UX Design</p>
+    <p class="header-1 product-text">
+      User Research & <br class="brake" />Product Analytics
+    </p>
+    <p class="header-1 brand-text">Brand Design</p>
+    <p class="header-1 pitch-text">Pitch Deck Creation</p>
+    <p class="header-1 strategy-text">Strategy</p>
   </div>
 </template>
 
@@ -57,7 +39,6 @@ export default {}
     margin-bottom: 30px;
     transition: all 0.4s ease;
     width: fit-content;
-    font-size: 20px;
     position: relative;
     text-align: right;
 
