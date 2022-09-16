@@ -215,6 +215,11 @@ export default {
 
   &__badge {
     cursor: pointer;
+
+    & > img {
+    width: 250px;
+
+    }
   }
 
   @media screen and (max-width: 1439px) {
