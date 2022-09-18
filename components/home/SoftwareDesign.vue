@@ -124,6 +124,7 @@ export default {}
 
     @media screen and (max-width: 425px) {
       margin-bottom: 40px;
+      justify-content: initial;
     }
   }
 
@@ -181,6 +182,10 @@ export default {}
 
     @media screen and (max-width: 768px) {
       margin-bottom: 24px;
+    }
+
+     @media screen and (max-width: 700px) and (min-width: 425px) {
+      margin-left: 100px;
     }
 
     @media screen and (max-width: 425px) {

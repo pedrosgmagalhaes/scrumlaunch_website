@@ -174,14 +174,19 @@ export default {
   gap: 20px;
   margin-bottom: 40px;
   flex-direction: column;
-  width: 200px;
 
-  & > a {
-    min-width: auto;
-  }
+  @media screen and (max-width: 420px) {
+    & {
+      width: 200px;
+    }
 
-  .clutch_badge > img {
-    width: 100%;
+    & > a {
+      min-width: auto;
+    }
+    
+    .clutch_badge > img {
+      width: 100%;
+    }
   }
 }
 
