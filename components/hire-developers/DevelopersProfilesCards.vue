@@ -3,7 +3,7 @@
     <div class="developers__item">
       <div class="developers__item__img">
         <div class="hover-btn">
-          <NuxtLink to="/quiz" class="btn">HIRE</NuxtLink>
+          <NuxtLink to="/contact-us" class="btn">HIRE</NuxtLink>
         </div>
         <img src="/images/hire-developers/ekaterina_a.png" alt="ekaterina_a" />
       </div>
@@ -22,7 +22,7 @@
     <div class="developers__item">
       <div class="developers__item__img">
         <div class="hover-btn">
-          <NuxtLink to="/quiz" class="btn">HIRE</NuxtLink>
+          <NuxtLink to="/contact-us" class="btn">HIRE</NuxtLink>
         </div>
         <img src="/images/hire-developers/oleg_v.png" alt="oleg_v" />
       </div>
@@ -41,7 +41,7 @@
     <div class="developers__item">
       <div class="developers__item__img">
         <div class="hover-btn">
-          <NuxtLink to="/quiz" class="btn">HIRE</NuxtLink>
+          <NuxtLink to="/contact-us" class="btn">HIRE</NuxtLink>
         </div>
         <img src="/images/hire-developers/oleksandr_b.png" alt="oleksandr_b" />
       </div>
