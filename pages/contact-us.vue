@@ -38,8 +38,6 @@ export default {
     ContactForm,
   },
 
-  scrollToTop: true,
-
   head: {
     title: 'ContactUs',
     meta: [
