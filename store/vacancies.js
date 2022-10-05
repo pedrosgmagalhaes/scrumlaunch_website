@@ -1,51 +1,10 @@
+import vacancies from '../seo/vacancies.json'
+
 function make_slug(name, jobLocation) {
   const slug = name + '-' + jobLocation
 
   return `/remote-developer-jobs/${slug.replace(/\s+/g, '-').toLowerCase()}`
 }
-
-const reallyExists = [
-  {
-    name: 'PHP',
-    jobLocation: 'Brazil',
-  },
-  {
-    name: 'ReactJS',
-    jobLocation: 'Ukraine',
-  },
-  {
-    name: 'Django',
-    jobLocation: 'Ukraine',
-  },
-  {
-    name: 'Java',
-    jobLocation: 'Ukraine',
-  },
-  {
-    name: 'Android',
-    jobLocation: 'Ukraine',
-  },
-  {
-    name: 'NodeJS',
-    jobLocation: 'Ukraine',
-  },
-  {
-    name: 'Laravel',
-    jobLocation: 'Ukraine',
-  },
-  {
-    name: 'Python',
-    jobLocation: 'Ukraine',
-  },
-  {
-    name: 'Ruby',
-    jobLocation: 'Ukraine',
-  },
-  {
-    name: 'Ruby',
-    jobLocation: 'Brazil',
-  },
-]
 
 const skills = [
   'ReactJS',
@@ -98,30 +57,39 @@ const locations = [
   'Mexico',
 ]
 
-const createVacancies = () => {
-  return skills.map((skill) =>
-    locations.map((location) => {
-      const isExists = reallyExists.find(
-        (item) => item.jobLocation === location && item.name === skill
-      )
+const generateVacancy = (name, jobLocation, description = null, datePosted = '12 / 06 / 2022') => ({
+  name,
+  jobLocation,
+  remote: true,
+  open: true,
+  datePosted,
+  hiringOrganisation: 'ScrumLaunch',
+  employmentType: 'Full Time',
+  baseSalary: '$10-20 / hour',
+  description,
+})
 
-      return {
-        name: skill,
-        jobLocation: location,
-        remote: true,
-        open: true,
-        datePosted: '12 / 06 / 2022',
-        hiringOrganisation: 'ScrumLaunch',
-        employmentType: 'Full Time',
-        baseSalary: '$10-20 / hour',
-        reallyExists: Boolean(Object.keys(isExists || {}).length),
-      }
-    })
+const createVacancies = () => {
+  const generatedVacancies = skills
+    .flatMap((skill) =>
+      locations.map((location) => generateVacancy(skill, location))
+    )
+    .sort((a, b) => Math.random() - Math.random())
+
+  const googleVacancies = vacancies.map((el) =>
+    generateVacancy(
+      el.title,
+      el.applicantLocationRequirements[0].name,
+      el.description,
+      el.datePosted
+    )
   )
+
+  return [...googleVacancies, ...generatedVacancies]
 }
 
 export const state = () => ({
-  vacancies: createVacancies().flat(),
+  vacancies: createVacancies(),
 })
 
 export const getters = {

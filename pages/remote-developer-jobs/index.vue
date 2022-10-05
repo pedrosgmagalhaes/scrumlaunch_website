@@ -45,9 +45,7 @@
 
         <div class="vacancies__items">
           <div
-            v-for="(vacancy, i) in vacancies.filter((item) =>
-              !skill && !location ? item.reallyExists : true
-            )"
+            v-for="(vacancy, i) in vacancies"
             :key="i"
             class="vacancies__item"
           >
@@ -75,6 +73,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import vacancies from '../../seo/vacancies.json'
 import CustomSelect from '@/components/Select.vue'
 
 export default {
@@ -87,6 +86,17 @@ export default {
       skill: '',
       location: '',
       vacancies: [],
+    }
+  },
+
+  head() {
+    return {
+      script: [
+        {
+          type: 'application/ld+json',
+          json: vacancies,
+        },
+      ],
     }
   },
 
