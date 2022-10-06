@@ -33,7 +33,10 @@
             </div>
             <div class="how_scrumlaunch_works__item_text">
               <div class="description__container">
-                <p class="how_scrumlaunch_works__item_text">
+                <p
+                  v-if="!vacancy.description"
+                  class="how_scrumlaunch_works__item_text"
+                >
                   {{ vacancy.name }} Developers: do you have a passion for
                   building software applications? Do you have an interest in web
                   development and design, UI, or UX? Do you enjoy working on
@@ -59,6 +62,7 @@
                 <p class="how_scrumlaunch_works__item_text">
                   The role requires at least 40 hours per week.
                 </p>
+                <div v-if="vacancy.description" v-html="vacancy.description" />
               </div>
             </div>
           </div>
@@ -164,7 +168,9 @@
           </div>
         </div>
         <div class="projects--btn-wrapper">
-          <NuxtLink class="btn on_dark_bg" to="/remote-developer-jobs">View all</NuxtLink>
+          <NuxtLink class="btn on_dark_bg" to="/remote-developer-jobs"
+            >View all</NuxtLink
+          >
         </div>
       </div>
     </div>

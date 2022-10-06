@@ -36,6 +36,10 @@ export default {
     '@nuxtjs/dotenv',
   ],
 
+  sitemap: {
+    hostname: 'https://www.scrumlaunch.com/',
+  },
+
   styleResources: {
     scss: ['~/assets/css/common.scss', '~/assets/css/main.scss'],
   },
