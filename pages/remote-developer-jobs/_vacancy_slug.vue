@@ -131,26 +131,30 @@
         <div class="header-1 white">More Remote Job</div>
         <div class="more_job">
           <div
-            v-for="(item, i) in more_vacancies"
+            v-for="(item, i) in more_vacancies.filter((el) => el.open)"
             :key="i"
             class="more_job_card"
           >
-            <div class="more_job__info_container subtitle">
-              <p>
-                {{ item.hiringOrganisation }}
-              </p>
-              <p>{{ item.datePosted }}</p>
-            </div>
-            <div class="more_job__info_container title">
-              <p>{{ item.name }} Developer</p>
-            </div>
-            <div class="more_job__info_container description">
-              <p class="vacancy__remote_bold">
-                <span v-if="item.remote" class="vacancy__remote_2">Remote</span>
-                {{ item.jobLocation }}
-              </p>
-              <div class="marker default">{{ item.employmentType }}</div>
-              <div class="marker default">{{ item.baseSalary }}</div>
+            <div>
+              <div class="more_job__info_container subtitle">
+                <p>
+                  {{ item.hiringOrganisation }}
+                </p>
+                <p>{{ item.datePosted }}</p>
+              </div>
+              <div class="more_job__info_container title">
+                <p>{{ item.name }} Developer</p>
+              </div>
+              <div class="more_job__info_container description">
+                <p class="vacancy__remote_bold">
+                  <span v-if="item.remote" class="vacancy__remote_2"
+                    >Remote</span
+                  >
+                  {{ item.jobLocation }}
+                </p>
+                <div class="marker default">{{ item.employmentType }}</div>
+                <div class="marker default">{{ item.baseSalary }}</div>
+              </div>
             </div>
             <div class="more_job__info_container footer">
               <div v-if="item.open" class="vacancy__state open">Open</div>
@@ -236,10 +240,13 @@ export default {
 
   &_card {
     min-width: 400px;
-    min-height: 200px;
+    height: 250px;
     padding: 30px;
     background-color: #fff;
     color: #1e1f21;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   &__info_container {
@@ -300,7 +307,6 @@ export default {
 .description {
   font-weight: 400;
   font-size: 16px;
-  margin-bottom: 55px;
 }
 
 .footer {

@@ -89,7 +89,7 @@
   {
     "@context": "https://schema.org/",
     "@type": "JobPosting",
-    "title": "Node.js Developer",
+    "title": "Node JS Developer",
     "description": "<p>Requirements:</p><p>- At least 1,5 years of Node.js experience;</p><p>- Experience with TypeGraphQL, Prisma and Knex;</p><p>- Experience with creating unit tests;</p><p>- Experience with git, task trackers (trello, jira etc);</p><p>- Intermediate English level or higher;</p><p>- Ability to work with the team.</p><br/><br/><p>Will be a plus:</p><p>- Experience of work with 3-rd party services, such as AWS, Twilio, Stripe, Google Cloud etc;</p><p>- Knowledge of front-end technologies such as HTML5 and CSS3;</p><p>- Experience with Postgres;</p><p>- Experience with serverless framework;</p><p>- Experience with frontend frameworks such as Angular, React, Vue etc.</p><br/><br/><p>We offer:</p><p>- Opportunity to grow as an expert;</p><p>- Regular results-based salary review;</p><p>- Flexible working conditions;</p><p>- 24 days of paid vacation (working days);</p><p>- 10 sick days;</p><p>- Friendly and open-minded team;</p><p>- English classes.</p>",
     "datePosted": "2022-09-02",
     "applicantLocationRequirements": [
