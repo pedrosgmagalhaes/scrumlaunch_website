@@ -7,9 +7,9 @@ function make_slug(name, jobLocation) {
 }
 
 const skills = [
-  'ReactJS',
-  'ReactNative',
-  'NodeJS',
+  'React JS',
+  'React Native',
+  'Node JS',
   'Python',
   'DevOps',
   'PHP',
@@ -61,7 +61,7 @@ const generateVacancy = (name, jobLocation, description = null, datePosted = '12
   name,
   jobLocation,
   remote: true,
-  open: true,
+  open: !!description,
   datePosted,
   hiringOrganisation: 'ScrumLaunch',
   employmentType: 'Full Time',
