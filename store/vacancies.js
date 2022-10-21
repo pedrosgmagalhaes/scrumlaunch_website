@@ -3,7 +3,7 @@ import vacancies from '../seo/vacancies.json'
 function make_slug(name, jobLocation) {
   const slug = name + '-' + jobLocation
 
-  return `/remote-developer-jobs/${slug.replace(/\s+/g, '-').toLowerCase()}`
+  return `/remote-developer-jobs/${slug.replace(/\s+/g, '-').replace(/\//g, '_').toLowerCase()}`
 }
 
 const skills = [
@@ -70,11 +70,14 @@ const generateVacancy = (name, jobLocation, description = null, datePosted = '12
 })
 
 const createVacancies = () => {
-  const generatedVacancies = skills
-    .flatMap((skill) =>
-      locations.map((location) => generateVacancy(skill, location))
-    )
-    .sort((a, b) => Math.random() - Math.random())
+
+  // Dummy Vacancies generator
+
+  // const generatedVacancies = skills
+  //   .flatMap((skill) =>
+  //     locations.map((location) => generateVacancy(skill, location))
+  //   )
+  //   .sort((a, b) => Math.random() - Math.random())
 
   const googleVacancies = vacancies.map((el) =>
     generateVacancy(
@@ -85,7 +88,7 @@ const createVacancies = () => {
     )
   )
 
-  return [...googleVacancies, ...generatedVacancies]
+  return [...googleVacancies]
 }
 
 export const state = () => ({
@@ -117,25 +120,25 @@ export const getters = {
   },
 
   getAllSkills: (state) => {
-    const skills = []
+    const rawSkills = [...skills]
 
     state.vacancies.map((item) => {
-      if (!skills.includes(item.name)) {
-        skills.push(item.name)
+      if (!rawSkills.includes(item.name)) {
+        rawSkills.push(item.name)
       }
 
       return item
     })
 
-    return skills
+    return rawSkills
   },
 
   getAllLocations: (state) => {
-    const locations = []
+    const rawLocations = [...locations]
 
     state.vacancies.map((item) => {
-      if (!locations.includes(item.jobLocation)) {
-        locations.push(item.jobLocation)
+      if (!rawLocations.includes(item.jobLocation)) {
+        rawLocations.push(item.jobLocation)
       }
 
       return item

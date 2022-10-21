@@ -42,13 +42,15 @@
             />
           </div>
         </div>
-
-        <div class="vacancies__items">
+        <div
+          v-if="vacancies.length"
+          class="vacancies__items"
+        >
           <div
             v-for="(vacancy, i) in vacancies"
             :key="i"
             class="vacancies__item"
-          >
+          >            
             <div class="vacancies__item_skill">
               <NuxtLink :to="vacancy.slug">{{ vacancy.name }}</NuxtLink>
             </div>
@@ -65,6 +67,9 @@
               Closed
             </div>
           </div>
+        </div>
+        <div v-else class="vacancies__empty">
+          There's no vacancies in picked combination
         </div>
       </div>
     </div>
@@ -191,6 +196,14 @@ export default {
 
   & * {
     box-sizing: border-box;
+  }
+
+  &__empty {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 140%;
+    text-align: center;
   }
 
   &__section_1 {
