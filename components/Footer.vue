@@ -56,7 +56,7 @@
       </div>
       <div class="footer--address">
         <p>
-          Portland, OR<br />Los Angeles, CA<br />Ukraine<br />Brazil<br />Poland
+          Portland, OR<br />Los Angeles, CA<br />Ukraine<br />Brazil<br />Poland<br />Uttar Pradesh, India
         </p>
       </div>
       <SocialBlock class="footer--social" />
