@@ -20,6 +20,10 @@ export default {
 
   mounted() {
     if (window.location.hostname.includes('scrumlaunch.com')) {
+      // luckyorange
+      const scriptLucky = document.createElement('script')
+      scriptLucky.setAttribute("src", "https://tools.luckyorange.com/core/lo.js?site-id=0a6cf2b2")
+
       // googletagmanager
       const ScriptSrc = document.createElement('script')
       ScriptSrc.setAttribute(
