@@ -1,15 +1,14 @@
 @font-face {
-  font-family: 'SofiaPro-Light';
+  font-family: 'Sofia Pro';
   font-feature-settings: normal;
-  src: url('/public/fonts/sofiapro-light.otf') format('opentype');
+  src: url('/public/fonts/SofiaProRegular.woff') format('woff');
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Sofia Pro', sans-serif;
 }
 
 a {
@@ -24,7 +23,8 @@ a {
 :root {
   --border-color: #6c727f;
   --background-color: #fff;
-  --text-black-color: #1e1f21;
+  --separator-footer-color: #a9a69e;
+  --text-color: #1e1f21;
   --secondary-color: #f4f2ec;
 }
 

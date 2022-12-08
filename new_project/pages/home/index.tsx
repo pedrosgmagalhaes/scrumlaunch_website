@@ -5,7 +5,7 @@ import './styles.module.scss'
 export default function Home() {
   return (
     <Layout>
-      <h3>dawdaw</h3>
+      <h3>layout</h3>
     </Layout>
   )
 }

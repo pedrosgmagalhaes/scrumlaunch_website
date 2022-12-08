@@ -11,10 +11,9 @@
     border-radius: 30px;
     padding: 10px 28px;
     outline: none;
-    font-family: 'SofiaPro-Light';
     font-weight: 700;
     font-size: 18px;
-    color: var(--text-black-color);
+    color: var(--text-color);
     cursor: pointer;
   }
 
@@ -24,10 +23,9 @@
     gap: 40px;
 
     a {
-      font-family: 'SofiaPro-Light';
       font-weight: 700;
       font-size: 18px;
-      color: var(--text-black-color);
+      color: var(--text-color);
     }
   }
 }

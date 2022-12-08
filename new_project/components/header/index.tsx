@@ -7,7 +7,7 @@ function Header() {
     <div id={styles.header}>
       <Image
         src="/public/icons/LogoScrumlaunch.svg"
-        alt="scrumlaunch logo"
+        alt="scrumlaunch"
         width={80}
         height={37}
       />
