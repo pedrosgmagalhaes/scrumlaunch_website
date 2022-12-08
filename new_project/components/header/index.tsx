@@ -6,13 +6,23 @@ function Header() {
   return (
     <div id={styles.header}>
       <Image
-        src="/public/icons/Logo SL.svg"
+        src="/public/icons/LogoScrumlaunch.svg"
         alt="scrumlaunch logo"
         width={80}
         height={37}
       />
 
-      <div>menu nav</div>
+      <nav className={styles.navbar}>
+        <a href="/about-us">About Us</a>
+
+        <a href="/services">Services</a>
+
+        <a href="/case-studies">Case Studies</a>
+
+        <a href="/careers">Careers</a>
+
+        <a href="/blog">Blog</a>
+      </nav>
 
       <button type="button" className={styles.contactUseBtn}>
         Contact Us

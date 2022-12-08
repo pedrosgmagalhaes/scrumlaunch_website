@@ -1,5 +1,5 @@
 #header {
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1.5px solid var(--border-color);
   width: 100%;
   height: 95px;
   display: flex;
@@ -7,6 +7,27 @@
   justify-content: space-evenly;
 
   .contactUseBtn {
-    background-color: red;
+    background-color: var(--background-color);
+    border-radius: 30px;
+    padding: 10px 28px;
+    outline: none;
+    font-family: 'SofiaPro-Light';
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--text-black-color);
+    cursor: pointer;
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    a {
+      font-family: 'SofiaPro-Light';
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--text-black-color);
+    }
   }
 }
