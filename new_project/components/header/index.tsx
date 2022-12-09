@@ -1,16 +1,12 @@
 import React from 'react'
 import Image from 'next/image'
 import styles from './styles.module.scss'
+import Scrumlaunch from '../../public/icons/LogoScrumlaunch.svg'
 
 function Header() {
   return (
     <div id={styles.header}>
-      <Image
-        src="/public/icons/LogoScrumlaunch.svg"
-        alt="scrumlaunch"
-        width={80}
-        height={37}
-      />
+      <Image src={Scrumlaunch} alt="scrumlaunch" width={80} height={37} />
 
       <nav className={styles.navbar}>
         <a href="/about-us">About Us</a>
