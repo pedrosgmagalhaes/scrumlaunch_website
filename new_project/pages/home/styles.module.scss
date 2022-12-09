@@ -1,1 +1,25 @@
+.techTalent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
+  .titleTech {
+    text-align: center;
+    width: 60%;
+    font-size: 72px;
+    font-weight: 700;
+    margin-top: 90px;
+    margin-bottom: 50px;
+    line-height: 72px;
+  }
+
+  .techSubText {
+    font-size: 16px;
+    line-height: 30px;
+    width: 40%;
+    text-align: center;
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 60px;
+  }
+}
