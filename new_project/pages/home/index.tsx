@@ -28,6 +28,42 @@ export default function Home() {
 
         <TechTalentCard />
       </div>
+
+      <div className={style.longTermPartner}>
+        <h2 className={style.title}>Your long term tech partner</h2>
+
+        <div className={style.majorContainer}>
+          <div className={style.container}>
+            <h4>
+              <div className={style.indicator}>1</div> Time savings:
+            </h4>
+
+            <h2>45h</h2>
+
+            <p>saved on avg for your tech team for each role</p>
+          </div>
+
+          <div className={style.container2}>
+            <h4>
+              <div className={style.indicator}>2</div> Client lifetime:
+            </h4>
+
+            <h2>2+</h2>
+
+            <p>years average client partnership</p>
+          </div>
+
+          <div className={style.container3}>
+            <h4>
+              <div className={style.indicator}>3</div> Cost Savings:
+            </h4>
+
+            <h2>40-50%</h2>
+
+            <p>saving on development costs</p>
+          </div>
+        </div>
+      </div>
     </Layout>
   )
 }
