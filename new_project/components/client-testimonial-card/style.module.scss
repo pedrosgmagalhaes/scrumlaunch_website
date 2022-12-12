@@ -1,0 +1,93 @@
+.clientTestimonial {
+  margin-top: 192px;
+
+  .testimony {
+    display: flex;
+    gap: 20px;
+
+    .iconsTestimony {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .icon {
+        width: 183px;
+        height: 142px;
+        border-radius: 24px;
+        border: 1px solid var(--separator-footer-color);
+        background-color: var(--secondary-color);
+      }
+    }
+
+    .photo {
+      width: 387px;
+      height: 464px;
+    }
+
+    .aggregatedData {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .modules {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        div {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          width: 183px;
+          height: 142px;
+          border-radius: 16px;
+          background-color: var(--seventh-color);
+          padding: 16px;
+          font-size: 16px;
+          font-weight: 700;
+
+          h2 {
+            margin: 0;
+            font-size: 42px;
+          }
+        }
+
+        div:nth-child(2) {
+          background-color: var(--forth-color);
+        }
+
+        div:nth-child(3) {
+          background-color: var(--eighth-color);
+        }
+      }
+
+      .nextTestimony {
+        display: flex;
+        gap: 20px;
+
+        .testimonyText {
+          border-radius: 16px;
+          border: 1px solid var(--separator-footer-color);
+          background-color: var(--secondary-color);
+          width: 386px;
+          height: 303px;
+        }
+
+        .nextButton {
+          background-color: var(--text-color);
+          border-radius: 16px;
+          width: 183px;
+          padding: 16px;
+          cursor: pointer;
+
+          h3 {
+            color: var(--background-color);
+            font-size: 28px;
+            line-height: 42px;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}

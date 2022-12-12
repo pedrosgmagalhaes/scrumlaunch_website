@@ -1,8 +1,9 @@
 import React from 'react'
 import style from './styles.module.scss'
 import TechTalentCard from '../../components/tech-talent-card'
-import Layout from '../../components/layout/index'
-import Button from '../../components/buttons/accept-button/index'
+import ClientTestimonialCard from '../../components/client-testimonial-card'
+import Layout from '../../components/layout'
+import Button from '../../components/buttons/accept-button'
 import Arrow from '../../public/icons/arrowBlack.svg'
 
 export default function Home() {
@@ -64,6 +65,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <ClientTestimonialCard />
     </Layout>
   )
 }
