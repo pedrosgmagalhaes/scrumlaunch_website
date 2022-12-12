@@ -1,6 +1,13 @@
 .clientTestimonial {
   margin-top: 192px;
 
+  .title {
+    margin: 0;
+    margin-bottom: 52px;
+    font-size: 48px;
+    margin-left: 120px;
+  }
+
   .testimony {
     display: flex;
     gap: 20px;
@@ -11,6 +18,9 @@
       gap: 20px;
 
       .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 183px;
         height: 142px;
         border-radius: 24px;
@@ -43,7 +53,8 @@
           border-radius: 16px;
           background-color: var(--seventh-color);
           padding: 16px;
-          font-size: 16px;
+          font-size: 15px;
+          line-height: 25px;
           font-weight: 700;
 
           h2 {
@@ -71,6 +82,21 @@
           background-color: var(--secondary-color);
           width: 386px;
           height: 303px;
+          padding: 16px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          h3 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 700;
+          }
+
+          p {
+            font-size: 15px;
+            line-height: 24px;
+          }
         }
 
         .nextButton {
@@ -78,6 +104,9 @@
           border-radius: 16px;
           width: 183px;
           padding: 16px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
           cursor: pointer;
 
           h3 {
@@ -85,6 +114,21 @@
             font-size: 28px;
             line-height: 42px;
             margin: 0;
+          }
+
+          div {
+            background-color: var(--background-color);
+            border-radius: 50%;
+            width: 64px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+              width: 25px;
+              height: 25px;
+            }
           }
         }
       }

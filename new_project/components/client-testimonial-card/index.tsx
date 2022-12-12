@@ -8,7 +8,7 @@ import Arrow from '../../public/icons/arrowBlack.svg'
 export default function ClientTestimonial() {
   return (
     <div className={style.clientTestimonial}>
-      <h1>Client Testimonials</h1>
+      <h1 className={style.title}>Client Testimonials</h1>
 
       <div className={style.testimony}>
         <div className={style.iconsTestimony}>
@@ -44,7 +44,16 @@ export default function ClientTestimonial() {
           </div>
 
           <div className={style.nextTestimony}>
-            <div className={style.testimonyText}>testimony</div>
+            <div className={style.testimonyText}>
+              <h3>Rob’s Thoughts:</h3>
+
+              <p>
+                “ScrumLaunch software developers have enabled CampusReel to go
+                from an idea to a product with millions of monthly unique users
+                over the past 5 years. We could not have gotten to where we are
+                today without them.”
+              </p>
+            </div>
 
             <div className={style.nextButton}>
               <h3>Next Testimonial</h3>
