@@ -1,12 +1,18 @@
 import React from 'react'
+import Image from 'next/image'
 import style from './style.module.scss'
 
 interface Props {
   buttonText: string
   onClickHandler: () => void
+  icon: string
 }
 
-export default function AcceptButton({ buttonText, onClickHandler }: Props) {
+export default function AcceptButton({
+  buttonText,
+  onClickHandler,
+  icon,
+}: Props) {
   return (
     <button
       type="button"
@@ -15,7 +21,9 @@ export default function AcceptButton({ buttonText, onClickHandler }: Props) {
     >
       {buttonText}
 
-      <div className={style.icon} />
+      <div className={style.icon}>
+        <Image src={icon} alt="icon" />
+      </div>
     </button>
   )
 }

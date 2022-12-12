@@ -3,6 +3,7 @@ import style from './styles.module.scss'
 import TechTalentCard from '../../components/tech-talent-card'
 import Layout from '../../components/layout/index'
 import Button from '../../components/buttons/accept-button/index'
+import Arrow from '../../public/icons/arrowBlack.svg'
 
 export default function Home() {
   return (
@@ -19,7 +20,11 @@ export default function Home() {
           global scale
         </h6>
 
-        <Button buttonText="Schedule a call" />
+        <Button
+          buttonText="Schedule a call"
+          icon={Arrow}
+          onClickHandler={() => {}}
+        />
 
         <TechTalentCard />
       </div>
