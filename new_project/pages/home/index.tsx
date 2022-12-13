@@ -1,7 +1,8 @@
 import React from 'react'
-import style from './styles.module.scss'
+import style from './style.module.scss'
 import TechTalentCard from '../../components/tech-talent-card'
 import ClientTestimonialCard from '../../components/client-testimonial-card'
+import StartupCard from '../../components/startup-teams-card'
 import Layout from '../../components/layout'
 import Button from '../../components/buttons/accept-button'
 import Arrow from '../../public/icons/arrowBlack.svg'
@@ -67,6 +68,40 @@ export default function Home() {
       </div>
 
       <ClientTestimonialCard />
+
+      <StartupCard />
+
+      <div className={style.thrive}>
+        <h1 className={style.thriveTitle}>
+          We thrive by making our clients thrive
+        </h1>
+
+        <div className={style.separator} />
+
+        <div className={style.infoThrive}>
+          <h5>Acquisitions by Unicorns</h5>
+
+          <span>2</span>
+        </div>
+
+        <div className={style.separator} />
+
+        <div className={style.infoThrive}>
+          <h5>Сlients raised Seed - Series D funding</h5>
+
+          <span>10+</span>
+        </div>
+
+        <div className={style.separator} />
+
+        <div className={style.infoThrive}>
+          <h5>Active monthly users across clients’ products</h5>
+
+          <span>100M</span>
+        </div>
+
+        <div className={style.separator} />
+      </div>
     </Layout>
   )
 }
