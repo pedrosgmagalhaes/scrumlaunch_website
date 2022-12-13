@@ -3,6 +3,7 @@ import style from './style.module.scss'
 import TechTalentCard from '../../components/tech-talent-card'
 import ClientTestimonialCard from '../../components/client-testimonial-card'
 import StartupCard from '../../components/startup-teams-card'
+import ServicesCard from '../../components/services-card'
 import Layout from '../../components/layout'
 import Button from '../../components/buttons/accept-button'
 import Arrow from '../../public/icons/arrowBlack.svg'
@@ -102,6 +103,8 @@ export default function Home() {
 
         <div className={style.separator} />
       </div>
+
+      <ServicesCard />
     </Layout>
   )
 }

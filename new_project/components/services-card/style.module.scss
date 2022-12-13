@@ -1,0 +1,38 @@
+.servicesCard {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .title {
+    margin: 0 0 57px 0;
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--text-color);
+  }
+
+  .serviceContainer {
+    display: flex;
+    align-items: center;
+    min-width: 1200px;
+    margin-bottom: 20px;
+
+    .container {
+      background-color: var(--forth-color);
+      width: 100%;
+      height: 398px;
+      border-bottom-left-radius: 32px;
+      border-top-left-radius: 32px;
+      display: flex;
+      align-items: center;
+      padding: 42px;
+      font-size: 36px;
+      line-height: 50px;
+    }
+
+    .container2 {
+      @extend .container;
+      background-color: var(--third-color);
+    }
+  }
+}
