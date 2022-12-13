@@ -4,6 +4,9 @@ import style from './style.module.scss'
 import CampusReel from '../../public/assets/campusReel.svg'
 import RobCarrol from '../../public/assets/robCarrol.svg'
 import Arrow from '../../public/icons/arrowBlack.svg'
+import Star from '../../public/icons/starRed.svg'
+import Clutch from '../../public/assets/clutch.svg'
+import ClutchIcon from '../../public/assets/clutchIcon.svg'
 
 export default function ClientTestimonial() {
   return (
@@ -16,9 +19,23 @@ export default function ClientTestimonial() {
             <Image src={CampusReel} alt="campus reel" />
           </div>
 
-          <div className={style.icon}>client reel</div>
+          <div className={style.icon}>
+            <Image src={Clutch} alt="Clutch" />
 
-          <div className={style.icon}>client reel</div>
+            <div>
+              {new Array(5).fill(1).map(() => (
+                <Image key={Math.random()} src={Star} alt="star" />
+              ))}
+
+              <p>20 REWIEWS</p>
+            </div>
+          </div>
+
+          <div className={style.icon}>
+            <Image src={ClutchIcon} alt="Clutch Icon" />
+
+            <div className={style.reviewContent}>Review us on CLUTCH</div>
+          </div>
         </div>
 
         <div className={style.photo}>

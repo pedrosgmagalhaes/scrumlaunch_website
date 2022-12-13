@@ -5,12 +5,13 @@
     margin: 0;
     margin-bottom: 52px;
     font-size: 48px;
-    margin-left: 120px;
+    margin-left: 10.5%;
   }
 
   .testimony {
     display: flex;
     gap: 20px;
+    justify-content: center;
 
     .iconsTestimony {
       display: flex;
@@ -19,13 +20,39 @@
 
       .icon {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 183px;
         height: 142px;
         border-radius: 24px;
+        gap: 17px;
         border: 1px solid var(--separator-footer-color);
         background-color: var(--secondary-color);
+
+        .reviewContent {
+          background-color: var(--text-color);
+          border-radius: 200px;
+          color: var(--background-color);
+          font-size: 14px;
+          padding: 4px 6px;
+        }
+
+        div {
+          img {
+            margin: 0 3px;
+            width: 20px;
+            height: 20px;
+          }
+        }
+
+        p {
+          margin: 0;
+          font-size: 16px;
+          font-weight: 500;
+          margin-top: 5px;
+          text-align: center;
+        }
       }
     }
 
