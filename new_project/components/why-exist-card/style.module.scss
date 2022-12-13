@@ -1,0 +1,27 @@
+.whyExistCard {
+  margin: 200px 10.5% 0;
+
+  .title {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--text-color);
+    margin: 0 0 64px 0;
+  }
+
+  .container {
+    display: flex;
+    gap: 20px;
+
+    .leftContainer {
+      background-color: var(--forth-color);
+      height: 372px;
+      border-radius: 16px;
+    }
+
+    .rightContainer {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+}

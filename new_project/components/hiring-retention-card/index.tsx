@@ -67,7 +67,9 @@ export default function HiringAndRetentionCard() {
       <div className={style.overallCard}>
         <h2 className={style.subTitle}>Talent Retention</h2>
 
-        <span>2x higher retention than industry average.</span>
+        <span className={style.highlight4}>
+          2x higher retention than industry average.
+        </span>
 
         <p>
           We take care of your engineering team, making sure everyone has a
