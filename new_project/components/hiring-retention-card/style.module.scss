@@ -1,0 +1,67 @@
+.hiringRetentionCard {
+  margin: 0 10.5%;
+  margin-top: 200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 110px;
+  row-gap: 42px;
+
+  .specificCard {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--text-color);
+  }
+
+  .overallCard {
+    width: 545px;
+    height: 430px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin: 0;
+      margin-right: auto;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 25px;
+      font-weight: 500;
+      margin: 0;
+      text-align: left;
+    }
+
+    .highlight {
+      background-color: var(--third-color);
+      padding: 9px 16px;
+      border-radius: 20px;
+      font-size: 16px;
+      font-weight: 700;
+      margin: 12px 0 24px 0;
+      margin-right: auto;
+    }
+
+    .highlight2 {
+      @extend .highlight;
+      background-color: var(--forth-color);
+    }
+
+    .highlight3 {
+      @extend .highlight;
+      background-color: var(--eighth-color);
+    }
+
+    .highlight4 {
+      @extend .highlight;
+      background-color: var(--seventh-color);
+    }
+
+    img {
+      object-fit: cover;
+    }
+  }
+}
