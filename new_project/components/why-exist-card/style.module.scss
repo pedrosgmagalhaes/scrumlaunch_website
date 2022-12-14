@@ -9,19 +9,49 @@
   }
 
   .container {
-    display: flex;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: 0.7fr 1fr;
+    column-gap: 20px;
+
+    .divContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
 
     .leftContainer {
       background-color: var(--forth-color);
       height: 372px;
       border-radius: 16px;
+      width: 486px;
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--text-color);
+      line-height: 150%;
+      padding: 28px;
+      display: flex;
+      align-items: flex-end;
     }
 
     .rightContainer {
       display: flex;
       align-items: center;
       gap: 20px;
+      width: auto;
+
+      .colorContainer {
+        background-color: var(--seventh-color);
+        height: 176px;
+        padding: 28px;
+        border-radius: 16px;
+        line-height: 150%;
+        font-size: 15px;
+      }
+
+      .colorContainer2 {
+        @extend .colorContainer;
+        background-color: var(--eighth-color);
+      }
     }
   }
 }

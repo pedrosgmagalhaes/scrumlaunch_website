@@ -6,6 +6,7 @@ import StartupCard from '../../components/startup-teams-card'
 import ServicesCard from '../../components/services-card'
 import HiringRetentionCard from '../../components/hiring-retention-card'
 import WhyExistsCard from '../../components/why-exist-card'
+import BlogCard from '../../components/blog-card'
 import Layout from '../../components/layout'
 import Button from '../../components/buttons/accept-button'
 import Arrow from '../../public/icons/arrowBlack.svg'
@@ -111,6 +112,8 @@ export default function Home() {
       <HiringRetentionCard />
 
       <WhyExistsCard />
+
+      <BlogCard />
     </Layout>
   )
 }

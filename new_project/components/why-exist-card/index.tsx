@@ -15,13 +15,13 @@ export default function WhyExistCard() {
           scour the globe on their own.
         </div>
 
-        <div>
+        <div className={style.divContainer}>
           <div className={style.rightContainer}>
-            <div>
-              Here at ScrumLaunch we have high expectations. And you should too.
-              We only hire the best. We expect the people you hire through us to
-              perform at the same standard as the best domestic talent you could
-              hire..
+            <div className={style.colorContainer}>
+              Here at ScrumLaunch <b>we have high expectations.</b> And you
+              should too. We only hire the best. We expect the people you hire
+              through us to perform at the same standard as the best domestic
+              talent you could hire..
             </div>
 
             <div>
@@ -37,11 +37,11 @@ export default function WhyExistCard() {
               />
             </div>
 
-            <div>
-              Our growth is 100% organic and based on client referral. That
-              means your success is our success and we treat creating a team for
-              your business as if we are doing it for ourselves, because in a
-              way, we are.
+            <div className={style.colorContainer2}>
+              Our growth is <b>100% organic and based on client referral.</b>
+              That means your success is our success and we treat creating a
+              team for your business as if we are doing it for ourselves,
+              because in a way, we are.
             </div>
           </div>
         </div>
