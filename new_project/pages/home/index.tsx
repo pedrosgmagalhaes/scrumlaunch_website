@@ -7,6 +7,7 @@ import ServicesCard from '../../components/services-card'
 import HiringRetentionCard from '../../components/hiring-retention-card'
 import WhyExistsCard from '../../components/why-exist-card'
 import BlogCard from '../../components/blog-card'
+import ContactUsCard from '../../components/contact-us-card'
 import Layout from '../../components/layout'
 import Button from '../../components/buttons/accept-button'
 import Arrow from '../../public/icons/arrowBlack.svg'
@@ -30,6 +31,7 @@ export default function Home() {
           buttonText="Schedule a call"
           icon={Arrow}
           onClickHandler={() => {}}
+          color="black"
         />
 
         <TechTalentCard />
@@ -114,6 +116,8 @@ export default function Home() {
       <WhyExistsCard />
 
       <BlogCard />
+
+      <ContactUsCard />
     </Layout>
   )
 }

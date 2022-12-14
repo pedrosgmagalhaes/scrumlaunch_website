@@ -1,11 +1,13 @@
 import React from 'react'
 import Image from 'next/image'
+import Button from '../buttons/accept-button'
 import style from './style.module.scss'
 import Blog from '../../public/assets/blog.svg'
 import Blog2 from '../../public/assets/blog2.svg'
 import Blog3 from '../../public/assets/blog3.svg'
 import Blog4 from '../../public/assets/blog4.svg'
 import BlogAvatar from '../../public/assets/blogAvatar.svg'
+import Arrow from '../../public/icons/arrowBlack.svg'
 
 const articleArray = [
   {
@@ -133,6 +135,13 @@ export default function BlogCard() {
           </div>
         ))}
       </div>
+
+      <Button
+        buttonText="View more articles"
+        onClickHandler={() => {}}
+        icon={Arrow}
+        color="black"
+      />
     </div>
   )
 }
