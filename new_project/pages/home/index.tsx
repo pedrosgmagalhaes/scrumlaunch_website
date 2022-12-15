@@ -2,6 +2,7 @@ import React from 'react'
 import style from './style.module.scss'
 import TechTalentCard from '../../components/tech-talent-card'
 import ClientTestimonialCard from '../../components/client-testimonial-card'
+import CarouselCaseCard from '../../components/carousel-case-studies-card'
 import StartupCard from '../../components/startup-teams-card'
 import ServicesCard from '../../components/services-card'
 import HiringRetentionCard from '../../components/hiring-retention-card'
@@ -74,6 +75,8 @@ export default function Home() {
       </div>
 
       <ClientTestimonialCard />
+
+      <CarouselCaseCard />
 
       <StartupCard />
 

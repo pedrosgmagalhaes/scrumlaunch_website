@@ -1,0 +1,13 @@
+.carouselCase {
+  margin-top: 200px;
+  display: flex;
+  justify-content: flex-end;
+
+  .animationCase {
+    background-color: var(--ninth-color);
+    width: 1320px;
+    height: 883px;
+    border-top-left-radius: 32px;
+    border-bottom-left-radius: 32px;
+  }
+}
