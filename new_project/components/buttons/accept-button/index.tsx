@@ -40,7 +40,10 @@ export default function AcceptButton({
     >
       {buttonText}
 
-      <div className={style.icon}>
+      <div
+        className={style.icon}
+        style={{ backgroundColor: returnColorButton(true) }}
+      >
         <Image src={icon} alt="icon" />
       </div>
     </button>

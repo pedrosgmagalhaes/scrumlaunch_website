@@ -1,8 +1,6 @@
 .acceptButton {
   display: flex;
   align-items: center;
-  background-color: var(--text-color);
-  color: var(--background-color);
   border-radius: 200px;
   padding: 8px 7px 8px 32px;
   font-weight: 700;
@@ -11,7 +9,6 @@
   cursor: pointer;
 
   .icon {
-    background-color: var(--background-color);
     width: 42px;
     height: 42px;
     border-radius: 50%;
