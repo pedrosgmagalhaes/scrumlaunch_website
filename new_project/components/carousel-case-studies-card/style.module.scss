@@ -1,7 +1,12 @@
-.carouselCase {
+.carouselCaseComponent {
   margin-top: 200px;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+
+  .carouselCase {
+    display: flex;
+    justify-content: flex-end;
+  }
 
   .animationCase {
     background-color: var(--ninth-color);
@@ -9,5 +14,39 @@
     height: 883px;
     border-top-left-radius: 32px;
     border-bottom-left-radius: 32px;
+    padding: 42px;
+
+    .cards {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 28px 10px;
+        width: 170px;
+        height: 158px;
+        border-radius: 16px;
+        background-color: var(--background-color);
+      }
+    }
+  }
+
+  .carouselControl {
+    margin-top: 32px;
+    align-self: center;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    .selector {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 1px solid var(--text-color);
+      cursor: pointer;
+    }
   }
 }
