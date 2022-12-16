@@ -17,11 +17,11 @@ export default function CarouselCaseCard() {
     <div className={style.carouselCaseComponent}>
       <div className={style.carouselCase}>
         <div className={style.animationCase}>
-          <h2>Case studies.</h2>
+          <h2 className={style.caseTitle}>Case studies.</h2>
 
-          <div>
-            <div>
-              <h3>Harvest</h3>
+          <div className={style.cardContainer}>
+            <div className={style.caseTextContainer}>
+              <h3 className={style.caseSubTitle}>Harvest</h3>
 
               <p>
                 From an idea to a market leader with millions of users powered
@@ -40,8 +40,8 @@ export default function CarouselCaseCard() {
                 </div>
 
                 <div>
-                  15 Dedicated team members
-                  <span />
+                  15
+                  <span>Dedicated team members</span>
                 </div>
               </div>
 
@@ -53,9 +53,17 @@ export default function CarouselCaseCard() {
               />
             </div>
 
-            <Image src={CarouselMobile1} alt="mobile case 1" />
+            <Image
+              className={style.img1}
+              src={CarouselMobile1}
+              alt="mobile case 1"
+            />
 
-            <Image src={CarouselDesktop1} alt="desktop case 1" />
+            <Image
+              className={style.img2}
+              src={CarouselDesktop1}
+              alt="desktop case 1"
+            />
           </div>
         </div>
       </div>
