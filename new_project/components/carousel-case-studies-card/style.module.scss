@@ -16,7 +16,7 @@
     border-top-left-radius: 32px;
     border-bottom-left-radius: 32px;
     padding: 42px;
-    margin-left: auto;
+    margin-left: 5%;
 
     .caseTitle {
       font-size: 28px;
@@ -71,6 +71,11 @@
           font-size: 48px;
           font-weight: 700;
           margin: 0;
+        }
+
+        .caseSubTitle2 {
+          opacity: 0;
+          visibility: hidden;
         }
       }
     }
@@ -132,8 +137,6 @@
   .scrollLeft {
     animation: scrollCardToTheLeft 700ms forwards;
     animation-delay: 600ms;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
   }
 
   .scrollToRight {
@@ -153,33 +156,34 @@
 
   .moveToTheTop1 {
     animation: moveToTheTop1 700ms forwards;
-    animation-delay: 1200ms;
+    animation-delay: 1300ms;
   }
 
   .moveToTheTop2 {
     animation: moveToTheTop2 700ms forwards;
-    animation-delay: 1200ms;
+    animation-delay: 1300ms;
   }
 
   @keyframes scrollCardToTheLeft {
-    from {
-      margin-left: auto;
+    5% {
+      margin: 0;
     }
 
-    to {
+    100% {
+      margin: 0;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
       background-color: var(--tenth-color);
     }
   }
 
   @keyframes scrollCardToTheRight {
     from {
-      // width: 5000px;
-      // margin-left: -1200px;
+      //margin-left: auto;
     }
 
     to {
-      width: 1320px;
-      margin-left: auto;
+      //margin-left: auto;
       background-color: var(--ninth-color);
     }
   }
@@ -229,7 +233,7 @@
     to {
       visibility: visible;
       opacity: 1;
-      top: 13%;
+      bottom: 6%;
       z-index: 1;
     }
   }
@@ -243,6 +247,19 @@
       position: absolute;
       margin-left: -500px;
       opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  @keyframes moveTextToTheRight {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      position: absolute;
+      margin-left: -500px;
+      opacity: 1;
       visibility: hidden;
     }
   }

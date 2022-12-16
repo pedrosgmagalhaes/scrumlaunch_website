@@ -1,4 +1,5 @@
 import React from 'react'
+import Head from 'next/head'
 import style from './style.module.scss'
 import TechTalentCard from '../../components/tech-talent-card'
 import ClientTestimonialCard from '../../components/client-testimonial-card'
@@ -15,112 +16,119 @@ import Arrow from '../../public/icons/arrowBlack.svg'
 
 export default function Home() {
   return (
-    <Layout>
-      <div className={style.techTalent}>
-        <h1 className={style.titleTech}>
-          Tech talent that’s right for your project.
-        </h1>
+    <>
+      <Head>
+        <title>Home</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
 
-        <h6 className={style.techSubText}>
-          Every technology project is different and it’s just as important to
-          find the right person as it is to find a talented person.
-          ScrumLaunch’s talent hubs in Eastern Europe and Latin America combine
-          global scale
-        </h6>
+      <Layout>
+        <div className={style.techTalent}>
+          <h1 className={style.titleTech}>
+            Tech talent that’s right for your project.
+          </h1>
 
-        <Button
-          buttonText="Schedule a call"
-          icon={Arrow}
-          onClickHandler={() => {}}
-          color="black"
-        />
+          <h6 className={style.techSubText}>
+            Every technology project is different and it’s just as important to
+            find the right person as it is to find a talented person.
+            ScrumLaunch’s talent hubs in Eastern Europe and Latin America
+            combine global scale
+          </h6>
 
-        <TechTalentCard />
-      </div>
+          <Button
+            buttonText="Schedule a call"
+            icon={Arrow}
+            onClickHandler={() => {}}
+            color="black"
+          />
 
-      <div className={style.longTermPartner}>
-        <h2 className={style.title}>Your long term tech partner</h2>
+          <TechTalentCard />
+        </div>
 
-        <div className={style.majorContainer}>
-          <div className={style.container}>
-            <h4>
-              <div className={style.indicator}>1</div> Time savings:
-            </h4>
+        <div className={style.longTermPartner}>
+          <h2 className={style.title}>Your long term tech partner</h2>
 
-            <h2>45h</h2>
+          <div className={style.majorContainer}>
+            <div className={style.container}>
+              <h4>
+                <div className={style.indicator}>1</div> Time savings:
+              </h4>
 
-            <p>saved on avg for your tech team for each role</p>
+              <h2>45h</h2>
+
+              <p>saved on avg for your tech team for each role</p>
+            </div>
+
+            <div className={style.container2}>
+              <h4>
+                <div className={style.indicator}>2</div> Client lifetime:
+              </h4>
+
+              <h2>2+</h2>
+
+              <p>years average client partnership</p>
+            </div>
+
+            <div className={style.container3}>
+              <h4>
+                <div className={style.indicator}>3</div> Cost Savings:
+              </h4>
+
+              <h2>40-50%</h2>
+
+              <p>saving on development costs</p>
+            </div>
+          </div>
+        </div>
+
+        <ClientTestimonialCard />
+
+        <CarouselCaseCard />
+
+        <StartupCard />
+
+        <div className={style.thrive}>
+          <h1 className={style.thriveTitle}>
+            We thrive by making our clients thrive
+          </h1>
+
+          <div className={style.separator} />
+
+          <div className={style.infoThrive}>
+            <h5>Acquisitions by Unicorns</h5>
+
+            <span>2</span>
           </div>
 
-          <div className={style.container2}>
-            <h4>
-              <div className={style.indicator}>2</div> Client lifetime:
-            </h4>
+          <div className={style.separator} />
 
-            <h2>2+</h2>
+          <div className={style.infoThrive}>
+            <h5>Сlients raised Seed - Series D funding</h5>
 
-            <p>years average client partnership</p>
+            <span>10+</span>
           </div>
 
-          <div className={style.container3}>
-            <h4>
-              <div className={style.indicator}>3</div> Cost Savings:
-            </h4>
+          <div className={style.separator} />
 
-            <h2>40-50%</h2>
+          <div className={style.infoThrive}>
+            <h5>Active monthly users across clients’ products</h5>
 
-            <p>saving on development costs</p>
+            <span>100M</span>
           </div>
-        </div>
-      </div>
 
-      <ClientTestimonialCard />
-
-      <CarouselCaseCard />
-
-      <StartupCard />
-
-      <div className={style.thrive}>
-        <h1 className={style.thriveTitle}>
-          We thrive by making our clients thrive
-        </h1>
-
-        <div className={style.separator} />
-
-        <div className={style.infoThrive}>
-          <h5>Acquisitions by Unicorns</h5>
-
-          <span>2</span>
+          <div className={style.separator} />
         </div>
 
-        <div className={style.separator} />
+        <ServicesCard />
 
-        <div className={style.infoThrive}>
-          <h5>Сlients raised Seed - Series D funding</h5>
+        <HiringRetentionCard />
 
-          <span>10+</span>
-        </div>
+        <WhyExistsCard />
 
-        <div className={style.separator} />
+        <BlogCard />
 
-        <div className={style.infoThrive}>
-          <h5>Active monthly users across clients’ products</h5>
-
-          <span>100M</span>
-        </div>
-
-        <div className={style.separator} />
-      </div>
-
-      <ServicesCard />
-
-      <HiringRetentionCard />
-
-      <WhyExistsCard />
-
-      <BlogCard />
-
-      <ContactUsCard />
-    </Layout>
+        <ContactUsCard />
+      </Layout>
+    </>
   )
 }

@@ -41,6 +41,14 @@ export default function CarouselCaseCard() {
                 Harvest
               </h3>
 
+              <h3
+                className={`${style.caseSubTitle2} ${
+                  positionSelected !== 0 ? style.moveTextToTheRight : ''
+                }`}
+              >
+                Campus Reel.
+              </h3>
+
               <p
                 className={`${
                   positionSelected !== 0 ? style.moveTextToTheLeft : ''
