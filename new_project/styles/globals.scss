@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Sofia Pro';
   font-feature-settings: normal;
-  src: url('/public/fonts/SofiaProRegular.woff') format('woff');
+  src: url('../public/fonts/SofiaProRegular.ttf');
 }
 
 html,
@@ -33,6 +33,7 @@ a {
   --seventh-color: #ffd7c2;
   --eighth-color: #ffccdc;
   --ninth-color: #74c947;
+  --tenth-color: #5a5df6;
   --error-color: rgb(253, 36, 36);
 }
 
