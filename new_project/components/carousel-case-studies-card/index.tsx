@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Button from '../buttons/accept-button'
 import Arrow from '../../public/icons/arrowBlack.svg'
@@ -12,10 +12,46 @@ export default function CarouselCaseCard() {
   const [positionSelected, setPositionSelected] = useState(0)
   const [loadFirstTime, setLoadFirstTime] = useState(false)
 
+  useEffect(() => {
+    const firstElement = document.getElementById('carousel-control-position-0')
+    if (firstElement) {
+      firstElement.style.backgroundColor = '#1e1f21'
+    }
+  }, [])
+
   const handleChangeSelector = (position: number) => {
     setPositionSelected(position)
     if (!loadFirstTime) {
       setLoadFirstTime(true)
+    }
+  }
+
+  const togglePosition = (index: number) => {
+    const clickedBtn = document.getElementById(
+      `carousel-control-position-${index}`
+    )
+    const prevBtn = document.getElementById(
+      `carousel-control-position-${positionSelected}`
+    )
+    if (clickedBtn && prevBtn) {
+      const distance =
+        Number(clickedBtn.offsetLeft) - Number(prevBtn.offsetLeft)
+      const animation = {
+        left: `${distance}px`,
+        backgroundColor: '#f4f2ec',
+      }
+      const animationPrev = {
+        left: `${-distance}px`,
+        backgroundColor: '#1e1f21',
+      }
+      prevBtn.animate(animation, {
+        duration: 400,
+        fill: 'forwards',
+      })
+      clickedBtn.animate(animationPrev, {
+        duration: 400,
+        fill: 'forwards',
+      })
     }
   }
 
@@ -162,16 +198,16 @@ export default function CarouselCaseCard() {
         {new Array(5).fill({}).map((_, index) => (
           <div
             key={Math.random()}
+            id={`carousel-control-position-${index}`}
             role="presentation"
-            className={`${style.selector} ${
-              positionSelected === index && index !== 0 ? style.moveToRight : ''
-            }`}
+            className={style.selector}
             style={{
-              backgroundColor:
-                positionSelected === index ? '#1E1F21' : '#f4f2ec',
               left: `${index * 40}px`,
             }}
-            onClick={() => handleChangeSelector(index)}
+            onClick={() => {
+              handleChangeSelector(index)
+              togglePosition(index)
+            }}
             onKeyDown={() => handleChangeSelector(index)}
           />
         ))}
