@@ -29,7 +29,13 @@ export default function CarouselCaseCard() {
             positionSelected === 0 && loadFirstTime ? style.scrollToRight : ''
           }`}
         >
-          <h2 className={style.caseTitle}>Case studies.</h2>
+          <h2
+            className={`${style.caseTitle} ${
+              positionSelected !== 0 ? style.transformToWhite : ''
+            }`}
+          >
+            Case studies.
+          </h2>
 
           <div className={style.cardContainer}>
             <div className={style.caseTextContainer}>
@@ -50,8 +56,17 @@ export default function CarouselCaseCard() {
               </h3>
 
               <p
-                className={`${
+                className={`${style.subTextContext} ${
                   positionSelected !== 0 ? style.moveTextToTheLeft : ''
+                }`}
+              >
+                From an idea to a market leader with millions of users powered
+                by ScrumLaunch.
+              </p>
+
+              <p
+                className={`${style.subTextContext2} ${
+                  positionSelected !== 0 ? style.moveTextToTheRight : ''
                 }`}
               >
                 From an idea to a market leader with millions of users powered
@@ -61,6 +76,27 @@ export default function CarouselCaseCard() {
               <div
                 className={`${style.cards} ${
                   positionSelected !== 0 ? style.moveTextToTheLeft : ''
+                }`}
+              >
+                <div>
+                  10M
+                  <span>Active users</span>
+                </div>
+
+                <div>
+                  $3M
+                  <span>Saved on Devlopment Costs</span>
+                </div>
+
+                <div>
+                  15
+                  <span>Dedicated team members</span>
+                </div>
+              </div>
+
+              <div
+                className={`${style.cards2} ${
+                  positionSelected !== 0 ? style.moveTextToTheRight : ''
                 }`}
               >
                 <div>

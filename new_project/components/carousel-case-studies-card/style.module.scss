@@ -59,12 +59,21 @@
       .caseTextContainer {
         margin-top: 150px;
 
-        p {
+        .subTextContext {
           font-size: 18px;
           font-weight: 700;
           line-height: 30px;
           width: 80%;
           margin-bottom: 30px;
+        }
+
+        .subTextContext2 {
+          @extend .subTextContext;
+          color: var(--background-color);
+          position: absolute;
+          opacity: 0;
+          visibility: hidden;
+          right: -600px;
         }
 
         .caseSubTitle {
@@ -74,8 +83,12 @@
         }
 
         .caseSubTitle2 {
+          @extend .caseSubTitle;
+          position: absolute;
           opacity: 0;
           visibility: hidden;
+          right: -600px;
+          color: var(--background-color);
         }
       }
     }
@@ -108,12 +121,20 @@
         }
       }
     }
+
+    .cards2 {
+      @extend .cards;
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+      right: -600px;
+    }
   }
 
   .carouselControl {
     margin-top: 32px;
     align-self: center;
-    margin-left: -3%;
+    margin-left: -10%;
     display: flex;
     gap: 20px;
     align-items: center;
@@ -162,6 +183,22 @@
   .moveToTheTop2 {
     animation: moveToTheTop2 700ms forwards;
     animation-delay: 1300ms;
+  }
+
+  .moveTextToTheRight {
+    animation: moveTextToTheRight 700ms forwards;
+    animation-delay: 600ms;
+  }
+
+  .transformToWhite {
+    animation: transformToWhite 700ms forwards;
+    animation-delay: 500ms;
+  }
+
+  @keyframes transformToWhite {
+    to {
+      color: var(--background-color);
+    }
   }
 
   @keyframes scrollCardToTheLeft {
@@ -257,10 +294,10 @@
     }
 
     to {
-      position: absolute;
-      margin-left: -500px;
+      position: relative;
+      right: 0;
       opacity: 1;
-      visibility: hidden;
+      visibility: visible;
     }
   }
 }
