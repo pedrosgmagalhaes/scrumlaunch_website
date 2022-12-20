@@ -64,6 +64,7 @@
   }
 }
 
+// TABLET
 @media screen and (max-width: 768px) {
   #header {
     justify-content: space-between;
@@ -76,6 +77,21 @@
     .menuIcon,
     .dropdown {
       display: flex;
+    }
+  }
+}
+
+// PHONE
+@media screen and (max-width: 376px) {
+  #header {
+    padding: 0 3%;
+
+    .containerBtn {
+      gap: 20px;
+
+      .contactUseBtn {
+        padding: 7px 20px;
+      }
     }
   }
 }
