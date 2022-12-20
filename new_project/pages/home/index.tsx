@@ -45,7 +45,7 @@ export default function Home() {
           <TechTalentCard />
         </div>
 
-        <div className={style.longTermPartner}>
+        {/* <div className={style.longTermPartner}>
           <h2 className={style.title}>Your long term tech partner</h2>
 
           <div className={style.majorContainer}>
@@ -127,7 +127,7 @@ export default function Home() {
 
         <BlogCard />
 
-        <ContactUsCard />
+        <ContactUsCard /> */}
       </Layout>
     </>
   )

@@ -4,6 +4,7 @@ import style from './style.module.scss'
 import TechTalent1 from '../../public/assets/techTalent1.svg'
 import TechTalent2 from '../../public/assets/techTalent2.svg'
 import TechTalent3 from '../../public/assets/techTalent3.svg'
+import TechTalentMobile from '../../public/assets/techTalentMobile.svg'
 
 export default function TechTalentCard() {
   return (
@@ -46,6 +47,12 @@ export default function TechTalentCard() {
           <p>employees</p>
         </div>
 
+        <Image
+          src={TechTalentMobile}
+          alt="business guy"
+          className={style.mobileImage}
+        />
+
         <div className={style.testCard}>
           <div className={style.unit}>
             15 <p>units</p>
@@ -60,7 +67,7 @@ export default function TechTalentCard() {
       <Image
         src={TechTalent3}
         alt="Tech Talent Image 3"
-        className={style.imageCard}
+        className={`${style.imageCard} ${style.mobileCard}`}
       />
     </div>
   )

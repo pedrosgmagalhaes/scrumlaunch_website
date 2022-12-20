@@ -14,6 +14,14 @@
     object-fit: contain;
   }
 
+  .mobileCard {
+    display: initial;
+  }
+
+  .mobileImage {
+    display: none;
+  }
+
   .cardMultiple {
     @extend .fixSize;
     position: relative;
@@ -116,6 +124,27 @@
       width: 50%;
       background-color: var(--forth-color);
       color: var(--text-color);
+    }
+  }
+}
+
+// TABLET
+@media screen and (max-width: 768px) {
+  .techTalentCard {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    .mobileCard {
+      display: none;
+    }
+
+    .cardInfoCompany {
+      flex-direction: row;
+      grid-area: 2 / 1 / 3;
+    }
+
+    .mobileImage {
+      display: initial;
     }
   }
 }
