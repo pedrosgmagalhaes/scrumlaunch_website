@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import SocialIcons from '../social-icons/index'
 import Logo from '../../public/icons/LogoScrumlaunch.svg'

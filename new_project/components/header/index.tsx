@@ -1,15 +1,12 @@
-import React, { useState, useRef } from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import styles from './styles.module.scss'
-import useClickOutside from '../../hooks/useClickOutside'
+import SocialIcons from '../social-icons'
 import Scrumlaunch from '../../public/icons/LogoScrumlaunch.svg'
 import MenuIcon from '../../public/icons/menu.svg'
 
 function Header() {
-  const ref = useRef(null)
   const [showMenuDropdown, setShowMenuDropdown] = useState(false)
-
-  useClickOutside(ref, () => setShowMenuDropdown(false))
 
   const toggleDropdown = () => {
     setShowMenuDropdown((prev) => !prev)
@@ -30,29 +27,38 @@ function Header() {
   )
 
   return (
-    <div id={styles.header}>
-      <Image src={Scrumlaunch} alt="scrumlaunch" className={styles.logoSL} />
+    <div
+      id={styles.header}
+      style={{
+        height: showMenuDropdown ? '420px' : '95px',
+      }}
+    >
+      <div className={styles.desktopContainer}>
+        <Image src={Scrumlaunch} alt="scrumlaunch" className={styles.logoSL} />
 
-      <nav className={styles.navbar}>{returnAnchorTags()}</nav>
+        <nav className={styles.navbar}>{returnAnchorTags()}</nav>
 
-      <div className={styles.containerBtn}>
-        <button type="button" className={styles.contactUseBtn}>
-          Contact Us
-        </button>
+        <div className={styles.containerBtn}>
+          <button type="button" className={styles.contactUseBtn}>
+            Contact Us
+          </button>
 
-        <div
-          role="presentation"
-          className={styles.menuIcon}
-          onClick={toggleDropdown}
-          onKeyDown={toggleDropdown}
-        >
-          <Image src={MenuIcon} alt="menu" />
+          <div
+            role="presentation"
+            className={styles.menuIcon}
+            onClick={toggleDropdown}
+            onKeyDown={toggleDropdown}
+          >
+            <Image src={MenuIcon} alt="menu" />
+          </div>
         </div>
       </div>
 
       {showMenuDropdown && (
-        <div ref={ref} className={styles.dropdown}>
+        <div className={styles.dropdown}>
           {returnAnchorTags()}
+
+          <SocialIcons />
         </div>
       )}
     </div>
@@ -60,6 +66,3 @@ function Header() {
 }
 
 export default Header
-
-// TODO
-// check menu dropdown style (figma not clear)

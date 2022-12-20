@@ -1,11 +1,17 @@
 #header {
   border-bottom: 1.5px solid var(--border-color);
-  width: 100%;
-  height: 95px;
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
   position: relative;
+  justify-content: center;
+  flex-direction: column;
+  transition: height 0.3s ease;
+
+  .desktopContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+  }
 
   .logoSL {
     width: 80px;
@@ -49,26 +55,31 @@
 
   .dropdown {
     display: none;
-    position: absolute;
-    border: 1px solid var(--separator-footer-color);
-    border-radius: 4px;
-    width: 140px;
-    height: 200px;
-    top: 70%;
-    right: 5%;
-    z-index: 5;
-    background-color: var(--background-color);
+    width: 100%;
     flex-direction: column;
     justify-content: space-between;
-    padding: 20px;
+    align-items: center;
+    margin-top: 30px;
+    gap: 20px;
+
+    a {
+      font-size: 20px;
+    }
+
+    div {
+      margin-top: 20px;
+    }
   }
 }
 
 // TABLET
 @media screen and (max-width: 768px) {
   #header {
-    justify-content: space-between;
     padding: 0 4%;
+
+    .desktopContainer {
+      justify-content: space-between;
+    }
 
     .navbar {
       display: none;
