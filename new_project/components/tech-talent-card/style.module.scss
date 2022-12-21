@@ -18,8 +18,9 @@
     display: initial;
   }
 
-  .mobileImage {
+  .desktopHide {
     display: none;
+    align-self: flex-start;
   }
 
   .cardMultiple {
@@ -49,7 +50,7 @@
         bottom: 15px;
         left: 18px;
         margin: 0;
-        font-weight: 500;
+        font-weight: 700;
         font-size: 14px;
         color: var(--fifth-color);
       }
@@ -103,7 +104,6 @@
       font-size: 42px;
       font-weight: 700;
       line-height: 40px;
-      grid-area: employees;
 
       p {
         font-weight: 100;
@@ -126,6 +126,11 @@
       color: var(--text-color);
     }
   }
+
+  .cardInfoCompanyMobile {
+    @extend .cardInfoCompany;
+    display: none;
+  }
 }
 
 // TABLET
@@ -133,18 +138,103 @@
   .techTalentCard {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 16px;
 
     .mobileCard {
       display: none;
     }
 
     .cardInfoCompany {
-      flex-direction: row;
-      grid-area: 2 / 1 / 3;
+      display: none;
     }
 
-    .mobileImage {
+    .desktopHide,
+    .cardInfoCompanyMobile {
       display: initial;
+    }
+  }
+}
+
+// PHONE
+@media screen and (max-width: 376px) {
+  .techTalentCard {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    column-gap: 12px;
+    row-gap: 12px;
+
+    .fixSize {
+      width: 166px;
+      height: 120px;
+    }
+
+    .imageCard {
+      object-fit: cover;
+      border-radius: 24px;
+    }
+
+    .cardMultiple {
+      grid-area: 1 / 2 / 3 / 3;
+      height: 100%;
+
+      .cardElement {
+        height: 104px;
+
+        li {
+          font-size: 14px;
+          margin-top: 15px;
+        }
+      }
+
+      .cardElement2 {
+        height: 104px;
+        top: 45px;
+      }
+
+      .cardElement3 {
+        height: 104px;
+        top: 95px;
+      }
+
+      .cardElement4 {
+        height: 104px;
+        top: 148px;
+      }
+    }
+
+    .mobileCard,
+    .cardInfoCompany {
+      display: initial;
+    }
+
+    .cardInfoCompany {
+      grid-area: 3 / 1 / 5 / 2;
+      height: 100%;
+
+      .employees {
+        font-size: 28px;
+        line-height: 28px;
+        height: 105px;
+
+        p {
+          font-size: 12px;
+          line-height: 18px;
+          margin-top: 6px;
+        }
+      }
+    }
+
+    .mobileCard {
+      grid-area: 3 / 2 / 5 / 3;
+      height: 100%;
+      object-fit: contain;
+      margin-top: -45px;
+    }
+
+    .desktopHide,
+    .cardInfoCompanyMobile {
+      display: none;
     }
   }
 }

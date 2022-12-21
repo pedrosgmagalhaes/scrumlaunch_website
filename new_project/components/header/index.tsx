@@ -4,9 +4,11 @@ import styles from './styles.module.scss'
 import SocialIcons from '../social-icons'
 import Scrumlaunch from '../../public/icons/LogoScrumlaunch.svg'
 import MenuIcon from '../../public/icons/menu.svg'
+import Arrow from '../../public/icons/toggleArrow.svg'
 
 function Header() {
   const [showMenuDropdown, setShowMenuDropdown] = useState(false)
+  const [showServices, setShowServices] = useState(false)
 
   const toggleDropdown = () => {
     setShowMenuDropdown((prev) => !prev)
@@ -16,7 +18,14 @@ function Header() {
     <>
       <a href="/about-us">About Us</a>
 
-      <a href="/services">Services</a>
+      <a href="/services" className={styles.services}>
+        Services
+        <Image
+          src={Arrow}
+          alt="arrow"
+          className={`${showServices ? styles.rotate : ''}`}
+        />
+      </a>
 
       <a href="/case-studies">Case Studies</a>
 
@@ -27,12 +36,7 @@ function Header() {
   )
 
   return (
-    <div
-      id={styles.header}
-      style={{
-        height: showMenuDropdown ? '420px' : '95px',
-      }}
-    >
+    <div id={styles.header}>
       <div className={styles.desktopContainer}>
         <Image src={Scrumlaunch} alt="scrumlaunch" className={styles.logoSL} />
 
@@ -54,13 +58,13 @@ function Header() {
         </div>
       </div>
 
-      {showMenuDropdown && (
-        <div className={styles.dropdown}>
-          {returnAnchorTags()}
+      <div
+        className={`${styles.dropdown} ${showMenuDropdown ? styles.show : ''}`}
+      >
+        {returnAnchorTags()}
 
-          <SocialIcons />
-        </div>
-      )}
+        <SocialIcons />
+      </div>
     </div>
   )
 }

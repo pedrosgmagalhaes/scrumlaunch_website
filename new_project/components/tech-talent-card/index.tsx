@@ -47,12 +47,6 @@ export default function TechTalentCard() {
           <p>employees</p>
         </div>
 
-        <Image
-          src={TechTalentMobile}
-          alt="business guy"
-          className={style.mobileImage}
-        />
-
         <div className={style.testCard}>
           <div className={style.unit}>
             15 <p>units</p>
@@ -69,6 +63,31 @@ export default function TechTalentCard() {
         alt="Tech Talent Image 3"
         className={`${style.imageCard} ${style.mobileCard}`}
       />
+
+      <div className={style.cardInfoCompanyMobile}>
+        <div className={style.employees}>
+          150+
+          <p>employees</p>
+        </div>
+      </div>
+
+      <Image
+        src={TechTalentMobile}
+        alt="business guy"
+        className={style.desktopHide}
+      />
+
+      <div className={style.cardInfoCompanyMobile}>
+        <div className={style.testCard}>
+          <div className={style.unit}>
+            15 <p>units</p>
+          </div>
+
+          <div className={style.developers}>
+            97 <p>developers</p>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
