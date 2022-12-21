@@ -83,11 +83,11 @@ export default function Home() {
 
         <ClientTestimonialCard />
 
-        {/* <CarouselCaseCard />
+        {/* <CarouselCaseCard /> */}
 
         <StartupCard />
 
-        <div className={style.thrive}>
+        {/* <div className={style.thrive}>
           <h1 className={style.thriveTitle}>
             We thrive by making our clients thrive
           </h1>

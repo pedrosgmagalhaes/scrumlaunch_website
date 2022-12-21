@@ -15,6 +15,10 @@
       margin: 0;
     }
 
+    .mobileTitle {
+      display: none;
+    }
+
     .companyIcons {
       display: grid;
       align-self: flex-end;
@@ -31,6 +35,80 @@
         justify-content: center;
         align-items: center;
         border-radius: 16px;
+      }
+    }
+  }
+}
+
+// TABLET
+@media screen and (max-width: 768px) {
+  .startupCard {
+    .container {
+      margin: 0 32px;
+
+      .title {
+        text-align: left;
+        width: 100%;
+        font-size: 38px;
+        line-height: 50px;
+      }
+
+      .companyIcons {
+        row-gap: 8px;
+        column-gap: 8px;
+        align-self: center;
+
+        .icons {
+          width: 170px;
+          height: 132px;
+        }
+      }
+    }
+  }
+}
+
+// PHONE
+@media screen and (max-width: 376px) {
+  .startupCard {
+    .container {
+      .title {
+        display: none;
+      }
+
+      .mobileTitle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        span {
+          font-size: 140px;
+          font-weight: 700;
+          line-height: 182px;
+        }
+
+        h1 {
+          font-size: 20px;
+          line-height: 26px;
+          text-align: center;
+        }
+      }
+
+      .companyIcons {
+        row-gap: 8px;
+        column-gap: 8px;
+        align-self: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-top: 40px;
+
+        .icons {
+          width: 107px;
+          height: 83px;
+
+          img {
+            width: 85px;
+            height: 21px;
+          }
+        }
       }
     }
   }

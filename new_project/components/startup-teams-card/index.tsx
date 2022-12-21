@@ -31,6 +31,12 @@ export default function StartupCard() {
           Join 100+ startups that build successful teams with ScrumLaunch
         </h1>
 
+        <div className={style.mobileTitle}>
+          <span>100+</span>
+
+          <h1>startups that build successful teams with ScrumLaunch</h1>
+        </div>
+
         <div className={style.companyIcons}>
           {iconArray.map((icon) => (
             <div key={Math.random()} className={style.icons}>
