@@ -36,3 +36,49 @@
     }
   }
 }
+
+// TABLET
+@media screen and (max-width: 768px) {
+  .servicesCard {
+    .title {
+      font-size: 38px;
+    }
+
+    .serviceContainer {
+      width: 704px;
+      min-width: auto;
+
+      img {
+        width: 352px;
+        height: 398px;
+        object-fit: cover;
+        border-top-right-radius: 32px;
+        border-bottom-right-radius: 32px;
+      }
+    }
+  }
+}
+
+// PHONE
+@media screen and (max-width: 376px) {
+  .servicesCard {
+    .title {
+      font-size: 32px;
+    }
+
+    .serviceContainer {
+      width: 343px;
+
+      .container {
+        height: 172px;
+        font-size: 20px;
+        line-height: 30px;
+      }
+
+      img {
+        width: 171px;
+        height: 172px;
+      }
+    }
+  }
+}
