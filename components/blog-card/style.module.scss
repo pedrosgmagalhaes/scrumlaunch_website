@@ -173,4 +173,45 @@
       }
     }
   }
+
+  .carouselControl {
+    margin-top: 28px;
+    margin-bottom: 48px;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    height: 20px;
+    gap: 20px;
+
+    .selector {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 1px solid var(--text-color);
+      cursor: pointer;
+    }
+  }
+}
+
+// TABLET
+@media screen and (max-width: 768px) {
+  .blogCard {
+    .title {
+      font-size: 32px;
+      margin-top: 39px;
+    }
+
+    .blogCardContainer {
+      display: none;
+    }
+
+    .articleSecondaryCard {
+      width: 100%;
+      overflow: scroll;
+      flex-wrap: nowrap;
+      padding-left: 32px;
+      padding-right: 32px;
+      gap: 18px;
+    }
+  }
 }

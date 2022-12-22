@@ -123,11 +123,11 @@ export default function Home() {
 
         <HiringRetentionCard />
 
-        {/*  <WhyExistsCard />
+        <WhyExistsCard />
 
         <BlogCard />
 
-        <ContactUsCard /> */}
+        {/* <ContactUsCard /> */}
       </Layout>
     </>
   )

@@ -46,6 +46,29 @@ export default function WhyExistCard() {
           </div>
         </div>
       </div>
+
+      <div className={style.containerMobile}>
+        <div className={style.leftContainer}>
+          US companies need to access to great talent and shouldn’t have to
+          scour the globe on their own.
+        </div>
+
+        <Image src={WhyExist2} alt="people happy in an business meeting" />
+
+        <Image src={WhyExist1} alt="people working in an workspace" />
+
+        <div className={style.colorContainer2}>
+          Your success is our success, and we treat hiring a team for your
+          business as if we were doing it for ourselves.
+        </div>
+
+        <div className={style.colorContainer}>
+          Here at ScrumLaunch <b>we have high expectations.</b> And you should
+          too. We only hire the best. We expect the people you hire through us
+          to perform at the same standard as the best domestic talent you could
+          hire..
+        </div>
+      </div>
     </div>
   )
 }

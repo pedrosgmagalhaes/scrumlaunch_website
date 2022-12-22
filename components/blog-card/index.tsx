@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import Button from '../buttons/accept-button'
 import style from './style.module.scss'
@@ -43,6 +43,12 @@ const articleArray = [
 ]
 
 export default function BlogCard() {
+  const [page, setPage] = useState(0)
+  const numberOfPages =
+    window.screen.width >= 375
+      ? Math.round(articleArray.length / 2)
+      : articleArray.length
+
   return (
     <div className={style.blogCard}>
       <h1 className={style.title}>Blog</h1>
@@ -133,6 +139,21 @@ export default function BlogCard() {
               </div>
             </div>
           </div>
+        ))}
+      </div>
+
+      <div className={style.carouselControl}>
+        {new Array(numberOfPages).fill({}).map((_, index) => (
+          <div
+            key={Math.random()}
+            role="presentation"
+            className={style.selector}
+            style={{
+              backgroundColor: `${page === index ? '#1e1f21' : '#f4f2ec'}`,
+            }}
+            // onClick={() => handleChangeSelector(index)}
+            // onKeyDown={() => handleChangeSelector(index)}
+          />
         ))}
       </div>
 
