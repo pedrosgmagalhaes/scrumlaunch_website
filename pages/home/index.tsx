@@ -83,7 +83,7 @@ export default function Home() {
 
         <ClientTestimonialCard />
 
-        {/* <CarouselCaseCard /> */}
+        <CarouselCaseCard />
 
         <StartupCard />
 

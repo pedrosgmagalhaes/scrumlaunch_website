@@ -150,6 +150,11 @@
     }
   }
 
+  .mobileButton {
+    display: none;
+    margin: 48px auto 0;
+  }
+
   .scrollLeft {
     animation: scrollCardToTheLeft 700ms forwards;
     animation-delay: 600ms;
@@ -211,11 +216,9 @@
 
   @keyframes scrollCardToTheRight {
     from {
-      //margin-left: auto;
     }
 
     to {
-      //margin-left: auto;
       background-color: var(--ninth-color);
     }
   }
@@ -236,6 +239,7 @@
   @keyframes moveToTheTop1 {
     from {
       opacity: 0;
+      bottom: -100%;
     }
 
     to {
@@ -249,6 +253,7 @@
   @keyframes moveToTheTop2 {
     from {
       opacity: 0;
+      top: 1500px;
     }
 
     to {
@@ -282,6 +287,181 @@
       right: 0;
       opacity: 1;
       visibility: visible;
+    }
+  }
+}
+
+// TABLET
+@media screen and (max-width: 768px) {
+  .carouselCaseComponent {
+    margin-top: 176px;
+
+    .carouselCase {
+      .animationCase {
+        padding: 32px;
+
+        .caseTitle {
+          font-size: 24px;
+        }
+
+        .cardContainer {
+          .caseTextContainer {
+            margin-top: 130px;
+
+            .caseSubTitle {
+              font-size: 38px;
+            }
+
+            .subTextContext {
+              font-size: 18px;
+              width: 55%;
+              line-height: 27px;
+            }
+
+            .cards {
+              gap: 12px;
+              margin-bottom: 48px;
+
+              div {
+                padding: 0 18px;
+                width: 115px;
+                height: 147px;
+                font-size: 28px;
+                line-height: 28px;
+                gap: 8px;
+                justify-content: center;
+
+                span {
+                  font-size: 14px;
+                  line-height: 21px;
+                }
+              }
+            }
+          }
+
+          .img1 {
+            right: 6.5%;
+            bottom: 6%;
+          }
+
+          .img2 {
+            right: -49%;
+          }
+
+          .img3 {
+            left: 65%;
+          }
+
+          .img4 {
+            left: 56%;
+          }
+        }
+      }
+    }
+
+    .carouselControl {
+      margin-top: 24px;
+      margin-left: -22%;
+    }
+  }
+}
+
+// PHONE
+@media screen and (max-width: 376px) {
+  .carouselCaseComponent {
+    margin-top: 100px;
+
+    .carouselCase {
+      overflow: hidden;
+
+      .animationCase {
+        padding: 32px 18px;
+        height: 662px;
+
+        .caseTitle {
+          font-size: 16px;
+        }
+
+        .cardContainer {
+          .caseTextContainer {
+            margin-top: 40px;
+
+            button {
+              display: none;
+            }
+
+            .caseSubTitle {
+              font-size: 32px;
+            }
+
+            .subTextContext {
+              font-size: 14px;
+              width: 80%;
+              line-height: 21px;
+            }
+
+            .cards {
+              gap: 14px;
+              margin-bottom: 48px;
+
+              div {
+                padding: 0 18px;
+                width: 98px;
+                height: 122px;
+
+                span {
+                  font-size: 12px;
+                  line-height: 18px;
+                }
+              }
+            }
+          }
+
+          .img1 {
+            width: 94px;
+            height: auto;
+            right: 65%;
+            bottom: -2%;
+          }
+
+          .img2 {
+            width: 390px;
+            right: -25%;
+            top: 41%;
+          }
+
+          .img3 {
+            left: 5%;
+          }
+
+          .img4 {
+            left: 20%;
+          }
+        }
+      }
+    }
+
+    .carouselControl {
+      margin-top: 22px;
+      margin-left: -42%;
+    }
+
+    .mobileButton {
+      display: initial;
+    }
+
+    @keyframes moveToTheTop1 {
+      from {
+        opacity: 0;
+        bottom: -100%;
+      }
+
+      to {
+        visibility: visible;
+        opacity: 1;
+        z-index: 2;
+        bottom: 2%;
+      }
     }
   }
 }
