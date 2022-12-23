@@ -47,12 +47,28 @@ export default function BlogCard() {
   const [numberOfPages, setNumberOfPages] = useState(0)
 
   useEffect(() => {
+    const container = document.getElementById('article-mobile-scroll')
     if (typeof window !== 'undefined') {
       const localNumber =
         window.screen.width > 376
           ? Math.round(articleArray.length / 2)
           : articleArray.length
       setNumberOfPages(localNumber)
+    }
+
+    if (container !== null) {
+      container.addEventListener('scroll', (event) => {
+        const { scrollLeft } = event.target
+        const position = Math.round(scrollLeft / 343)
+        console.log('qq ', position)
+        setPage(position)
+      })
+    }
+
+    return () => {
+      if (container !== null) {
+        container.removeEventListener('scroll', () => {})
+      }
     }
   }, [])
 

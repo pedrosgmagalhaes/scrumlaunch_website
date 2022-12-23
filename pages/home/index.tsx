@@ -127,7 +127,7 @@ export default function Home() {
 
         <BlogCard />
 
-        {/* <ContactUsCard /> */}
+        <ContactUsCard />
       </Layout>
     </>
   )
