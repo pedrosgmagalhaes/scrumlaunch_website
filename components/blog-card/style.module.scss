@@ -179,10 +179,10 @@
   }
 
   .carouselControl {
+    display: none;
     margin-top: 28px;
     margin-bottom: 48px;
     align-self: center;
-    display: flex;
     align-items: center;
     height: 20px;
     gap: 20px;
@@ -283,6 +283,10 @@
           }
         }
       }
+    }
+
+    .carouselControl {
+      display: flex;
     }
   }
 }
