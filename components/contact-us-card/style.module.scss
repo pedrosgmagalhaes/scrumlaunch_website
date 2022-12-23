@@ -145,3 +145,36 @@
     }
   }
 }
+
+// TABLET
+@media screen and (max-width: 768px) {
+  .contactUsCard {
+    margin-top: 176px;
+
+    .title {
+      font-size: 38px;
+      margin-bottom: 56px;
+    }
+
+    .contactUsContainer {
+      width: 736px;
+      height: auto;
+
+      .formContainerImage {
+        flex-direction: column;
+        gap: 20px;
+
+        .contactImage {
+          width: 676px;
+          height: 200px;
+          border-radius: 16px;
+        }
+
+        .companyDetailsCard {
+          width: 676px;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
