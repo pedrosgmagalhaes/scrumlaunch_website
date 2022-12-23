@@ -43,6 +43,8 @@
 // TABLET
 @media screen and (max-width: 768px) {
   .startupCard {
+    margin-top: 176px;
+
     .container {
       margin: 0 32px;
 
@@ -70,6 +72,8 @@
 // PHONE
 @media screen and (max-width: 376px) {
   .startupCard {
+    margin-top: 100px;
+
     .container {
       .title {
         display: none;
