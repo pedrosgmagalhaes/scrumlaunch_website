@@ -140,3 +140,151 @@
     border-bottom: 1px solid var(--separator-footer-color);
   }
 }
+
+// TABLET
+@media screen and (max-width: 768px) {
+  .techTalent {
+    .titleTech {
+      width: 100%;
+      font-size: 62px;
+      line-height: 62px;
+    }
+
+    .techSubText {
+      width: 70%;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  .longTermPartner {
+    margin-top: 0;
+
+    .majorContainer {
+      .container {
+        width: 221px;
+        height: 194px;
+        padding: 22px;
+
+        h4 {
+          font-size: 20px;
+          margin-bottom: 16px;
+        }
+
+        h2 {
+          font-size: 36px;
+        }
+
+        p {
+          font-size: 15px;
+          line-height: 21px;
+        }
+      }
+    }
+  }
+
+  .thrive {
+    padding-bottom: 88px;
+
+    .thriveTitle {
+      font-size: 38px;
+      margin-top: 88px;
+      text-align: center;
+      letter-spacing: 0;
+    }
+
+    .infoThrive {
+      width: 90%;
+      height: 116px;
+
+      h5 {
+        font-size: 22px;
+      }
+
+      span {
+        font-size: 84px;
+      }
+    }
+
+    .separator {
+      width: 90%;
+    }
+  }
+}
+
+// PHONE
+@media screen and (max-width: 376px) {
+  .techTalent {
+    .titleTech {
+      width: 90%;
+      font-size: 32px;
+      line-height: 32px;
+      margin-bottom: 22px;
+    }
+
+    .techSubText {
+      width: 90%;
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .longTermPartner {
+    margin-top: 50px;
+
+    .title {
+      font-size: 32px;
+      text-align: center;
+    }
+
+    .majorContainer {
+      flex-direction: column;
+      gap: 5px;
+
+      .container {
+        width: 343px;
+        height: 173px;
+        padding: 24px;
+
+        p {
+          font-size: 14px;
+        }
+
+        .indicator {
+          width: 22px;
+          height: 22px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .thrive {
+    padding-bottom: 50px;
+
+    .hideSeparator {
+      display: none;
+    }
+
+    .thriveTitle {
+      font-size: 32px;
+      margin-top: 50px;
+      margin-bottom: 40px;
+      width: 80%;
+    }
+
+    .infoThrive {
+      flex-direction: column-reverse;
+      align-items: center;
+
+      h5 {
+        font-size: 14px;
+      }
+
+      span {
+        font-size: 64px;
+      }
+    }
+  }
+}

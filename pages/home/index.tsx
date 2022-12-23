@@ -92,7 +92,7 @@ export default function Home() {
             We thrive by making our clients thrive
           </h1>
 
-          <div className={style.separator} />
+          <div className={`${style.separator} ${style.hideSeparator}`} />
 
           <div className={style.infoThrive}>
             <h5>Acquisitions by Unicorns</h5>
@@ -116,7 +116,7 @@ export default function Home() {
             <span>100M</span>
           </div>
 
-          <div className={style.separator} />
+          <div className={`${style.separator} ${style.hideSeparator}`} />
         </div>
 
         <ServicesCard />

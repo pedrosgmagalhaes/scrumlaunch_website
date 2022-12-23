@@ -14,49 +14,43 @@ export default function ClientTestimonial() {
       <h1 className={style.title}>Client Testimonials</h1>
 
       <div className={style.testimony}>
-        <div className={style.iconsTestimony}>
-          <div className={style.icon}>
-            <Image src={CampusReel} alt="campus reel" />
-          </div>
-
-          <div className={style.icon}>
-            <Image src={Clutch} alt="Clutch" />
-
-            <div>
-              {new Array(5).fill(1).map(() => (
-                <Image key={Math.random()} src={Star} alt="star" />
-              ))}
-
-              <p>20 REWIEWS</p>
-            </div>
-          </div>
-
-          <div className={style.icon}>
-            <Image src={ClutchIcon} alt="Clutch Icon" />
-
-            <div className={style.reviewContent}>Review us on CLUTCH</div>
-          </div>
-        </div>
-
         <div className={style.photo}>
           <Image src={RobCarrol} alt="Rob Carrol" />
+
+          <div className={style.subTitle}>
+            <h3>Rob Carrol</h3>
+            <span>CEO • CampusReel</span>
+          </div>
         </div>
 
         <div className={style.aggregatedData}>
-          <div className={style.modules}>
-            <div>
-              Active users
-              <h2>10M</h2>
+          <div className={style.iconsTestimony}>
+            <div className={style.icon}>
+              <Image src={CampusReel} alt="campus reel" />
             </div>
 
-            <div>
-              Saved on Devlopment Costs
-              <h2>$3M</h2>
+            <div className={style.icon}>
+              <Image src={Clutch} alt="Clutch" />
+
+              <div>
+                {new Array(5).fill(1).map(() => (
+                  <Image key={Math.random()} src={Star} alt="star" />
+                ))}
+
+                <p>20 REWIEWS</p>
+              </div>
             </div>
 
-            <div>
-              Dedicated team members
-              <h2>15</h2>
+            <div className={`${style.icon} ${style.hideMobile}`}>
+              <Image src={ClutchIcon} alt="Clutch Icon" />
+
+              <div className={style.reviewContent}>Review us on CLUTCH</div>
+
+              <h5 className={style.mobileText}>Review us on CLUTCH</h5>
+
+              <div className={style.iconTestimonyArrow}>
+                <Image src={Arrow} alt="arrow" />
+              </div>
             </div>
           </div>
 

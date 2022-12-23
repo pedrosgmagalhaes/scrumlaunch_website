@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Button from '../buttons/accept-button'
 import style from './style.module.scss'
@@ -43,6 +43,43 @@ const articleArray = [
 ]
 
 export default function BlogCard() {
+  const [page, setPage] = useState(0)
+  const [numberOfPages, setNumberOfPages] = useState(0)
+
+  useEffect(() => {
+    const container = document.getElementById('article-mobile-scroll')
+    if (typeof window !== 'undefined') {
+      const localNumber =
+        window.screen.width > 376
+          ? Math.round(articleArray.length / 2)
+          : articleArray.length
+      setNumberOfPages(localNumber)
+    }
+
+    if (container !== null) {
+      container.addEventListener('scroll', (event) => {
+        const { scrollLeft } = event.target
+        const position = Math.round(scrollLeft / 343)
+        console.log('qq ', position)
+        setPage(position)
+      })
+    }
+
+    return () => {
+      if (container !== null) {
+        container.removeEventListener('scroll', () => {})
+      }
+    }
+  }, [])
+
+  const handleChangeSelector = (index: number) => {
+    setPage(index)
+    const container = document.getElementById('article-mobile-scroll')
+    if (container !== null) {
+      container.scrollLeft = index * 361
+    }
+  }
+
   return (
     <div className={style.blogCard}>
       <h1 className={style.title}>Blog</h1>
@@ -99,9 +136,22 @@ export default function BlogCard() {
         </div>
       </div>
 
-      <div className={style.articleSecondaryCard}>
+      <div id="article-mobile-scroll" className={style.articleSecondaryCard}>
         {articleArray.map((article) => (
           <div key={Math.random()} className={style.singleArticle}>
+            <div className={style.mobileContainer}>
+              <div>
+                <span
+                  className={style.articleTag1}
+                  style={{ backgroundColor: article.tagColor }}
+                >
+                  {article.tag}
+                </span>
+              </div>
+
+              <h1 className={style.articleTitle}>{article.title}</h1>
+            </div>
+
             <Image
               className={style.articleSecondaryImg}
               src={article.image}
@@ -133,6 +183,21 @@ export default function BlogCard() {
               </div>
             </div>
           </div>
+        ))}
+      </div>
+
+      <div className={style.carouselControl}>
+        {new Array(numberOfPages).fill({}).map((_, index) => (
+          <div
+            key={Math.random()}
+            role="presentation"
+            className={style.selector}
+            style={{
+              backgroundColor: `${page === index ? '#1e1f21' : '#f4f2ec'}`,
+            }}
+            onClick={() => handleChangeSelector(index)}
+            onKeyDown={() => handleChangeSelector(index)}
+          />
         ))}
       </div>
 

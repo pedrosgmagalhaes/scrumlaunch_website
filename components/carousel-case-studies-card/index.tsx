@@ -175,6 +175,15 @@ export default function CarouselCaseCard() {
           />
         ))}
       </div>
+
+      <div className={style.mobileButton}>
+        <Button
+          buttonText="View case"
+          color="black"
+          onClickHandler={() => {}}
+          icon={Arrow}
+        />
+      </div>
     </div>
   )
 }

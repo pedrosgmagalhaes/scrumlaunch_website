@@ -13,52 +13,33 @@
     gap: 20px;
     justify-content: center;
 
-    .iconsTestimony {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
+    .photo {
+      width: 590px;
+      height: 465px;
+      position: relative;
 
-      .icon {
+      .subTitle {
+        position: absolute;
+        bottom: 0;
+        width: 170px;
+        height: 81px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 183px;
-        height: 142px;
-        border-radius: 24px;
-        gap: 17px;
-        border: 1px solid var(--separator-footer-color);
-        background-color: var(--secondary-color);
+        background-color: var(--background-color);
+        border-top-right-radius: 16px;
+        padding: 16px;
+        gap: 5px;
 
-        .reviewContent {
-          background-color: var(--text-color);
-          border-radius: 200px;
-          color: var(--background-color);
-          font-size: 14px;
-          padding: 4px 6px;
-        }
-
-        div {
-          img {
-            margin: 0 3px;
-            width: 20px;
-            height: 20px;
-          }
-        }
-
-        p {
+        h3 {
           margin: 0;
-          font-size: 16px;
-          font-weight: 500;
-          margin-top: 5px;
-          text-align: center;
+          font-size: 20px;
+          font-weight: 800;
+        }
+
+        span {
+          font-size: 14px;
         }
       }
-    }
-
-    .photo {
-      width: 387px;
-      height: 464px;
     }
 
     .aggregatedData {
@@ -66,38 +47,66 @@
       flex-direction: column;
       gap: 20px;
 
-      .modules {
+      .iconsTestimony {
         display: flex;
-        align-items: center;
+        flex-direction: row-reverse;
         gap: 20px;
 
-        div {
+        .icon {
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
+          justify-content: center;
+          align-items: center;
           width: 183px;
           height: 142px;
-          border-radius: 16px;
-          background-color: var(--seventh-color);
-          padding: 16px;
-          font-size: 15px;
-          line-height: 25px;
-          font-weight: 700;
+          border-radius: 24px;
+          gap: 17px;
+          border: 1px solid var(--separator-footer-color);
+          background-color: var(--secondary-color);
 
-          h2 {
-            margin: 0;
-            font-weight: 700;
-            font-size: 42px;
-            line-height: 42px;
+          .reviewContent {
+            background-color: var(--text-color);
+            border-radius: 200px;
+            color: var(--background-color);
+            font-size: 14px;
+            padding: 4px 6px;
           }
-        }
 
-        div:nth-child(2) {
-          background-color: var(--forth-color);
-        }
+          div {
+            img {
+              margin: 0 3px;
+              width: 20px;
+              height: 20px;
+            }
+          }
 
-        div:nth-child(3) {
-          background-color: var(--eighth-color);
+          p {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 500;
+            margin-top: 5px;
+            text-align: center;
+          }
+
+          .mobileText {
+            display: none;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 30px;
+            color: var(--background-color);
+            margin: 0;
+          }
+
+          .iconTestimonyArrow {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--background-color);
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            align-self: flex-end;
+          }
         }
       }
 
@@ -159,6 +168,238 @@
               width: 25px;
               height: 25px;
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+// TABLET
+@media screen and (max-width: 768px) {
+  .clientTestimonial {
+    margin-top: 176px;
+
+    .title {
+      text-align: center;
+      margin-left: 0;
+    }
+
+    .testimony {
+      flex-direction: column;
+      align-items: center;
+      gap: 26px;
+
+      .photo {
+        .subTitle {
+          left: -2px;
+        }
+      }
+
+      .aggregatedData {
+        .iconsTestimony {
+          flex-direction: row;
+
+          .icon {
+            border-radius: 16px;
+          }
+
+          .hideMobile {
+            border: none;
+            background-color: var(--text-color);
+            padding: 16px;
+            gap: 0;
+
+            img,
+            .reviewContent {
+              display: none;
+            }
+
+            .mobileText {
+              display: initial;
+            }
+
+            .iconTestimonyArrow {
+              display: flex;
+
+              img {
+                display: initial;
+                margin: 0;
+              }
+            }
+          }
+        }
+
+        .nextTestimony {
+          flex-direction: column;
+          gap: 0;
+
+          .testimonyText {
+            background-color: var(--background-color);
+            border: none;
+            padding: 0;
+            height: auto;
+            width: 589px;
+
+            p {
+              font-size: 16px;
+            }
+          }
+
+          .nextButton {
+            height: 51px;
+            width: 227px;
+            border-radius: 200px;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin: 48px auto 0;
+            padding: 0 7px 0 29px;
+
+            h3 {
+              font-size: 18px;
+              line-height: 27px;
+              font-weight: 500;
+            }
+
+            div {
+              width: 42px;
+              height: 42px;
+              align-self: center;
+
+              img {
+                width: 18px;
+                height: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// PHONE
+@media screen and (max-width: 376px) {
+  .clientTestimonial {
+    margin-top: 100px;
+
+    .title {
+      font-size: 32px;
+    }
+
+    .testimony {
+      flex-direction: column;
+      align-items: center;
+      gap: 26px;
+
+      .photo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: fit-content;
+
+        img {
+          width: 343px;
+          height: 210px;
+          object-fit: cover;
+          border-radius: 16px;
+        }
+
+        .subTitle {
+          width: 100%;
+          height: fit-content;
+          left: 24%;
+          bottom: 5%;
+          background-color: transparent;
+          border: none;
+          padding: 0;
+          gap: 70px;
+          flex-direction: row;
+          align-items: center;
+
+          h3,
+          span {
+            color: var(--background-color);
+          }
+        }
+      }
+
+      .aggregatedData {
+        .iconsTestimony {
+          gap: 11px;
+          align-self: center;
+
+          .icon {
+            width: 107px;
+            height: 83px;
+            border-radius: 9px;
+
+            p {
+              font-size: 10px;
+            }
+
+            div {
+              margin-top: -12px;
+
+              img {
+                width: 14px;
+                height: 14px;
+                margin: 0 1.5px;
+              }
+
+              p {
+                margin-top: 2px;
+              }
+            }
+
+            img {
+              width: 87px;
+              height: 20px;
+            }
+          }
+
+          .hideMobile {
+            padding: 10px;
+
+            div {
+              margin: 0;
+            }
+
+            .mobileText {
+              font-size: 12px;
+              line-height: 16px;
+              font-weight: 500;
+            }
+
+            .iconTestimonyArrow {
+              width: 32px;
+              height: 32px;
+
+              img {
+                width: 14px;
+              }
+            }
+          }
+        }
+
+        .nextTestimony {
+          padding: 0 16px;
+
+          .testimonyText {
+            width: fit-content;
+
+            h3 {
+              font-size: 20px;
+            }
+
+            p {
+              font-size: 16px;
+            }
+          }
+
+          .nextButton {
+            margin: 40px auto 0;
           }
         }
       }
