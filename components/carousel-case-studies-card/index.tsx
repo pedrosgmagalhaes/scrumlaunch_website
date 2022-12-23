@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import Button from '../buttons/accept-button'
 import Arrow from '../../public/icons/arrowBlack.svg'
+import CarouselControl from '../carousel-control'
 import CarouselMobile1 from '../../public/assets/carouselCase1Mobile.svg'
 import CarouselDesktop1 from '../../public/assets/carouselCase1Desktop.svg'
 import CarouselMobile2 from '../../public/assets/carouselCase2Mobile.svg'
@@ -157,6 +158,12 @@ export default function CarouselCaseCard() {
           </div>
         </div>
       </div>
+
+      <CarouselControl
+        page={positionSelected}
+        numberOfPages={5}
+        handleChangeSelector={handleChangeSelector}
+      />
 
       <div className={style.carouselControl}>
         {new Array(5).fill({}).map((_, index) => (

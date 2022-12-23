@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Button from '../buttons/accept-button'
 import style from './style.module.scss'
@@ -44,10 +44,25 @@ const articleArray = [
 
 export default function BlogCard() {
   const [page, setPage] = useState(0)
-  const numberOfPages =
-    window.screen.width >= 375
-      ? Math.round(articleArray.length / 2)
-      : articleArray.length
+  const [numberOfPages, setNumberOfPages] = useState(0)
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const localNumber =
+        window.screen.width > 376
+          ? Math.round(articleArray.length / 2)
+          : articleArray.length
+      setNumberOfPages(localNumber)
+    }
+  }, [])
+
+  const handleChangeSelector = (index: number) => {
+    setPage(index)
+    const container = document.getElementById('article-mobile-scroll')
+    if (container !== null) {
+      container.scrollLeft = index * 361
+    }
+  }
 
   return (
     <div className={style.blogCard}>
@@ -105,9 +120,22 @@ export default function BlogCard() {
         </div>
       </div>
 
-      <div className={style.articleSecondaryCard}>
+      <div id="article-mobile-scroll" className={style.articleSecondaryCard}>
         {articleArray.map((article) => (
           <div key={Math.random()} className={style.singleArticle}>
+            <div className={style.mobileContainer}>
+              <div>
+                <span
+                  className={style.articleTag1}
+                  style={{ backgroundColor: article.tagColor }}
+                >
+                  {article.tag}
+                </span>
+              </div>
+
+              <h1 className={style.articleTitle}>{article.title}</h1>
+            </div>
+
             <Image
               className={style.articleSecondaryImg}
               src={article.image}
@@ -151,8 +179,8 @@ export default function BlogCard() {
             style={{
               backgroundColor: `${page === index ? '#1e1f21' : '#f4f2ec'}`,
             }}
-            // onClick={() => handleChangeSelector(index)}
-            // onKeyDown={() => handleChangeSelector(index)}
+            onClick={() => handleChangeSelector(index)}
+            onKeyDown={() => handleChangeSelector(index)}
           />
         ))}
       </div>

@@ -51,7 +51,7 @@
 
       h6 {
         margin: 0;
-        font-size: 13px;
+        font-size: 14px;
         font-weight: 400;
         color: var(--separator-footer-color);
       }
@@ -134,6 +134,10 @@
       border-radius: 24px;
       background-color: var(--secondary-color);
 
+      .mobileContainer {
+        display: none;
+      }
+
       .articleSecondaryImg {
         width: 331px;
         height: 196px;
@@ -196,9 +200,11 @@
 // TABLET
 @media screen and (max-width: 768px) {
   .blogCard {
+    margin-top: 176px;
+
     .title {
       font-size: 32px;
-      margin-top: 39px;
+      margin-top: 0;
     }
 
     .blogCardContainer {
@@ -212,6 +218,95 @@
       padding-left: 32px;
       padding-right: 32px;
       gap: 18px;
+
+      .singleArticle {
+        width: 343px;
+        height: 577px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .mobileContainer {
+          display: flex;
+          flex-direction: column;
+          gap: 14px;
+          margin-bottom: 18px;
+
+          .articleTag1,
+          .articleTitle {
+            display: initial;
+          }
+        }
+
+        .articleSecondaryImg {
+          width: 315px;
+          height: 180px;
+          object-fit: fill;
+          margin-bottom: 0;
+        }
+
+        .articleTag1,
+        .articleTitle {
+          display: none;
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 21px;
+          -webkit-line-clamp: 6;
+        }
+
+        .readMore,
+        .separator {
+          margin-top: 0;
+        }
+
+        .authorInfo {
+          width: 100%;
+          padding: 0 25px;
+
+          img {
+            width: 32px;
+            height: 32px;
+          }
+
+          div {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+
+            h4 {
+              font-size: 14px;
+              line-height: 19px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// PHONE
+@media screen and (max-width: 376px) {
+  .blogCard {
+    width: 100%;
+    padding: 0 16px;
+
+    .articleSecondaryCard {
+      padding: 0;
+      margin: 0;
+    }
+
+    .carouselControl {
+      margin-top: 24px;
+      margin-bottom: 40px;
+      gap: 14px;
+
+      .selector {
+        width: 10px;
+        height: 10px;
+      }
     }
   }
 }
