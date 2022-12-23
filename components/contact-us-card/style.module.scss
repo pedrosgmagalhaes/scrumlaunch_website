@@ -160,6 +160,12 @@
       width: 736px;
       height: auto;
 
+      .subTitle {
+        margin-left: 0;
+        font-size: 24px;
+        margin-bottom: 24px;
+      }
+
       .formContainerImage {
         flex-direction: column;
         gap: 20px;
@@ -173,7 +179,122 @@
         .companyDetailsCard {
           width: 676px;
           margin: 0;
+
+          .separator {
+            margin: 28px 0;
+          }
+
+          .additionalInfo {
+            h3 {
+              font-size: 24px;
+            }
+
+            .selectorContainer {
+              gap: 22px;
+            }
+          }
+
+          .inputContainer {
+            input[type='text'],
+            select {
+              width: 308px;
+            }
+
+            textarea {
+              width: 308px;
+              height: 216px;
+            }
+          }
+
+          .formContactContainer {
+            gap: 20px;
+
+            .firstForm,
+            .secondForm {
+              width: auto;
+            }
+          }
         }
+      }
+
+      .submitFormButton {
+        margin-left: 210px;
+        margin-top: 48px;
+      }
+    }
+  }
+}
+
+// PHONE
+@media screen and (max-width: 376px) {
+  .contactUsCard {
+    margin-top: 120px;
+
+    .title {
+      display: none;
+    }
+
+    .contactUsContainer {
+      width: 359px;
+      padding: 32px 16px;
+
+      .subTitle {
+        font-size: 18px;
+        margin-bottom: 22px;
+      }
+
+      .formContainerImage {
+        .contactImage {
+          width: 329px;
+          height: 130px;
+        }
+
+        .companyDetailsCard {
+          width: 329px;
+          height: auto;
+          padding: 24px 16px;
+
+          .separator {
+            margin: 22px 0;
+          }
+
+          .additionalInfo {
+            h3 {
+              font-size: 20px;
+            }
+
+            .selectorContainer {
+              gap: 12px;
+              flex-direction: column;
+            }
+          }
+
+          .inputContainer {
+            input[type='text'],
+            select {
+              width: 300px;
+            }
+
+            textarea {
+              width: 300px;
+              height: 42px;
+            }
+          }
+
+          .formContactContainer {
+            gap: 20px;
+            flex-direction: column;
+
+            .firstForm,
+            .secondForm {
+              width: auto;
+            }
+          }
+        }
+      }
+
+      .submitFormButton {
+        margin: 40px 0 40px 50px;
       }
     }
   }
