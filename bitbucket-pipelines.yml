@@ -3,6 +3,10 @@ image: node:16
 clone:
   depth: full
 
+definitions:
+  caches:
+    nextcache: .next/cache
+
 pipelines:
   custom:
     deployment-to-staging:
@@ -26,6 +30,7 @@ pipelines:
            deployment: staging
            caches:
              - node
+             - nextcache
            script:
              - pipe: atlassian/heroku-deploy:1.1.4
                variables:
@@ -38,6 +43,7 @@ pipelines:
           name: 'Build app'
           caches:
             - node
+            - nextcache
           script:
             - npm install --quiet
             - npm run build --progress=false
