@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, MouseEvent } from 'react'
 import Image from 'next/image'
 import Button from '../buttons/accept-button'
 import style from './style.module.scss'
@@ -58,9 +58,8 @@ export default function BlogCard() {
 
     if (container !== null) {
       container.addEventListener('scroll', (event) => {
-        const { scrollLeft } = event.target
+        const { scrollLeft } = event.target as Element
         const position = Math.round(scrollLeft / 343)
-        console.log('qq ', position)
         setPage(position)
       })
     }
