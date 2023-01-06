@@ -1,12 +1,12 @@
 import React from 'react'
 import Image from 'next/image'
 import style from './style.module.scss'
-import CampusReel from '../../public/assets/campusReel.svg'
-import CommunityFunded from '../../public/assets/communityFunded.svg'
-import Gipper from '../../public/assets/gipper.svg'
-import Harvest from '../../public/assets/harvest.svg'
-import Heli from '../../public/assets/heli.svg'
-import Vesta from '../../public/assets/vesta.svg'
+import CampusReel from '../../public/assets/campusReel.webp'
+import CommunityFunded from '../../public/assets/communityFunded.webp'
+import Gipper from '../../public/assets/gipper.webp'
+import Harvest from '../../public/assets/harvest.webp'
+import Heli from '../../public/assets/heli.webp'
+import Vesta from '../../public/assets/vesta.webp'
 
 const iconArray = [
   Gipper,

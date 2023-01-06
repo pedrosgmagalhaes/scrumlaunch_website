@@ -1,10 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
 import style from './style.module.scss'
-import TechTalent1 from '../../public/assets/techTalent1.svg'
-import TechTalent2 from '../../public/assets/techTalent2.svg'
-import TechTalent3 from '../../public/assets/techTalent3.svg'
-import TechTalentMobile from '../../public/assets/techTalentMobile.svg'
+import TechTalent1 from '../../public/assets/techTalent1.webp'
+import TechTalent2 from '../../public/assets/techTalent2.webp'
+import TechTalent3 from '../../public/assets/techTalent3.webp'
+import TechTalentMobile from '../../public/assets/techTalentMobile.webp'
 
 export default function TechTalentCard() {
   return (

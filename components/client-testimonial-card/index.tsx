@@ -1,12 +1,12 @@
 import React from 'react'
 import Image from 'next/image'
 import style from './style.module.scss'
-import CampusReel from '../../public/assets/campusReel.svg'
-import RobCarrol from '../../public/assets/robCarrol.svg'
+import CampusReel from '../../public/assets/campusReel.webp'
+import RobCarrol from '../../public/assets/robCarrol.webp'
 import Arrow from '../../public/icons/arrowBlack.svg'
 import Star from '../../public/icons/starRed.svg'
-import Clutch from '../../public/assets/clutch.svg'
-import ClutchIcon from '../../public/assets/clutchIcon.svg'
+import Clutch from '../../public/assets/clutch.webp'
+import ClutchIcon from '../../public/assets/clutchIcon.webp'
 
 export default function ClientTestimonial() {
   return (

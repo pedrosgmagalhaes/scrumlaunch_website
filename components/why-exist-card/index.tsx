@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
-import WhyExist1 from '../../public/assets/whyExistCard1.svg'
-import WhyExist2 from '../../public/assets/whyExistCard2.svg'
+import WhyExist1 from '../../public/assets/whyExistCard1.webp'
+import WhyExist2 from '../../public/assets/whyExistCard2.webp'
 import style from './style.module.scss'
 
 export default function WhyExistCard() {

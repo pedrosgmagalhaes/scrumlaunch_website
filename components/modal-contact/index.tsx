@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import ModalImage from '../../public/assets/modalFormContact.svg'
+import ModalImage from '../../public/assets/modalFormContact.webp'
 import style from './style.module.scss'
 
 interface Props {

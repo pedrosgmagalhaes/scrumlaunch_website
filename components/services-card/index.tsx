@@ -1,8 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
 import style from './style.module.scss'
-import ServiceCard1 from '../../public/assets/serviceCard1.svg'
-import ServiceCard2 from '../../public/assets/serviceCard2.svg'
+import ServiceCard1 from '../../public/assets/serviceCard1.webp'
+import ServiceCard2 from '../../public/assets/serviceCard2.webp'
 
 export default function ServicesCard() {
   return (

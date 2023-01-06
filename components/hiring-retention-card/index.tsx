@@ -1,9 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
-import HiringCard1 from '../../public/assets/hiringCard1.svg'
-import HiringCard2 from '../../public/assets/hiringCard2.svg'
-import HiringCard3 from '../../public/assets/hiringCard3.svg'
-import HiringCard4 from '../../public/assets/hiringCard4.svg'
+import HiringCard1 from '../../public/assets/hiringCard1.webp'
+import HiringCard2 from '../../public/assets/hiringCard2.webp'
+import HiringCard3 from '../../public/assets/hiringCard3.webp'
+import HiringCard4 from '../../public/assets/hiringCard4.webp'
 import style from './style.module.scss'
 
 export default function HiringAndRetentionCard() {
