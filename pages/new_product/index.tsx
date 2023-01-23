@@ -24,8 +24,6 @@ import CaseStudiesGipperDesktopImage from '../../public/assets/case-studies/gipp
 
 
 import TechnologiesCarousel from '../../components/carousel-technologies'
-
-
 import StartupCard from '../../components/startup-teams-card'
 import ContactUsCard from '../../components/contact-us-card'
 import Layout from '../../components/layout'
@@ -81,7 +79,7 @@ const developmentProcess = [
   },
 ]
 
-function checkIsBelowActive(index) {
+function checkIsBelowActive(index: number) {
   const indexOfActive = developmentProcess.map(e => e.activeContainer).indexOf(true);
   if (index > indexOfActive) {
     return false
@@ -94,7 +92,7 @@ function checkIsBelowActive(index) {
 export default function Home() {
   const [scheduleBusinessSolutionEmail, setBusinessSolutionEmail] = useState();
 
-  const handlePasswordChange = (e) => {
+  const handlePasswordChange = (e: any) => {
     setBusinessSolutionEmail(e.target.value);
   };
 
