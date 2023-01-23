@@ -7,27 +7,26 @@ import { useState } from 'react';
 import ClientImage1 from '../../public/assets/client-type-images/client1.jpg'
 import ClientImage2 from '../../public/assets/client-type-images/client2.jpg'
 import ClientImage3 from '../../public/assets/client-type-images/client3.jpg'
-import BuildProductsImage from '../../public/assets/build-products/hero.jpg'
-import BusinessSolutionsTabImage from '../../public/assets/business-solutions/tab-image.jpg'
 
+import BuildProductsImage from '../../public/assets/build-products/hero.jpg'
+
+import BusinessSolutionsTabImage from '../../public/assets/business-solutions/tab-image.jpg'
 import BusinessSolutionsContactLogoImage from '../../public/assets/business-solutions/logo.jpg'
 import BusinessSolutionsContactCampusReelImage from '../../public/assets/business-solutions/CampusReel.jpg'
 import BusinessSolutionsContactBurgerImage from '../../public/assets/business-solutions/burger.jpg'
 import BusinessSolutionsContactFormTextImage from '../../public/assets/business-solutions/text.svg'
 import BusinessSolutionsContactFooterImage from '../../public/assets/business-solutions/footer.svg'
+
 import CaseStudiesCampusReelMobileImage from '../../public/assets/case-studies/campusReelMobile.svg'
 import CaseStudiesCampusReelDesktopImage from '../../public/assets/case-studies/campusReelDesktop.svg'
 import CaseStudiesGipperMobileImage from '../../public/assets/case-studies/gipperMobile.svg'
 import CaseStudiesGipperDesktopImage from '../../public/assets/case-studies/gipperDesktop.svg'
 
 
-import ClientTestimonialCard from '../../components/client-testimonial-card'
-import CarouselCaseCard from '../../components/carousel-case-studies-card'
+import TechnologiesCarousel from '../../components/carousel-technologies'
+
+
 import StartupCard from '../../components/startup-teams-card'
-import ServicesCard from '../../components/services-card'
-import HiringRetentionCard from '../../components/hiring-retention-card'
-import WhyExistsCard from '../../components/why-exist-card'
-import BlogCard from '../../components/blog-card'
 import ContactUsCard from '../../components/contact-us-card'
 import Layout from '../../components/layout'
 import Button from '../../components/buttons/accept-button'
@@ -334,11 +333,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={style.scrumLaunchTechnologies}>
-          <h2>
-            ScrumLaunch Technologies
-          </h2>
-        </section>
+        <TechnologiesCarousel />
 
         <ContactUsCard />
       </Layout>

@@ -1,0 +1,86 @@
+.scrumLaunchTechnologies {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 1440px;
+  margin: auto;
+  // margin: 90px auto 100px;
+  padding: 90px 120px 120px;
+
+  h2 {
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 48px;
+    margin: 0;
+    margin-bottom: 64px;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+.animate {
+  animation: scroll 15s linear infinite;
+}
+
+.animate-backwards {
+  animation: scroll 15s linear infinite reverse;
+}
+
+.sliderContainer {
+  display: flex;
+  align-items: center;
+  min-height: 400px;
+  width: 100%;
+  justify-content: center;
+
+  .sliderOuter {
+    // w-[200%] h-20 border-t border-b border-gray-600 overflow-hidden relative
+    width: 200%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+
+    .slider {
+      // w-[200%] flex items-center h-20 justify-around absolute left-0 animate gap-20 animate
+      width: 200%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      position: absolute;
+      left: 0;
+      gap: 20px;
+      @extend .animate;
+
+      .slide {
+        display: flex;
+        justify-content: center;
+        width: 293px;
+        height: 142px;
+        border: 1px solid #A9A69E;
+        border-radius: 16px;
+        align-items: center;
+
+        h3 {
+          margin-left: 8px;
+          font-weight: 700;
+          font-size: 28px;
+          line-height: 100%;
+        }
+      }
+    }
+
+    .sliderBackwards {
+      margin-top: 200px;
+      @extend .slider;
+      @extend .animate-backwards
+    }
+  }
+}
