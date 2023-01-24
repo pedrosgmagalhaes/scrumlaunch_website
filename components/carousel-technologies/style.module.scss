@@ -42,14 +42,12 @@
   justify-content: center;
 
   .sliderOuter {
-    // w-[200%] h-20 border-t border-b border-gray-600 overflow-hidden relative
     width: 200%;
     height: 400px;
     overflow: hidden;
     position: relative;
 
     .slider {
-      // w-[200%] flex items-center h-20 justify-around absolute left-0 animate gap-20 animate
       width: 200%;
       display: flex;
       align-items: center;
@@ -60,7 +58,7 @@
       @extend .animate;
 
       .slide {
-        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        -webkit-filter: grayscale(100%);
         filter: grayscale(100%);
         display: flex;
         justify-content: center;
@@ -71,7 +69,7 @@
         align-items: center;
 
         &:hover {
-          -webkit-filter: grayscale(0); /* Safari 6.0 - 9.0 */
+          -webkit-filter: grayscale(0);
           filter: grayscale(0);
         }
 

@@ -2,7 +2,9 @@
   "name": "scrumlaunch_sl",
   "version": "0.1.0",
   "private": true,
-  "cacheDirectories": [".next/cache"],
+  "cacheDirectories": [
+    ".next/cache"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -24,6 +26,7 @@
     "react-dom": "18.2.0",
     "react-modal": "^3.16.1",
     "sass": "^1.56.1",
+    "swiper": "^8.4.6",
     "typescript": "4.9.3"
   },
   "devDependencies": {
