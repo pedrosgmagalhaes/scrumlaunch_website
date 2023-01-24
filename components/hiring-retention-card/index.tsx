@@ -20,7 +20,7 @@ export default function HiringAndRetentionCard() {
       <div className={style.overallCard}>
         <h2>Personalized recruiting</h2>
 
-        <span className={style.highlight}>5h per candidate.</span>
+        <span className={style.highlight}>5h per candidate</span>
 
         <p>
           Our five step hiring process includes an English proficiency
@@ -34,7 +34,7 @@ export default function HiringAndRetentionCard() {
         <h2>Highly selective</h2>
 
         <span className={style.highlight2}>
-          3% of talent hired after vetting.
+          3% of talent hired after vetting
         </span>
 
         <p>
@@ -55,7 +55,7 @@ export default function HiringAndRetentionCard() {
         <h2>Time saving onboarding process</h2>
 
         <span className={style.highlight3}>
-          10 hours saved during onboarding for each new hire.
+          10 hours saved during onboarding for each new hire
         </span>
 
         <p>
@@ -68,7 +68,7 @@ export default function HiringAndRetentionCard() {
         <h2 className={style.subTitle}>Talent Retention</h2>
 
         <span className={style.highlight4}>
-          2x higher retention than industry average.
+          2x higher retention than industry average
         </span>
 
         <p>
@@ -88,7 +88,7 @@ export default function HiringAndRetentionCard() {
 
           <Image src={HiringCard1} alt="two persons talking in an meeting" />
 
-          <span className={style.highlight}>5h per candidate.</span>
+          <span className={style.highlight}>5h per candidate</span>
 
           <p>
             Our five step hiring process includes an English proficiency
@@ -104,7 +104,7 @@ export default function HiringAndRetentionCard() {
           <Image src={HiringCard2} alt="business meeting showing graphs" />
 
           <span className={style.highlight2}>
-            3% of talent hired after vetting.
+            3% of talent hired after vetting
           </span>
 
           <p>
@@ -119,7 +119,7 @@ export default function HiringAndRetentionCard() {
           <Image src={HiringCard3} alt="two persons talking in an video call" />
 
           <span className={style.highlight3}>
-            10 hours saved during onboarding for each new hire.
+            10 hours saved during onboarding for each new hire
           </span>
 
           <p>
@@ -134,7 +134,7 @@ export default function HiringAndRetentionCard() {
           <Image src={HiringCard4} alt="workspace with people working" />
 
           <span className={style.highlight4}>
-            2x higher retention than industry average.
+            2x higher retention than industry average
           </span>
 
           <p>

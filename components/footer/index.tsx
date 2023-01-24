@@ -6,7 +6,7 @@ import Arrow from '../../public/icons/toggleArrow.svg'
 import styles from './style.module.scss'
 
 export default function Footer() {
-  const [showServices, setShowServices] = useState(false)
+  const [showServices, setShowServices] = useState(true)
 
   const toggleServices = () => {
     setShowServices((prev) => !prev)
