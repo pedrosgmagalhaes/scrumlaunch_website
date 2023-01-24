@@ -123,9 +123,6 @@ export default function Home() {
             onClickHandler={() => {}}
             color="black"
           />
-
-          
-          {/* слайдер */}
         </div>
 
         <section className={style.carouselWithFade}>
