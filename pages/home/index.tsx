@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import Image from 'next/image'
 import style from './style.module.scss'
 import TechTalentCard from '../../components/tech-talent-card'
 import ClientTestimonialCard from '../../components/client-testimonial-card'
@@ -13,6 +14,7 @@ import ContactUsCard from '../../components/contact-us-card'
 import Layout from '../../components/layout'
 import Button from '../../components/buttons/accept-button'
 import Arrow from '../../public/icons/arrowBlack.svg'
+import HeroCard from '../../public/assets/heroCard.png'
 
 export default function Home() {
   return (
@@ -24,25 +26,33 @@ export default function Home() {
 
       <Layout>
         <div className={style.techTalent}>
-          <h1 className={style.titleTech}>
-            Tech talent that’s right for your project.
-          </h1>
+          <div className={style.callToAction}>
+            <h1 className={style.titleTech}>
+              Scale your tech team with global talent
+            </h1>
 
-          <h6 className={style.techSubText}>
-            Every technology project is different and it’s just as important to
-            find the right person as it is to find a talented person.
-            ScrumLaunch’s talent hubs in Eastern Europe and Latin America
-            combine global scale
-          </h6>
+            <h6 className={style.techSubText}>
+              We make it fast & hassle-free to onboard top IT talent from Latin
+              America and Eastern Europe.
+            </h6>
+            <div className={style.techButton}>
+              <Button
+                buttonText="Schedule a call"
+                icon={Arrow}
+                onClickHandler={() => {}}
+                color="black"
+              />
+            </div>
+          </div>
 
-          <Button
-            buttonText="Schedule a call"
-            icon={Arrow}
-            onClickHandler={() => {}}
-            color="black"
-          />
-
-          <TechTalentCard />
+          <div className={style.heroCard}>
+            <div className={style.rectangle}>
+              <Image
+                src={HeroCard}
+                alt="Scale your tech team with global talent"
+              />
+            </div>
+          </div>
         </div>
 
         <div className={style.longTermPartner}>

@@ -1,26 +1,66 @@
 .techTalent {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-evenly;
+
+  .callToActionSection {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 
   .titleTech {
-    text-align: center;
-    width: 60%;
+    width: 100%;
     font-size: 72px;
     font-weight: 700;
     margin-top: 90px;
     margin-bottom: 50px;
     line-height: 72px;
+    max-width: 500px;
+    text-align: left;
   }
 
   .techSubText {
     font-size: 16px;
     line-height: 30px;
-    width: 40%;
-    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
     font-weight: 500;
     margin: 0;
     margin-bottom: 60px;
+  }
+
+  .techButton {
+    width: 100%;
+    max-width: 500px;
+    text-align: left;
+    margin: 0;
+    margin-bottom: 60px;
+  }
+
+  .heroCard {
+    position: relative;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    z-index: 1;
+    padding-left: -10px;
+
+    .rectangle {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 512px;
+      height: 400px;
+      border-radius: 24px;
+      background-color: #97f7e0;
+      z-index: -1;
+      padding-right: 16rem;
+
+    }
   }
 }
 
