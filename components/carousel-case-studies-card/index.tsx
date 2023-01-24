@@ -34,7 +34,7 @@ export default function CarouselCaseCard() {
               positionSelected !== 0 ? style.transformToWhite : ''
             }`}
           >
-            Case studies.
+            Case studies
           </h2>
 
           <div className={style.cardContainer}>

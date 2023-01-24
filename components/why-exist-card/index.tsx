@@ -18,7 +18,7 @@ export default function WhyExistCard() {
         <div className={style.divContainer}>
           <div className={style.rightContainer}>
             <div className={style.colorContainer}>
-              Here at ScrumLaunch <b>we have high expectations.</b> And you
+              Here at ScrumLaunch we have <b>high expectations.</b> And you
               should too. We only hire the best. We expect the people you hire
               through us to perform at the same standard as the best domestic
               talent you could hire..
@@ -63,7 +63,7 @@ export default function WhyExistCard() {
         </div>
 
         <div className={style.colorContainer}>
-          Here at ScrumLaunch <b>we have high expectations.</b> And you should
+          Here at ScrumLaunch we have <b>high expectations.</b> And you should
           too. We only hire the best. We expect the people you hire through us
           to perform at the same standard as the best domestic talent you could
           hire..

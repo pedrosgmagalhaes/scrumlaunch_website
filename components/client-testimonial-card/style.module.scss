@@ -1,43 +1,124 @@
 .clientTestimonial {
-  margin-top: 192px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 1440px;
+  margin: auto;
+  padding: 90px 120px 120px;
+  @media screen and (max-width: 768px) {
+    padding: 90px 32px 120px;
+    text-align: left;
+  }
+  @media screen and (max-width: 376px) {
+    padding: 90px 16px 120px;
+  }
 
   .title {
-    margin: 0;
-    margin-bottom: 52px;
+    color: var(--text-color);
+    font-weight: 700;
     font-size: 48px;
-    margin-left: 10.5%;
+    margin: 0;
+    margin-bottom: 64px;
+  }
+
+  .header {
+    display: flex;
+    margin-bottom: 64px;
+    align-items: center;
+    align-self: stretch;
+    @media screen and (max-width: 768px) {
+      display: block;
+      align-items: left;
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      font-weight: 700;
+      font-size: 48px;
+      margin: 0;
+      margin-right: auto;
+      @media screen and (max-width: 768px) {
+        margin-bottom: 64px;
+      }
+      @media screen and (max-width: 376px) {
+        font-size: 32px;
+      }
+    }
+
+    .stars {
+      display: flex;
+      padding-top: 2px;
+      align-items: center;
+      margin-right: 24px;
+      @media screen and (max-width: 768px) {
+        display: inline-flex;
+      }
+
+      p {
+        margin: -5px ;
+        margin: 0;
+        margin-left: 8px;
+        font-weight: 500;
+        font-size: 20px;
+      }
+    }
+
+    .clutch {
+      display: flex;
+      align-items: center;
+      @media screen and (max-width: 768px) {
+        display: inline-flex;
+      }
+
+      p {
+        margin-right: 12px;
+        text-decoration-line: underline;
+        font-weight: 500;
+        font-size: 20px;
+        @media screen and (max-width: 376px) {
+          font-size: 16px;
+        }
+      }
+    }
   }
 
   .testimony {
     display: flex;
     gap: 20px;
     justify-content: center;
+    margin-bottom: 48px;
+    @media screen and (max-width: 376px) {
+      flex-direction: column;
+    }
 
     .photo {
-      width: 590px;
-      height: 465px;
+      flex-grow: 1;
+      flex-basis: 0;
       position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      @media screen and (max-width: 768px) {
+        max-width: 40%;
+      }
+      @media screen and (max-width: 376px) {
+        width: 100%;
+        max-width: 100%;
+        height: 230px;
+        flex-basis: unset;
+      }
 
-      .subTitle {
+      img {
         position: absolute;
-        bottom: 0;
-        width: 170px;
-        height: 81px;
-        display: flex;
-        flex-direction: column;
-        background-color: var(--background-color);
-        border-top-right-radius: 16px;
-        padding: 16px;
-        gap: 5px;
-
-        h3 {
-          margin: 0;
-          font-size: 20px;
-          font-weight: 800;
+        left: 0;
+        top: -30%;
+        @media screen and (max-width: 768px) {
+          height: 100%;
+          left: -75%;
+          top: 0;
         }
-
-        span {
-          font-size: 14px;
+        @media screen and (max-width: 376px) {
+          left: -50%;
         }
       }
     }
@@ -46,95 +127,93 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
+      flex-grow: 1;
+      flex-basis: 0;
 
-      .iconsTestimony {
+
+      .position {
         display: flex;
-        flex-direction: row-reverse;
-        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        border-radius: 24px;
+        gap: 17px;
+        border: 1px solid var(--separator-footer-color);
+        background-color: var(--secondary-color);
+        @media screen and (max-width: 376px) {
+          padding: 18px 14px;
+          gap: 8px;
+        }
 
-        .icon {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          width: 183px;
-          height: 142px;
-          border-radius: 24px;
-          gap: 17px;
-          border: 1px solid var(--separator-footer-color);
-          background-color: var(--secondary-color);
-
-          .reviewContent {
-            background-color: var(--text-color);
-            border-radius: 200px;
-            color: var(--background-color);
-            font-size: 14px;
-            padding: 4px 6px;
-          }
-
-          div {
-            img {
-              margin: 0 3px;
-              width: 20px;
-              height: 20px;
-            }
-          }
-
-          p {
-            margin: 0;
-            font-size: 16px;
-            font-weight: 500;
-            margin-top: 5px;
-            text-align: center;
-          }
-
-          .mobileText {
-            display: none;
+        h3 {
+          font-weight: 700;
+          font-size: 28px;
+          line-height: 46px;
+          margin: 0;
+          margin-top: -6px;
+          @media screen and (max-width: 768px) {
             font-size: 20px;
-            font-weight: 700;
-            line-height: 30px;
-            color: var(--background-color);
-            margin: 0;
+          }
+        }
+
+        span {
+          margin-left: auto;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          @media screen and (max-width: 768px) {
+            font-size: 20px;
+            margin-top: -6px;
+          }
+          @media screen and (max-width: 376px) {
+            font-size: 14px;
+            margin-top: 0px;
           }
 
-          .iconTestimonyArrow {
-            display: none;
-            align-items: center;
-            justify-content: center;
-            background-color: var(--background-color);
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            align-self: flex-end;
+          .dot {
+
           }
         }
       }
 
       .nextTestimony {
         display: flex;
+        flex-direction: column;
         gap: 20px;
+        padding: 20px;
+        border-radius: 24px;
+        gap: 17px;
+        border: 1px solid var(--separator-footer-color);
+        background-color: var(--secondary-color);
+        text-align: left;
+
+        h3 {
+          margin: 0;
+          font-size: 20px;
+          font-weight: 700;
+        }
+
+        p {
+          line-height: 24px;
+          font-weight: 500;
+          font-size: 16px;
+          margin: 0;
+        }
 
         .testimonyText {
           border-radius: 16px;
           border: 1px solid var(--separator-footer-color);
           background-color: var(--secondary-color);
-          width: 386px;
+          width: 100%;
           height: 303px;
           padding: 16px;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
 
-          h3 {
-            margin: 0;
-            font-size: 28px;
-            font-weight: 700;
-          }
+          
 
-          p {
-            font-size: 15px;
-            line-height: 24px;
-          }
+          
         }
 
         .nextButton {
@@ -176,233 +255,233 @@
 }
 
 // TABLET
-@media screen and (max-width: 768px) {
-  .clientTestimonial {
-    margin-top: 176px;
+// @media screen and (max-width: 768px) {
+//   .clientTestimonial {
+//     margin-top: 176px;
 
-    .title {
-      text-align: center;
-      margin-left: 0;
-    }
+//     .title {
+//       text-align: center;
+//       margin-left: 0;
+//     }
 
-    .testimony {
-      flex-direction: column;
-      align-items: center;
-      gap: 26px;
+//     .testimony {
+//       flex-direction: column;
+//       align-items: center;
+//       gap: 26px;
 
-      .photo {
-        .subTitle {
-          left: -2px;
-        }
-      }
+//       .photo {
+//         .subTitle {
+//           left: -2px;
+//         }
+//       }
 
-      .aggregatedData {
-        .iconsTestimony {
-          flex-direction: row;
+//       .aggregatedData {
+//         .iconsTestimony {
+//           flex-direction: row;
 
-          .icon {
-            border-radius: 16px;
-          }
+//           .icon {
+//             border-radius: 16px;
+//           }
 
-          .hideMobile {
-            border: none;
-            background-color: var(--text-color);
-            padding: 16px;
-            gap: 0;
+//           .hideMobile {
+//             border: none;
+//             background-color: var(--text-color);
+//             padding: 16px;
+//             gap: 0;
 
-            img,
-            .reviewContent {
-              display: none;
-            }
+//             img,
+//             .reviewContent {
+//               display: none;
+//             }
 
-            .mobileText {
-              display: initial;
-            }
+//             .mobileText {
+//               display: initial;
+//             }
 
-            .iconTestimonyArrow {
-              display: flex;
+//             .iconTestimonyArrow {
+//               display: flex;
 
-              img {
-                display: initial;
-                margin: 0;
-              }
-            }
-          }
-        }
+//               img {
+//                 display: initial;
+//                 margin: 0;
+//               }
+//             }
+//           }
+//         }
 
-        .nextTestimony {
-          flex-direction: column;
-          gap: 0;
+//         .nextTestimony {
+//           flex-direction: column;
+//           gap: 0;
 
-          .testimonyText {
-            background-color: var(--background-color);
-            border: none;
-            padding: 0;
-            height: auto;
-            width: 589px;
+//           .testimonyText {
+//             background-color: var(--background-color);
+//             border: none;
+//             padding: 0;
+//             height: auto;
+//             width: 589px;
 
-            p {
-              font-size: 16px;
-            }
-          }
+//             p {
+//               font-size: 16px;
+//             }
+//           }
 
-          .nextButton {
-            height: 51px;
-            width: 227px;
-            border-radius: 200px;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            margin: 48px auto 0;
-            padding: 0 7px 0 29px;
+//           .nextButton {
+//             height: 51px;
+//             width: 227px;
+//             border-radius: 200px;
+//             flex-direction: row;
+//             align-items: center;
+//             justify-content: space-between;
+//             margin: 48px auto 0;
+//             padding: 0 7px 0 29px;
 
-            h3 {
-              font-size: 18px;
-              line-height: 27px;
-              font-weight: 500;
-            }
+//             h3 {
+//               font-size: 18px;
+//               line-height: 27px;
+//               font-weight: 500;
+//             }
 
-            div {
-              width: 42px;
-              height: 42px;
-              align-self: center;
+//             div {
+//               width: 42px;
+//               height: 42px;
+//               align-self: center;
 
-              img {
-                width: 18px;
-                height: 18px;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
+//               img {
+//                 width: 18px;
+//                 height: 18px;
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
 // PHONE
-@media screen and (max-width: 376px) {
-  .clientTestimonial {
-    margin-top: 100px;
+// @media screen and (max-width: 376px) {
+//   .clientTestimonial {
+//     margin-top: 100px;
 
-    .title {
-      font-size: 32px;
-    }
+//     .title {
+//       font-size: 32px;
+//     }
 
-    .testimony {
-      flex-direction: column;
-      align-items: center;
-      gap: 26px;
+//     .testimony {
+//       flex-direction: column;
+//       align-items: center;
+//       gap: 26px;
 
-      .photo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: fit-content;
+//       .photo {
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         height: fit-content;
 
-        img {
-          width: 343px;
-          height: 210px;
-          object-fit: cover;
-          border-radius: 16px;
-        }
+//         img {
+//           width: 343px;
+//           height: 210px;
+//           object-fit: cover;
+//           border-radius: 16px;
+//         }
 
-        .subTitle {
-          width: 100%;
-          height: fit-content;
-          left: 24%;
-          bottom: 5%;
-          background-color: transparent;
-          border: none;
-          padding: 0;
-          gap: 70px;
-          flex-direction: row;
-          align-items: center;
+//         .subTitle {
+//           width: 100%;
+//           height: fit-content;
+//           left: 24%;
+//           bottom: 5%;
+//           background-color: transparent;
+//           border: none;
+//           padding: 0;
+//           gap: 70px;
+//           flex-direction: row;
+//           align-items: center;
 
-          h3,
-          span {
-            color: var(--background-color);
-          }
-        }
-      }
+//           h3,
+//           span {
+//             color: var(--background-color);
+//           }
+//         }
+//       }
 
-      .aggregatedData {
-        .iconsTestimony {
-          gap: 11px;
-          align-self: center;
+//       .aggregatedData {
+//         .iconsTestimony {
+//           gap: 11px;
+//           align-self: center;
 
-          .icon {
-            width: 107px;
-            height: 83px;
-            border-radius: 9px;
+//           .icon {
+//             width: 107px;
+//             height: 83px;
+//             border-radius: 9px;
 
-            p {
-              font-size: 10px;
-            }
+//             p {
+//               font-size: 10px;
+//             }
 
-            div {
-              margin-top: -12px;
+//             div {
+//               margin-top: -12px;
 
-              img {
-                width: 14px;
-                height: 14px;
-                margin: 0 1.5px;
-              }
+//               img {
+//                 width: 14px;
+//                 height: 14px;
+//                 margin: 0 1.5px;
+//               }
 
-              p {
-                margin-top: 2px;
-              }
-            }
+//               p {
+//                 margin-top: 2px;
+//               }
+//             }
 
-            img {
-              width: 87px;
-              height: 20px;
-            }
-          }
+//             img {
+//               width: 87px;
+//               height: 20px;
+//             }
+//           }
 
-          .hideMobile {
-            padding: 10px;
+//           .hideMobile {
+//             padding: 10px;
 
-            div {
-              margin: 0;
-            }
+//             div {
+//               margin: 0;
+//             }
 
-            .mobileText {
-              font-size: 12px;
-              line-height: 16px;
-              font-weight: 500;
-            }
+//             .mobileText {
+//               font-size: 12px;
+//               line-height: 16px;
+//               font-weight: 500;
+//             }
 
-            .iconTestimonyArrow {
-              width: 32px;
-              height: 32px;
+//             .iconTestimonyArrow {
+//               width: 32px;
+//               height: 32px;
 
-              img {
-                width: 14px;
-              }
-            }
-          }
-        }
+//               img {
+//                 width: 14px;
+//               }
+//             }
+//           }
+//         }
 
-        .nextTestimony {
-          padding: 0 16px;
+//         .nextTestimony {
+//           padding: 0 16px;
 
-          .testimonyText {
-            width: fit-content;
+//           .testimonyText {
+//             width: fit-content;
 
-            h3 {
-              font-size: 20px;
-            }
+//             h3 {
+//               font-size: 20px;
+//             }
 
-            p {
-              font-size: 16px;
-            }
-          }
+//             p {
+//               font-size: 16px;
+//             }
+//           }
 
-          .nextButton {
-            margin: 40px auto 0;
-          }
-        }
-      }
-    }
-  }
-}
+//           .nextButton {
+//             margin: 40px auto 0;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
