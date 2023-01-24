@@ -43,6 +43,9 @@
   }
 }
 
+.carouselWithFade {
+  @extend .section;
+}
 
 .developmentProcess {
   @extend .section;

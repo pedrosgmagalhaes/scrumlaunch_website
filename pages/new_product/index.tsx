@@ -24,6 +24,7 @@ import CaseStudiesGipperDesktopImage from '../../public/assets/case-studies/gipp
 
 
 import TechnologiesCarousel from '../../components/carousel-technologies'
+import CarouselWithFade from '../../components/carousel-with-fade'
 import StartupCard from '../../components/startup-teams-card'
 import ContactUsCard from '../../components/contact-us-card'
 import Layout from '../../components/layout'
@@ -120,9 +121,11 @@ export default function Home() {
             onClickHandler={() => {}}
             color="black"
           />
-
-          {/* слайдер */}
         </div>
+
+        <section className={style.carouselWithFade}>
+          <CarouselWithFade />
+        </section>
 
         <section className={style.longTermPartner} >
 
