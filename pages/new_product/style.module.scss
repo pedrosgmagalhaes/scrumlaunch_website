@@ -34,12 +34,27 @@
   // margin: 90px auto 100px;
   padding: 90px 120px 120px;
 
+  @media screen and (max-width: 768px) {
+    padding: 90px 32px 50px;
+  }
+  @media screen and (max-width: 376px) {
+    padding: 80px 16px 50px;
+  }
+
   h2 {
     color: var(--text-color);
     font-weight: 700;
     font-size: 48px;
     margin: 0;
     margin-bottom: 64px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 38px;
+    }
+    @media screen and (max-width: 376px) {
+      font-size: 32px;
+      margin-bottom: 24px;
+    }
   }
 }
 
@@ -51,61 +66,108 @@
   @extend .section;
 
   .mainContainer {
-    padding: 0 120px;
   
     .container {
       display: flex;
       padding: 40px 0;
       width: 100%;
       height: 120px;
+      @media screen and (max-width: 376px) {
+        height: unset;
+        padding: 12px 0;
+      }
 
       &.active {
         @extend .container;
         background-color: #E2CCFF;
         border-radius: 24px;
         padding: 32px 40px;
+        @media screen and (max-width: 768px) {
+          padding: 24px;
+        }
+        @media screen and (max-width: 376px) {
+          margin: 12px 0;
+        }
 
         .processName {
-          width: calc(25% - 40px);
+          width: calc(40% - 34px);
+          @media screen and (max-width: 768px) {
+            width: calc(60% - 16px);
+          }
         }
+        
+        .numberContainer {
 
-        .number {
-          background-color: #1e1f21;
-          color: white;
+          &:after {
+            @media screen and (max-width: 376px) {
+              bottom: calc((0% - -36px)*(-1));
+            }
+          }
+
+          .number {
+            background-color: #1e1f21;
+            color: white;
+          }
         }
+        
       }
 
       .processName {
-        width: 25%;
+        width: 40%;
         margin: 0;
         align-self: center;
+        text-align: left;
+        font-size: 28px;
+        font-weight: 700;
+
+        @media screen and (max-width: 768px) {
+          width: 60%;
+        }
+        @media screen and (max-width: 376px) {
+          font-size: 20px;
+          align-self: flex-start;
+        }
       }
 
-      .number {
-        border-radius: 100%;
-        border: 1px black solid;
-        min-width: 34px;
-        height: 34px;
+      .numberContainer {
+        position: relative;
         align-self: center;
         text-align: center;
-        line-height: 28px;
-        font-weight: 700;
-        font-size: 28px;
-        margin-right: 28px;
-        position: relative;
-
-        &.active {
-          background-color: #1e1f21;
-          color: white;
+        @media screen and (max-width: 376px) {
+          align-self: stretch;
         }
 
         &:after {
           content: "";
           position: absolute;
-          right: 45%;
+          right: 71%;
           border-right: 1px dashed #1e1f21;
-          top: calc(100% + 8px);
-          bottom: -80px;
+          top: 38px;
+          bottom: calc((100% + 48px)*(-1));
+          @media screen and (max-width: 376px) {
+            bottom: calc((0% - -18px)*(-1));
+          }
+        }
+
+        .number {
+          border-radius: 100%;
+          border: 1px black solid;
+          min-width: 34px;
+          height: 34px;
+          line-height: 28px;
+          font-weight: 700;
+          font-size: 28px;
+          margin-right: 28px;
+          
+          @media screen and (max-width: 376px) {
+            font-size: 20px;
+            align-self: flex-start;
+          }
+  
+          &.active {
+            background-color: #1e1f21;
+            color: white;
+          }
         }
       }
 
@@ -115,10 +177,22 @@
         line-height: 150%;
         width: 100%;
         margin: 0;
+        text-align: left;
+        @media screen and (max-width: 376px) {
+          font-size: 14px;
+        }
+      }
+
+      &:first-child {
+        .numberContainer:after {
+          @media screen and (max-width: 376px) {
+            bottom: calc((0% - -36px)*(-1));
+          }
+        }
       }
 
       &:last-child {
-        .number:after {
+        .numberContainer:after {
           display: none;
         }
       }
@@ -221,10 +295,47 @@
   .contentContainer {
     display: flex;
     gap: 40px;
+    @media screen and (max-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
 
     .tabContainer {
       display: inline-grid;
+      align-content: center;
       gap: 32px;
+      @media screen and (max-width: 768px) {
+        align-content: start;
+        gap: 26px;
+
+        &:first-child {
+          grid-column-start: 2;
+          grid-row-start: 1;
+          grid-row-end: 2;
+        }
+
+        &:nth-child(2) {
+          grid-column-start: 1;
+          grid-row-start: 1;
+          grid-row-end: 3;
+        }
+
+        &:last-child {
+          grid-column-start: 2;
+          grid-row-start: 2;
+          grid-row-end: 3;
+        }
+
+      }
+
+      
+      .tabImage {
+        @media screen and (max-width: 768px) {
+          display: none;
+        }
+      }
+      
 
       .contactTab {
         display: grid;
@@ -295,21 +406,32 @@
         padding: 42px;
         border-radius: 24px;
         text-align: left;
+        @media screen and (max-width: 768px) {
+          padding: 24px;
+        }
 
         h4 {
           font-weight: 700;
           font-size: 28px;
           line-height: 150%;
           margin: 0 0px 20px;
+          @media screen and (max-width: 768px) {
+            font-size: 24px;
+            margin: 0 0px 16px;
+          }
         }
 
         ul {
           padding-left: 30px;
+          margin: 0;
 
           li {
             font-weight: 700;
             font-size: 20px;
             line-height: 150%;
+            @media screen and (max-width: 768px) {
+              font-size: 16px;
+            }
           }
         }
         button {

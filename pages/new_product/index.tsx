@@ -129,7 +129,7 @@ export default function Home() {
 
         <section className={style.longTermPartner} >
 
-          <h2>Your long term tech partner</h2>
+          <h2>Types of clients</h2>
 
           <div className={style.majorContainer}>
             {clientsType.map((client, index) => (
@@ -154,7 +154,9 @@ export default function Home() {
             {developmentProcess.map((process, index) => (
               <div key={index} className={process.activeContainer ? `${style.container} ${style.active}` : style.container}>
                 <h3 className={style.processName}>{process.title}</h3>
-                <div className={checkIsBelowActive(index) ? `${style.number} ${style.active}` : style.number }> {index + 1} </div>
+                <div className={style.numberContainer}>
+                  <div className={checkIsBelowActive(index) ? `${style.number} ${style.active}` : style.number }> {index + 1} </div>
+                </div>
                 <p className={style.content}>{process.content}</p>
               </div>
             ))}
@@ -266,7 +268,7 @@ export default function Home() {
                 </div>
               </div>
               <div className={style.tabContainer}>
-                <Image src={BusinessSolutionsTabImage} alt='business solutions tab image' />
+                <Image className={style.tabImage} src={BusinessSolutionsTabImage} alt='business solutions tab image' />
                 <div className={style.tab} style={{ backgroundColor: '#97F7E0' }}>
                   <h4>
                     IT & Operations Support
