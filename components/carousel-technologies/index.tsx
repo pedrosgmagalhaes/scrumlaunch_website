@@ -66,17 +66,17 @@ export default function TechnologiesCarousel() {
           {/* 2. */}
           <div className={style.slider}>
             {/* 3 */}
-            {images.map((i) => {
+            {images.map((i, index) => {
               return (
-                <div className={style.slide}>
+                <div key={index} className={style.slide}>
                   <Image src={i.image} alt={i.name}/>
                   <h3>{i.name}</h3>
                 </div>
               );
             })}
-            {images.map((i) => {
+            {images.map((i, index) => {
               return (
-                <div className={style.slide}>
+                <div key={index} className={style.slide}>
                   <Image src={i.image} alt={i.name}/>
                   <h3>{i.name}</h3>
                 </div>
@@ -85,17 +85,17 @@ export default function TechnologiesCarousel() {
           </div>
           <div className={style.sliderBackwards}>
             {/* 3 */}
-            {images.map((i) => {
+            {images.map((i, index) => {
               return (
-                <div className={style.slide}>
+                <div key={index} className={style.slide}>
                   <Image src={i.image} alt={i.name}/>
                   <h3>{i.name}</h3>
                 </div>
               );
             })}
-            {images.map((i) => {
+            {images.map((i, index) => {
               return (
-                <div className={style.slide}>
+                <div key={index} className={style.slide}>
                   <Image src={i.image} alt={i.name}/>
                   <h3>{i.name}</h3>
                 </div>

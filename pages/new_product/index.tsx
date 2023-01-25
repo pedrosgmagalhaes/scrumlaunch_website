@@ -314,6 +314,7 @@ export default function Home() {
                 <Image src={CaseStudiesCampusReelMobileImage} alt='Campus Reel Mobile Image' />
                 <Image src={CaseStudiesCampusReelDesktopImage} alt='Campus Reel Desktop Image' />
               </div>
+              <div className={style.shadow}/>
             </div>
             <div className={style.gipperTab}>
               <h2>
@@ -332,6 +333,7 @@ export default function Home() {
                 <Image src={CaseStudiesGipperMobileImage} alt='Gipper Mobile Image' />
                 <Image src={CaseStudiesGipperDesktopImage} alt='Gipper Desktop Image' />
               </div>
+              <div className={style.shadow}/>
             </div>
           </div>
         </section>
