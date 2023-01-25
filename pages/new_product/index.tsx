@@ -17,10 +17,10 @@ import BusinessSolutionsContactBurgerImage from '../../public/assets/business-so
 import BusinessSolutionsContactFormTextImage from '../../public/assets/business-solutions/text.svg'
 import BusinessSolutionsContactFooterImage from '../../public/assets/business-solutions/footer.svg'
 
-import CaseStudiesCampusReelMobileImage from '../../public/assets/case-studies/campusReelMobile.svg'
-import CaseStudiesCampusReelDesktopImage from '../../public/assets/case-studies/campusReelDesktop.svg'
-import CaseStudiesGipperMobileImage from '../../public/assets/case-studies/gipperMobile.svg'
-import CaseStudiesGipperDesktopImage from '../../public/assets/case-studies/gipperDesktop.svg'
+import CaseStudiesCampusReelMobileImage from '../../public/assets/case-studies/campusReelMobile.png'
+import CaseStudiesCampusReelDesktopImage from '../../public/assets/case-studies/campusReelDesktop.png'
+import CaseStudiesGipperMobileImage from '../../public/assets/case-studies/gipperMobile.png'
+import CaseStudiesGipperDesktopImage from '../../public/assets/case-studies/gipperDesktop.png'
 
 
 import TechnologiesCarousel from '../../components/carousel-technologies'
