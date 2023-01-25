@@ -42,24 +42,28 @@
 
   .heroCard {
     position: relative;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
     z-index: 1;
     padding-left: -10px;
+    max-width: 30rem;
 
-    .rectangle {
+    .heroCardRectangle {
       position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 512px;
-      height: 400px;
+      width: 28rem;
+      height: 24rem;
       border-radius: 24px;
-      background-color: #97f7e0;
+      background-color: var(--third-color);
       z-index: -1;
       padding-right: 16rem;
+    }
 
+    .heroCardImage {
+      position: relative;
+      height: 18rem;
+      width: auto;
+      margin-left: 10rem;
     }
   }
 }
@@ -182,18 +186,72 @@
 }
 
 // TABLET
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1180px) {
   .techTalent {
+    display: flex;
+    flex-direction: column;
+
+    .callToActionSection {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
     .titleTech {
       width: 100%;
-      font-size: 62px;
-      line-height: 62px;
+      font-size: 72px;
+      font-weight: 700;
+      margin-top: 90px;
+      margin-bottom: 50px;
+      line-height: 72px;
+      max-width: 500px;
+      text-align: center;
     }
 
     .techSubText {
-      width: 70%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       font-size: 16px;
-      line-height: 24px;
+      line-height: 30px;
+      width: 100%;
+      text-align: center;
+      font-weight: 500;
+      margin: 0;
+      margin-bottom: 60px;
+    }
+
+    .techButton {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      margin: 0;
+      margin-bottom: 60px;
+    }
+
+    .heroCard {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10rem;
+
+      .heroCardRectangle {
+        position: relative;
+        height: 24rem;
+        width: 28rem;
+        border-radius: 24px;
+        background-color: var(--third-color);
+        z-index: -1;
+      }
+
+      .heroCardImage {
+        position: relative;
+        height: 18rem;
+        width: auto;
+        margin-left: 10rem;
+      }
     }
   }
 
@@ -253,20 +311,73 @@
 }
 
 // PHONE
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 390px) {
   .techTalent {
+    display: flex;
+    flex-direction: column;
+
+    .callToActionSection {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
     .titleTech {
-      width: 90%;
+      width: 100%;
       font-size: 32px;
+      font-weight: 900;
+      margin-top: 30px;
+      margin-bottom: 5px;
       line-height: 32px;
-      margin-bottom: 22px;
+      max-width: 500px;
+      text-align: center;
+      padding: 1rem;
     }
 
     .techSubText {
-      width: 90%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       font-size: 16px;
-      line-height: 24px;
+      font-weight: 500;
+      width: 100%;
+      text-align: center;
+      margin: 0;
       margin-bottom: 40px;
+      padding: 1rem;
+    }
+
+    .techButton {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      margin: 0;
+      margin-bottom: 40px;
+    }
+
+    .heroCard {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 3rem;
+
+      .heroCardRectangle {
+        position: relative;
+        height: 14rem;
+        width: 20rem;
+        border-radius: 24px;
+        background-color: var(--third-color);
+        z-index: -1;
+      }
+
+      .heroCardImage {
+        position: relative;
+        height: 12rem;
+        width: auto;
+        margin-left: 14rem;
+      }
     }
   }
 

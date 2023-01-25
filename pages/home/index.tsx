@@ -26,7 +26,7 @@ export default function Home() {
 
       <Layout>
         <div className={style.techTalent}>
-          <div className={style.callToAction}>
+          <div className={style.callToActionSection}>
             <h1 className={style.titleTech}>
               Scale your tech team with global talent
             </h1>
@@ -46,8 +46,9 @@ export default function Home() {
           </div>
 
           <div className={style.heroCard}>
-            <div className={style.rectangle}>
+            <div className={style.heroCardRectangle}>
               <Image
+              className={style.heroCardImage}
                 src={HeroCard}
                 alt="Scale your tech team with global talent"
               />
