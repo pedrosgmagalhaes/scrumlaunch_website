@@ -20,7 +20,7 @@ export default function CarouselWithFade() {
       <Swiper
         effect={"coverflow"}
         slidesPerView={2}
-        spaceBetween={90}
+        spaceBetween={10}
         slidesPerGroup={1}
         grabCursor={true}
         navigation={true}
@@ -29,11 +29,12 @@ export default function CarouselWithFade() {
         loop={true}
         coverflowEffect={{
           rotate: 0,
-          scale: 0.8,
-          stretch: 60,
+          scale: 0.9,
+          stretch: 100,
           depth: 100,
           modifier: 1,
           slideShadows: false,
+          transformEl: ''
         }}
         pagination={false}
         modules={[EffectCoverflow, Navigation]}

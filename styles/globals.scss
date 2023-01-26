@@ -47,6 +47,9 @@ a {
 //   }
 // }
 
+
+// Swiper with fade effect
+
 .swiper {
   width: 100%;
   padding-top: 50px;
@@ -63,4 +66,40 @@ a {
 .swiperSlide img {
   display: block;
   width: 100%;
+}
+
+.swiper-slide-next {
+  filter: blur(2px);
+  // margin-top: 20px;
+  transition: 4s ease-in;
+  transform: translateY(80px);
+}
+
+.swiper-slide-prev {
+  filter: blur(2px);
+  // margin-top: 20px;
+  transition: 4s ease-in;
+  transform: translateY(80px);
+}
+
+.swiper-button-next {
+  right: 29% !important;
+  background-image: url("../public/assets/carousel-with-fade/btn-right.svg");
+  min-width: 42px;
+  max-height: 42px;
+  &::after {
+    content: ''!important;
+    
+  }
+}
+
+.swiper-button-prev {
+  left: 29% !important;
+  background-image: url("../public/assets/carousel-with-fade/btn-left.svg");
+  max-height: 42px;
+  min-width: 42px;
+  &::after {
+    content: ''!important;
+    
+  }
 }
