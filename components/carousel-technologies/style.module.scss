@@ -6,7 +6,13 @@
   max-width: 1440px;
   margin: auto;
   // margin: 90px auto 100px;
-  padding: 90px 120px 120px;
+  padding: 90px 0px 120px;
+  @media screen and (max-width: 768px) {
+    padding: 90px 0px 50px;
+  }
+  @media screen and (max-width: 376px) {
+    padding: 80px 0px 50px;
+  }
 
   h2 {
     color: var(--text-color);
@@ -14,6 +20,14 @@
     font-size: 48px;
     margin: 0;
     margin-bottom: 64px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 38px;
+    }
+    @media screen and (max-width: 376px) {
+      font-size: 32px;
+      margin-bottom: 24px;
+    }
   }
 }
 
@@ -37,15 +51,20 @@
 .sliderContainer {
   display: flex;
   align-items: center;
-  min-height: 400px;
   width: 100%;
   justify-content: center;
 
   .sliderOuter {
     width: 200%;
-    height: 400px;
+    height: 305px;
     overflow: hidden;
     position: relative;
+    @media screen and (max-width: 768px) {
+      height: 230px;
+    }
+    @media screen and (max-width: 376px) {
+      height: 165px;
+    }
 
     .slider {
       width: 200%;
@@ -56,21 +75,44 @@
       left: 0;
       gap: 20px;
       @extend .animate;
+      @media screen and (max-width: 376px) {
+        gap: 12px;
+      }
 
       .slide {
         -webkit-filter: grayscale(100%);
         filter: grayscale(100%);
         display: flex;
         justify-content: center;
-        width: 293px;
+        min-width: 293px;
         height: 142px;
         border: 1px solid #A9A69E;
         border-radius: 16px;
         align-items: center;
+        @media screen and (max-width: 768px) {
+          min-width: 214px;
+          height: 104px;
+        }
+        @media screen and (max-width: 376px) {
+          font-size: 16px;
+          min-width: 160px;
+          height: 72px;
+        }
 
         &:hover {
           -webkit-filter: grayscale(0);
           filter: grayscale(0);
+        }
+
+        img {
+          @media screen and (max-width: 768px) {
+            max-width: 36px;
+            max-height: 36px;
+          }
+          @media screen and (max-width: 376px) {
+            max-width: 22px;
+            max-height: 22px;
+          }
         }
 
         h3 {
@@ -78,14 +120,27 @@
           font-weight: 700;
           font-size: 28px;
           line-height: 100%;
+          @media screen and (max-width: 768px) {
+            font-size: 20px;
+          }
+          @media screen and (max-width: 376px) {
+            font-size: 16px;
+          }
+  
         }
       }
     }
 
     .sliderBackwards {
-      margin-top: 200px;
+      margin-top: 160px;
       @extend .slider;
-      @extend .animate-backwards
+      @extend .animate-backwards;
+      @media screen and (max-width: 768px) {
+        margin-top: 125px;
+      }
+      @media screen and (max-width: 376px) {
+        margin-top: 90px;
+      }
     }
   }
 }

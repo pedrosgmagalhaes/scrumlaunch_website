@@ -17,10 +17,10 @@ import BusinessSolutionsContactBurgerImage from '../../public/assets/business-so
 import BusinessSolutionsContactFormTextImage from '../../public/assets/business-solutions/text.svg'
 import BusinessSolutionsContactFooterImage from '../../public/assets/business-solutions/footer.svg'
 
-import CaseStudiesCampusReelMobileImage from '../../public/assets/case-studies/campusReelMobile.svg'
-import CaseStudiesCampusReelDesktopImage from '../../public/assets/case-studies/campusReelDesktop.svg'
-import CaseStudiesGipperMobileImage from '../../public/assets/case-studies/gipperMobile.svg'
-import CaseStudiesGipperDesktopImage from '../../public/assets/case-studies/gipperDesktop.svg'
+import CaseStudiesCampusReelMobileImage from '../../public/assets/case-studies/campusReelMobile.png'
+import CaseStudiesCampusReelDesktopImage from '../../public/assets/case-studies/campusReelDesktop.png'
+import CaseStudiesGipperMobileImage from '../../public/assets/case-studies/gipperMobile.png'
+import CaseStudiesGipperDesktopImage from '../../public/assets/case-studies/gipperDesktop.png'
 
 
 import TechnologiesCarousel from '../../components/carousel-technologies'
@@ -129,7 +129,7 @@ export default function Home() {
 
         <section className={style.longTermPartner} >
 
-          <h2>Your long term tech partner</h2>
+          <h2>Types of clients</h2>
 
           <div className={style.majorContainer}>
             {clientsType.map((client, index) => (
@@ -154,7 +154,9 @@ export default function Home() {
             {developmentProcess.map((process, index) => (
               <div key={index} className={process.activeContainer ? `${style.container} ${style.active}` : style.container}>
                 <h3 className={style.processName}>{process.title}</h3>
-                <div className={checkIsBelowActive(index) ? `${style.number} ${style.active}` : style.number }> {index + 1} </div>
+                <div className={style.numberContainer}>
+                  <div className={checkIsBelowActive(index) ? `${style.number} ${style.active}` : style.number }> {index + 1} </div>
+                </div>
                 <p className={style.content}>{process.content}</p>
               </div>
             ))}
@@ -266,7 +268,7 @@ export default function Home() {
                 </div>
               </div>
               <div className={style.tabContainer}>
-                <Image src={BusinessSolutionsTabImage} alt='business solutions tab image' />
+                <Image className={style.tabImage} src={BusinessSolutionsTabImage} alt='business solutions tab image' />
                 <div className={style.tab} style={{ backgroundColor: '#97F7E0' }}>
                   <h4>
                     IT & Operations Support
@@ -312,6 +314,7 @@ export default function Home() {
                 <Image src={CaseStudiesCampusReelMobileImage} alt='Campus Reel Mobile Image' />
                 <Image src={CaseStudiesCampusReelDesktopImage} alt='Campus Reel Desktop Image' />
               </div>
+              <div className={style.shadow}/>
             </div>
             <div className={style.gipperTab}>
               <h2>
@@ -330,6 +333,7 @@ export default function Home() {
                 <Image src={CaseStudiesGipperMobileImage} alt='Gipper Mobile Image' />
                 <Image src={CaseStudiesGipperDesktopImage} alt='Gipper Desktop Image' />
               </div>
+              <div className={style.shadow}/>
             </div>
           </div>
         </section>
