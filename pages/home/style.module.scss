@@ -65,10 +65,16 @@
         min-height: 250px;
       }
       img {
-        position: absolute;
+        position: initial;
         left: 0;
         width: 100%;
         bottom: -25%;
+        @media screen and (max-width: 768px) {
+          position: absolute;
+          width: 100%;
+          bottom: -50%;
+          height: auto;
+        }
         @media screen and (max-width: 376px) {
           bottom: 0;
           height: 100%;

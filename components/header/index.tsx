@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useRouter } from "next/router";
 import Image from 'next/image'
 import styles from './styles.module.scss'
 import SocialIcons from '../social-icons'
@@ -7,6 +8,7 @@ import MenuIcon from '../../public/icons/menu.svg'
 import Arrow from '../../public/icons/toggleArrow.svg'
 
 function Header() {
+  const router = useRouter();
   const [showMenuDropdown, setShowMenuDropdown] = useState(false)
   const [showServices, setShowServices] = useState(false)
 
@@ -16,7 +18,12 @@ function Header() {
 
   const returnAnchorTags = () => (
     <>
-      <a href="/about-us">About Us</a>
+      <a
+        className={`${router.pathname == "/home" ? styles.active : ''}`}
+        href="/about-us"
+      >
+        About Us
+      </a>
 
       <a href="/services" className={styles.services}>
         Services
@@ -40,7 +47,9 @@ function Header() {
       <div className={styles.desktopContainer}>
         <Image src={Scrumlaunch} alt="scrumlaunch" className={styles.logoSL} />
 
-        <nav className={styles.navbar}>{returnAnchorTags()}</nav>
+        <nav className={styles.navbar}>
+          {returnAnchorTags()}
+        </nav>
 
         <div className={styles.containerBtn}>
           <button type="button" className={styles.contactUseBtn}>
