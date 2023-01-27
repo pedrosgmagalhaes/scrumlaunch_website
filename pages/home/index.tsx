@@ -1,6 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import style from './style.module.scss'
+import Image from 'next/image'
 import TechTalentCard from '../../components/tech-talent-card'
 import ClientTestimonialCard from '../../components/client-testimonial-card'
 import CarouselCaseCard from '../../components/carousel-case-studies-card'
@@ -13,6 +14,8 @@ import ContactUsCard from '../../components/contact-us-card'
 import Layout from '../../components/layout'
 import Button from '../../components/buttons/accept-button'
 import Arrow from '../../public/icons/arrowBlack.svg'
+import HeroImg from '../../public/assets/tech-talent/heroImg.jpg'
+
 
 export default function Home() {
   return (
@@ -23,27 +26,35 @@ export default function Home() {
       </Head>
 
       <Layout>
-        <div className={style.techTalent}>
-          <h1 className={style.titleTech}>
-            Tech talent that’s right for your project.
-          </h1>
+        <section className={style.techTalent}>
+          <div className={style.infoRow}>
+            <div className={style.imgContainer}>
+              <Image src={HeroImg} alt='tech-talent hero'/>
+            </div>
+            <div className={style.actionContainer}>
+              <h1 className={style.titleTech}>
+                Tech talent that’s right for your project.
+              </h1>
 
-          <h6 className={style.techSubText}>
-            Every technology project is different and it’s just as important to
-            find the right person as it is to find a talented person.
-            ScrumLaunch’s talent hubs in Eastern Europe and Latin America
-            combine global scale
-          </h6>
+              <h6 className={style.techSubText}>
+                Every technology project is different and it’s just as important to
+                find the right person as it is to find a talented person.
+                ScrumLaunch’s talent hubs in Eastern Europe and Latin America
+                combine global scale
+              </h6>
 
-          <Button
-            buttonText="Schedule a call"
-            icon={Arrow}
-            onClickHandler={() => {}}
-            color="black"
-          />
+              <Button
+                buttonText="Schedule a call"
+                icon={Arrow}
+                onClickHandler={() => {}}
+                color="black"
+              />
+            </div>
+            
+          </div>
 
           <TechTalentCard />
-        </div>
+        </section>
 
         <div className={style.longTermPartner}>
           <h2 className={style.title}>Your long term tech partner</h2>

@@ -19,9 +19,6 @@ export default function CarouselWithFade() {
     <>
       <Swiper
         effect={"coverflow"}
-        slidesPerView={2}
-        spaceBetween={10}
-        slidesPerGroup={1}
         grabCursor={true}
         navigation={true}
         centeredSlides={true}
@@ -36,6 +33,29 @@ export default function CarouselWithFade() {
           slideShadows: false,
           transformEl: ''
         }}
+        breakpoints={
+          {
+            // when window width is >= 320px
+            320: {
+              width: 325,
+              slidesPerView: 1,
+              slidesPerGroup: 1,
+              spaceBetween: 10
+            },
+            // when window width is >= 480px
+            377: {
+              slidesPerView: 1,
+              slidesPerGroup: 1,
+              spaceBetween: 10
+            },
+            // when window width is >= 640px
+            769: {
+              slidesPerView: 2,
+              spaceBetween: 10,
+              slidesPerGroup: 1
+            }
+          }
+        } 
         pagination={false}
         modules={[EffectCoverflow, Navigation]}
         className="mySwiper"

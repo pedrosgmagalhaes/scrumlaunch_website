@@ -1,240 +1,98 @@
 .techTalentCard {
   margin-top: 80px;
-  display: flex;
+  display: grid;
   align-items: center;
   gap: 20px;
-
-  .fixSize {
-    width: 224px;
-    height: 280px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-columns: minmax(0, 1fr);
+  @media screen and (max-width: 768px) {
+    gap: 11px;
   }
-
-  .imageCard {
-    @extend .fixSize;
-    object-fit: contain;
-  }
-
-  .mobileCard {
-    display: initial;
-  }
-
-  .desktopHide {
-    display: none;
-    align-self: flex-start;
-  }
-
-  .cardMultiple {
-    @extend .fixSize;
-    position: relative;
-    overflow: hidden;
-
-    .cardElement {
-      position: absolute;
-      width: 100%;
-      background-color: var(--forth-color);
-      border-top-left-radius: 24px;
-      border-top-right-radius: 24px;
-      height: 220px;
-      display: flex;
-      flex-direction: column;
-      margin: 0;
-      font-weight: 700;
-      font-size: 17px;
-
-      li {
-        margin-top: 22px;
-      }
-
-      p {
-        position: absolute;
-        bottom: 15px;
-        left: 18px;
-        margin: 0;
-        font-weight: 700;
-        font-size: 14px;
-        color: var(--fifth-color);
-      }
-    }
-
-    .cardElement2 {
-      @extend .cardElement;
-      background-color: var(--text-color);
-      color: var(--background-color);
-      top: 60px;
-      height: 140px;
-    }
-
-    .cardElement3 {
-      @extend .cardElement;
-      background-color: var(--fifth-color);
-      top: 120px;
-      height: 140px;
-    }
-
-    .cardElement4 {
-      @extend .cardElement;
-      background-color: var(--sixth-color);
-      color: var(--background-color);
-      top: 180px;
-      height: 100px;
-      border-radius: 24px;
-    }
-  }
-
-  .cardInfoCompany {
-    @extend .fixSize;
-    display: flex;
-    flex-direction: column;
-
-    .testCard {
-      display: flex;
-      width: 100%;
-    }
-
-    .employees {
-      background-color: var(--text-color);
-      color: var(--background-color);
-      border-radius: 24px;
-      width: 100%;
-      height: 140px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      font-size: 42px;
-      font-weight: 700;
-      line-height: 40px;
-
-      p {
-        font-weight: 100;
-        font-size: 16px;
-        margin: 0;
-      }
-    }
-
-    .unit {
-      @extend .employees;
-      background-color: var(--third-color);
-      color: var(--text-color);
-      width: 50%;
-    }
-
-    .developers {
-      @extend .employees;
-      width: 50%;
-      background-color: var(--forth-color);
-      color: var(--text-color);
-    }
-  }
-
-  .cardInfoCompanyMobile {
-    @extend .cardInfoCompany;
-    display: none;
-  }
-}
-
-// TABLET
-@media screen and (max-width: 768px) {
-  .techTalentCard {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 16px;
-    row-gap: 16px;
-
-    .mobileCard {
-      display: none;
-    }
-
-    .cardInfoCompany {
-      display: none;
-    }
-
-    .desktopHide,
-    .cardInfoCompanyMobile {
-      display: initial;
-    }
-  }
-}
-
-// PHONE
-@media screen and (max-width: 376px) {
-  .techTalentCard {
+  @media screen and (max-width: 376px) {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    column-gap: 12px;
-    row-gap: 12px;
+    margin-top: 68px;
+  }
 
-    .fixSize {
-      width: 166px;
-      height: 120px;
-    }
+ .card {
+  border-radius: 20px;
+  padding: 16px 0 16px 18px;
+  height: 100%;
+  text-align: left;
+  max-height: 142px;
+  transition: 0.5s ease;
+  border: 1px solid #A9A69E;
+  background-color: #ffffff;
+  @media screen and (max-width: 768px) {
+    min-height: 158px;
+  }
+  @media screen and (max-width: 376px) {
+    min-height: 184px;
+  }
+  
 
-    .imageCard {
-      object-fit: cover;
-      border-radius: 24px;
-    }
-
-    .cardMultiple {
-      grid-area: 1 / 2 / 3 / 3;
-      height: 100%;
-
-      .cardElement {
-        height: 104px;
-
-        li {
-          font-size: 14px;
-          margin-top: 15px;
-        }
-      }
-
-      .cardElement2 {
-        height: 104px;
-        top: 45px;
-      }
-
-      .cardElement3 {
-        height: 104px;
-        top: 95px;
-      }
-
-      .cardElement4 {
-        height: 104px;
-        top: 148px;
-      }
-    }
-
-    .mobileCard,
-    .cardInfoCompany {
-      display: initial;
-    }
-
-    .cardInfoCompany {
-      grid-area: 3 / 1 / 5 / 2;
-      height: 100%;
-
-      .employees {
-        font-size: 28px;
-        line-height: 28px;
-        height: 105px;
-
-        p {
-          font-size: 12px;
-          line-height: 18px;
-          margin-top: 6px;
-        }
-      }
-    }
-
-    .mobileCard {
-      grid-area: 3 / 2 / 5 / 3;
-      height: 100%;
-      object-fit: contain;
-      margin-top: -45px;
-    }
-
-    .desktopHide,
-    .cardInfoCompanyMobile {
-      display: none;
+  &:first-child {
+    border: unset;
+    text-align: center;
+    @media screen and (max-width: 376px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: left;
     }
   }
+
+  &:hover:not(:first-child) {
+    border: 1px solid transparent;
+    .indicator {
+      background-color: var(--text-color);
+      color: var(--background-color);
+      border: 1px solid transparent;
+    }
+  }
+  
+  h2 {
+    margin-bottom: 0;
+    line-height: 62px;
+    @media screen and (max-width: 768px) {
+      font-size: 36px;
+    }
+    @media screen and (max-width: 376px) {
+      font-size: 24px;
+      line-height: 150%;
+    }
+  }
+
+  h3 {
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 16px;
+    margin-bottom: 0;
+    @media screen and (max-width: 768px) {
+      margin-top: 10px;
+    }
+  }
+
+  .indicator {
+    width: 34px;
+    height: 34px;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 500;
+    border: 1px solid #1E1F21;
+    transition: 0.5s ease;
+    padding-bottom: 5px;
+    padding-right: 1px;
+    @media screen and (max-width: 768px) {
+      width: 22px;
+      height: 22px;
+      font-size: 16px;
+      padding-bottom: 2px;
+    }
+  }
+ }
 }
