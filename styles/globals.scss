@@ -47,20 +47,48 @@ a {
 //   }
 // }
 
-.swiper {
+
+// Swiper with fade effect
+
+.swiperWithFade {
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
+
+  .swiperSlide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+  }
+  
+  .swiperSlide img {
+    display: block;
+    width: 100%;
+  }
+  
+  .swiper-slide {
+    @media screen and (max-width: 376px) {
+      margin-left: 5px;
+    }
+    img {
+      @media screen and (max-width: 376px) {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  
+  .swiper-slide-next {
+    filter: blur(2px);
+    transition: 4s ease-in;
+    transform: translateY(80px);
+  }
+  
+  .swiper-slide-prev {
+    filter: blur(2px);
+    transition: 4s ease-in;
+    transform: translateY(80px);
+  }
 }
 
-.swiperSlide {
-  background-position: center;
-  background-size: cover;
-  width: 300px;
-  height: 300px;
-}
-
-.swiperSlide img {
-  display: block;
-  width: 100%;
-}
