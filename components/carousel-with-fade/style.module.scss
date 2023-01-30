@@ -1,0 +1,35 @@
+
+.button {
+  height: 42px;
+  width: 42px;
+  position: absolute;
+  top: 42%;
+  z-index: 10;
+  cursor: pointer;
+  @media screen and (max-width: 376px) {
+    display: none;
+  }
+}
+
+.buttonPrev {
+  @extend .button;
+
+  left: 29%;
+  background-image: url("../../public/assets/carousel-with-fade/btn-left.svg");
+  
+  @media screen and (max-width: 768px) {
+    left: 10%;
+  }
+  
+}
+
+.buttonNext {
+  @extend .button;
+
+  right: 29%;
+  background-image: url("../../public/assets/carousel-with-fade/btn-right.svg");
+
+  @media screen and (max-width: 768px) {
+    right: 10%;
+  }
+}

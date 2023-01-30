@@ -11,41 +11,25 @@ export default function TechTalentCard() {
   const cardsInitial = [
     {
       text: 'A Long-term technology partner',
-      activeBgColor: '#ffffff',
-      bgColor: '#E2CCFF'
+      bgColor: 'lavender'
     },
     {
       text: 'Support for founders and early-stage companies',
-      activeBgColor: '#ffffff',
-      bgColor: '#FFCCDC'
+      bgColor: 'pink'
     },
     {
       text: 'Personalized, dedicated account management',
-      activeBgColor: '#ffffff',
-      bgColor: '#FFD7C2'
+      bgColor: 'orange'
     },
     {
       text: 'Global talent insights and strategies',
-      activeBgColor: '#ffffff',
-      bgColor: '#E1E2E3'
+      bgColor: 'grey'
     },
     {
       text: 'Outcome-oriented focus on business success',
-      activeBgColor: '#ffffff',
-      bgColor: '#97F7E0'
+      bgColor: 'ligth-green'
     },
   ]
-
-  const [cards, setBgColour] = useState(cardsInitial);
-
-    const setCardBgColour = (count: number) => {
-      setBgColour(existingItems => {
-        return existingItems.map((item, index) => {
-          return index === count ? { ...item, activeBgColor: item.activeBgColor == item.bgColor ? '#ffffff' : item.bgColor } : item
-        })
-      })
-    };
-  
 
   return (
     <div className={style.techTalentCard}>
@@ -54,14 +38,11 @@ export default function TechTalentCard() {
           Our Superpowers
         </h2>
       </div>
-      {cards.map((card, index) => {
+      {cardsInitial.map((card, index) => {
         return (
           <div
             key={index}
-            className={style.card}
-            style={{ backgroundColor: card.activeBgColor }}
-            onMouseEnter={() => setCardBgColour(index)}
-            onMouseLeave={() => setCardBgColour(index)}
+            className={style['card--' + card.bgColor]}
           >
             <div className={style.indicator}>{index + 1}</div>
             <h3>{card.text}</h3>

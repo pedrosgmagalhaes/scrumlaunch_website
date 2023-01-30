@@ -29,6 +29,36 @@
     min-height: 184px;
   }
   
+  &--lavender {
+    @extend .card;
+    &:hover {
+      background-color: #E2CCFF;
+    }
+  }
+  &--pink {
+    @extend .card;
+    &:hover {
+      background-color: #FFCCDC;
+    }
+  }
+  &--orange {
+    @extend .card;
+    &:hover {
+      background-color: #FFD7C2;
+    }
+  }
+  &--grey {
+    @extend .card;
+    &:hover {
+      background-color: #E1E2E3;
+    }
+  }
+  &--ligth-green {
+    @extend .card;
+    &:hover {
+      background-color: #97F7E0;
+    }
+  }
 
   &:first-child {
     border: unset;
