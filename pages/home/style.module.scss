@@ -68,69 +68,17 @@
   }
 }
 
-.longTermPartner {
-  margin-top: 180px;
+.staffSection {
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 
-  .majorContainer {
+  .staffItems {
     display: flex;
-    gap: 20px;
-    align-items: center;
-
-    .container {
-      width: 387px;
-      height: 316px;
-      border-radius: 24px;
-      background-color: var(--seventh-color);
-      padding: 28px;
-
-      h4 {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        font-size: 22px;
-        margin: 0;
-        margin-bottom: 70px;
-      }
-
-      h2 {
-        font-size: 72px;
-        margin: 0;
-        margin-bottom: 10px;
-      }
-
-      p {
-        font-size: 18px;
-        margin: 0;
-        font-weight: 500;
-        line-height: 30px;
-      }
-
-      .indicator {
-        width: 34px;
-        height: 34px;
-        background-color: var(--text-color);
-        border-radius: 50%;
-        color: var(--background-color);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 22px;
-        font-weight: 500;
-      }
-    }
-
-    .container2 {
-      @extend .container;
-      background-color: var(--forth-color);
-    }
-
-    .container3 {
-      @extend .container;
-      background-color: var(--eighth-color);
-    }
+    flex-direction: row;
+    margin-top: 40px;
   }
 
   .title {
@@ -138,7 +86,109 @@
     font-weight: 700;
     font-size: 48px;
     margin: 0;
-    margin-bottom: 64px;
+    text-align: center;
+    padding: 2rem 2.3rem;
+  }
+
+  .subTitle {
+    font-weight: 700;
+    font-size: 36px;
+    margin: 0.5rem 2rem;
+    padding-bottom: 1rem;
+  }
+
+  .subLegend {
+    font-weight: 700;
+    font-size: 36px;
+    margin: 2rem 2rem;
+    max-width: 45rem;
+    text-align: center;
+  }
+
+  .staffCardImage {
+    width: auto;
+    margin-left: 10rem;
+    margin-bottom: 2px;
+    background-image: url('../../public/assets/staffCard.png');
+    border-radius: 24px;
+    background-position: bottom;
+    position: relative;
+    height: 70vh;
+    min-width: 40vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .staffItemsList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 90rem;
+  }
+
+  .staffItemNumber {
+    font-weight: 500;
+    font-size: 20px;
+    background: var(--fifth-color);
+    border-radius: 50%;
+    display: flex;
+    min-width: 2rem;
+    height: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+
+  .staffItemNumberFocused {
+    font-weight: 700;
+    font-size: 34px;
+    background: var(--forth-color);
+    border-radius: 50%;
+    display: flex;
+    min-width: 3rem;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .staffItem {
+    margin: 0;
+    margin-top: 1rem;
+
+    ul {
+      margin: 0;
+    }
+
+    .li_last {
+      border-bottom: 1px solid var(--separator-footer-color);
+    }
+
+    li {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      border-top: 1px solid var(--separator-footer-color);
+      padding-top: 1rem;
+      line-height: 30px;
+
+      .staffItemText {
+        list-style: none;
+        padding: 0;
+        margin: 0.5rem;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+      }
+
+      .staffItemTextFocused {
+        list-style: none;
+        padding: 0;
+        margin: 0.5rem;
+        font-weight: 700;
+        font-size: 20px;
+        max-width: 32rem;
+      }
+    }
   }
 }
 
@@ -200,11 +250,11 @@
     .titleTech {
       width: 100%;
       font-size: 72px;
-      font-weight: 700;
+      font-weight: 900;
       margin-top: 90px;
       margin-bottom: 50px;
-      line-height: 72px;
-      max-width: 500px;
+      line-height: 62px;
+      max-width: 700px;
       text-align: center;
     }
 
@@ -218,7 +268,7 @@
       text-align: center;
       font-weight: 500;
       margin: 0;
-      margin-bottom: 60px;
+      margin-bottom: 40px;
     }
 
     .techButton {
@@ -235,11 +285,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-bottom: 10rem;
+      margin-bottom: 6rem;
 
       .heroCardRectangle {
         position: relative;
-        height: 24rem;
+        height: 22rem;
         width: 28rem;
         border-radius: 24px;
         background-color: var(--third-color);
@@ -247,35 +297,149 @@
       }
 
       .heroCardImage {
+        background-image: url("../../public/assets/heroCard.png");
+        border-radius: 24px;
         position: relative;
         height: 18rem;
         width: auto;
-        margin-left: 10rem;
+        margin-left: 18vw;
       }
     }
   }
 
-  .longTermPartner {
-    margin-top: 0;
+  .staffSection {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-    .majorContainer {
-      .container {
-        width: 221px;
-        height: 194px;
-        padding: 22px;
+    .staffCardImage {
+      position: relative;
+      margin-left: 0;
+      width: 20px;
+      height: auto;
+    }
 
-        h4 {
+    .staffCardContent {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .staffItems {
+      display: flex;
+      flex-direction: column;
+      margin-top: 40px;
+    }
+
+    .title {
+      color: var(--text-color);
+      font-weight: 700;
+      font-size: 38px;
+      margin: 0;
+      text-align: center;
+      padding: 2rem 1.3rem;
+    }
+
+    .subTitle {
+      font-weight: 700;
+      font-size: 36px;
+      margin: 0.5rem 2rem;
+      padding-bottom: 1rem;
+    }
+
+    .subLegend {
+      font-weight: 700;
+      font-size: 36px;
+      margin: 2rem 2rem;
+      max-width: 45rem;
+      text-align: center;
+    }
+
+    .staffCardImage {
+      position: relative;
+      height: 200px;
+      background-position: bottom;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 90%;
+    }
+
+    .staffItemsList {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .staffItemNumber {
+      font-weight: 500;
+      font-size: 16px;
+      background: var(--fifth-color);
+      border-radius: 50%;
+      display: flex;
+      min-width: 2rem;
+      height: 2rem;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0.5rem;
+    }
+
+    .staffItemNumberFocused {
+      font-weight: 700;
+      font-size: 28px;
+      background: var(--forth-color);
+      border-radius: 50%;
+      display: flex;
+      min-width: 2.5rem;
+      height: 2.5rem;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .staffItem {
+      margin: 0;
+      margin-top: 1rem;
+      padding: 1.3rem;
+
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+
+      .li_last {
+        border-bottom: 1px solid var(--separator-footer-color);
+      }
+
+      li {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        border-top: 1px solid var(--separator-footer-color);
+        padding-top: 1.1rem;
+        padding-bottom: 1.1rem;
+        line-height: 32px;
+        
+
+        .staffItemText {
+          list-style: none;
+          padding: 0;
+          margin: 0.5rem;
+          font-weight: 500;
           font-size: 20px;
-          margin-bottom: 16px;
+          line-height: 30px;
         }
 
-        h2 {
-          font-size: 36px;
-        }
-
-        p {
-          font-size: 15px;
-          line-height: 21px;
+        .staffItemTextFocused {
+          list-style: none;
+          padding: 0;
+          margin: 0.5rem;
+          font-weight: 700;
+          font-size: 20px;
+          width: 100%;
+          max-width: unset;
         }
       }
     }
@@ -305,13 +469,13 @@
     }
 
     .separator {
-      width: 90%;
+      width: 100%;
     }
   }
 }
 
 // PHONE
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 460px) {
   .techTalent {
     display: flex;
     flex-direction: column;
@@ -381,33 +545,95 @@
     }
   }
 
-  .longTermPartner {
+  .staffSection {
     margin-top: 50px;
+
+    .staffItemNumber {
+      font-weight: 500;
+      font-size: 16px;
+      background: var(--fifth-color);
+      border-radius: 50%;
+      display: flex;
+      min-width: 1.3rem;
+      height: 1.3rem;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0.5rem;
+    }
+
+    .staffItemNumberFocused {
+      font-weight: 700;
+      font-size: 20px;
+      background: var(--forth-color);
+      border-radius: 50%;
+      display: flex;
+      min-width: 2rem;
+      height: 2rem;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .staffItems {
+      .staffItem {
+
+        ul {
+          margin: 1rem;
+        }
+
+        li {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          border-top: 1px solid var(--separator-footer-color);
+          line-height: 32px;
+
+          .staffItemText {
+            list-style: none;
+            padding: 0;
+            margin: 0.5rem;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 30px;
+          }
+
+          .staffItemTextFocused {
+            list-style: none;
+            padding: 0;
+            margin: 0.5rem;
+            font-weight: 800;
+            font-size: 16px;
+            max-width: 32rem;
+          }
+        }
+      }
+    }
+
+    .subTitle {
+      font-weight: 800;
+      font-size: 20px;
+      margin: 0rem;
+      padding-bottom: 1rem;
+      text-align: center;
+      line-height: 30px;
+    }
 
     .title {
       font-size: 32px;
       text-align: center;
+      line-height: 42px;
     }
 
-    .majorContainer {
+    .staffItems {
+      display: flex;
       flex-direction: column;
-      gap: 5px;
+      margin-top: 20px;
+    }
+    
 
-      .container {
-        width: 343px;
-        height: 173px;
-        padding: 24px;
-
-        p {
-          font-size: 14px;
-        }
-
-        .indicator {
-          width: 22px;
-          height: 22px;
-          font-size: 16px;
-        }
-      }
+    .staffItem {
+      margin: 0;
+      padding: 0;
     }
   }
 

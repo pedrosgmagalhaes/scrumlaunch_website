@@ -2,7 +2,6 @@ import React from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import style from './style.module.scss'
-import TechTalentCard from '../../components/tech-talent-card'
 import ClientTestimonialCard from '../../components/client-testimonial-card'
 import CarouselCaseCard from '../../components/carousel-case-studies-card'
 import StartupCard from '../../components/startup-teams-card'
@@ -14,7 +13,9 @@ import ContactUsCard from '../../components/contact-us-card'
 import Layout from '../../components/layout'
 import Button from '../../components/buttons/accept-button'
 import Arrow from '../../public/icons/arrowBlack.svg'
+import ArrowDown from '../../public/assets/arrow_down.svg'
 import HeroCard from '../../public/assets/heroCard.png'
+import StaffCard from '../../public/assets/staffCard.png'
 
 export default function Home() {
   return (
@@ -32,8 +33,8 @@ export default function Home() {
             </h1>
 
             <h6 className={style.techSubText}>
-              We make it fast & hassle-free to onboard top IT talent from Latin
-              America and Eastern Europe.
+              Every technology project with experienced engineers, designers and
+              other IT roles.
             </h6>
             <div className={style.techButton}>
               <Button
@@ -56,40 +57,67 @@ export default function Home() {
           </div>
         </div>
 
-        <div className={style.longTermPartner}>
-          <h2 className={style.title}>Your long term tech partner</h2>
-
-          <div className={style.majorContainer}>
-            <div className={style.container}>
-              <h4>
-                <div className={style.indicator}>1</div> Time savings:
-              </h4>
-
-              <h2>45h</h2>
-
-              <p>saved on avg for your tech team for each role</p>
+        <div className={style.staffSection}>
+          <h2 className={style.title}>
+            Staff your tech roles quickly and effectively without any of the
+            administrative burden or recruiting costs.
+          </h2>
+          <div className={style.staffItems}>
+            <div className={style.staffCardContent}>
+              <div  className={style.staffCardImage}></div>
             </div>
-
-            <div className={style.container2}>
-              <h4>
-                <div className={style.indicator}>2</div> Client lifetime:
-              </h4>
-
-              <h2>2+</h2>
-
-              <p>years average client partnership</p>
-            </div>
-
-            <div className={style.container3}>
-              <h4>
-                <div className={style.indicator}>3</div> Cost Savings:
-              </h4>
-
-              <h2>40-50%</h2>
-
-              <p>saving on development costs</p>
+            <div className={style.staffItemsList}>
+              <h3 className={style.subTitle}>
+                We thrive only when our clients thrive
+              </h3>
+              <div className={style.staffItem}>
+                <ul>
+                  <li>
+                    <span className={style.staffItemNumberFocused}>1</span>
+                    <span className={style.staffItemTextFocused}>
+                      Quickly adapt to increases in workload with additional
+                      development resources
+                    </span>
+                  </li>
+                  <li>
+                    <span className={style.staffItemNumber}>2</span>
+                    <span className={style.staffItemText}>
+                      Add team members with highly specialized skills from the
+                      global market
+                    </span>
+                  </li>
+                  <li>
+                    <span className={style.staffItemNumber}>3</span>
+                    <span className={style.staffItemText}>
+                      Access to the global talent market without the legwork
+                    </span>
+                  </li>
+                  <li>
+                    <span className={style.staffItemNumber}>4</span>
+                    <span className={style.staffItemText}>
+                      Focus on your core business goals, not routine hiring and
+                      screening tasks
+                    </span>
+                  </li>
+                  <li className={style.li_last}>
+                    <span className={style.staffItemNumber}>5</span>
+                    <span className={style.staffItemText}>
+                      Don’t worry about onboarding, HR administration, payroll
+                      and compliance
+                    </span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
+          <h3 className={style.subLegend}>
+            Learn more how Scrumlaunch can help you with Staff Augmentation
+          </h3>
+          <Image
+            src={ArrowDown}
+            alt="Scale your tech team with global talent"
+          />
+          <div></div>
         </div>
 
         <ClientTestimonialCard />
