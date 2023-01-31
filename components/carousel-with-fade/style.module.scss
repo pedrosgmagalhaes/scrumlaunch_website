@@ -1,18 +1,35 @@
 
-.swiper {
-  width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
+.button {
+  height: 42px;
+  width: 42px;
+  position: absolute;
+  top: 42%;
+  z-index: 10;
+  cursor: pointer;
+  @media screen and (max-width: 376px) {
+    display: none;
+  }
 }
 
-.swiperSlide {
-  width: 554px;
-  height: 415px;
-  background-position: center;
-  background-size: cover;
-  }
+.buttonPrev {
+  @extend .button;
 
-.swiperSlide img {
-  display: block;
-  width: 100%;
+  left: 29%;
+  background-image: url("../../public/assets/carousel-with-fade/btn-left.svg");
+  
+  @media screen and (max-width: 768px) {
+    left: 10%;
+  }
+  
+}
+
+.buttonNext {
+  @extend .button;
+
+  right: 29%;
+  background-image: url("../../public/assets/carousel-with-fade/btn-right.svg");
+
+  @media screen and (max-width: 768px) {
+    right: 10%;
+  }
 }

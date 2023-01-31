@@ -31,8 +31,14 @@
   text-align: center;
   max-width: 1440px;
   margin: auto;
-  // margin: 90px auto 100px;
-  padding: 90px 120px 120px;
+  padding: 90px 120px 60px;
+
+  @media screen and (max-width: 768px) {
+    padding: 90px 32px 50px;
+  }
+  @media screen and (max-width: 376px) {
+    padding: 50px 16px 50px;
+  }
 
   h2 {
     color: var(--text-color);
@@ -40,10 +46,21 @@
     font-size: 48px;
     margin: 0;
     margin-bottom: 64px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 38px;
+    }
+    @media screen and (max-width: 376px) {
+      font-size: 32px;
+      margin-bottom: 24px;
+    }
   }
 }
 
 .carouselWithFade {
+  padding: 90px 0px 120px;
+  position: relative;
+
   @extend .section;
 }
 
@@ -51,61 +68,108 @@
   @extend .section;
 
   .mainContainer {
-    padding: 0 120px;
   
     .container {
       display: flex;
       padding: 40px 0;
       width: 100%;
       height: 120px;
+      @media screen and (max-width: 376px) {
+        height: unset;
+        padding: 12px 0;
+      }
 
       &.active {
         @extend .container;
         background-color: #E2CCFF;
         border-radius: 24px;
         padding: 32px 40px;
+        @media screen and (max-width: 768px) {
+          padding: 24px;
+        }
+        @media screen and (max-width: 376px) {
+          margin: 12px 0;
+        }
 
         .processName {
-          width: calc(25% - 40px);
+          width: calc(40% - 34px);
+          @media screen and (max-width: 768px) {
+            width: calc(60% - 16px);
+          }
         }
+        
+        .numberContainer {
 
-        .number {
-          background-color: #1e1f21;
-          color: white;
+          &:after {
+            @media screen and (max-width: 376px) {
+              bottom: -42px;
+            }
+          }
+
+          .number {
+            background-color: #1e1f21;
+            color: white;
+          }
         }
+        
       }
 
       .processName {
-        width: 25%;
+        width: 40%;
         margin: 0;
         align-self: center;
+        text-align: left;
+        font-size: 28px;
+        font-weight: 700;
+
+        @media screen and (max-width: 768px) {
+          width: 60%;
+        }
+        @media screen and (max-width: 376px) {
+          font-size: 20px;
+          align-self: flex-start;
+        }
       }
 
-      .number {
-        border-radius: 100%;
-        border: 1px black solid;
-        min-width: 34px;
-        height: 34px;
+      .numberContainer {
+        position: relative;
         align-self: center;
         text-align: center;
-        line-height: 28px;
-        font-weight: 700;
-        font-size: 28px;
-        margin-right: 28px;
-        position: relative;
-
-        &.active {
-          background-color: #1e1f21;
-          color: white;
+        @media screen and (max-width: 376px) {
+          align-self: stretch;
         }
 
         &:after {
           content: "";
           position: absolute;
-          right: 45%;
+          right: 71%;
           border-right: 1px dashed #1e1f21;
-          top: calc(100% + 8px);
-          bottom: -80px;
+          top: 38px;
+          bottom: calc((100% + 48px)*(-1));
+          @media screen and (max-width: 376px) {
+            bottom: -18px;
+          }
+        }
+
+        .number {
+          border-radius: 100%;
+          border: 1px black solid;
+          min-width: 34px;
+          height: 34px;
+          line-height: 28px;
+          font-weight: 700;
+          font-size: 28px;
+          margin-right: 28px;
+          
+          @media screen and (max-width: 376px) {
+            font-size: 20px;
+            align-self: flex-start;
+          }
+  
+          &.active {
+            background-color: #1e1f21;
+            color: white;
+          }
         }
       }
 
@@ -115,10 +179,22 @@
         line-height: 150%;
         width: 100%;
         margin: 0;
+        text-align: left;
+        @media screen and (max-width: 376px) {
+          font-size: 14px;
+        }
+      }
+
+      &:first-child {
+        .numberContainer:after {
+          @media screen and (max-width: 376px) {
+            bottom: -36px;
+          }
+        }
       }
 
       &:last-child {
-        .number:after {
+        .numberContainer:after {
           display: none;
         }
       }
@@ -221,10 +297,47 @@
   .contentContainer {
     display: flex;
     gap: 40px;
+    @media screen and (max-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
 
     .tabContainer {
       display: inline-grid;
+      align-content: center;
       gap: 32px;
+      @media screen and (max-width: 768px) {
+        align-content: start;
+        gap: 26px;
+
+        &:first-child {
+          grid-column-start: 2;
+          grid-row-start: 1;
+          grid-row-end: 2;
+        }
+
+        &:nth-child(2) {
+          grid-column-start: 1;
+          grid-row-start: 1;
+          grid-row-end: 3;
+        }
+
+        &:last-child {
+          grid-column-start: 2;
+          grid-row-start: 2;
+          grid-row-end: 3;
+        }
+
+      }
+
+      
+      .tabImage {
+        @media screen and (max-width: 768px) {
+          display: none;
+        }
+      }
+      
 
       .contactTab {
         display: grid;
@@ -295,21 +408,32 @@
         padding: 42px;
         border-radius: 24px;
         text-align: left;
+        @media screen and (max-width: 768px) {
+          padding: 24px;
+        }
 
         h4 {
           font-weight: 700;
           font-size: 28px;
           line-height: 150%;
           margin: 0 0px 20px;
+          @media screen and (max-width: 768px) {
+            font-size: 24px;
+            margin: 0 0px 16px;
+          }
         }
 
         ul {
           padding-left: 30px;
+          margin: 0;
 
           li {
             font-weight: 700;
             font-size: 20px;
             line-height: 150%;
+            @media screen and (max-width: 768px) {
+              font-size: 16px;
+            }
           }
         }
         button {
@@ -325,6 +449,7 @@
   @extend .section;
   background: #1E1F21;
   margin-top: 100px;
+  padding-bottom: 120px;
   h2 {
     color: white;
   }
@@ -333,6 +458,10 @@
     display: flex;
     gap: 20px;
     position: relative;
+    @media screen and (max-width: 768px) {
+      display: grid;
+      gap: 26px;
+    }
 
     .tab {
       border-radius: 32px;
@@ -341,18 +470,46 @@
       overflow: hidden;
       flex-grow: 1;
       flex-basis: 0;
+      @media screen and (max-width: 768px) {
+        height: 717px;
+        padding: 32px 26px;
+      }
+      @media screen and (max-width: 376px) {
+        padding: 32px 18px;
+      }
+
+      .shadow {
+        position: absolute;
+        width: 100%;
+        min-height: 65px;
+        left: 0;
+        bottom: 0%;
+        z-index: 15;
+        -webkit-box-shadow: inset 0px -60px 50px -50px #E2CCFF;
+        -moz-box-shadow: inset 0px -60px 50px -50px #E2CCFF;
+        box-shadow: inset 0px -60px 50px -50px #E2CCFF;
+      }
 
       h2 {
         font-weight: 700;
         font-size: 48px;
         line-height: 130%;  
         margin-bottom: 16px;
+        @media screen and (max-width: 768px) {
+          font-size: 38px;
+        }
+        @media screen and (max-width: 376px) {
+          font-size: 32px;
+        }
       }
 
       .text {
         font-weight: 700;
         font-size: 20px;
         line-height: 150%;
+        @media screen and (max-width: 376px) {
+          font-size: 14px;
+        }
       }
 
       button {
@@ -363,25 +520,39 @@
     .campusReelTab {
       @extend .tab;
       background-color: #5A5DF6;
-      -webkit-box-shadow: inset 0px -60px 50px -50px rgba(90,93,246,1);
-      -moz-box-shadow: inset 0px -60px 50px -50px rgba(90,93,246,1);
-      box-shadow: inset 0px -60px 50px -50px rgba(90,93,246,1);
       color: white;
+      position: relative;
 
-
+      .shadow {
+        -webkit-box-shadow: inset 0px -60px 50px -50px #5A5DF6;
+        -moz-box-shadow: inset 0px -60px 50px -50px #5A5DF6;
+        box-shadow: inset 0px -60px 50px -50px #5A5DF6;
+      }
     }
 
     .gipperTab {
       @extend .tab;
+      position: relative;
       background-color: #E2CCFF;
-      -webkit-box-shadow: inset 0px -60px 50px -50px rgba(90,93,246,1);
-      -moz-box-shadow: inset 0px -60px 50px -50px rgba(90,93,246,1);
-      box-shadow: inset 0px -60px 50px -50px rgba(90,93,246,1);
       color: #1E1F21;
   
       h2 {
         color: #1E1F21;
       }
+
+      p {
+        margin-bottom: 100px;
+        @media screen and (max-width: 768px) {
+          margin-bottom: 0px;
+        }
+      }
+
+      .shadow {
+        -webkit-box-shadow: inset 0px -60px 50px -50px #E2CCFF;
+        -moz-box-shadow: inset 0px -60px 50px -50px #E2CCFF;
+        box-shadow: inset 0px -60px 50px -50px #E2CCFF;
+      }
+
     }
 
     .footer {
@@ -397,40 +568,56 @@
 
         &:first-child {
           position: absolute;
-          bottom: 0px;
-          left: 5px;
+          bottom: -231px;
+          left: -5px;
           z-index: 15;
+          width: 213px;
+          height: auto;
         }
 
         &:last-child {
           position: absolute;
-          z-index: 10;
-          bottom: 0px;
-          right: -42px;
+          z-index: 14;
+          bottom: -173px;
+          left: 35px;
+          width: auto;
+          height: 468px;
         }
       }
     }
 
     .footerGipper {
       @extend .footer;
-      bottom: -102px;
+      bottom: -45px;
 
       img {
 
         &:first-child {
           position: absolute;
-          bottom: 0px;
-          left: 5px;
+          bottom: -149px;
+          left: -29px;
           z-index: 15;
-          border-top-left-radius: 25px;
-          border-top-right-radius: 25px;
-        }
+          width: 215px;
+          height: auto;
+          @media screen and (max-width: 768px) {
+            bottom: -200px;
+            left: -10px;
+          }
+          
+       }
 
         &:last-child {
           position: absolute;
           z-index: 10;
-          bottom: 0px;
-          right: -80px;
+          bottom: -69px;
+          right: -126px;
+          width: 500px;
+          height: auto;
+          @media screen and (max-width: 768px) {
+            width: 630px;
+            bottom: -105px;
+            left: 110px;
+          }
         }
       }
     }
